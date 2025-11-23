@@ -1,0 +1,9 @@
+<map id="Infinit_XO_UI::get_move" name="Infinit_XO_UI::get_move">
+<area shape="rect" id="Node000001" title="Retrieves the next move from a player." alt="" coords="5,55,184,80"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#a508617eddfae8915d098102d480fc888" title="Get a pointer to the game board." alt="" coords="232,5,393,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,52,242,31,243,36,152,57"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="239,55,386,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,65,226,65,226,70,184,70"/>
+<area shape="rect" id="Node000004" href="$classPlayer.html#a2df3bd299bf7aecfa2275ec6902a60f8" title="Get player type (e.g., &#39;H&#39; or &#39;C&#39;)." alt="" coords="249,104,377,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,77,243,98,242,104,151,83"/>
+</map>

@@ -1,0 +1,47 @@
+\doxysection{Infinity\+\_\+\+XO\+\_\+\+Classes.\+h}
+\hypertarget{Infinity__XO__Classes_8h_source}{}\label{Infinity__XO__Classes_8h_source}\index{include/Infinity\_XO\_Classes.h@{include/Infinity\_XO\_Classes.h}}
+\mbox{\hyperlink{Infinity__XO__Classes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00010}00010\ \textcolor{preprocessor}{\#ifndef\ XO\_CLASSES\_H}}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00011}00011\ \textcolor{preprocessor}{\#define\ XO\_CLASSES\_H}}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BoardGame__Classes_8h}{BoardGame\_Classes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00015}00015\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00027}\mbox{\hyperlink{classInfinity__X__O__Board}{00027}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classInfinity__X__O__Board}{Infinity\_X\_O\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBoard}{Board}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00028}00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00029}\mbox{\hyperlink{classInfinity__X__O__Board_af24c915c8663397f662c3401ff0dc43c}{00029}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classInfinity__X__O__Board_af24c915c8663397f662c3401ff0dc43c}{blank\_symbol}}\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00030}\mbox{\hyperlink{classInfinity__X__O__Board_a435f74a0bbdbc014813514f30d1880cf}{00030}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classInfinity__X__O__Board_a435f74a0bbdbc014813514f30d1880cf}{counter}};}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00031}\mbox{\hyperlink{classInfinity__X__O__Board_adc319d75cefb84cecb4ed5691edb7cdc}{00031}}\ \ \ \ \ queue<pair<int,\ int>>\ \mbox{\hyperlink{classInfinity__X__O__Board_adc319d75cefb84cecb4ed5691edb7cdc}{last\_moves}};}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00033}00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{classInfinity__X__O__Board_a04d6b6684c98319a8ee093672cf2bbb1}{Infinity\_X\_O\_Board}}();}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classInfinity__X__O__Board_acdf958b1a2d08227ccfe316a68519622}{update\_board}}(\mbox{\hyperlink{classMove}{Move<char>}}*\ move);}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classInfinity__X__O__Board_adee61151bd324d1e28fb1391e1df0789}{is\_win}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ player);}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00058}\mbox{\hyperlink{classInfinity__X__O__Board_a041f1cd1f82eae2a0ca28791f41eb1c4}{00058}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classInfinity__X__O__Board_a041f1cd1f82eae2a0ca28791f41eb1c4}{is\_lose}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classInfinity__X__O__Board_a27dc0d692d24c8ec6e921267424bf046}{is\_draw}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ player);}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00072}00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classInfinity__X__O__Board_aecd2c26979b7ba39a036ec469363f6bf}{game\_is\_over}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ player);}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00073}00073\ \};}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00085}\mbox{\hyperlink{classInfinit__XO__UI}{00085}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classInfinit__XO__UI}{Infinit\_XO\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classUI}{UI}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00086}00086\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00092}00092\ \ \ \ \ \mbox{\hyperlink{classInfinit__XO__UI_ae6a1240b55dbb865c7a0bf941790939a}{Infinit\_XO\_UI}}();}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00097}\mbox{\hyperlink{classInfinit__XO__UI_a25d218e89b158c35d03545de6a60338d}{00097}}\ \ \ \ \ \mbox{\hyperlink{classInfinit__XO__UI_a25d218e89b158c35d03545de6a60338d}{\string~Infinit\_XO\_UI}}()\ \{\};}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00106}00106\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classInfinit__XO__UI_a17a1cf5cdab96a1f1d4877b1f68e4955}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type);}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00113}00113\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classMove}{Move<char>}}*\ \mbox{\hyperlink{classInfinit__XO__UI_a01e2ad782bacda8c2f7cff214617b54c}{get\_move}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ player);}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00114}00114\ \};}
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{Infinity__XO__Classes_8h_source_l00116}00116\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ XO\_CLASSES\_H}}
+
+\end{DoxyCode}

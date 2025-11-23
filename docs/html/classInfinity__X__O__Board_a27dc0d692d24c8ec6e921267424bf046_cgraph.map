@@ -1,0 +1,7 @@
+<map id="Infinity_X_O_Board::is_draw" name="Infinity_X_O_Board::is_draw">
+<area shape="rect" id="Node000001" title="Checks if the game has ended in a draw." alt="" coords="5,5,151,45"/>
+<area shape="rect" id="Node000002" href="$classInfinity__X__O__Board.html#adee61151bd324d1e28fb1391e1df0789" title="Checks if the given player has won the game." alt="" coords="199,5,344,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,23,184,23,184,28,151,28"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="392,13,539,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="344,23,378,23,378,28,344,28"/>
+</map>

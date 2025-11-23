@@ -1,0 +1,5 @@
+<map id="Player::get_type" name="Player::get_type">
+<area shape="rect" id="Node000001" title="Get player type (e.g., &#39;H&#39; or &#39;C&#39;)." alt="" coords="232,5,360,31"/>
+<area shape="rect" id="Node000002" href="$classInfinit__XO__UI.html#a01e2ad782bacda8c2f7cff214617b54c" title="Retrieves the next move from a player." alt="" coords="5,5,184,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,21,184,21,184,15,218,15"/>
+</map>

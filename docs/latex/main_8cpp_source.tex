@@ -1,0 +1,51 @@
+\doxysection{main.\+cpp}
+\hypertarget{main_8cpp_source}{}\label{main_8cpp_source}\index{src/main.cpp@{src/main.cpp}}
+\mbox{\hyperlink{main_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <iostream>}\ \textcolor{comment}{//\ Required\ for\ input/output\ operations\ (cout,\ cin)}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <string>}\ \ \ \textcolor{comment}{//\ Required\ for\ string}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <vector>}\ \ \ \textcolor{comment}{//\ Required\ for\ vector}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <memory>}\ \ \ \textcolor{comment}{//\ Required\ for\ unique\_ptr}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}../include/BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}../include/Infinity\_XO\_Classes.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00017}00017\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00031}\mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00031}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00033}00033\ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));\ \ \textcolor{comment}{//\ Seed\ the\ random\ number\ generator}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ Create\ an\ instance\ of\ the\ specific\ UI\ for\ X-\/O\ using\ a\ pointer\ }}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{classUI}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfinit__XO__UI}{Infinit\_XO\_UI}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ board.\ For\ X-\/O,\ this\ is\ an\ X\_O\_Board.}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{classBoard}{Board<char>}}*\ xo\_board\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfinity__X__O__Board}{Infinity\_X\_O\_Board}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ Use\ the\ UI\ to\ set\ up\ the\ players\ for\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ The\ UI\ returns\ a\ dynamically\ allocated\ array\ of\ Player\ pointers.}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ players\ =\ game\_ui-\/>\mbox{\hyperlink{classUI_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ manager\ with\ the\ board\ and\ the\ array\ of\ players.}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046\ \ \ \ \ \mbox{\hyperlink{classGameManager}{GameManager<char>}}\ x\_o\_game(xo\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ Run\ the\ game\ loop.}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049\ \ \ \ \ x\_o\_game.\mbox{\hyperlink{classGameManager_a71f46d5189dac5c773f608cea1b5a203}{run}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Cleanup\ -\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ board\ object.}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{delete}\ xo\_board;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ individual\ player\ objects.}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ array\ of\ player\ pointers\ itself.}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \textcolor{comment}{//\ Exit\ successfully}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00065}00065\ \textcolor{comment}{//\ =====================================================================}}
+
+\end{DoxyCode}

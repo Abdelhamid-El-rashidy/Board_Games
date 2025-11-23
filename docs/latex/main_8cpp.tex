@@ -1,0 +1,111 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+Entry point for the FCAI X-\/O (Tic-\/\+Tac-\/\+Toe) game.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include "{}../include/\+Board\+Game\+\_\+\+Classes.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Infinity\+\_\+\+XO\+\_\+\+Classes.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function to run the X-\/O game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entry point for the FCAI X-\/O (Tic-\/\+Tac-\/\+Toe) game. 
+
+This file initializes the X-\/O game by creating the user interface, board, and players. It then launches the game loop via the \doxylink{classGameManager}{Game\+Manager} class. All dynamically allocated objects are properly deleted at the end. 
+
+Definition in file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function to run the X-\/O game. 
+
+This function orchestrates the game by\+:
+\begin{DoxyItemize}
+\item Initializing the random number generator
+\item Creating the X-\/O specific \doxylink{classUI}{UI} and board
+\item Setting up players using the \doxylink{classUI}{UI}
+\item Running the main game loop through the \doxylink{classGameManager}{Game\+Manager}
+\item Performing cleanup of dynamically allocated memory
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+int Returns 0 on successful execution. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));\ \ \textcolor{comment}{//\ Seed\ the\ random\ number\ generator}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Create\ an\ instance\ of\ the\ specific\ UI\ for\ X-\/O\ using\ a\ pointer\ }}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classUI}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfinit__XO__UI}{Infinit\_XO\_UI}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ board.\ For\ X-\/O,\ this\ is\ an\ X\_O\_Board.}}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classBoard}{Board<char>}}*\ xo\_board\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfinity__X__O__Board}{Infinity\_X\_O\_Board}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Use\ the\ UI\ to\ set\ up\ the\ players\ for\ the\ game.}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ The\ UI\ returns\ a\ dynamically\ allocated\ array\ of\ Player\ pointers.}}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ players\ =\ game\_ui-\/>\mbox{\hyperlink{classUI_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ manager\ with\ the\ board\ and\ the\ array\ of\ players.}}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classGameManager}{GameManager<char>}}\ x\_o\_game(xo\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ Run\ the\ game\ loop.}}
+\DoxyCodeLine{00049\ \ \ \ \ x\_o\_game.run();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Cleanup\ -\/-\/-\/}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ board\ object.}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{delete}\ xo\_board;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ individual\ player\ objects.}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ array\ of\ player\ pointers\ itself.}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \textcolor{comment}{//\ Exit\ successfully}}
+\DoxyCodeLine{00063\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00270}{Game\+Manager$<$ T $>$\+::run()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00306}{UI$<$ T $>$\+::setup\+\_\+players()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

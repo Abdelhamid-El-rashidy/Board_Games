@@ -1,0 +1,29 @@
+PROJECT_NAME           = "Board Games"
+PROJECT_BRIEF          = "A C++ OOP board game project"
+OUTPUT_DIRECTORY       = docs
+
+INPUT                  = src include
+FILE_PATTERNS          = *.h *.hpp *.cpp
+RECURSIVE              = YES
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_METHODS  = YES
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = Yes
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+HAVE_DOT               = YES
+CLASS_DIAGRAMS         = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+DOT_IMAGE_FORMAT       = svg
+
+

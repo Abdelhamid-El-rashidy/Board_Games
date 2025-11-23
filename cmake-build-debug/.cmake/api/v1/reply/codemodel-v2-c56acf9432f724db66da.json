@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "4.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "BoardGameFramework",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "BoardGameFramework::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BoardGameFramework-Debug-bdd6c27f279a55dd560a.json",
+					"name" : "BoardGameFramework",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/media/abdelhamid/32C42606C425CD43/Computer Science/C++, Fundamentals of Programming/OOP/Assignment 3- Board_Games/BoardGameFramework/cmake-build-debug",
+		"source" : "/media/abdelhamid/32C42606C425CD43/Computer Science/C++, Fundamentals of Programming/OOP/Assignment 3- Board_Games/BoardGameFramework"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

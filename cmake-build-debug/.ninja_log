@@ -1,0 +1,13 @@
+# ninja log v6
+2	660	1763904753891587300	CMakeFiles/BoardGameFramework.dir/src/Infinity_XO_Classes.cpp.o	76b7d59b7c0d0043
+2	580	1763904753891587300	CMakeFiles/BoardGameFramework.dir/src/main.cpp.o	d717ce44f9f5e5f
+27	88	1763905352924566100	build.ninja	a3d088e001bccc5b
+1	610	1763050193523145800	CMakeFiles/BoardGameFramework.dir/main.cpp.o	647033c2a92d0c96
+2	675	1763050193524145300	CMakeFiles/BoardGameFramework.dir/Infinity_XO_Classes.cpp.o	3c46c76b884eb651
+27	88	1763905352923566200	/media/abdelhamid/32C42606C425CD43/Computer Science/C++, Fundamentals of Programming/OOP/Assignment 3- Board_Games/BoardGameFramework/cmake-build-debug/cmake_install.cmake	a3d088e001bccc5b
+660	785	1763904754549576800	BoardGameFramework	75a27bd89c2e37d7
+1	31	1763905352924566100	build.ninja	a3d088e001bccc5b
+1	31	1763905352924566100	/media/abdelhamid/32C42606C425CD43/Computer Science/C++, Fundamentals of Programming/OOP/Assignment 3- Board_Games/BoardGameFramework/cmake-build-debug/cmake_install.cmake	a3d088e001bccc5b
+1	562	1763905352935566000	CMakeFiles/BoardGameFramework.dir/src/main.cpp.o	d717ce44f9f5e5f
+3	726	1763905352936566000	CMakeFiles/BoardGameFramework.dir/src/Infinity_XO_Classes.cpp.o	76b7d59b7c0d0043
+726	873	1763905353659555500	BoardGameFramework	75a27bd89c2e37d7

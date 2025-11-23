@@ -1,0 +1,3 @@
+/media/abdelhamid/32C42606C425CD43/Computer Science/C++, Fundamentals of Programming/OOP/Assignment 3- Board_Games/BoardGameFramework/cmake-build-debug/CMakeFiles/BoardGameFramework.dir
+/media/abdelhamid/32C42606C425CD43/Computer Science/C++, Fundamentals of Programming/OOP/Assignment 3- Board_Games/BoardGameFramework/cmake-build-debug/CMakeFiles/edit_cache.dir
+/media/abdelhamid/32C42606C425CD43/Computer Science/C++, Fundamentals of Programming/OOP/Assignment 3- Board_Games/BoardGameFramework/cmake-build-debug/CMakeFiles/rebuild_cache.dir
