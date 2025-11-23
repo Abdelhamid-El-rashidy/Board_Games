@@ -1,0 +1,21 @@
+# Compiled object files
+*.o
+*.obj
+
+# Compiled binary/executable files
+*.exe
+*.out
+*.app
+
+# CLion project files
+cmake-build-*/
+.idea/
+
+# Backup files
+*~
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
