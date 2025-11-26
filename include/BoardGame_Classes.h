@@ -1,3 +1,9 @@
+// BoardGame_classes.h
+// Version 2.3
+// Date: 25 Nov 2023
+// Author: Mohammad El-Ramly
+// Putpose: Core classes to build board XO-style games (x-o, connect4, etc)
+
 #ifndef _BOARDGAME_CLASSES_H
 #define _BOARDGAME_CLASSES_H
 
@@ -36,8 +42,6 @@ enum class PlayerType {
  * Provides core data (rows, columns, matrix) and virtual methods to be
  * implemented by specific games like Tic-Tac-Toe, Connect4, etc.
  */
-
-
 template <typename T>
 class Board {
 protected:
@@ -90,8 +94,13 @@ public:
     /** @brief Get number of columns. */
     int get_columns() const { return columns; }
 
-    /** @brief Get Cell at coordinates (x,y). */
-    T get_cell(int x, int y ) { return board[x][y]; }
+    /** @brief Get number of moves. */
+    int get_n_moves() const { return n_moves; }
+
+    /** @brief Return content of cell x, y in current board. */
+    T get_cell(int x, int y) {
+        return board[x][y];
+    }
 };
 
 //-----------------------------------------------------
@@ -131,7 +140,7 @@ class Player {
 protected:
     string name;         ///< Player name
     PlayerType type;     ///< Player type (e.g., HUMAN or COMPUTER)
-    T symbol;            ///< Player�s symbol on board
+    T symbol;            ///< Players symbol on board
     Board<T>* boardPtr;  ///< Pointer to the game board
 
 public:
@@ -193,8 +202,11 @@ protected:
     }
 
 public:
-    /** @brief Default Constructor */
-    UI(int cell_display_width = 3){};
+    /**
+     * @brief Construct the UI and display a welcome message.
+     */
+    UI(int cell_display_width = 3) : cell_width(cell_display_width) {}
+    
     /**
      * @brief Construct the UI and display a welcome message.
      */
@@ -221,11 +233,12 @@ public:
     /**
      * @brief Create a player object based on input name, symbol, and type.
      */
-    virtual Player<T>* create_player(string& name, T symbol, PlayerType type) = 0;
+    virtual Player<T>* create_player(string& name, T symbol, PlayerType type);
 
     /**
      * @brief Display the current board matrix in formatted form.
      */
+
     virtual void display_board_matrix(const vector<vector<T>>& matrix) const {
         if (matrix.empty() || matrix[0].empty()) return;
 
@@ -323,6 +336,18 @@ Player<T>** UI<T>::setup_players() {
     players[1] = create_player(nameO, static_cast<T>('O'), typeO);
 
     return players;
+}
+
+/**
+ * @brief Default implementation of creating two players.
+ */
+template <typename T>
+Player<T>* UI<T>::create_player(string& name, T symbol, PlayerType type) {
+    // Create player based on type
+    cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
+        << " player: " << name << " (" << symbol << ")\n";
+
+    return new Player<T>(name, symbol, type);
 }
 
 #endif // _BOARDGAME_CLASSES_H
