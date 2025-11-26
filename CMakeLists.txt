@@ -10,4 +10,6 @@ add_executable(BoardGameFramework
         src/main.cpp
         src/Infinity_XO_Classes.cpp
         include/Infinity_XO_Classes.h
-        )
+        src/Four_Four_XO.cpp
+        include/Four_Four_XO.h
+)
