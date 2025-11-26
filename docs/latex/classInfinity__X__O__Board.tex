@@ -54,7 +54,9 @@ vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{classBoard_a117f2e61fdb7deccca
 int \mbox{\hyperlink{classBoard_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
 \begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classBoard_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
-\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classBoard_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Get Cell at coordinates (x,y). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -119,7 +121,7 @@ Definition at line \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00012}{12
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{Infinity__XO__Classes_8h_source_l00029}{blank\+\_\+symbol}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00044}{Board$<$ char $>$\+::board}}.
+References \mbox{\hyperlink{Infinity__XO__Classes_8h_source_l00029}{blank\+\_\+symbol}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00046}{Board$<$ char $>$\+::board}}.
 
 
 
@@ -203,7 +205,7 @@ Definition at line \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00071}{71
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00049}{is\+\_\+win()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00045}{Board$<$ char $>$\+::n\+\_\+moves}}.
+References \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00049}{is\+\_\+win()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00047}{Board$<$ char $>$\+::n\+\_\+moves}}.
 
 
 
@@ -307,7 +309,7 @@ Definition at line \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00049}{49
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{Infinity__XO__Classes_8h_source_l00029}{blank\+\_\+symbol}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00044}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00148}{Player$<$ T $>$\+::get\+\_\+symbol()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00042}{Board$<$ char $>$\+::rows}}.
+References \mbox{\hyperlink{Infinity__XO__Classes_8h_source_l00029}{blank\+\_\+symbol}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00046}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00153}{Player$<$ T $>$\+::get\+\_\+symbol()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00044}{Board$<$ char $>$\+::rows}}.
 
 
 
@@ -388,7 +390,7 @@ Definition at line \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00019}{19
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{Infinity__XO__Classes_8h_source_l00029}{blank\+\_\+symbol}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00044}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00043}{Board$<$ char $>$\+::columns}}, \mbox{\hyperlink{Infinity__XO__Classes_8h_source_l00030}{counter}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00115}{Move$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00109}{Move$<$ T $>$\+::get\+\_\+x()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00112}{Move$<$ T $>$\+::get\+\_\+y()}}, \mbox{\hyperlink{Infinity__XO__Classes_8h_source_l00031}{last\+\_\+moves}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00045}{Board$<$ char $>$\+::n\+\_\+moves}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00042}{Board$<$ char $>$\+::rows}}.
+References \mbox{\hyperlink{Infinity__XO__Classes_8h_source_l00029}{blank\+\_\+symbol}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00046}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00045}{Board$<$ char $>$\+::columns}}, \mbox{\hyperlink{Infinity__XO__Classes_8h_source_l00030}{counter}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00120}{Move$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00114}{Move$<$ T $>$\+::get\+\_\+x()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00117}{Move$<$ T $>$\+::get\+\_\+y()}}, \mbox{\hyperlink{Infinity__XO__Classes_8h_source_l00031}{last\+\_\+moves}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00047}{Board$<$ char $>$\+::n\+\_\+moves}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00044}{Board$<$ char $>$\+::rows}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

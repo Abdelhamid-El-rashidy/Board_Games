@@ -1,31 +1,97 @@
 @startuml
-'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-' ------Classes---------
-class ArrayList {
-- Object[] elementData
-+ size()
+enum PlayerType {
+    HUMAN
+    COMPUTER
+    AI
+    RANDOM
 }
 
-' ------Relation---------
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-
-
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Board<T> {
+    - int rows
+    - int columns
+    - vector<vector<T>> board
+    - int n_moves
+    --
+    + Board(int rows, int cols)
+    + ~Board()
+    + vector<vector<T>> get_board_matrix() const
+    + int get_rows() const
+    + int get_columns() const
+    + T get_cell(int x, int y)
+    -- Virtual --
+    {abstract} + bool update_board(Move<T>* move)
+    {abstract} + bool is_win(Player<T>*)
+    {abstract} + bool is_lose(Player<T>*)
+    {abstract} + bool is_draw(Player<T>*)
+    {abstract} + bool game_is_over(Player<T>*)
 }
+
+class Move<T> {
+    - int x
+    - int y
+    - T symbol
+    --
+    + Move(int x, int y, T symbol)
+    + int get_x() const
+    + int get_y() const
+    + T get_symbol() const
+}
+
+class Player<T> {
+    - string name
+    - PlayerType type
+    - T symbol
+    - Board<T>* boardPtr
+    --
+    + Player(string n, T s, PlayerType t)
+    + ~Player()
+    + string get_name() const
+    + PlayerType get_type() const
+    + T get_symbol() const
+    + Board<T>* get_board_ptr() const
+    + void set_board_ptr(Board<T>* b)
+}
+
+class UI<T> {
+    - int cell_width
+    --
+    # string get_player_name(string)
+    # PlayerType get_player_type_choice(string, vector<string>)
+    --
+    + UI(int width = 3)
+    + UI(string msg, int width)
+    + ~UI()
+    + void display_message(string)
+    + void display_board_matrix(vector<vector<T>> matrix) const
+    + Player<T>** setup_players()
+    --
+    {abstract} + Move<T>* get_move(Player<T>*)
+    {abstract} + Player<T>* create_player(string& name, T symbol, PlayerType type)
+}
+
+class GameManager<T> {
+    - Board<T>* boardPtr
+    - Player<T>* players[2]
+    - UI<T>* ui
+    --
+    + GameManager(Board<T>* b, Player<T>* p[2], UI<T>* u)
+    + void run()
+}
+
+' =====================================================
+' RELATIONSHIPS — remove <T> from endpoints (IMPORTANT)
+' =====================================================
+
+Board o-- Move : uses
+Board o-- Player : interacts
+Player --> Board : boardPtr
+
+UI --> Move : creates
+UI --> Player : creates
+GameManager --> Board : contains
+GameManager --> Player : contains
+GameManager --> UI : contains
 
 @enduml

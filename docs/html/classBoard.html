@@ -115,6 +115,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac665e1ed1f49125fab248e2c9ddfd608" id="r_ac665e1ed1f49125fab248e2c9ddfd608"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ac665e1ed1f49125fab248e2c9ddfd608">get_columns</a> () const</td></tr>
 <tr class="memdesc:ac665e1ed1f49125fab248e2c9ddfd608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of columns.  <br /></td></tr>
 <tr class="separator:ac665e1ed1f49125fab248e2c9ddfd608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93558c58e60ca4291c6044828afd260b" id="r_a93558c58e60ca4291c6044828afd260b"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a93558c58e60ca4291c6044828afd260b">get_cell</a> (int x, int y)</td></tr>
+<tr class="memdesc:a93558c58e60ca4291c6044828afd260b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Cell at coordinates (x,y).  <br /></td></tr>
+<tr class="separator:a93558c58e60ca4291c6044828afd260b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -142,7 +145,7 @@ class Board&lt; T &gt;</div><p>Base template for any board used in board games. 
 </dl>
 <p>Provides core data (rows, columns, matrix) and virtual methods to be implemented by specific games like Tic-Tac-Toe, Connect4, etc. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00040">40</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00042">42</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae5dfded241ee3644196e2f6074d1d0b1" name="ae5dfded241ee3644196e2f6074d1d0b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5dfded241ee3644196e2f6074d1d0b1">&#9670;&#160;</a></span>Board()</h2>
@@ -182,11 +185,11 @@ template&lt;typename T &gt; </div>
 
 <p>Construct a board with given dimensions. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00051">51</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>        : <a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>(<a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>), <a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>(<a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>), <a class="code hl_variable" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a>(<a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>, vector&lt;T&gt;(<a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>)) {}</div>
-<div class="ttc" id="aclassBoard_html_a948d978e3b5fc460559b588f5dee9572"><div class="ttname"><a href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">Board::rows</a></div><div class="ttdeci">int rows</div><div class="ttdoc">Number of rows.</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00042">BoardGame_Classes.h:42</a></div></div>
-<div class="ttc" id="aclassBoard_html_af00c1fc363eb640ca276b8a572040040"><div class="ttname"><a href="classBoard.html#af00c1fc363eb640ca276b8a572040040">Board::board</a></div><div class="ttdeci">vector&lt; vector&lt; T &gt; &gt; board</div><div class="ttdoc">2D vector for the board</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00044">BoardGame_Classes.h:44</a></div></div>
-<div class="ttc" id="aclassBoard_html_afaf8842d9d52ac724e8c2f5642ecafc7"><div class="ttname"><a href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">Board::columns</a></div><div class="ttdeci">int columns</div><div class="ttdoc">Number of columns.</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00043">BoardGame_Classes.h:43</a></div></div>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00053">53</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>        : <a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>(<a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>), <a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>(<a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>), <a class="code hl_variable" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a>(<a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>, vector&lt;T&gt;(<a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>)) {}</div>
+<div class="ttc" id="aclassBoard_html_a948d978e3b5fc460559b588f5dee9572"><div class="ttname"><a href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">Board::rows</a></div><div class="ttdeci">int rows</div><div class="ttdoc">Number of rows.</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00044">BoardGame_Classes.h:44</a></div></div>
+<div class="ttc" id="aclassBoard_html_af00c1fc363eb640ca276b8a572040040"><div class="ttname"><a href="classBoard.html#af00c1fc363eb640ca276b8a572040040">Board::board</a></div><div class="ttdeci">vector&lt; vector&lt; T &gt; &gt; board</div><div class="ttdoc">2D vector for the board</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00046">BoardGame_Classes.h:46</a></div></div>
+<div class="ttc" id="aclassBoard_html_afaf8842d9d52ac724e8c2f5642ecafc7"><div class="ttname"><a href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">Board::columns</a></div><div class="ttdeci">int columns</div><div class="ttdoc">Number of columns.</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00045">BoardGame_Classes.h:45</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -217,8 +220,8 @@ template&lt;typename T &gt; </div>
 
 <p>Virtual destructor. Frees allocated board memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00057">57</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00059">59</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -282,12 +285,57 @@ template&lt;typename T &gt; </div>
 
 <p>Return a copy of the current board as a 2D vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00081">81</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                                               {</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a>;</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00083">83</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                                               {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a>;</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00044">Board&lt; T &gt;::board</a>.</p>
+<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00046">Board&lt; T &gt;::board</a>.</p>
+
+</div>
+</div>
+<a id="a93558c58e60ca4291c6044828afd260b" name="a93558c58e60ca4291c6044828afd260b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93558c58e60ca4291c6044828afd260b">&#9670;&#160;</a></span>get_cell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::get_cell </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get Cell at coordinates (x,y). </p>
+
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00094">94</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a>[x][y]; }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00046">Board&lt; T &gt;::board</a>.</p>
 
 </div>
 </div>
@@ -318,10 +366,10 @@ template&lt;typename T &gt; </div>
 
 <p>Get number of columns. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00089">89</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00091">91</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>; }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00043">Board&lt; T &gt;::columns</a>.</p>
+<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00045">Board&lt; T &gt;::columns</a>.</p>
 
 </div>
 </div>
@@ -352,10 +400,10 @@ template&lt;typename T &gt; </div>
 
 <p>Get number of rows. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00086">86</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00088">88</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>; }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00042">Board&lt; T &gt;::rows</a>.</p>
+<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00044">Board&lt; T &gt;::rows</a>.</p>
 
 </div>
 </div>
@@ -519,9 +567,9 @@ template&lt;typename T &gt; </div>
 
 <p>2D vector for the board </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00044">44</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00046">46</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00081">Board&lt; T &gt;::get_board_matrix()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00083">Board&lt; T &gt;::get_board_matrix()</a>, and <a class="el" href="BoardGame__Classes_8h_source.html#l00094">Board&lt; T &gt;::get_cell()</a>.</p>
 
 </div>
 </div>
@@ -549,9 +597,9 @@ template&lt;typename T &gt; </div>
 
 <p>Number of columns. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00043">43</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00045">45</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00089">Board&lt; T &gt;::get_columns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00091">Board&lt; T &gt;::get_columns()</a>.</p>
 
 </div>
 </div>
@@ -579,7 +627,7 @@ template&lt;typename T &gt; </div>
 
 <p>Number of moves made. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00045">45</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00047">47</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
 
 </div>
 </div>
@@ -607,9 +655,9 @@ template&lt;typename T &gt; </div>
 
 <p>Number of rows. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00042">42</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00044">44</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00086">Board&lt; T &gt;::get_rows()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00088">Board&lt; T &gt;::get_rows()</a>.</p>
 
 </div>
 </div>

@@ -31,7 +31,9 @@ vector$<$ vector$<$ T $>$ $>$ \mbox{\hyperlink{classBoard_a117f2e61fdb7deccca333
 int \mbox{\hyperlink{classBoard_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
 \begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classBoard_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
-\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classBoard_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Get Cell at coordinates (x,y). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -57,7 +59,7 @@ Base template for any board used in board games.
 \end{DoxyTemplParams}
 Provides core data (rows, columns, matrix) and virtual methods to be implemented by specific games like Tic-\/\+Tac-\/\+Toe, Connect4, etc. 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00040}{40}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00042}{42}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
@@ -75,11 +77,11 @@ Construct a board with given dimensions.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00051}{51}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00053}{53}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}}(\mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}}),\ \mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}(\mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}),\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}(\mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}},\ vector<T>(\mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}))\ \{\}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}}(\mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}}),\ \mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}(\mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}),\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}(\mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}},\ vector<T>(\mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}))\ \{\}}
 
 \end{DoxyCode}
 \Hypertarget{classBoard_a138a6378af669dd1ce55dc11217aea48}\label{classBoard_a138a6378af669dd1ce55dc11217aea48} 
@@ -95,11 +97,11 @@ Virtual destructor. Frees allocated board memory.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00057}{57}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00059}{59}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00057\ \{\}}
+\DoxyCodeLine{00059\ \{\}}
 
 \end{DoxyCode}
 
@@ -133,18 +135,42 @@ Return a copy of the current board as a 2D vector.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00081}{81}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00083}{83}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}};}
-\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}};}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00044}{Board$<$ T $>$\+::board}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00046}{Board$<$ T $>$\+::board}}.
+
+\Hypertarget{classBoard_a93558c58e60ca4291c6044828afd260b}\label{classBoard_a93558c58e60ca4291c6044828afd260b} 
+\index{Board$<$ T $>$@{Board$<$ T $>$}!get\_cell@{get\_cell}}
+\index{get\_cell@{get\_cell}!Board$<$ T $>$@{Board$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_cell()}{get\_cell()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classBoard}{Board}}$<$ T $>$\+::get\+\_\+cell (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Cell at coordinates (x,y). 
+
+
+
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00094}{94}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[x][y];\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00046}{Board$<$ T $>$\+::board}}.
 
 \Hypertarget{classBoard_ac665e1ed1f49125fab248e2c9ddfd608}\label{classBoard_ac665e1ed1f49125fab248e2c9ddfd608} 
 \index{Board$<$ T $>$@{Board$<$ T $>$}!get\_columns@{get\_columns}}
@@ -159,16 +185,16 @@ Get number of columns.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00089}{89}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00091}{91}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00089\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}};\ \}}
+\DoxyCodeLine{00091\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}};\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00043}{Board$<$ T $>$\+::columns}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00045}{Board$<$ T $>$\+::columns}}.
 
 \Hypertarget{classBoard_a93b130eff67bd4476fab27be8341cb78}\label{classBoard_a93b130eff67bd4476fab27be8341cb78} 
 \index{Board$<$ T $>$@{Board$<$ T $>$}!get\_rows@{get\_rows}}
@@ -183,16 +209,16 @@ Get number of rows.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00086}{86}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00088}{88}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00086\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}};\ \}}
+\DoxyCodeLine{00088\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}};\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00042}{Board$<$ T $>$\+::rows}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00044}{Board$<$ T $>$\+::rows}}.
 
 \Hypertarget{classBoard_a8dbe2a243881986f3e53b45799d377fc}\label{classBoard_a8dbe2a243881986f3e53b45799d377fc} 
 \index{Board$<$ T $>$@{Board$<$ T $>$}!is\_draw@{is\_draw}}
@@ -278,11 +304,11 @@ vector$<$vector$<$T$>$ $>$ \mbox{\hyperlink{classBoard}{Board}}$<$ T $>$\+::boar
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00044}{44}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00046}{46}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00081}{Board$<$ T $>$\+::get\+\_\+board\+\_\+matrix()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00083}{Board$<$ T $>$\+::get\+\_\+board\+\_\+matrix()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00094}{Board$<$ T $>$\+::get\+\_\+cell()}}.
 
 \Hypertarget{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}\label{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7} 
 \index{Board$<$ T $>$@{Board$<$ T $>$}!columns@{columns}}
@@ -297,11 +323,11 @@ Number of columns.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00043}{43}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00045}{45}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00089}{Board$<$ T $>$\+::get\+\_\+columns()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00091}{Board$<$ T $>$\+::get\+\_\+columns()}}.
 
 \Hypertarget{classBoard_a5952baefabced65fecec333de638408d}\label{classBoard_a5952baefabced65fecec333de638408d} 
 \index{Board$<$ T $>$@{Board$<$ T $>$}!n\_moves@{n\_moves}}
@@ -316,7 +342,7 @@ Number of moves made.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00045}{45}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00047}{47}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 \Hypertarget{classBoard_a948d978e3b5fc460559b588f5dee9572}\label{classBoard_a948d978e3b5fc460559b588f5dee9572} 
 \index{Board$<$ T $>$@{Board$<$ T $>$}!rows@{rows}}
@@ -331,11 +357,11 @@ Number of rows.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00042}{42}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00044}{44}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00086}{Board$<$ T $>$\+::get\+\_\+rows()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00088}{Board$<$ T $>$\+::get\+\_\+rows()}}.
 
 
 

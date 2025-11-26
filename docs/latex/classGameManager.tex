@@ -39,7 +39,7 @@ Controls the flow of a board game between two players.
 \end{DoxyTemplParams}
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00250}{250}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00257}{257}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
@@ -57,21 +57,21 @@ Construct a game manager with board, players, and \doxylink{classUI}{UI}.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00259}{259}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00266}{266}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}(b),\ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}(u)\ \{}
-\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[0]\ =\ p[0];}
-\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[1]\ =\ p[1];}
-\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[0]-\/>\mbox{\hyperlink{classPlayer_a3617a3ad0db435176a06948065f9a3a6}{set\_board\_ptr}}(b);}
-\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[1]-\/>set\_board\_ptr(b);}
-\DoxyCodeLine{00265\ \ \ \ \ \}}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}(b),\ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}(u)\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[0]\ =\ p[0];}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[1]\ =\ p[1];}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[0]-\/>\mbox{\hyperlink{classPlayer_a3617a3ad0db435176a06948065f9a3a6}{set\_board\_ptr}}(b);}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[1]-\/>set\_board\_ptr(b);}
+\DoxyCodeLine{00272\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00252}{Game\+Manager$<$ T $>$\+::players}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00154}{Player$<$ T $>$\+::set\+\_\+board\+\_\+ptr()}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00259}{Game\+Manager$<$ T $>$\+::players}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00159}{Player$<$ T $>$\+::set\+\_\+board\+\_\+ptr()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -96,44 +96,44 @@ Run the main game loop until someone wins or the game ends.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00270}{270}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00277}{277}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_board\_matrix(\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>get\_board\_matrix());}
-\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<T>}}*\ currentPlayer\ =\ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[0];}
-\DoxyCodeLine{00273\ }
-\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
-\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ :\ \{0,\ 1\})\ \{}
-\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentPlayer\ =\ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[i];}
-\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMove}{Move<T>}}*\ move\ =\ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>get\_move(currentPlayer);}
-\DoxyCodeLine{00278\ }
-\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>update\_board(move))}
-\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move\ =\ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>get\_move(currentPlayer);}
-\DoxyCodeLine{00281\ }
-\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_board\_matrix(\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>get\_board\_matrix());}
-\DoxyCodeLine{00283\ }
-\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>is\_win(currentPlayer))\ \{}
-\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_message(currentPlayer-\/>\mbox{\hyperlink{classPlayer_aed2af19790ba73190e3ebeea589518e1}{get\_name}}()\ +\ \textcolor{stringliteral}{"{}\ wins!"{}});}
-\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>is\_lose(currentPlayer))\ \{}
-\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_message(\mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[1\ -\/\ i]-\/>get\_name()\ +\ \textcolor{stringliteral}{"{}\ wins!"{}});}
-\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>is\_draw(currentPlayer))\ \{}
-\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_message(\textcolor{stringliteral}{"{}Draw!"{}});}
-\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00298\ \ \ \ \ \}}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_board\_matrix(\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>get\_board\_matrix());}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<T>}}*\ currentPlayer\ =\ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[0];}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ :\ \{0,\ 1\})\ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentPlayer\ =\ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[i];}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMove}{Move<T>}}*\ move\ =\ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>get\_move(currentPlayer);}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>update\_board(move))}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move\ =\ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>get\_move(currentPlayer);}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_board\_matrix(\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>get\_board\_matrix());}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>is\_win(currentPlayer))\ \{}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_message(currentPlayer-\/>\mbox{\hyperlink{classPlayer_aed2af19790ba73190e3ebeea589518e1}{get\_name}}()\ +\ \textcolor{stringliteral}{"{}\ wins!"{}});}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>is\_lose(currentPlayer))\ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_message(\mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[1\ -\/\ i]-\/>get\_name()\ +\ \textcolor{stringliteral}{"{}\ wins!"{}});}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>is\_draw(currentPlayer))\ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_message(\textcolor{stringliteral}{"{}Draw!"{}});}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00305\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00251}{Game\+Manager$<$ T $>$\+::board\+Ptr}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00142}{Player$<$ T $>$\+::get\+\_\+name()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00252}{Game\+Manager$<$ T $>$\+::players}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00253}{Game\+Manager$<$ T $>$\+::ui}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00258}{Game\+Manager$<$ T $>$\+::board\+Ptr}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00147}{Player$<$ T $>$\+::get\+\_\+name()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00259}{Game\+Manager$<$ T $>$\+::players}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00260}{Game\+Manager$<$ T $>$\+::ui}}.
 
 
 
@@ -169,11 +169,11 @@ Game board.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00251}{251}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00258}{258}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00270}{Game\+Manager$<$ T $>$\+::run()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00277}{Game\+Manager$<$ T $>$\+::run()}}.
 
 \Hypertarget{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}\label{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd} 
 \index{GameManager$<$ T $>$@{GameManager$<$ T $>$}!players@{players}}
@@ -188,11 +188,11 @@ Two players.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00252}{252}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00259}{259}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00259}{Game\+Manager$<$ T $>$\+::\+Game\+Manager()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00270}{Game\+Manager$<$ T $>$\+::run()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00266}{Game\+Manager$<$ T $>$\+::\+Game\+Manager()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00277}{Game\+Manager$<$ T $>$\+::run()}}.
 
 \Hypertarget{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}\label{classGameManager_a2a3d79a969e0ff1ae529058779039ea9} 
 \index{GameManager$<$ T $>$@{GameManager$<$ T $>$}!ui@{ui}}
@@ -207,11 +207,11 @@ User interface.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00253}{253}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00260}{260}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00270}{Game\+Manager$<$ T $>$\+::run()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00277}{Game\+Manager$<$ T $>$\+::run()}}.
 
 
 

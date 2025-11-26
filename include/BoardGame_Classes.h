@@ -36,6 +36,8 @@ enum class PlayerType {
  * Provides core data (rows, columns, matrix) and virtual methods to be
  * implemented by specific games like Tic-Tac-Toe, Connect4, etc.
  */
+
+
 template <typename T>
 class Board {
 protected:
