@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 4.0)
 project(BoardGameFramework)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -14,6 +14,4 @@ add_executable(BoardGameFramework
         include/Four_Four_XO.h
         src/X_O_5x5.cpp
         include/X_O_5x5.h
-        src/Numerical_X_O.cpp
-        include/Numerical_X_O.h
 )
