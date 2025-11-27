@@ -7,36 +7,38 @@
 using namespace std;
 
 map<char,int> X,O;
-X['1'] = 1;
-X['3'] = 1;
-X['5'] = 1;
-X['7'] = 1;
-X['9'] = 1;
-///////////////
-O['2'] = 1;
-O['4'] = 1;
-O['6'] = 1;
-O['8'] = 1;
+
 Numerical_X_O_Board::Numerical_X_O_Board() : Board(3, 3), counter(0) {
     // Initialize all cells with blank_symbol
     for (auto& row : board)
         for (auto& cell : row)
             cell = blank_symbol;
+
+    for (int i = 1; i<10;i+=2) X[(i+'0')] = 1;
+    for (int i = 2;i<10;i+=2) O[(i+'0')] = 1;
 }
 
+
 bool Numerical_X_O_Board::update_board(Move<char>* move) {
-    int x = move->get_x();
-    int y = move->get_y();
-    int val = move->get_value();
+
+    // Convert Move<char>* → nMove*
+    nMove* nm = dynamic_cast<nMove*>(move);
+    if (!nm) return false;
+
+    int x = nm->get_x();
+    int y = nm->get_y();
+    char val = nm->get_value();
     char mark = move->get_symbol();
 
-    if (!(x < 0 || x >= rows || y < 0 || y >= columns) && (board[x][y] == blank_symbol)) {
 
-        if(mark == 'X' && X[(val+'0')] == 1) {
-            X[(val+'0')] = 2;
+
+    if (!(x < 0 || x >= rows || y < 0 || y >= columns) && (board[x][y] == blank_symbol) ) {
+
+        if(mark == 'X' && X[val] == 1) {
+            X[val] = 2;
         }
-        else if(mark == 'O' && O[(val+'0')] == 1) {
-            O[(val+'0')] == 2;
+        else if(mark == 'O' && O[val] == 1) {
+            O[val] = 2;
         }
         else return false;
         n_moves++;
@@ -89,8 +91,10 @@ Player<char>* Numerical_XO_UI::create_player(string& name, char symbol, PlayerTy
     return new Player<char>(name, symbol, type);
 }
 
+
 Move<char>* Numerical_XO_UI::get_move(Player<char>* player) {
-    int x, y,val;
+    int x, y;
+    char val;
 
     if (player->get_type() == PlayerType::HUMAN) {
         cout << "\nPlease enter your move x and y (0 to 2) and value: ";
@@ -105,14 +109,24 @@ Move<char>* Numerical_XO_UI::get_move(Player<char>* player) {
         int L = 1, R = 9;
         if(player->get_symbol() == 'X') {
             uniform_int_distribution<int> odd_dist(L/2, (R-1)/2);
-            val = odd_dist(gen) * 2 + 1;
+            int num = odd_dist(gen) * 2 + 1;
+            val = (num+'0');
         }
         else {
             uniform_int_distribution<int> even_dist((L+1)/2, R/2);
-            val = even_dist(gen) * 2;
+            int num = even_dist(gen) * 2;
+            val = (num+'0');
         }
 
     }
-    return new nMove<char>(x, y, player->get_symbol(), val);
+
+    /**
+     * @return nmove a derived class from move
+    */
+    return new nMove(x, y, player->get_symbol(), val);
 }
+
+
+
+
 

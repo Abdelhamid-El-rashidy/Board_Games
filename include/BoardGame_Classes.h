@@ -127,6 +127,8 @@ public:
 
     /** @brief Get the move symbol. */
     T get_symbol() const { return symbol; }
+
+    virtual ~Move() {}
 };
 
 //-----------------------------------------------------

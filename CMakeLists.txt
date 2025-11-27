@@ -14,4 +14,6 @@ add_executable(BoardGameFramework
         include/Four_Four_XO.h
         src/X_O_5x5.cpp
         include/X_O_5x5.h
+        include/Numerical_X_O.h
+        src/Numerical_X_O.cpp
 )

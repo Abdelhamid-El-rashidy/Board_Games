@@ -26,37 +26,38 @@ public:
 
 
     bool game_is_over(Player<char>* player);
+
+    virtual ~Numerical_X_O_Board() {}
 };
 
 class Numerical_XO_UI : public UI<char> {
 public:
     Numerical_XO_UI();
-    virtual ~Numerical_XO_UI() {};
 
     Player<char>* create_player(string& name, char symbol, PlayerType type);
 
 
     virtual Move<char>* get_move(Player<char>* player);
 
+    virtual ~Numerical_XO_UI() {}
 };
 
 class nMove : public Move<char> {
 private:
-    int value;
+    char value;
 public:
     /**
      * Constructor to intialize Base Class Move and Derived Class dualMove
      * @param x x-coordinate in grid
      * @param y y-coordinate in grid
      * @param symbol the current player's move symbol
-     * @param hort horizontal change (right,left) 1 or -1
-     * @param vert vertical change (up,down) 1 or -1
+     * @param value the number played by the move
      */
-    nMove(int x, int y, char symbol, int value) : Move<char>(x,y,symbol), value(value) {};
+    nMove(int x, int y, char symbol, char value) : Move<char>(x,y,symbol), value(value) {};
 
-    int get_value() const { return value; }
+    char get_value() const { return value; }
 
-    virtual ~nMove();
+    virtual ~nMove() {}
 
 };
 

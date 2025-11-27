@@ -14,6 +14,7 @@
 
 #include "../include/BoardGame_Classes.h"
 #include "../include/Infinity_XO_Classes.h"
+#include "include/Numerical_X_O.h"
 using namespace std;
 
 /**
@@ -33,7 +34,7 @@ int main() {
     srand(static_cast<unsigned int>(time(0)));  // Seed the random number generator
 
     // Create an instance of the specific UI for X-O using a pointer 
-    UI<char>* game_ui = new Numerical_X_O();
+    UI<char>* game_ui = new Numerical_XO_UI();
 
     // Create the game board. For X-O, this is an X_O_Board.
     Board<char>* xo_board = new Numerical_X_O_Board();
