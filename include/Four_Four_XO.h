@@ -27,7 +27,7 @@ public:
     virtual bool is_win(Player<char>*);
 
     /** @brief Check if a player has lost. */
-    virtual bool is_lose(Player<char>*);
+    virtual bool is_lose(Player<char>*) {return false;};
 
     /** @brief Check if the game ended in a draw. */
     virtual bool is_draw(Player<char>*);
@@ -36,7 +36,7 @@ public:
     virtual bool game_is_over(Player<char>*);
 
     /** Destructor */
-    virtual ~Four_Four_XO_Board();
+    virtual ~Four_Four_XO_Board() {};
 
 };
 
@@ -53,7 +53,7 @@ public:
 class Four_Four_XO_UI : public UI<char> {
 
 public:
-    Four_Four_XO_UI();
+    Four_Four_XO_UI() : UI<char>("Welcome to Four-Four Tic Tac Toe Game",3) {}
     /**
      * @brief Retrieves the next move from a player.
      * @param player Pointer to the player whose move is being requested.
@@ -61,7 +61,7 @@ public:
      */
     virtual Move<char>* get_move(Player<char>* player);
 
-    virtual ~Four_Four_XO_UI();
+    virtual ~Four_Four_XO_UI() {};
 
 };
 
@@ -77,29 +77,29 @@ public:
  */
 class dualMove : public Move<char> {
 private:
-    int horizontal;
-    int vertical;
+    int dx;
+    int dy;
 public:
     /**
      * Constructor to intialize Base Class Move and Derived Class dualMove
      * @param x x-coordinate in grid
      * @param y y-coordinate in grid
      * @param symbol the current player's move symbol
-     * @param hort horizontal change (right,left) 1 or -1
-     * @param vert vertical change (up,down) 1 or -1
+     * @param dy horizontal change (right,left) 1 or -1
+     * @param dx vertical change (up,down) 1 or -1
      */
-    dualMove(int x, int y, char symbol, int hort, int vert) : Move<char>(x,y,symbol), horizontal(hort), vertical(vert) {};
+    dualMove(int x, int y, char symbol, int dy, int dx) : Move<char>(x,y,symbol), dy(dy), dx(dx) {};
 
     /**
      * @return The horizontal change
      */
-    int get_horizontal() const;
+    int get_dy() const {return dy;};
     /**
      * @return The vertical change
      */
-    int get_vertical() const;
+    int get_dx() const {return dx;};
 
-    virtual ~dualMove();
+    virtual ~dualMove() {};
 
 };
 
