@@ -33,10 +33,10 @@ int main() {
     srand(static_cast<unsigned int>(time(0)));  // Seed the random number generator
 
     // Create an instance of the specific UI for X-O using a pointer 
-    UI<char>* game_ui = new Infinit_XO_UI();
+    UI<char>* game_ui = new Numerical_X_O();
 
     // Create the game board. For X-O, this is an X_O_Board.
-    Board<char>* xo_board = new Infinity_X_O_Board();
+    Board<char>* xo_board = new Numerical_X_O_Board();
 
     // Use the UI to set up the players for the game.
     // The UI returns a dynamically allocated array of Player pointers.
