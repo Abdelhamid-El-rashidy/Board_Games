@@ -18,4 +18,6 @@ add_executable(BoardGameFramework
         src/Numerical_X_O.cpp
         include/SUS_Classes.h
         src/SUS_Classes.cpp
+        include/Misere_Tic_Tac_Toe.h
+        src/Misere_Tic_Tac_Toe.cpp
 )
