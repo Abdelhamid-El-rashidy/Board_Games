@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['move_2',['move',['../classMove.html',1,'Move&lt; T &gt;'],['../classMove.html#a100102cb072a2857304023233dac7b42',1,'Move::Move()']]]
+  ['last_5fmoves_0',['last_moves',['../classInfinity__X__O__Board.html#adc319d75cefb84cecb4ed5691edb7cdc',1,'Infinity_X_O_Board']]]
 ];

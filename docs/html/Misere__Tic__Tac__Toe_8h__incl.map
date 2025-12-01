@@ -1,0 +1,15 @@
+<map id="include/Misere_Tic_Tac_Toe.h" name="include/Misere_Tic_Tac_Toe.h">
+<area shape="rect" id="Node000001" title="Defines the X&#45;O (Tic&#45;Tac&#45;Toe) specific classes that extend the generic board game framework." alt="" coords="71,5,213,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,116,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,47,85,85,81,82,120,44"/>
+<area shape="rect" id="Node000003" href="$BoardGame__Classes_8h.html" title=" " alt="" coords="141,93,309,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,44,204,82,201,86,160,47"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="62,167,121,192"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="204,121,126,162,124,158,202,116"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="145,167,208,192"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="219,121,194,157,190,154,215,118"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="233,167,313,192"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="235,118,260,154,255,157,230,121"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="337,167,411,192"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="250,116,338,158,336,163,248,121"/>
+</map>

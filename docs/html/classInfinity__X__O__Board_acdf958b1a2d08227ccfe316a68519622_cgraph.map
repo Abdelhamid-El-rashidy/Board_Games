@@ -1,9 +1,5 @@
 <map id="Infinity_X_O_Board::update_board" name="Infinity_X_O_Board::update_board">
-<area shape="rect" id="Node000001" title="Updates the board with a player&#39;s move." alt="" coords="5,47,151,87"/>
-<area shape="rect" id="Node000002" href="$classMove.html#a595bf740852c05a1cb425ef2640fd4ff" title="Get the move symbol." alt="" coords="199,5,341,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,46,206,32,207,37,152,51"/>
-<area shape="rect" id="Node000003" href="$classMove.html#a9d4f543a81e361f872d37bcfb64d5b55" title="Get row index." alt="" coords="219,55,321,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,65,205,65,205,70,151,70"/>
-<area shape="rect" id="Node000004" href="$classMove.html#a96469802a55c9083a1e93c7edec8a00c" title="Get column index." alt="" coords="219,104,321,129"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,83,207,98,206,103,150,89"/>
+<area shape="rect" id="Node000001" title="Updates the board with a player&#39;s move." alt="" coords="5,5,151,45"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="199,13,345,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,23,185,23,185,28,151,28"/>
 </map>

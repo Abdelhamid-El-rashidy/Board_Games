@@ -1,0 +1,135 @@
+\doxysection{Numerical\+\_\+\+X\+\_\+\+O.\+cpp}
+\hypertarget{Numerical__X__O_8cpp_source}{}\label{Numerical__X__O_8cpp_source}\index{src/Numerical\_X\_O.cpp@{src/Numerical\_X\_O.cpp}}
+\mbox{\hyperlink{Numerical__X__O_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <cctype>}\ \ \textcolor{comment}{//\ for\ toupper()}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}../include/Numerical\_X\_O.h"{}}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <bits/stdc++.h>}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00007}00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00009}\mbox{\hyperlink{Numerical__X__O_8cpp_abebb09ed97a80220fe966adc1c134570}{00009}}\ \mbox{\hyperlink{classPlayer}{map<char,int>}}\ \mbox{\hyperlink{Numerical__X__O_8cpp_aa7d67912fa10fd50fc91ce1913798e84}{X}},\mbox{\hyperlink{Numerical__X__O_8cpp_abebb09ed97a80220fe966adc1c134570}{O}};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00011}\mbox{\hyperlink{classNumerical__X__O__Board_a084939543c4cf8a896a93da9cd7975eb}{00011}}\ \mbox{\hyperlink{classNumerical__X__O__Board_a084939543c4cf8a896a93da9cd7975eb}{Numerical\_X\_O\_Board::Numerical\_X\_O\_Board}}()\ :\ \mbox{\hyperlink{classBoard}{Board}}(3,\ 3),\ counter(0)\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{comment}{//\ Initialize\ all\ cells\ with\ blank\_symbol}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classPlayer}{row}}\ :\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classPlayer}{cell}}\ :\ \mbox{\hyperlink{classPlayer}{row}})}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cell}}\ =\ \mbox{\hyperlink{classNumerical__X__O__Board_a47b9d4d7f5db136fd213b9743800ba12}{blank\_symbol}};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 1;\ \mbox{\hyperlink{classPlayer}{i}}<10;\mbox{\hyperlink{classPlayer}{i}}+=2)\ \mbox{\hyperlink{Numerical__X__O_8cpp_aa7d67912fa10fd50fc91ce1913798e84}{X}}[(\mbox{\hyperlink{classPlayer}{i}}+\textcolor{charliteral}{'0'})]\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 2;\mbox{\hyperlink{classPlayer}{i}}<10;\mbox{\hyperlink{classPlayer}{i}}+=2)\ \mbox{\hyperlink{Numerical__X__O_8cpp_abebb09ed97a80220fe966adc1c134570}{O}}[(\mbox{\hyperlink{classPlayer}{i}}+\textcolor{charliteral}{'0'})]\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00022}\mbox{\hyperlink{classNumerical__X__O__Board_ae4bed90db4f9d8308c3b4e7e0db8a5d4}{00022}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classNumerical__X__O__Board_ae4bed90db4f9d8308c3b4e7e0db8a5d4}{Numerical\_X\_O\_Board::update\_board}}(\mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classPlayer}{move}})\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//\ Convert\ Move<char>*\ →\ nMove*}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{classnMove}{nMove}}*\ \mbox{\hyperlink{classPlayer}{nm}}\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classnMove}{nMove}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classPlayer}{move}});}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classPlayer}{nm}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ \mbox{\hyperlink{classPlayer}{nm}}-\/>get\_x();}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ \mbox{\hyperlink{classPlayer}{nm}}-\/>get\_y();}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{val}}\ =\ \mbox{\hyperlink{classPlayer}{nm}}-\/>get\_value();}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{mark}}\ =\ \mbox{\hyperlink{classPlayer}{move}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(\mbox{\hyperlink{classPlayer}{x\ <\ 0\ ||\ x\ >}}=\ \mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ \mbox{\hyperlink{classPlayer}{y\ <\ 0\ ||\ y\ >}}=\ \mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \&\&\ (\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ ==\ \mbox{\hyperlink{classNumerical__X__O__Board_a47b9d4d7f5db136fd213b9743800ba12}{blank\_symbol}})\ )\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classPlayer}{mark}}\ ==\ \textcolor{charliteral}{'X'}\ \&\&\ \mbox{\hyperlink{Numerical__X__O_8cpp_aa7d67912fa10fd50fc91ce1913798e84}{X}}[\mbox{\hyperlink{classPlayer}{val}}]\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Numerical__X__O_8cpp_aa7d67912fa10fd50fc91ce1913798e84}{X}}[\mbox{\hyperlink{classPlayer}{val}}]\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classPlayer}{mark}}\ ==\ \textcolor{charliteral}{'O'}\ \&\&\ \mbox{\hyperlink{Numerical__X__O_8cpp_abebb09ed97a80220fe966adc1c134570}{O}}[\mbox{\hyperlink{classPlayer}{val}}]\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Numerical__X__O_8cpp_abebb09ed97a80220fe966adc1c134570}{O}}[\mbox{\hyperlink{classPlayer}{val}}]\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoard_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ \mbox{\hyperlink{classPlayer}{val}};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNumerical__X__O__Board_a4dd943f0c221722e287409470b882c5d}{counter}}++;}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00050}00050\ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00052}\mbox{\hyperlink{classNumerical__X__O__Board_a0940816900ed8bf06b0cd49d70b443fd}{00052}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classNumerical__X__O__Board_a0940816900ed8bf06b0cd49d70b443fd}{Numerical\_X\_O\_Board::is\_win}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}})\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{sym}}\ =\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{all\_equal}}\ =\ [\&](\textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{a}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{c}})\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classPlayer}{a}}-\/\textcolor{charliteral}{'0'})+(\mbox{\hyperlink{classPlayer}{b}}-\/\textcolor{charliteral}{'0'})+(\mbox{\hyperlink{classPlayer}{c}}-\/\textcolor{charliteral}{'0'})\ ==\ 15;}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ Check\ rows\ and\ columns}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ \mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++\mbox{\hyperlink{classPlayer}{i}})\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classPlayer}{all\_equal}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][0],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][2]))\ ||}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classPlayer}{all\_equal}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][\mbox{\hyperlink{classPlayer}{i}}],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][\mbox{\hyperlink{classPlayer}{i}}],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][\mbox{\hyperlink{classPlayer}{i}}])))}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//\ Check\ diagonals}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classPlayer}{all\_equal}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][0],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][2]))\ ||}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classPlayer}{all\_equal}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][2],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][0])))}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00072}00072\ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00074}\mbox{\hyperlink{classNumerical__X__O__Board_a2d3ee20a3d8e9b2e001649ce85d3a515}{00074}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classNumerical__X__O__Board_a2d3ee20a3d8e9b2e001649ce85d3a515}{Numerical\_X\_O\_Board::is\_draw}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}})\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classBoard_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 9\ \&\&\ !\mbox{\hyperlink{classNumerical__X__O__Board_a0940816900ed8bf06b0cd49d70b443fd}{is\_win}}(\mbox{\hyperlink{classPlayer}{player}}));}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00078}\mbox{\hyperlink{classNumerical__X__O__Board_a4dbd494c6fca2beea04c4180d3d322e9}{00078}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classNumerical__X__O__Board_a4dbd494c6fca2beea04c4180d3d322e9}{Numerical\_X\_O\_Board::game\_is\_over}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}})\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classNumerical__X__O__Board_a0940816900ed8bf06b0cd49d70b443fd}{is\_win}}(\mbox{\hyperlink{classPlayer}{player}})\ ||\ \mbox{\hyperlink{classNumerical__X__O__Board_a2d3ee20a3d8e9b2e001649ce85d3a515}{is\_draw}}(\mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00082}00082\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ XO\_UI\ Implementation}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00084}\mbox{\hyperlink{classNumerical__XO__UI_a952961ac98f71c317b1f093f5c53a43d}{00084}}\ \mbox{\hyperlink{classNumerical__XO__UI_a952961ac98f71c317b1f093f5c53a43d}{Numerical\_XO\_UI::Numerical\_XO\_UI}}()\ :\ \mbox{\hyperlink{classUI}{UI}}<\mbox{\hyperlink{classPlayer}{char}}>(\textcolor{stringliteral}{"{}Weclome\ to\ FCAI\ X-\/O\ Game"{}},\ 3)\ \{\}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00086}\mbox{\hyperlink{classNumerical__XO__UI_ad76a74171761d4b8e47dbb0dd573adce}{00086}}\ \mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classNumerical__XO__UI_ad76a74171761d4b8e47dbb0dd573adce}{Numerical\_XO\_UI::create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type)\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00087}00087\ \ \ \ \ \textcolor{comment}{//\ Create\ player\ based\ on\ type}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00088}00088\ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Creating\ "{}}\ <<\ (type\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}human"{}}\ :\ \textcolor{stringliteral}{"{}computer"{}})}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ symbol\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Player<char>}}(name,\ symbol,\ type);}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00095}\mbox{\hyperlink{classNumerical__XO__UI_af6296ae59c604456f531f4e996e99467}{00095}}\ \mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classNumerical__XO__UI_af6296ae59c604456f531f4e996e99467}{Numerical\_XO\_UI::get\_move}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}})\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00096}00096\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00097}00097\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{val}};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00099}00099\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPlease\ enter\ your\ move\ x\ and\ y\ (0\ to\ 2)\ and\ value:\ "{}};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ x\ >>\ y\ >>\ \mbox{\hyperlink{classPlayer}{val}};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00102}00102\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00103}00103\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ x\ =\ \mbox{\hyperlink{classPlayer}{rand}}()\ \%\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}()-\/>get\_rows();}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ y\ =\ \mbox{\hyperlink{classPlayer}{rand}}()\ \%\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}()-\/>get\_columns();}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{random\_device}}\ \mbox{\hyperlink{classPlayer}{rd}};}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{mt19937}}\ \mbox{\hyperlink{classPlayer}{gen}}(\mbox{\hyperlink{classPlayer}{rd}}());}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{L}}\ =\ 1,\ \mbox{\hyperlink{classPlayer}{R}}\ =\ 9;}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}()\ ==\ \textcolor{charliteral}{'X'})\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{uniform\_int\_distribution<int>}}\ \mbox{\hyperlink{classPlayer}{odd\_dist}}(\mbox{\hyperlink{classPlayer}{L}}/2,\ (\mbox{\hyperlink{classPlayer}{R}}-\/1)/2);}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{num}}\ =\ \mbox{\hyperlink{classPlayer}{odd\_dist}}(\mbox{\hyperlink{classPlayer}{gen}})\ *\ 2\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{val}}\ =\ (\mbox{\hyperlink{classPlayer}{num}}+\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{uniform\_int\_distribution<int>}}\ \mbox{\hyperlink{classPlayer}{even\_dist}}((\mbox{\hyperlink{classPlayer}{L}}+1)/2,\ \mbox{\hyperlink{classPlayer}{R}}/2);}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{num}}\ =\ \mbox{\hyperlink{classPlayer}{even\_dist}}(\mbox{\hyperlink{classPlayer}{gen}})\ *\ 2;}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{val}}\ =\ (\mbox{\hyperlink{classPlayer}{num}}+\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00126}00126\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classnMove}{nMove}}(x,\ y,\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}(),\ \mbox{\hyperlink{classPlayer}{val}});}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00127}00127\ \}}
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{Numerical__X__O_8cpp_source_l00132}00132\ }
+
+\end{DoxyCode}

@@ -1,0 +1,9 @@
+<map id="X_O_5x5_Board::game_is_over" name="X_O_5x5_Board::game_is_over">
+<area shape="rect" id="Node000001" title="Check if the game is over." alt="" coords="5,23,175,63"/>
+<area shape="rect" id="Node000002" href="$classX__O__5x5__Board.html#af71219aef79883d9aab1fb4c7b5b3f87" title="Check if the game ended in a draw." alt="" coords="223,5,405,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,31,209,27,210,32,175,36"/>
+<area shape="rect" id="Node000003" href="$classX__O__5x5__Board.html#a90eeba3a2b960065c81ab50b08997da5" title="Check if a player has won." alt="" coords="227,55,401,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,50,214,54,213,59,175,55"/>
+<area shape="rect" id="Node000004" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="453,55,600,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="401,65,439,65,439,70,401,70"/>
+</map>

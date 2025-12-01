@@ -1,0 +1,148 @@
+\doxysection{n\+Move Class Reference}
+\hypertarget{classnMove}{}\label{classnMove}\index{nMove@{nMove}}
+
+
+{\ttfamily \#include $<$Numerical\+\_\+\+X\+\_\+\+O.\+h$>$}
+
+
+
+Inheritance diagram for n\+Move\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classnMove__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for n\+Move\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classnMove__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnMove_ac6bfc58db3bd058879c8bfde1eeabfd0}{n\+Move}} (\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a5f399fb722305d3061e0f6f2438e5390}{x}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_abe58a4df9d3e121d06a3b2d1815f012e}{y}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classMove_a0bec25acdce91feab1b4c21c26505088}{symbol}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classnMove_ac96470e0f53c012ca688a37a7b66166b}{value}})
+\item 
+\mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classnMove_a91068775705d5f5c82db7b6bef2d861c}{get\+\_\+value}} () \mbox{\hyperlink{classPlayer}{const}}
+\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classnMove_a09a40d42a1128e2dd5cf7c6d2836f8e1}{\texorpdfstring{$\sim$}{\string~}n\+Move}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMove}{Move$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMove_a100102cb072a2857304023233dac7b42}{Move}} (\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a5f399fb722305d3061e0f6f2438e5390}{x}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_abe58a4df9d3e121d06a3b2d1815f012e}{y}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classMove_a0bec25acdce91feab1b4c21c26505088}{symbol}})
+\begin{DoxyCompactList}\small\item\em Construct a move at (x, y) using a symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a9d4f543a81e361f872d37bcfb64d5b55}{get\+\_\+x}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get row index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a96469802a55c9083a1e93c7edec8a00c}{get\+\_\+y}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get column index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classMove_a595bf740852c05a1cb425ef2640fd4ff}{get\+\_\+symbol}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get the move symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classMove_a8dd9eeed1b7e22daadd790dd60e743da}{\texorpdfstring{$\sim$}{\string~}\+Move}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classnMove_ac96470e0f53c012ca688a37a7b66166b}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Numerical__X__O_8h_source_l00045}{45}} of file \mbox{\hyperlink{Numerical__X__O_8h_source}{Numerical\+\_\+\+X\+\_\+\+O.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnMove_ac6bfc58db3bd058879c8bfde1eeabfd0}\label{classnMove_ac6bfc58db3bd058879c8bfde1eeabfd0} 
+\index{nMove@{nMove}!nMove@{nMove}}
+\index{nMove@{nMove}!nMove@{nMove}}
+\doxysubsubsection{\texorpdfstring{nMove()}{nMove()}}
+{\footnotesize\ttfamily n\+Move\+::n\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{int}}}]{x,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{y,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{symbol,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor to intialize Base Class \doxylink{classMove}{Move} and Derived Class \doxylink{classdualMove}{dual\+Move} 
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate in grid \\
+\hline
+{\em y} & y-\/coordinate in grid \\
+\hline
+{\em symbol} & the current player\textquotesingle{}s move symbol \\
+\hline
+{\em value} & the number played by the move \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Numerical__X__O_8h_source_l00056}{56}} of file \mbox{\hyperlink{Numerical__X__O_8h_source}{Numerical\+\_\+\+X\+\_\+\+O.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ :\ \mbox{\hyperlink{classPlayer}{Move<char>}}(\mbox{\hyperlink{classMove_a5f399fb722305d3061e0f6f2438e5390}{x}},\mbox{\hyperlink{classMove_abe58a4df9d3e121d06a3b2d1815f012e}{y}},\mbox{\hyperlink{classMove_a0bec25acdce91feab1b4c21c26505088}{symbol}}),\ \mbox{\hyperlink{classnMove_ac96470e0f53c012ca688a37a7b66166b}{value}}(\mbox{\hyperlink{classnMove_ac96470e0f53c012ca688a37a7b66166b}{value}})\ \{\};}
+
+\end{DoxyCode}
+\Hypertarget{classnMove_a09a40d42a1128e2dd5cf7c6d2836f8e1}\label{classnMove_a09a40d42a1128e2dd5cf7c6d2836f8e1} 
+\index{nMove@{nMove}!````~nMove@{\texorpdfstring{$\sim$}{\string~}nMove}}
+\index{````~nMove@{\texorpdfstring{$\sim$}{\string~}nMove}!nMove@{nMove}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}nMove()}{\string~nMove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{virtual}} n\+Move\+::\texorpdfstring{$\sim$}{\string~}n\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{Numerical__X__O_8h_source_l00060}{60}} of file \mbox{\hyperlink{Numerical__X__O_8h_source}{Numerical\+\_\+\+X\+\_\+\+O.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnMove_a91068775705d5f5c82db7b6bef2d861c}\label{classnMove_a91068775705d5f5c82db7b6bef2d861c} 
+\index{nMove@{nMove}!get\_value@{get\_value}}
+\index{get\_value@{get\_value}!nMove@{nMove}}
+\doxysubsubsection{\texorpdfstring{get\_value()}{get\_value()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{char}} n\+Move\+::get\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{Numerical__X__O_8h_source_l00058}{58}} of file \mbox{\hyperlink{Numerical__X__O_8h_source}{Numerical\+\_\+\+X\+\_\+\+O.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classnMove_ac96470e0f53c012ca688a37a7b66166b}{value}};\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Numerical__X__O_8h_source_l00047}{value}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnMove_ac96470e0f53c012ca688a37a7b66166b}\label{classnMove_ac96470e0f53c012ca688a37a7b66166b} 
+\index{nMove@{nMove}!value@{value}}
+\index{value@{value}!nMove@{nMove}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{char}} n\+Move\+::value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Numerical__X__O_8h_source_l00047}{47}} of file \mbox{\hyperlink{Numerical__X__O_8h_source}{Numerical\+\_\+\+X\+\_\+\+O.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{Numerical__X__O_8h_source_l00058}{get\+\_\+value()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Numerical__X__O_8h}{Numerical\+\_\+\+X\+\_\+\+O.\+h}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ui_0',['ui',['../classGameManager.html#a2a3d79a969e0ff1ae529058779039ea9',1,'GameManager']]]
+  ['symbol_0',['symbol',['../classMove.html#a0bec25acdce91feab1b4c21c26505088',1,'Move::symbol'],['../classPlayer.html#a272d6c4dab769930d4f8074918e7708a',1,'Player::symbol']]]
 ];

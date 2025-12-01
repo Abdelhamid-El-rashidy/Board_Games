@@ -1,0 +1,205 @@
+\doxysection{dual\+Move Class Reference}
+\hypertarget{classdualMove}{}\label{classdualMove}\index{dualMove@{dualMove}}
+
+
+Customized move that changed symbol position in board.  
+
+
+
+
+{\ttfamily \#include $<$Four\+\_\+\+Four\+\_\+\+XO.\+h$>$}
+
+
+
+Inheritance diagram for dual\+Move\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classdualMove__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for dual\+Move\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classdualMove__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdualMove_a09c8db4c9eaf472e314f73a2bfc4bbb5}{dual\+Move}} (\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a5f399fb722305d3061e0f6f2438e5390}{x}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_abe58a4df9d3e121d06a3b2d1815f012e}{y}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classMove_a0bec25acdce91feab1b4c21c26505088}{symbol}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classdualMove_a56922cc7ba30a0a219e067b5c8ee4e48}{dy}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classdualMove_a0f0d9e86af81cdfc9a5b329ac6a31c3c}{dx}})
+\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classdualMove_a7a5eecff95eabe9afbda3e7d3ef2f9dc}{get\+\_\+dy}} () \mbox{\hyperlink{classPlayer}{const}}
+\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classdualMove_abd1f9878bd9ff0972ef21a21728ddcd9}{get\+\_\+dx}} () \mbox{\hyperlink{classPlayer}{const}}
+\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classdualMove_adf6e139065f5f0cd6deb7811e5e57b24}{\texorpdfstring{$\sim$}{\string~}dual\+Move}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMove}{Move$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMove_a100102cb072a2857304023233dac7b42}{Move}} (\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a5f399fb722305d3061e0f6f2438e5390}{x}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_abe58a4df9d3e121d06a3b2d1815f012e}{y}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classMove_a0bec25acdce91feab1b4c21c26505088}{symbol}})
+\begin{DoxyCompactList}\small\item\em Construct a move at (x, y) using a symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a9d4f543a81e361f872d37bcfb64d5b55}{get\+\_\+x}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get row index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a96469802a55c9083a1e93c7edec8a00c}{get\+\_\+y}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get column index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classMove_a595bf740852c05a1cb425ef2640fd4ff}{get\+\_\+symbol}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get the move symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classMove_a8dd9eeed1b7e22daadd790dd60e743da}{\texorpdfstring{$\sim$}{\string~}\+Move}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classdualMove_a0f0d9e86af81cdfc9a5b329ac6a31c3c}{dx}}
+\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classdualMove_a56922cc7ba30a0a219e067b5c8ee4e48}{dy}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Customized move that changed symbol position in board. 
+
+Inherits from the generic {\ttfamily \doxylink{classMove}{Move}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} base class and provides specific functionality for move.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{classUI}{UI} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{Four__Four__XO_8h_source_l00078}{78}} of file \mbox{\hyperlink{Four__Four__XO_8h_source}{Four\+\_\+\+Four\+\_\+\+XO.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classdualMove_a09c8db4c9eaf472e314f73a2bfc4bbb5}\label{classdualMove_a09c8db4c9eaf472e314f73a2bfc4bbb5} 
+\index{dualMove@{dualMove}!dualMove@{dualMove}}
+\index{dualMove@{dualMove}!dualMove@{dualMove}}
+\doxysubsubsection{\texorpdfstring{dualMove()}{dualMove()}}
+{\footnotesize\ttfamily dual\+Move\+::dual\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{int}}}]{x,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{y,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{symbol,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{dy,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{dx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor to intialize Base Class \doxylink{classMove}{Move} and Derived Class \doxylink{classdualMove}{dual\+Move} 
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate in grid \\
+\hline
+{\em y} & y-\/coordinate in grid \\
+\hline
+{\em symbol} & the current player\textquotesingle{}s move symbol \\
+\hline
+{\em dy} & horizontal change (right,left) 1 or -\/1 \\
+\hline
+{\em dx} & vertical change (up,down) 1 or -\/1 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Four__Four__XO_8h_source_l00091}{91}} of file \mbox{\hyperlink{Four__Four__XO_8h_source}{Four\+\_\+\+Four\+\_\+\+XO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ :\ \mbox{\hyperlink{classPlayer}{Move<char>}}(\mbox{\hyperlink{classMove_a5f399fb722305d3061e0f6f2438e5390}{x}},\mbox{\hyperlink{classMove_abe58a4df9d3e121d06a3b2d1815f012e}{y}},\mbox{\hyperlink{classMove_a0bec25acdce91feab1b4c21c26505088}{symbol}}),\ \mbox{\hyperlink{classdualMove_a56922cc7ba30a0a219e067b5c8ee4e48}{dy}}(\mbox{\hyperlink{classdualMove_a56922cc7ba30a0a219e067b5c8ee4e48}{dy}}),\ \mbox{\hyperlink{classdualMove_a0f0d9e86af81cdfc9a5b329ac6a31c3c}{dx}}(\mbox{\hyperlink{classdualMove_a0f0d9e86af81cdfc9a5b329ac6a31c3c}{dx}})\ \{\};}
+
+\end{DoxyCode}
+\Hypertarget{classdualMove_adf6e139065f5f0cd6deb7811e5e57b24}\label{classdualMove_adf6e139065f5f0cd6deb7811e5e57b24} 
+\index{dualMove@{dualMove}!````~dualMove@{\texorpdfstring{$\sim$}{\string~}dualMove}}
+\index{````~dualMove@{\texorpdfstring{$\sim$}{\string~}dualMove}!dualMove@{dualMove}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}dualMove()}{\string~dualMove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{virtual}} dual\+Move\+::\texorpdfstring{$\sim$}{\string~}dual\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{Four__Four__XO_8h_source_l00102}{102}} of file \mbox{\hyperlink{Four__Four__XO_8h_source}{Four\+\_\+\+Four\+\_\+\+XO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102\ \{\};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdualMove_abd1f9878bd9ff0972ef21a21728ddcd9}\label{classdualMove_abd1f9878bd9ff0972ef21a21728ddcd9} 
+\index{dualMove@{dualMove}!get\_dx@{get\_dx}}
+\index{get\_dx@{get\_dx}!dualMove@{dualMove}}
+\doxysubsubsection{\texorpdfstring{get\_dx()}{get\_dx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{int}} dual\+Move\+::get\+\_\+dx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The vertical change 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Four__Four__XO_8h_source_l00100}{100}} of file \mbox{\hyperlink{Four__Four__XO_8h_source}{Four\+\_\+\+Four\+\_\+\+XO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classdualMove_a0f0d9e86af81cdfc9a5b329ac6a31c3c}{dx}};\};}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Four__Four__XO_8h_source_l00080}{dx}}.
+
+\Hypertarget{classdualMove_a7a5eecff95eabe9afbda3e7d3ef2f9dc}\label{classdualMove_a7a5eecff95eabe9afbda3e7d3ef2f9dc} 
+\index{dualMove@{dualMove}!get\_dy@{get\_dy}}
+\index{get\_dy@{get\_dy}!dualMove@{dualMove}}
+\doxysubsubsection{\texorpdfstring{get\_dy()}{get\_dy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{int}} dual\+Move\+::get\+\_\+dy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The horizontal change 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Four__Four__XO_8h_source_l00096}{96}} of file \mbox{\hyperlink{Four__Four__XO_8h_source}{Four\+\_\+\+Four\+\_\+\+XO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classdualMove_a56922cc7ba30a0a219e067b5c8ee4e48}{dy}};\};}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Four__Four__XO_8h_source_l00081}{dy}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classdualMove_a0f0d9e86af81cdfc9a5b329ac6a31c3c}\label{classdualMove_a0f0d9e86af81cdfc9a5b329ac6a31c3c} 
+\index{dualMove@{dualMove}!dx@{dx}}
+\index{dx@{dx}!dualMove@{dualMove}}
+\doxysubsubsection{\texorpdfstring{dx}{dx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{int}} dual\+Move\+::dx\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Four__Four__XO_8h_source_l00080}{80}} of file \mbox{\hyperlink{Four__Four__XO_8h_source}{Four\+\_\+\+Four\+\_\+\+XO.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{Four__Four__XO_8h_source_l00100}{get\+\_\+dx()}}.
+
+\Hypertarget{classdualMove_a56922cc7ba30a0a219e067b5c8ee4e48}\label{classdualMove_a56922cc7ba30a0a219e067b5c8ee4e48} 
+\index{dualMove@{dualMove}!dy@{dy}}
+\index{dy@{dy}!dualMove@{dualMove}}
+\doxysubsubsection{\texorpdfstring{dy}{dy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{int}} dual\+Move\+::dy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Four__Four__XO_8h_source_l00081}{81}} of file \mbox{\hyperlink{Four__Four__XO_8h_source}{Four\+\_\+\+Four\+\_\+\+XO.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{Four__Four__XO_8h_source_l00096}{get\+\_\+dy()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Four__Four__XO_8h}{Four\+\_\+\+Four\+\_\+\+XO.\+h}}\end{DoxyCompactItemize}

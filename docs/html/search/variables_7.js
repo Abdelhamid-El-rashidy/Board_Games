@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type_0',['type',['../classPlayer.html#a81a15b1b507fd5f2157fb15bf0fd283f',1,'Player']]]
+  ['rows_0',['rows',['../classBoard.html#a948d978e3b5fc460559b588f5dee9572',1,'Board']]]
 ];

@@ -1,3 +1,17 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classUI.html" title="Base class for handling user interface and input/output." alt="" coords="5,5,80,31"/>
+<area shape="rect" id="Node000000" href="$classUI.html" title=" " alt="" coords="5,153,100,179"/>
+<area shape="rect" id="Node000001" href="$classFour__Four__XO__UI.html" title="User Interface class for 4*4 XO Tic Tac Toe Game." alt="" coords="168,5,299,31"/>
+<area shape="poly" id="edge10_Node000000_Node000001" title=" " alt="" coords="64,140,97,89,120,63,147,40,169,28,171,33,149,44,123,66,101,92,69,143"/>
+<area shape="rect" id="Node000002" href="$classInfinit__XO__UI.html" title="User Interface class for the X&#45;O (Tic&#45;Tac&#45;Toe) game." alt="" coords="181,55,286,80"/>
+<area shape="poly" id="edge11_Node000000_Node000002" title=" " alt="" coords="75,141,108,114,147,89,180,76,182,81,149,94,111,119,79,146"/>
+<area shape="rect" id="Node000003" href="$classMisere__Tic__Tac__Toe__UI.html" title="User Interface class for the Misere (Tic&#45;Tac&#45;Toe) game." alt="" coords="148,104,319,129"/>
+<area shape="poly" id="edge12_Node000000_Node000003" title=" " alt="" coords="113,147,185,127,186,132,114,152"/>
+<area shape="rect" id="Node000004" href="$classNumerical__XO__UI.html" title=" " alt="" coords="166,153,301,179"/>
+<area shape="poly" id="edge13_Node000000_Node000004" title=" " alt="" coords="114,163,166,163,166,169,114,169"/>
+<area shape="rect" id="Node000005" href="$classPyramid__XO__UI.html" title=" " alt="" coords="172,203,295,228"/>
+<area shape="poly" id="edge14_Node000000_Node000005" title=" " alt="" coords="114,180,186,200,185,205,113,185"/>
+<area shape="rect" id="Node000006" href="$classSUS__UI.html" title=" " alt="" coords="199,252,268,277"/>
+<area shape="poly" id="edge15_Node000000_Node000006" title=" " alt="" coords="79,186,111,213,149,237,200,255,198,260,147,242,108,217,76,191"/>
+<area shape="rect" id="Node000007" href="$classX__O__5x5__UI.html" title=" " alt="" coords="183,301,283,327"/>
+<area shape="poly" id="edge16_Node000000_Node000007" title=" " alt="" coords="69,189,101,239,124,265,149,286,184,302,182,307,147,291,120,268,97,242,64,192"/>
 </map>

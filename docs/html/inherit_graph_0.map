@@ -1,5 +1,17 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classBoard.html" title=" " alt="" coords="5,5,124,31"/>
-<area shape="rect" id="Node000001" href="$classInfinity__X__O__Board.html" title="Represents the Tic&#45;Tac&#45;Toe game board." alt="" coords="172,5,317,31"/>
-<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="137,15,172,15,172,21,137,21"/>
+<area shape="rect" id="Node000000" href="$classBoard.html" title=" " alt="" coords="5,169,124,195"/>
+<area shape="rect" id="Node000001" href="$classFour__Four__XO__Board.html" title="Represent the 4*4 XO Tic Tac Toe Game." alt="" coords="178,5,333,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="76,156,113,97,140,66,171,40,192,28,195,33,173,44,143,70,117,101,81,158"/>
+<area shape="rect" id="Node000002" href="$classInfinity__X__O__Board.html" title="Represents the Tic&#45;Tac&#45;Toe game board." alt="" coords="183,55,328,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="85,158,123,123,171,90,200,78,203,83,173,95,127,127,89,162"/>
+<area shape="rect" id="Node000003" href="$classMisere__Tic__Tac__Toe__board.html" title="Represents the Tic&#45;Tac&#45;Toe game board." alt="" coords="181,105,330,145"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="120,163,188,142,189,147,122,168"/>
+<area shape="rect" id="Node000004" href="$classNumerical__X__O__Board.html" title=" " alt="" coords="172,169,339,195"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="138,179,172,179,172,185,138,185"/>
+<area shape="rect" id="Node000005" href="$classPyramid__XO__Board.html" title=" " alt="" coords="182,219,329,244"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="128,196,206,216,204,221,127,201"/>
+<area shape="rect" id="Node000006" href="$classSUS__Board.html" title=" " alt="" coords="209,268,302,293"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="94,201,130,228,173,253,209,267,207,272,171,258,127,232,91,206"/>
+<area shape="rect" id="Node000007" href="$classX__O__5x5__Board.html" title=" " alt="" coords="193,317,317,343"/>
+<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="83,205,120,254,145,280,173,302,199,315,197,320,171,307,142,284,116,258,79,208"/>
 </map>

@@ -1,0 +1,8 @@
+<map id="Misere_Tic_Tac_Toe_board::is_lose" name="Misere_Tic_Tac_Toe_board::is_lose">
+<area shape="rect" id="Node000001" title="Checks if the given player has lost the game." alt="" coords="416,5,565,45"/>
+<area shape="rect" id="Node000002" href="$classMisere__Tic__Tac__Toe__board.html#ada7bdaa8066378a91d22134d2b931343" title="Determines if the game is over (win or draw)." alt="" coords="5,5,171,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="402,25,368,24,219,24,171,25,171,20,219,19,368,19,402,19"/>
+<area shape="rect" id="Node000003" href="$classMisere__Tic__Tac__Toe__board.html#ae61d1f10678bb86d7de70a6a5f0e67f7" title="Checks if the game has ended in a draw." alt="" coords="219,33,368,73"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="403,40,369,45,368,40,402,35"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="204,44,171,39,171,34,205,39"/>
+</map>

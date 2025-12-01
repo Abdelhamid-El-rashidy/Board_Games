@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['set_5fboard_5fptr_0',['set_board_ptr',['../classPlayer.html#a3617a3ad0db435176a06948065f9a3a6',1,'Player']]],
-  ['setup_5fplayers_1',['setup_players',['../classUI.html#a6966a040c995b2292e5edddaa94f889a',1,'UI']]]
+  ['player_0',['Player',['../classPlayer.html#adb4e803a7ac0356b111b8ca79d766976',1,'Player']]]
 ];

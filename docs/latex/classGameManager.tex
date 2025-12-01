@@ -12,23 +12,23 @@ Controls the flow of a board game between two players.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classGameManager_addaf3682d9783bdc432a8e3273b5b92c}{Game\+Manager}} (\mbox{\hyperlink{classBoard}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*}b, \mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$ \texorpdfstring{$\ast$}{*}p\mbox{[}2\mbox{]}, \mbox{\hyperlink{classUI}{UI}}$<$ T $>$ \texorpdfstring{$\ast$}{*}u)
+\mbox{\hyperlink{classGameManager_addaf3682d9783bdc432a8e3273b5b92c}{Game\+Manager}} (\mbox{\hyperlink{classBoard}{Board}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPlayer}{b}}, \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPlayer}{p}}\mbox{[}2\mbox{]}, \mbox{\hyperlink{classUI}{UI}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPlayer}{u}})
 \begin{DoxyCompactList}\small\item\em Construct a game manager with board, players, and \doxylink{classUI}{UI}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameManager_a71f46d5189dac5c773f608cea1b5a203}{run}} ()
+\mbox{\hyperlink{classPlayer}{void}} \mbox{\hyperlink{classGameManager_a71f46d5189dac5c773f608cea1b5a203}{run}} ()
 \begin{DoxyCompactList}\small\item\em Run the main game loop until someone wins or the game ends. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classBoard}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{board\+Ptr}}
+\mbox{\hyperlink{classBoard}{Board}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{board\+Ptr}}
 \begin{DoxyCompactList}\small\item\em Game board. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}} \mbox{[}2\mbox{]}
+\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}} \mbox{[}2\mbox{]}
 \begin{DoxyCompactList}\small\item\em Two players. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classUI}{UI}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}
+\mbox{\hyperlink{classUI}{UI}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}
 \begin{DoxyCompactList}\small\item\em User interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename T$>$\newline
+\subsubsection*{template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}}$>$\newline
 class Game\+Manager$<$ T $>$}
 Controls the flow of a board game between two players. 
 
@@ -39,7 +39,7 @@ Controls the flow of a board game between two players.
 \end{DoxyTemplParams}
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00257}{257}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00272}{272}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
@@ -48,8 +48,8 @@ Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00257}{257}} o
 \index{GameManager$<$ T $>$@{GameManager$<$ T $>$}!GameManager@{GameManager}}
 \index{GameManager@{GameManager}!GameManager$<$ T $>$@{GameManager$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{GameManager()}{GameManager()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classGameManager}{Game\+Manager}}$<$ T $>$\mbox{\hyperlink{classGameManager}{\+::\+Game\+Manager}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{b,  }\item[{\mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{p\mbox{[}2\mbox{]},  }\item[{\mbox{\hyperlink{classUI}{UI}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classGameManager}{Game\+Manager}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\mbox{\hyperlink{classGameManager}{\+::\+Game\+Manager}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*}}]{b,  }\item[{\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*}}]{p\mbox{[}2\mbox{]},  }\item[{\mbox{\hyperlink{classUI}{UI}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*}}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -57,21 +57,21 @@ Construct a game manager with board, players, and \doxylink{classUI}{UI}.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00266}{266}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00281}{281}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}(b),\ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}(u)\ \{}
-\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[0]\ =\ p[0];}
-\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[1]\ =\ p[1];}
-\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[0]-\/>\mbox{\hyperlink{classPlayer_a3617a3ad0db435176a06948065f9a3a6}{set\_board\_ptr}}(b);}
-\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[1]-\/>set\_board\_ptr(b);}
-\DoxyCodeLine{00272\ \ \ \ \ \}}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}(\mbox{\hyperlink{classPlayer}{b}}),\ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}(\mbox{\hyperlink{classPlayer}{u}})\ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[0]\ =\ \mbox{\hyperlink{classPlayer}{p}}[0];}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[1]\ =\ \mbox{\hyperlink{classPlayer}{p}}[1];}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[0]-\/>\mbox{\hyperlink{classPlayer_a3617a3ad0db435176a06948065f9a3a6}{set\_board\_ptr}}(\mbox{\hyperlink{classPlayer}{b}});}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[1]-\/>\mbox{\hyperlink{classPlayer_a3617a3ad0db435176a06948065f9a3a6}{set\_board\_ptr}}(\mbox{\hyperlink{classPlayer}{b}});}
+\DoxyCodeLine{00287\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00259}{Game\+Manager$<$ T $>$\+::players}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00159}{Player$<$ T $>$\+::set\+\_\+board\+\_\+ptr()}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00274}{Game\+Manager$<$ T $>$\+::players}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00170}{Player$<$ T $>$\+::set\+\_\+board\+\_\+ptr()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -87,8 +87,8 @@ Here is the call graph for this function\+:\nopagebreak
 \index{GameManager$<$ T $>$@{GameManager$<$ T $>$}!run@{run}}
 \index{run@{run}!GameManager$<$ T $>$@{GameManager$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{classGameManager}{Game\+Manager}}$<$ T $>$\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classPlayer}{void}} \mbox{\hyperlink{classGameManager}{Game\+Manager}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -96,61 +96,50 @@ Run the main game loop until someone wins or the game ends.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00277}{277}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00292}{292}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_board\_matrix(\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>get\_board\_matrix());}
-\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<T>}}*\ currentPlayer\ =\ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[0];}
-\DoxyCodeLine{00280\ }
-\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
-\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ :\ \{0,\ 1\})\ \{}
-\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentPlayer\ =\ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[i];}
-\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMove}{Move<T>}}*\ move\ =\ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>get\_move(currentPlayer);}
-\DoxyCodeLine{00285\ }
-\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>update\_board(move))}
-\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move\ =\ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>get\_move(currentPlayer);}
-\DoxyCodeLine{00288\ }
-\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_board\_matrix(\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>get\_board\_matrix());}
-\DoxyCodeLine{00290\ }
-\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>is\_win(currentPlayer))\ \{}
-\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_message(currentPlayer-\/>\mbox{\hyperlink{classPlayer_aed2af19790ba73190e3ebeea589518e1}{get\_name}}()\ +\ \textcolor{stringliteral}{"{}\ wins!"{}});}
-\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>is\_lose(currentPlayer))\ \{}
-\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_message(\mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[1\ -\/\ i]-\/>get\_name()\ +\ \textcolor{stringliteral}{"{}\ wins!"{}});}
-\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>is\_draw(currentPlayer))\ \{}
-\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_message(\textcolor{stringliteral}{"{}Draw!"{}});}
-\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00305\ \ \ \ \ \}}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_board\_matrix(\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>get\_board\_matrix());}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<T>}}*\ \mbox{\hyperlink{classPlayer}{currentPlayer}}\ =\ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[0];}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ :\ \{0,\ 1\})\ \{}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{currentPlayer}}\ =\ \mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[\mbox{\hyperlink{classPlayer}{i}}];}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Move<T>}}*\ \mbox{\hyperlink{classPlayer}{move}}\ =\ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>get\_move(\mbox{\hyperlink{classPlayer}{currentPlayer}});}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>update\_board(\mbox{\hyperlink{classPlayer}{move}}))}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{move}}\ =\ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>get\_move(\mbox{\hyperlink{classPlayer}{currentPlayer}});}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_board\_matrix(\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>get\_board\_matrix());}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>is\_win(\mbox{\hyperlink{classPlayer}{currentPlayer}}))\ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_message(\mbox{\hyperlink{classPlayer}{currentPlayer}}-\/>\mbox{\hyperlink{classPlayer_aed2af19790ba73190e3ebeea589518e1}{get\_name}}()\ +\ \textcolor{stringliteral}{"{}\ wins!"{}});}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>is\_lose(\mbox{\hyperlink{classPlayer}{currentPlayer}}))\ \{}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_message(\mbox{\hyperlink{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}}[1\ -\/\ \mbox{\hyperlink{classPlayer}{i}}]-\/>get\_name()\ +\ \textcolor{stringliteral}{"{}\ wins!"{}});}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGameManager_a97608354a255ec6916f64fc51e49f9e1}{boardPtr}}-\/>is\_draw(\mbox{\hyperlink{classPlayer}{currentPlayer}}))\ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}-\/>display\_message(\textcolor{stringliteral}{"{}Draw!"{}});}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00320\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00258}{Game\+Manager$<$ T $>$\+::board\+Ptr}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00147}{Player$<$ T $>$\+::get\+\_\+name()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00259}{Game\+Manager$<$ T $>$\+::players}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00260}{Game\+Manager$<$ T $>$\+::ui}}.
-
-
-
-Referenced by \mbox{\hyperlink{main_8cpp_source_l00031}{main()}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00273}{Game\+Manager$<$ T $>$\+::board\+Ptr}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00158}{Player$<$ T $>$\+::get\+\_\+name()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00274}{Game\+Manager$<$ T $>$\+::players}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00275}{Game\+Manager$<$ T $>$\+::ui}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=328pt]{classGameManager_a71f46d5189dac5c773f608cea1b5a203_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=267pt]{classGameManager_a71f46d5189dac5c773f608cea1b5a203_icgraph}
 \end{center}
 \end{figure}
 
@@ -160,8 +149,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{GameManager$<$ T $>$@{GameManager$<$ T $>$}!boardPtr@{boardPtr}}
 \index{boardPtr@{boardPtr}!GameManager$<$ T $>$@{GameManager$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{boardPtr}{boardPtr}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classBoard}{Board}}$<$T$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager}{Game\+Manager}}$<$ T $>$\+::board\+Ptr\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classBoard}{Board}}$<$\mbox{\hyperlink{classPlayer}{T}}$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager}{Game\+Manager}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::board\+Ptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -169,18 +158,18 @@ Game board.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00258}{258}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00273}{273}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00277}{Game\+Manager$<$ T $>$\+::run()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00292}{Game\+Manager$<$ T $>$\+::run()}}.
 
 \Hypertarget{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd}\label{classGameManager_abc7b7dc6bd0e89a29886ace8a7db60bd} 
 \index{GameManager$<$ T $>$@{GameManager$<$ T $>$}!players@{players}}
 \index{players@{players}!GameManager$<$ T $>$@{GameManager$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{players}{players}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classPlayer}{Player}}$<$T$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager}{Game\+Manager}}$<$ T $>$\+::players\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classPlayer}{Player}}$<$\mbox{\hyperlink{classPlayer}{T}}$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager}{Game\+Manager}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::players\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -188,18 +177,18 @@ Two players.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00259}{259}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00274}{274}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00266}{Game\+Manager$<$ T $>$\+::\+Game\+Manager()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00277}{Game\+Manager$<$ T $>$\+::run()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00281}{Game\+Manager$<$ T $>$\+::\+Game\+Manager()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00292}{Game\+Manager$<$ T $>$\+::run()}}.
 
 \Hypertarget{classGameManager_a2a3d79a969e0ff1ae529058779039ea9}\label{classGameManager_a2a3d79a969e0ff1ae529058779039ea9} 
 \index{GameManager$<$ T $>$@{GameManager$<$ T $>$}!ui@{ui}}
 \index{ui@{ui}!GameManager$<$ T $>$@{GameManager$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{ui}{ui}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classUI}{UI}}$<$T$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager}{Game\+Manager}}$<$ T $>$\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classUI}{UI}}$<$\mbox{\hyperlink{classPlayer}{T}}$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGameManager}{Game\+Manager}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::ui\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -207,11 +196,11 @@ User interface.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00260}{260}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00275}{275}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00277}{Game\+Manager$<$ T $>$\+::run()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00292}{Game\+Manager$<$ T $>$\+::run()}}.
 
 
 

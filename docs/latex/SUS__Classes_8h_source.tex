@@ -1,0 +1,48 @@
+\doxysection{SUS\+\_\+\+Classes.\+h}
+\hypertarget{SUS__Classes_8h_source}{}\label{SUS__Classes_8h_source}\index{include/SUS\_Classes.h@{include/SUS\_Classes.h}}
+\mbox{\hyperlink{SUS__Classes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00009}00009\ \textcolor{preprocessor}{\#ifndef\ SUS\_CLASSES\_H}}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00010}00010\ \textcolor{preprocessor}{\#define\ SUS\_CLASSES\_H}}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BoardGame__Classes_8h}{BoardGame\_Classes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00015}00015\ \textcolor{keyword}{using\ namespace\ }std\ ;}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00028}\mbox{\hyperlink{classSUS__Board}{00028}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSUS__Board}{SUS\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBoard}{Board}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00029}00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00030}\mbox{\hyperlink{classSUS__Board_a8992f8d0fb8c8f2916249518e94c22b2}{00030}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classSUS__Board_a8992f8d0fb8c8f2916249518e94c22b2}{blank\_symbol}}\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00032}00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{classSUS__Board_a653be0dfe8070a59361bd228c0b54f71}{SUS\_Board}}();}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSUS__Board_a5cf8d1ad2da90ed50b77a7f5d91342f4}{update\_board}}(\mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classPlayer}{move}})\ ;}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSUS__Board_a48747aa0b5f24bac5b5953576725b3ec}{is\_win}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00058}\mbox{\hyperlink{classSUS__Board_a4c5fc64b7dc144a2f3c132ca50b713d9}{00058}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSUS__Board_a4c5fc64b7dc144a2f3c132ca50b713d9}{is\_lose}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSUS__Board_a006d0b395a8912ceb0335b95cc69de49}{is\_draw}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00072}00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSUS__Board_a1402f8069947c57d4b65f50248e699b2}{game\_is\_over}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00074}00074\ \};}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00086}\mbox{\hyperlink{classSUS__UI}{00086}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSUS__UI}{SUS\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classUI}{UI}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00087}00087\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00094}00094\ \ \ \ \ \mbox{\hyperlink{classSUS__UI_ac1a13d00ecf04b1ea3af53f1c08949c1}{SUS\_UI}}();}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00099}\mbox{\hyperlink{classSUS__UI_a5860425ff09d2e1971fb7822c69b1a34}{00099}}\ \ \ \ \ \mbox{\hyperlink{classSUS__UI_a5860425ff09d2e1971fb7822c69b1a34}{\string~SUS\_UI}}()\ \{\};}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00101}00101\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ \mbox{\hyperlink{classSUS__UI_ac6340e45474680c71c6dcda9a6701616}{setup\_players}}()\ ;}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00109}00109\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classSUS__UI_a03be65e7b3ef9d336bb5078cd7b604a8}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type);}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00116}00116\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classSUS__UI_a621a4bfadf8d79f2b2b66f2241c310c3}{get\_move}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00117}00117\ \};}
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{SUS__Classes_8h_source_l00119}00119\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

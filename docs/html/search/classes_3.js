@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['move_0',['Move',['../classMove.html',1,'']]]
+  ['gamemanager_0',['GameManager',['../classGameManager.html',1,'']]]
 ];

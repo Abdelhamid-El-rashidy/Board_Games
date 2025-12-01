@@ -12,30 +12,30 @@ Base template for all players (human or AI).
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{Player}} (string n, T s, \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t)
+\mbox{\hyperlink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{Player}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{n}}, \mbox{\hyperlink{classPlayer}{T}} \mbox{\hyperlink{classPlayer}{s}}, \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer}{t}})
 \begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classPlayer_aac1f2ab2a8e2aa0336d302c16068020e}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer_aac1f2ab2a8e2aa0336d302c16068020e}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
 \item 
-string \mbox{\hyperlink{classPlayer_aed2af19790ba73190e3ebeea589518e1}{get\+\_\+name}} () const
+\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer_aed2af19790ba73190e3ebeea589518e1}{get\+\_\+name}} () \mbox{\hyperlink{classPlayer}{const}}
 \begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\+\_\+type}} () const
-\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
-T \mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\+\_\+symbol}} () const
+\mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\+\_\+type}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get player type (\doxylink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{e.\+g}., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{T}} \mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\+\_\+symbol}} () \mbox{\hyperlink{classPlayer}{const}}
 \begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classBoard}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlayer_a508617eddfae8915d098102d480fc888}{get\+\_\+board\+\_\+ptr}} () const
+\mbox{\hyperlink{classBoard}{Board}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlayer_a508617eddfae8915d098102d480fc888}{get\+\_\+board\+\_\+ptr}} () \mbox{\hyperlink{classPlayer}{const}}
 \begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classPlayer_a3617a3ad0db435176a06948065f9a3a6}{set\+\_\+board\+\_\+ptr}} (\mbox{\hyperlink{classBoard}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*}b)
+\mbox{\hyperlink{classPlayer}{void}} \mbox{\hyperlink{classPlayer_a3617a3ad0db435176a06948065f9a3a6}{set\+\_\+board\+\_\+ptr}} (\mbox{\hyperlink{classBoard}{Board}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPlayer}{b}})
 \begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-string \mbox{\hyperlink{classPlayer_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}
+\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}
 \begin{DoxyCompactList}\small\item\em \doxylink{classPlayer}{Player} name. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}
-\begin{DoxyCompactList}\small\item\em \doxylink{classPlayer}{Player} type (e.\+g., HUMAN or COMPUTER) \end{DoxyCompactList}\item 
-T \mbox{\hyperlink{classPlayer_a272d6c4dab769930d4f8074918e7708a}{symbol}}
-\begin{DoxyCompactList}\small\item\em Player{\ucr}s symbol on board. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classBoard}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlayer_a26249e756f850b6585267bfbc928ac79}{board\+Ptr}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classPlayer}{Player} type (\doxylink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{e.\+g}., HUMAN or COMPUTER) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{T}} \mbox{\hyperlink{classPlayer_a272d6c4dab769930d4f8074918e7708a}{symbol}}
+\begin{DoxyCompactList}\small\item\em Players symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBoard}{Board}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlayer_a26249e756f850b6585267bfbc928ac79}{board\+Ptr}}
 \begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -51,7 +51,7 @@ Base template for all players (human or AI).
 \end{DoxyTemplParams}
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00130}{130}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00141}{141}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
@@ -60,8 +60,8 @@ Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00130}{130}} o
 \index{Player$<$ T $>$@{Player$<$ T $>$}!Player@{Player}}
 \index{Player@{Player}!Player$<$ T $>$@{Player$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{Player()}{Player()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$\mbox{\hyperlink{classPlayer}{\+::\+Player}} (\begin{DoxyParamCaption}\item[{string}]{n,  }\item[{T}]{s,  }\item[{\mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\mbox{\hyperlink{classPlayer}{\+::\+Player}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{string}}}]{n,  }\item[{\mbox{\hyperlink{classPlayer}{T}}}]{s,  }\item[{\mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -69,27 +69,27 @@ Construct a player with name, symbol, and type.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00141}{141}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00152}{152}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classPlayer_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}(n),\ \mbox{\hyperlink{classPlayer_a272d6c4dab769930d4f8074918e7708a}{symbol}}(s),\ \mbox{\hyperlink{classPlayer_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}(t),\ \mbox{\hyperlink{classPlayer_a26249e756f850b6585267bfbc928ac79}{boardPtr}}(\textcolor{keyword}{nullptr})\ \{\}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classPlayer_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}(\mbox{\hyperlink{classPlayer}{n}}),\ \mbox{\hyperlink{classPlayer_a272d6c4dab769930d4f8074918e7708a}{symbol}}(\mbox{\hyperlink{classPlayer}{s}}),\ \mbox{\hyperlink{classPlayer_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}(\mbox{\hyperlink{classPlayer}{t}}),\ \mbox{\hyperlink{classPlayer_a26249e756f850b6585267bfbc928ac79}{boardPtr}}(\textcolor{keyword}{nullptr})\ \{\}}
 
 \end{DoxyCode}
 \Hypertarget{classPlayer_aac1f2ab2a8e2aa0336d302c16068020e}\label{classPlayer_aac1f2ab2a8e2aa0336d302c16068020e} 
 \index{Player$<$ T $>$@{Player$<$ T $>$}!````~Player@{\texorpdfstring{$\sim$}{\string~}Player}}
 \index{````~Player@{\texorpdfstring{$\sim$}{\string~}Player}!Player$<$ T $>$@{Player$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Player()}{\string~Player()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-virtual \mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classPlayer}{Player}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classPlayer}{Player}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00144}{144}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00155}{155}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00144\ \{\}}
+\DoxyCodeLine{00155\ \{\}}
 
 \end{DoxyCode}
 
@@ -99,8 +99,8 @@ Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00144}{144}} o
 \index{Player$<$ T $>$@{Player$<$ T $>$}!get\_board\_ptr@{get\_board\_ptr}}
 \index{get\_board\_ptr@{get\_board\_ptr}!Player$<$ T $>$@{Player$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{get\_board\_ptr()}{get\_board\_ptr()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classBoard}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$\+::get\+\_\+board\+\_\+ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classBoard}{Board}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::get\+\_\+board\+\_\+ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -108,22 +108,23 @@ Get a pointer to the game board.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00156}{156}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00167}{167}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00156\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer_a26249e756f850b6585267bfbc928ac79}{boardPtr}};\ \}}
+\DoxyCodeLine{00167\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer_a26249e756f850b6585267bfbc928ac79}{boardPtr}};\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00135}{Player$<$ T $>$\+::board\+Ptr}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00146}{Player$<$ T $>$\+::board\+Ptr}}.
 
 
 
-Referenced by \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00091}{Infinit\+\_\+\+XO\+\_\+\+UI\+::get\+\_\+move()}}.
+Referenced by \mbox{\hyperlink{Four__Four__XO_8cpp_source_l00075}{Four\+\_\+\+Four\+\_\+\+XO\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00091}{Infinit\+\_\+\+XO\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{Misere__Tic__Tac__Toe_8cpp_source_l00085}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{Numerical__X__O_8cpp_source_l00095}{Numerical\+\_\+\+XO\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{SUS__Classes_8cpp_source_l00103}{SUS\+\_\+\+UI\+::get\+\_\+move()}}, and \mbox{\hyperlink{X__O__5x5_8cpp_source_l00141}{X\+\_\+\+O\+\_\+5x5\+\_\+\+UI\+::get\+\_\+move()}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -134,8 +135,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{Player$<$ T $>$@{Player$<$ T $>$}!get\_name@{get\_name}}
 \index{get\_name@{get\_name}!Player$<$ T $>$@{Player$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-string \mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -143,34 +144,35 @@ Get the player\textquotesingle{}s name.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00147}{147}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00158}{158}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00147\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer_af0ad0d4ca8584d23a98c723cd703a4f6}{name}};\ \}}
+\DoxyCodeLine{00158\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer_af0ad0d4ca8584d23a98c723cd703a4f6}{name}};\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00132}{Player$<$ T $>$\+::name}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00143}{Player$<$ T $>$\+::name}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00277}{Game\+Manager$<$ T $>$\+::run()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00292}{Game\+Manager$<$ T $>$\+::run()}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classPlayer_aed2af19790ba73190e3ebeea589518e1_icgraph}
+\includegraphics[width=328pt]{classPlayer_aed2af19790ba73190e3ebeea589518e1_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}\label{classPlayer_af56f0bf98c0423a3a75b0848607d03a4} 
 \index{Player$<$ T $>$@{Player$<$ T $>$}!get\_symbol@{get\_symbol}}
 \index{get\_symbol@{get\_symbol}!Player$<$ T $>$@{Player$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{get\_symbol()}{get\_symbol()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-T \mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$\+::get\+\_\+symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classPlayer}{T}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::get\+\_\+symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -178,22 +180,23 @@ Get the player\textquotesingle{}s symbol.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00153}{153}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00164}{164}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00153\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer_a272d6c4dab769930d4f8074918e7708a}{symbol}};\ \}}
+\DoxyCodeLine{00164\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer_a272d6c4dab769930d4f8074918e7708a}{symbol}};\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00134}{Player$<$ T $>$\+::symbol}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00145}{Player$<$ T $>$\+::symbol}}.
 
 
 
-Referenced by \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00091}{Infinit\+\_\+\+XO\+\_\+\+UI\+::get\+\_\+move()}}, and \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00049}{Infinity\+\_\+\+X\+\_\+\+O\+\_\+\+Board\+::is\+\_\+win()}}.
+Referenced by \mbox{\hyperlink{Four__Four__XO_8cpp_source_l00075}{Four\+\_\+\+Four\+\_\+\+XO\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00091}{Infinit\+\_\+\+XO\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{Misere__Tic__Tac__Toe_8cpp_source_l00085}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{Numerical__X__O_8cpp_source_l00095}{Numerical\+\_\+\+XO\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{SUS__Classes_8cpp_source_l00103}{SUS\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{X__O__5x5_8cpp_source_l00141}{X\+\_\+\+O\+\_\+5x5\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{Misere__Tic__Tac__Toe_8cpp_source_l00041}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+board\+::is\+\_\+lose()}}, \mbox{\hyperlink{Four__Four__XO_8cpp_source_l00042}{Four\+\_\+\+Four\+\_\+\+XO\+\_\+\+Board\+::is\+\_\+win()}}, \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00049}{Infinity\+\_\+\+X\+\_\+\+O\+\_\+\+Board\+::is\+\_\+win()}}, \mbox{\hyperlink{Numerical__X__O_8cpp_source_l00052}{Numerical\+\_\+\+X\+\_\+\+O\+\_\+\+Board\+::is\+\_\+win()}}, \mbox{\hyperlink{SUS__Classes_8cpp_source_l00035}{SUS\+\_\+\+Board\+::is\+\_\+win()}}, \mbox{\hyperlink{X__O__5x5_8cpp_source_l00036}{X\+\_\+\+O\+\_\+5x5\+\_\+\+Board\+::is\+\_\+win()}}, \mbox{\hyperlink{Four__Four__XO_8cpp_source_l00022}{Four\+\_\+\+Four\+\_\+\+XO\+\_\+\+Board\+::update\+\_\+board()}}, \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00019}{Infinity\+\_\+\+X\+\_\+\+O\+\_\+\+Board\+::update\+\_\+board()}}, \mbox{\hyperlink{Misere__Tic__Tac__Toe_8cpp_source_l00020}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+board\+::update\+\_\+board()}}, \mbox{\hyperlink{Numerical__X__O_8cpp_source_l00022}{Numerical\+\_\+\+X\+\_\+\+O\+\_\+\+Board\+::update\+\_\+board()}}, \mbox{\hyperlink{SUS__Classes_8cpp_source_l00013}{SUS\+\_\+\+Board\+::update\+\_\+board()}}, and \mbox{\hyperlink{X__O__5x5_8cpp_source_l00013}{X\+\_\+\+O\+\_\+5x5\+\_\+\+Board\+::update\+\_\+board()}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -204,43 +207,44 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{Player$<$ T $>$@{Player$<$ T $>$}!get\_type@{get\_type}}
 \index{get\_type@{get\_type}!Player$<$ T $>$@{Player$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). 
+Get player type (\doxylink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{e.\+g}., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). 
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00150}{150}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00161}{161}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00150\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer_a81a15b1b507fd5f2157fb15bf0fd283f}{type}};\ \}}
+\DoxyCodeLine{00161\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer_a81a15b1b507fd5f2157fb15bf0fd283f}{type}};\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00133}{Player$<$ T $>$\+::type}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00144}{Player$<$ T $>$\+::type}}.
 
 
 
-Referenced by \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00091}{Infinit\+\_\+\+XO\+\_\+\+UI\+::get\+\_\+move()}}.
+Referenced by \mbox{\hyperlink{Four__Four__XO_8cpp_source_l00075}{Four\+\_\+\+Four\+\_\+\+XO\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{Infinity__XO__Classes_8cpp_source_l00091}{Infinit\+\_\+\+XO\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{Misere__Tic__Tac__Toe_8cpp_source_l00085}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{Numerical__X__O_8cpp_source_l00095}{Numerical\+\_\+\+XO\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{SUS__Classes_8cpp_source_l00103}{SUS\+\_\+\+UI\+::get\+\_\+move()}}, and \mbox{\hyperlink{X__O__5x5_8cpp_source_l00141}{X\+\_\+\+O\+\_\+5x5\+\_\+\+UI\+::get\+\_\+move()}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=346pt]{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8_icgraph}
+\includegraphics[width=350pt]{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classPlayer_a3617a3ad0db435176a06948065f9a3a6}\label{classPlayer_a3617a3ad0db435176a06948065f9a3a6} 
 \index{Player$<$ T $>$@{Player$<$ T $>$}!set\_board\_ptr@{set\_board\_ptr}}
 \index{set\_board\_ptr@{set\_board\_ptr}!Player$<$ T $>$@{Player$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{set\_board\_ptr()}{set\_board\_ptr()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$\+::set\+\_\+board\+\_\+ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classPlayer}{void}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::set\+\_\+board\+\_\+ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -248,20 +252,20 @@ Assign the board pointer for the player.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00159}{159}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00170}{170}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00159\ \{\ \mbox{\hyperlink{classPlayer_a26249e756f850b6585267bfbc928ac79}{boardPtr}}\ =\ b;\ \}}
+\DoxyCodeLine{00170\ \{\ \mbox{\hyperlink{classPlayer_a26249e756f850b6585267bfbc928ac79}{boardPtr}}\ =\ \mbox{\hyperlink{classPlayer}{b}};\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00135}{Player$<$ T $>$\+::board\+Ptr}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00146}{Player$<$ T $>$\+::board\+Ptr}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00266}{Game\+Manager$<$ T $>$\+::\+Game\+Manager()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00281}{Game\+Manager$<$ T $>$\+::\+Game\+Manager()}}.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -277,8 +281,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{Player$<$ T $>$@{Player$<$ T $>$}!boardPtr@{boardPtr}}
 \index{boardPtr@{boardPtr}!Player$<$ T $>$@{Player$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{boardPtr}{boardPtr}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classBoard}{Board}}$<$T$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$\+::board\+Ptr\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classBoard}{Board}}$<$\mbox{\hyperlink{classPlayer}{T}}$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::board\+Ptr\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -286,18 +290,18 @@ Pointer to the game board.
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00135}{135}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00146}{146}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00156}{Player$<$ T $>$\+::get\+\_\+board\+\_\+ptr()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00159}{Player$<$ T $>$\+::set\+\_\+board\+\_\+ptr()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00167}{Player$<$ T $>$\+::get\+\_\+board\+\_\+ptr()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00170}{Player$<$ T $>$\+::set\+\_\+board\+\_\+ptr()}}.
 
 \Hypertarget{classPlayer_af0ad0d4ca8584d23a98c723cd703a4f6}\label{classPlayer_af0ad0d4ca8584d23a98c723cd703a4f6} 
 \index{Player$<$ T $>$@{Player$<$ T $>$}!name@{name}}
 \index{name@{name}!Player$<$ T $>$@{Player$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{name}{name}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-string \mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::name\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -305,49 +309,49 @@ string \mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$\+::name\hspace{0.3cm}{\tt
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00132}{132}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00143}{143}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00147}{Player$<$ T $>$\+::get\+\_\+name()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00158}{Player$<$ T $>$\+::get\+\_\+name()}}.
 
 \Hypertarget{classPlayer_a272d6c4dab769930d4f8074918e7708a}\label{classPlayer_a272d6c4dab769930d4f8074918e7708a} 
 \index{Player$<$ T $>$@{Player$<$ T $>$}!symbol@{symbol}}
 \index{symbol@{symbol}!Player$<$ T $>$@{Player$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{symbol}{symbol}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-T \mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$\+::symbol\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{classPlayer}{T}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::symbol\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Player{\ucr}s symbol on board. 
+Players symbol on board. 
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00134}{134}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00145}{145}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00153}{Player$<$ T $>$\+::get\+\_\+symbol()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00164}{Player$<$ T $>$\+::get\+\_\+symbol()}}.
 
 \Hypertarget{classPlayer_a81a15b1b507fd5f2157fb15bf0fd283f}\label{classPlayer_a81a15b1b507fd5f2157fb15bf0fd283f} 
 \index{Player$<$ T $>$@{Player$<$ T $>$}!type@{type}}
 \index{type@{type}!Player$<$ T $>$@{Player$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{type}{type}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer}{Player}}$<$ T $>$\+::type\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classPlayer}{typename}} \mbox{\hyperlink{classPlayer}{T}} $>$ \\
+\mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$\+::type\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-\doxylink{classPlayer}{Player} type (e.\+g., HUMAN or COMPUTER) 
+\doxylink{classPlayer}{Player} type (\doxylink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{e.\+g}., HUMAN or COMPUTER) 
 
 
 
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00133}{133}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
+Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00144}{144}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00150}{Player$<$ T $>$\+::get\+\_\+type()}}.
+Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00161}{Player$<$ T $>$\+::get\+\_\+type()}}.
 
 
 

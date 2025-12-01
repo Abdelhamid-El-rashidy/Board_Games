@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['ui_0',['ui',['../classUI.html',1,'UI&lt; T &gt;'],['../classGameManager.html#a2a3d79a969e0ff1ae529058779039ea9',1,'GameManager::ui'],['../classUI.html#afb59b53f3c2ed750b1a9a0c7d6dc4a7a',1,'UI::UI(int cell_display_width=3)'],['../classUI.html#ae50eed41905ca2f8dc103d9bef427fe6',1,'UI::UI(string message, int cell_display_width)']]],
-  ['ui_3c_20char_20_3e_1',['UI&lt; char &gt;',['../classUI.html',1,'']]],
-  ['update_5fboard_2',['update_board',['../classBoard.html#a93d9dec601dda58b7e206ccb47633e57',1,'Board::update_board()'],['../classInfinity__X__O__Board.html#acdf958b1a2d08227ccfe316a68519622',1,'Infinity_X_O_Board::update_board()']]]
+  ['set_5fboard_5fptr_0',['set_board_ptr',['../classPlayer.html#a3617a3ad0db435176a06948065f9a3a6',1,'Player']]],
+  ['setup_5fplayers_1',['setup_players',['../classUI.html#a6966a040c995b2292e5edddaa94f889a',1,'UI::setup_players()'],['../classSUS__UI.html#ac6340e45474680c71c6dcda9a6701616',1,'SUS_UI::setup_players()']]],
+  ['sus_5fboard_2',['sus_board',['../classSUS__Board.html',1,'SUS_Board'],['../classSUS__Board.html#a653be0dfe8070a59361bd228c0b54f71',1,'SUS_Board::SUS_Board()']]],
+  ['sus_5fclasses_2ecpp_3',['SUS_Classes.cpp',['../SUS__Classes_8cpp.html',1,'']]],
+  ['sus_5fclasses_2eh_4',['SUS_Classes.h',['../SUS__Classes_8h.html',1,'']]],
+  ['sus_5fui_5',['sus_ui',['../classSUS__UI.html',1,'SUS_UI'],['../classSUS__UI.html#ac1a13d00ecf04b1ea3af53f1c08949c1',1,'SUS_UI::SUS_UI()']]],
+  ['symbol_6',['symbol',['../classMove.html#a0bec25acdce91feab1b4c21c26505088',1,'Move::symbol'],['../classPlayer.html#a272d6c4dab769930d4f8074918e7708a',1,'Player::symbol']]]
 ];

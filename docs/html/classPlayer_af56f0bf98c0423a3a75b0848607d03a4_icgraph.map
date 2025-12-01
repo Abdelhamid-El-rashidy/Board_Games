@@ -1,12 +1,68 @@
 <map id="Player::get_symbol" name="Player::get_symbol">
-<area shape="rect" id="Node000001" title="Get the player&#39;s symbol." alt="" coords="619,35,765,60"/>
-<area shape="rect" id="Node000002" href="$classInfinit__XO__UI.html#a01e2ad782bacda8c2f7cff214617b54c" title="Retrieves the next move from a player." alt="" coords="392,5,571,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="605,38,570,33,571,28,605,33"/>
-<area shape="rect" id="Node000003" href="$classInfinity__X__O__Board.html#adee61151bd324d1e28fb1391e1df0789" title="Checks if the given player has won the game." alt="" coords="409,55,554,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="605,61,554,68,554,63,605,56"/>
-<area shape="rect" id="Node000004" href="$classInfinity__X__O__Board.html#aecd2c26979b7ba39a036ec469363f6bf" title="Determines if the game is over (win or draw)." alt="" coords="5,55,151,95"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="395,75,344,74,199,74,151,75,151,70,199,69,344,69,395,70"/>
-<area shape="rect" id="Node000005" href="$classInfinity__X__O__Board.html#a27dc0d692d24c8ec6e921267424bf046" title="Checks if the game has ended in a draw." alt="" coords="199,83,344,123"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="396,89,345,96,344,91,395,84"/>
-<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="185,93,151,89,152,83,185,88"/>
+<area shape="rect" id="Node000001" title="Get the player&#39;s symbol." alt="" coords="727,485,873,511"/>
+<area shape="rect" id="Node000002" href="$classFour__Four__XO__UI.html#a462e22aa01d930bda7449c759f36c86f" title="Retrieves the next move from a player." alt="" coords="473,5,677,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="793,472,778,376,754,247,738,182,719,124,699,76,677,44,662,33,665,29,681,40,704,73,724,122,743,181,759,246,784,375,798,471"/>
+<area shape="rect" id="Node000003" href="$classInfinit__XO__UI.html#a01e2ad782bacda8c2f7cff214617b54c" title="Retrieves the next move from a player." alt="" coords="485,55,664,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="797,472,793,397,778,295,763,241,742,187,713,138,677,95,659,82,662,78,680,91,718,135,746,185,768,239,783,294,799,396,802,471"/>
+<area shape="rect" id="Node000004" href="$classMisere__Tic__Tac__Toe__UI.html#a13c2f356fe79f87ed9bce9ca4efadb68" title="Retrieves the next move from a player." alt="" coords="500,105,649,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="795,472,787,408,768,324,753,279,733,235,708,195,677,159,648,141,651,136,680,155,712,191,737,233,758,277,773,323,792,407,800,471"/>
+<area shape="rect" id="Node000005" href="$classNumerical__XO__UI.html#af6296ae59c604456f531f4e996e99467" title="Ask the user (or AI) to make a move." alt="" coords="471,169,679,195"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="793,472,783,416,763,345,748,307,729,271,705,237,677,208,660,197,662,193,680,204,709,234,733,268,753,305,768,343,789,415,798,471"/>
+<area shape="rect" id="Node000006" href="$classSUS__UI.html#a621a4bfadf8d79f2b2b66f2241c310c3" title="Retrieves the next move from a player." alt="" coords="503,219,646,244"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="791,472,778,425,756,367,723,307,702,281,677,258,645,241,647,237,680,253,705,277,727,304,761,365,783,424,796,471"/>
+<area shape="rect" id="Node000007" href="$classX__O__5x5__UI.html#a60163186f3074fea418f530e78f5f9f1" title="Ask the user (or AI) to make a move." alt="" coords="488,268,661,293"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="787,473,772,435,748,391,717,346,677,308,654,296,656,291,680,304,721,342,753,388,776,433,792,471"/>
+<area shape="rect" id="Node000008" href="$classMisere__Tic__Tac__Toe__board.html#a17b6a2ec14f1f4c9dc5b6cd59127bc56" title="Checks if the given player has lost the game." alt="" coords="500,318,649,358"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="780,476,737,423,709,396,677,372,649,358,651,354,680,368,712,392,741,420,784,472"/>
+<area shape="rect" id="Node000011" href="$classFour__Four__XO__Board.html#a469ec43cdebb07b56a2b780ba9134506" title="Check if a player has won." alt="" coords="497,382,652,422"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="764,480,678,436,646,425,648,420,680,432,767,476"/>
+<area shape="rect" id="Node000014" href="$classInfinity__X__O__Board.html#adee61151bd324d1e28fb1391e1df0789" title="Checks if the given player has won the game." alt="" coords="502,446,647,486"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="713,488,647,479,648,474,713,483"/>
+<area shape="rect" id="Node000017" href="$classNumerical__X__O__Board.html#a0940816900ed8bf06b0cd49d70b443fd" title="Check if a player has won." alt="" coords="491,510,658,550"/>
+<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="713,513,659,521,658,516,713,508"/>
+<area shape="rect" id="Node000020" href="$classSUS__Board.html#a48747aa0b5f24bac5b5953576725b3ec" title="Checks if the given player has won the game." alt="" coords="503,575,646,600"/>
+<area shape="poly" id="edge23_Node000001_Node000020" title=" " alt="" coords="768,520,727,543,680,564,639,577,637,572,678,560,724,538,765,516"/>
+<area shape="rect" id="Node000023" href="$classX__O__5x5__Board.html#a90eeba3a2b960065c81ab50b08997da5" title="Check if a player has won." alt="" coords="488,624,661,649"/>
+<area shape="poly" id="edge27_Node000001_Node000023" title=" " alt="" coords="783,523,739,569,711,593,680,614,649,626,647,621,677,609,708,589,735,565,779,519"/>
+<area shape="rect" id="Node000026" href="$classFour__Four__XO__Board.html#a406a2273ba6b32bc074afdd0402223ac" title="Update the board with a new move." alt="" coords="497,674,652,714"/>
+<area shape="poly" id="edge30_Node000001_Node000026" title=" " alt="" coords="789,524,747,593,717,630,680,663,653,678,651,673,677,658,713,627,743,590,784,521"/>
+<area shape="rect" id="Node000027" href="$classInfinity__X__O__Board.html#acdf958b1a2d08227ccfe316a68519622" title="Updates the board with a player&#39;s move." alt="" coords="502,738,647,778"/>
+<area shape="poly" id="edge31_Node000001_Node000027" title=" " alt="" coords="794,525,780,569,757,624,724,680,704,705,680,728,649,746,646,741,677,724,700,702,720,677,752,621,775,567,789,524"/>
+<area shape="rect" id="Node000028" href="$classMisere__Tic__Tac__Toe__board.html#a51c52a227b90423940eef5c91097d879" title="Updates the board with a player&#39;s move." alt="" coords="493,802,656,842"/>
+<area shape="poly" id="edge32_Node000001_Node000028" title=" " alt="" coords="798,525,787,580,767,652,751,690,732,727,708,761,680,792,658,807,655,803,677,788,704,758,727,724,746,687,761,650,782,579,793,524"/>
+<area shape="rect" id="Node000029" href="$classNumerical__X__O__Board.html#ae4bed90db4f9d8308c3b4e7e0db8a5d4" title="Update the board with a new move." alt="" coords="491,866,658,906"/>
+<area shape="poly" id="edge33_Node000001_Node000029" title=" " alt="" coords="800,525,793,591,775,680,760,727,739,774,713,817,680,856,660,871,656,866,677,852,709,814,734,771,755,725,770,678,788,590,795,524"/>
+<area shape="rect" id="Node000030" href="$classSUS__Board.html#a5cf8d1ad2da90ed50b77a7f5d91342f4" title="Updates the board with a player&#39;s move." alt="" coords="479,931,670,956"/>
+<area shape="poly" id="edge34_Node000001_Node000030" title=" " alt="" coords="802,525,800,602,794,653,785,708,770,766,748,822,719,874,680,920,662,933,659,928,677,916,714,871,743,819,765,764,780,707,789,652,794,602,797,524"/>
+<area shape="rect" id="Node000031" href="$classX__O__5x5__Board.html#a4c7b73d99de1c299bbef965cdc3c5f32" title="Update the board with a new move." alt="" coords="486,981,663,1021"/>
+<area shape="poly" id="edge35_Node000001_Node000031" title=" " alt="" coords="798,524,784,622,759,755,743,823,724,885,704,935,681,970,665,983,662,979,677,967,699,933,719,883,737,822,754,754,778,621,793,524"/>
+<area shape="rect" id="Node000009" href="$classMisere__Tic__Tac__Toe__board.html#ada7bdaa8066378a91d22134d2b931343" title="Determines if the game is over (win or draw)." alt="" coords="19,191,184,231"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="486,319,469,307,458,294,451,281,446,254,440,230,433,219,421,210,391,195,360,185,326,179,292,178,227,182,169,194,168,189,226,177,292,172,327,174,361,180,393,190,424,205,437,216,445,228,451,253,456,279,462,291,472,303,489,314"/>
+<area shape="rect" id="Node000010" href="$classMisere__Tic__Tac__Toe__board.html#ae61d1f10678bb86d7de70a6a5f0e67f7" title="Checks if the game has ended in a draw." alt="" coords="259,219,409,259"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="492,316,470,307,421,280,382,262,384,257,424,276,472,302,494,311"/>
+<area shape="poly" id="edge10_Node000010_Node000009" title=" " alt="" coords="245,231,184,224,184,219,246,226"/>
+<area shape="rect" id="Node000012" href="$classFour__Four__XO__Board.html#ac6b120eac0b398ddc91e9bc1562badf9" title="Check if the game is over." alt="" coords="24,306,179,346"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="483,380,469,372,454,359,445,346,436,334,422,324,360,307,296,302,234,304,179,311,179,306,234,299,297,296,361,302,424,320,440,330,450,343,458,356,472,368,486,375"/>
+<area shape="rect" id="Node000013" href="$classFour__Four__XO__Board.html#afcade23d315ec56024baeaaca94e432f" title="Check if the game ended in a draw." alt="" coords="257,334,411,374"/>
+<area shape="poly" id="edge13_Node000011_Node000013" title=" " alt="" coords="483,386,411,372,412,367,484,381"/>
+<area shape="poly" id="edge14_Node000013_Node000012" title=" " alt="" coords="242,346,179,338,179,333,243,340"/>
+<area shape="rect" id="Node000015" href="$classInfinity__X__O__Board.html#aecd2c26979b7ba39a036ec469363f6bf" title="Determines if the game is over (win or draw)." alt="" coords="29,421,174,461"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="488,449,422,439,291,434,174,438,174,433,291,429,423,434,489,444"/>
+<area shape="rect" id="Node000016" href="$classInfinity__X__O__Board.html#a27dc0d692d24c8ec6e921267424bf046" title="Checks if the game has ended in a draw." alt="" coords="261,449,407,489"/>
+<area shape="poly" id="edge17_Node000014_Node000016" title=" " alt="" coords="489,470,407,471,407,465,489,464"/>
+<area shape="poly" id="edge18_Node000016_Node000015" title=" " alt="" coords="248,461,174,452,174,447,248,456"/>
+<area shape="rect" id="Node000018" href="$classNumerical__X__O__Board.html#a4dbd494c6fca2beea04c4180d3d322e9" title="Check if the game is over." alt="" coords="18,551,185,591"/>
+<area shape="poly" id="edge20_Node000017_Node000018" title=" " alt="" coords="478,537,246,554,185,561,184,556,245,549,477,532"/>
+<area shape="rect" id="Node000019" href="$classNumerical__X__O__Board.html#a2d3ee20a3d8e9b2e001649ce85d3a515" title="Check if the game ended in a draw." alt="" coords="251,563,417,603"/>
+<area shape="poly" id="edge21_Node000017_Node000019" title=" " alt="" coords="478,554,418,568,417,562,477,549"/>
+<area shape="poly" id="edge22_Node000019_Node000018" title=" " alt="" coords="236,581,185,578,185,573,237,576"/>
+<area shape="rect" id="Node000021" href="$classSUS__Board.html#a1402f8069947c57d4b65f50248e699b2" title="Determines if the game is over (win or draw)." alt="" coords="5,641,197,667"/>
+<area shape="poly" id="edge24_Node000020_Node000021" title=" " alt="" coords="497,605,423,618,198,647,197,642,422,613,496,600"/>
+<area shape="rect" id="Node000022" href="$classSUS__Board.html#a006d0b395a8912ceb0335b95cc69de49" title="Checks if the game has ended in a draw." alt="" coords="259,679,409,704"/>
+<area shape="poly" id="edge25_Node000020_Node000022" title=" " alt="" coords="491,605,472,614,457,625,448,636,439,649,424,662,383,681,380,676,421,657,435,645,444,633,454,621,469,609,489,600"/>
+<area shape="poly" id="edge26_Node000022_Node000021" title=" " alt="" coords="245,680,181,669,181,664,245,674"/>
+<area shape="rect" id="Node000024" href="$classX__O__5x5__Board.html#ad2e0c1e9c3cb85acdbff6c081ad7b8b3" title="Check if the game is over." alt="" coords="249,729,419,769"/>
+<area shape="poly" id="edge28_Node000023_Node000024" title=" " alt="" coords="487,657,472,664,457,677,448,690,439,703,424,717,400,731,397,726,421,713,435,700,444,687,453,673,469,660,485,652"/>
+<area shape="rect" id="Node000025" href="$classX__O__5x5__Board.html#af85ffbe23533e0388f64ca0f55b58979" title="Check if a player has lost." alt="" coords="245,793,423,819"/>
+<area shape="poly" id="edge29_Node000023_Node000025" title=" " alt="" coords="481,658,472,664,460,678,454,692,449,721,444,752,437,768,424,783,404,796,402,791,421,779,433,765,439,751,444,721,448,690,456,675,469,660,477,654"/>
 </map>

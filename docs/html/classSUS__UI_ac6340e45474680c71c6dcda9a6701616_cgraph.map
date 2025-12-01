@@ -1,0 +1,7 @@
+<map id="SUS_UI::setup_players" name="SUS_UI::setup_players">
+<area shape="rect" id="Node000001" title="Set up players for the game." alt="" coords="5,35,173,60"/>
+<area shape="rect" id="Node000002" href="$classSUS__UI.html#a03be65e7b3ef9d336bb5078cd7b604a8" title="Creates a player of the specified type." alt="" coords="223,5,390,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,33,209,28,210,34,174,39"/>
+<area shape="rect" id="Node000003" href="$classUI.html#ac3d45fea2bbcaa0372d8e5101e116ca1" title="Ask the user to choose the player type from a list." alt="" coords="221,55,392,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,56,208,60,207,65,173,61"/>
+</map>

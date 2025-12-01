@@ -1,0 +1,7 @@
+<map id="X_O_5x5_Board::is_win" name="X_O_5x5_Board::is_win">
+<area shape="rect" id="Node000001" title="Check if a player has won." alt="" coords="231,42,404,67"/>
+<area shape="rect" id="Node000002" href="$classX__O__5x5__Board.html#ad2e0c1e9c3cb85acdbff6c081ad7b8b3" title="Check if the game is over." alt="" coords="9,5,179,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,44,179,39,179,34,217,39"/>
+<area shape="rect" id="Node000003" href="$classX__O__5x5__Board.html#af85ffbe23533e0388f64ca0f55b58979" title="Check if a player has lost." alt="" coords="5,70,183,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,70,183,74,183,69,216,65"/>
+</map>

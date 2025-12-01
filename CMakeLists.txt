@@ -20,4 +20,6 @@ add_executable(BoardGameFramework
         src/SUS_Classes.cpp
         include/Misere_Tic_Tac_Toe.h
         src/Misere_Tic_Tac_Toe.cpp
+        src/Pyramid_XO.cpp
+        include/Pyramid_XO.h
 )

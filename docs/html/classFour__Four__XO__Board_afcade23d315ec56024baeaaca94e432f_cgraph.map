@@ -1,0 +1,7 @@
+<map id="Four_Four_XO_Board::is_draw" name="Four_Four_XO_Board::is_draw">
+<area shape="rect" id="Node000001" title="Check if the game ended in a draw." alt="" coords="5,5,160,45"/>
+<area shape="rect" id="Node000002" href="$classFour__Four__XO__Board.html#a469ec43cdebb07b56a2b780ba9134506" title="Check if a player has won." alt="" coords="208,5,363,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,23,194,23,194,28,160,28"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="411,13,557,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,23,397,23,397,28,363,28"/>
+</map>

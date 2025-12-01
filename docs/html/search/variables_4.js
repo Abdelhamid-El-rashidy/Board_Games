@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['players_0',['players',['../classGameManager.html#abc7b7dc6bd0e89a29886ace8a7db60bd',1,'GameManager']]]
+  ['n_5fmoves_0',['n_moves',['../classBoard.html#a5952baefabced65fecec333de638408d',1,'Board']]],
+  ['name_1',['name',['../classPlayer.html#af0ad0d4ca8584d23a98c723cd703a4f6',1,'Player']]]
 ];

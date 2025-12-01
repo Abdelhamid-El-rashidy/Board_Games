@@ -85,67 +85,70 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae5dfded241ee3644196e2f6074d1d0b1" id="r_ae5dfded241ee3644196e2f6074d1d0b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ae5dfded241ee3644196e2f6074d1d0b1">Board</a> (int <a class="el" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>, int <a class="el" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>)</td></tr>
+<tr class="memitem:ae5dfded241ee3644196e2f6074d1d0b1" id="r_ae5dfded241ee3644196e2f6074d1d0b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ae5dfded241ee3644196e2f6074d1d0b1">Board</a> (<a class="el" href="classPlayer.html">int</a> <a class="el" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>, <a class="el" href="classPlayer.html">int</a> <a class="el" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>)</td></tr>
 <tr class="memdesc:ae5dfded241ee3644196e2f6074d1d0b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a board with given dimensions.  <br /></td></tr>
 <tr class="separator:ae5dfded241ee3644196e2f6074d1d0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a138a6378af669dd1ce55dc11217aea48" id="r_a138a6378af669dd1ce55dc11217aea48"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a138a6378af669dd1ce55dc11217aea48">~Board</a> ()</td></tr>
+<tr class="memitem:a138a6378af669dd1ce55dc11217aea48" id="r_a138a6378af669dd1ce55dc11217aea48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a138a6378af669dd1ce55dc11217aea48">~Board</a> ()</td></tr>
 <tr class="memdesc:a138a6378af669dd1ce55dc11217aea48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. Frees allocated board memory.  <br /></td></tr>
 <tr class="separator:a138a6378af669dd1ce55dc11217aea48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93d9dec601dda58b7e206ccb47633e57" id="r_a93d9dec601dda58b7e206ccb47633e57"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a93d9dec601dda58b7e206ccb47633e57">update_board</a> (<a class="el" href="classMove.html">Move</a>&lt; T &gt; *move)=0</td></tr>
+<tr class="memitem:a93d9dec601dda58b7e206ccb47633e57" id="r_a93d9dec601dda58b7e206ccb47633e57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">virtual</a> <a class="el" href="classPlayer.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a93d9dec601dda58b7e206ccb47633e57">update_board</a> (<a class="el" href="classMove.html">Move</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; *<a class="el" href="classPlayer.html">move</a>)=0</td></tr>
 <tr class="memdesc:a93d9dec601dda58b7e206ccb47633e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the board with a new move.  <br /></td></tr>
 <tr class="separator:a93d9dec601dda58b7e206ccb47633e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab316fe3e79677b4617fc3d90d6c48f33" id="r_ab316fe3e79677b4617fc3d90d6c48f33"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ab316fe3e79677b4617fc3d90d6c48f33">is_win</a> (<a class="el" href="classPlayer.html">Player</a>&lt; T &gt; *)=0</td></tr>
+<tr class="memitem:ab316fe3e79677b4617fc3d90d6c48f33" id="r_ab316fe3e79677b4617fc3d90d6c48f33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">virtual</a> <a class="el" href="classPlayer.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ab316fe3e79677b4617fc3d90d6c48f33">is_win</a> (<a class="el" href="classPlayer.html">Player</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; *)=0</td></tr>
 <tr class="memdesc:ab316fe3e79677b4617fc3d90d6c48f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a player has won.  <br /></td></tr>
 <tr class="separator:ab316fe3e79677b4617fc3d90d6c48f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a207d5f6feb77f81c51d1462f0245890d" id="r_a207d5f6feb77f81c51d1462f0245890d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a207d5f6feb77f81c51d1462f0245890d">is_lose</a> (<a class="el" href="classPlayer.html">Player</a>&lt; T &gt; *)=0</td></tr>
+<tr class="memitem:a207d5f6feb77f81c51d1462f0245890d" id="r_a207d5f6feb77f81c51d1462f0245890d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">virtual</a> <a class="el" href="classPlayer.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a207d5f6feb77f81c51d1462f0245890d">is_lose</a> (<a class="el" href="classPlayer.html">Player</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; *)=0</td></tr>
 <tr class="memdesc:a207d5f6feb77f81c51d1462f0245890d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a player has lost.  <br /></td></tr>
 <tr class="separator:a207d5f6feb77f81c51d1462f0245890d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dbe2a243881986f3e53b45799d377fc" id="r_a8dbe2a243881986f3e53b45799d377fc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a8dbe2a243881986f3e53b45799d377fc">is_draw</a> (<a class="el" href="classPlayer.html">Player</a>&lt; T &gt; *)=0</td></tr>
+<tr class="memitem:a8dbe2a243881986f3e53b45799d377fc" id="r_a8dbe2a243881986f3e53b45799d377fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">virtual</a> <a class="el" href="classPlayer.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a8dbe2a243881986f3e53b45799d377fc">is_draw</a> (<a class="el" href="classPlayer.html">Player</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; *)=0</td></tr>
 <tr class="memdesc:a8dbe2a243881986f3e53b45799d377fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the game ended in a draw.  <br /></td></tr>
 <tr class="separator:a8dbe2a243881986f3e53b45799d377fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0e4575ec3cc4b6eb9f367ffb2beed13" id="r_ae0e4575ec3cc4b6eb9f367ffb2beed13"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ae0e4575ec3cc4b6eb9f367ffb2beed13">game_is_over</a> (<a class="el" href="classPlayer.html">Player</a>&lt; T &gt; *)=0</td></tr>
+<tr class="memitem:ae0e4575ec3cc4b6eb9f367ffb2beed13" id="r_ae0e4575ec3cc4b6eb9f367ffb2beed13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">virtual</a> <a class="el" href="classPlayer.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ae0e4575ec3cc4b6eb9f367ffb2beed13">game_is_over</a> (<a class="el" href="classPlayer.html">Player</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; *)=0</td></tr>
 <tr class="memdesc:ae0e4575ec3cc4b6eb9f367ffb2beed13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the game is over.  <br /></td></tr>
 <tr class="separator:ae0e4575ec3cc4b6eb9f367ffb2beed13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a117f2e61fdb7deccca333bbbc9c62d3a" id="r_a117f2e61fdb7deccca333bbbc9c62d3a"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a117f2e61fdb7deccca333bbbc9c62d3a">get_board_matrix</a> () const</td></tr>
+<tr class="memitem:a117f2e61fdb7deccca333bbbc9c62d3a" id="r_a117f2e61fdb7deccca333bbbc9c62d3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">vector</a>&lt; <a class="el" href="classPlayer.html">vector</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a117f2e61fdb7deccca333bbbc9c62d3a">get_board_matrix</a> () <a class="el" href="classPlayer.html">const</a></td></tr>
 <tr class="memdesc:a117f2e61fdb7deccca333bbbc9c62d3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a copy of the current board as a 2D vector.  <br /></td></tr>
 <tr class="separator:a117f2e61fdb7deccca333bbbc9c62d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93b130eff67bd4476fab27be8341cb78" id="r_a93b130eff67bd4476fab27be8341cb78"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a93b130eff67bd4476fab27be8341cb78">get_rows</a> () const</td></tr>
+<tr class="memitem:a93b130eff67bd4476fab27be8341cb78" id="r_a93b130eff67bd4476fab27be8341cb78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a93b130eff67bd4476fab27be8341cb78">get_rows</a> () <a class="el" href="classPlayer.html">const</a></td></tr>
 <tr class="memdesc:a93b130eff67bd4476fab27be8341cb78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of rows.  <br /></td></tr>
 <tr class="separator:a93b130eff67bd4476fab27be8341cb78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac665e1ed1f49125fab248e2c9ddfd608" id="r_ac665e1ed1f49125fab248e2c9ddfd608"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ac665e1ed1f49125fab248e2c9ddfd608">get_columns</a> () const</td></tr>
+<tr class="memitem:ac665e1ed1f49125fab248e2c9ddfd608" id="r_ac665e1ed1f49125fab248e2c9ddfd608"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ac665e1ed1f49125fab248e2c9ddfd608">get_columns</a> () <a class="el" href="classPlayer.html">const</a></td></tr>
 <tr class="memdesc:ac665e1ed1f49125fab248e2c9ddfd608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of columns.  <br /></td></tr>
 <tr class="separator:ac665e1ed1f49125fab248e2c9ddfd608"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93558c58e60ca4291c6044828afd260b" id="r_a93558c58e60ca4291c6044828afd260b"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a93558c58e60ca4291c6044828afd260b">get_cell</a> (int x, int y)</td></tr>
-<tr class="memdesc:a93558c58e60ca4291c6044828afd260b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Cell at coordinates (x,y).  <br /></td></tr>
+<tr class="memitem:a512d0bd8c282985c410d677c82eb3b78" id="r_a512d0bd8c282985c410d677c82eb3b78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a512d0bd8c282985c410d677c82eb3b78">get_n_moves</a> () <a class="el" href="classPlayer.html">const</a></td></tr>
+<tr class="memdesc:a512d0bd8c282985c410d677c82eb3b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of moves.  <br /></td></tr>
+<tr class="separator:a512d0bd8c282985c410d677c82eb3b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93558c58e60ca4291c6044828afd260b" id="r_a93558c58e60ca4291c6044828afd260b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a93558c58e60ca4291c6044828afd260b">get_cell</a> (<a class="el" href="classPlayer.html">int</a> x, <a class="el" href="classPlayer.html">int</a> y)</td></tr>
+<tr class="memdesc:a93558c58e60ca4291c6044828afd260b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return content of cell x, y in current board.  <br /></td></tr>
 <tr class="separator:a93558c58e60ca4291c6044828afd260b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a948d978e3b5fc460559b588f5dee9572" id="r_a948d978e3b5fc460559b588f5dee9572"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a></td></tr>
+<tr class="memitem:a948d978e3b5fc460559b588f5dee9572" id="r_a948d978e3b5fc460559b588f5dee9572"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a></td></tr>
 <tr class="memdesc:a948d978e3b5fc460559b588f5dee9572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of rows.  <br /></td></tr>
 <tr class="separator:a948d978e3b5fc460559b588f5dee9572"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaf8842d9d52ac724e8c2f5642ecafc7" id="r_afaf8842d9d52ac724e8c2f5642ecafc7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a></td></tr>
+<tr class="memitem:afaf8842d9d52ac724e8c2f5642ecafc7" id="r_afaf8842d9d52ac724e8c2f5642ecafc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a></td></tr>
 <tr class="memdesc:afaf8842d9d52ac724e8c2f5642ecafc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of columns.  <br /></td></tr>
 <tr class="separator:afaf8842d9d52ac724e8c2f5642ecafc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af00c1fc363eb640ca276b8a572040040" id="r_af00c1fc363eb640ca276b8a572040040"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a></td></tr>
+<tr class="memitem:af00c1fc363eb640ca276b8a572040040" id="r_af00c1fc363eb640ca276b8a572040040"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">vector</a>&lt; <a class="el" href="classPlayer.html">vector</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a></td></tr>
 <tr class="memdesc:af00c1fc363eb640ca276b8a572040040"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D vector for the board  <br /></td></tr>
 <tr class="separator:af00c1fc363eb640ca276b8a572040040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5952baefabced65fecec333de638408d" id="r_a5952baefabced65fecec333de638408d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a5952baefabced65fecec333de638408d">n_moves</a> = 0</td></tr>
+<tr class="memitem:a5952baefabced65fecec333de638408d" id="r_a5952baefabced65fecec333de638408d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a5952baefabced65fecec333de638408d">n_moves</a> = 0</td></tr>
 <tr class="memdesc:a5952baefabced65fecec333de638408d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of moves made.  <br /></td></tr>
 <tr class="separator:a5952baefabced65fecec333de638408d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a>&gt;<br />
 class Board&lt; T &gt;</div><p>Base template for any board used in board games. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of the elements stored on the board (e.g., char, int, string).</td></tr>
+    <tr><td class="paramname">T</td><td>Type of the elements stored on the board (<a class="el" href="classPlayer.html#adb4e803a7ac0356b111b8ca79d766976" title="Construct a player with name, symbol, and type.">e.g</a>., char, int, string).</td></tr>
   </table>
   </dd>
 </dl>
 <p>Provides core data (rows, columns, matrix) and virtual methods to be implemented by specific games like Tic-Tac-Toe, Connect4, etc. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00042">42</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00046">46</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae5dfded241ee3644196e2f6074d1d0b1" name="ae5dfded241ee3644196e2f6074d1d0b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5dfded241ee3644196e2f6074d1d0b1">&#9670;&#160;</a></span>Board()</h2>
@@ -153,21 +156,21 @@ class Board&lt; T &gt;</div><p>Base template for any board used in board games. 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBoard.html">Board</a>&lt; T &gt;<a class="el" href="classBoard.html">::Board</a> </td>
+          <td class="memname"><a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;<a class="el" href="classBoard.html">::Board</a> </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPlayer.html">int</a>&#160;</td>
           <td class="paramname"><em>rows</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPlayer.html">int</a>&#160;</td>
           <td class="paramname"><em>columns</em>&#160;</td>
         </tr>
         <tr>
@@ -185,11 +188,12 @@ template&lt;typename T &gt; </div>
 
 <p>Construct a board with given dimensions. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00053">53</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>        : <a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>(<a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>), <a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>(<a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>), <a class="code hl_variable" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a>(<a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>, vector&lt;T&gt;(<a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>)) {}</div>
-<div class="ttc" id="aclassBoard_html_a948d978e3b5fc460559b588f5dee9572"><div class="ttname"><a href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">Board::rows</a></div><div class="ttdeci">int rows</div><div class="ttdoc">Number of rows.</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00044">BoardGame_Classes.h:44</a></div></div>
-<div class="ttc" id="aclassBoard_html_af00c1fc363eb640ca276b8a572040040"><div class="ttname"><a href="classBoard.html#af00c1fc363eb640ca276b8a572040040">Board::board</a></div><div class="ttdeci">vector&lt; vector&lt; T &gt; &gt; board</div><div class="ttdoc">2D vector for the board</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00046">BoardGame_Classes.h:46</a></div></div>
-<div class="ttc" id="aclassBoard_html_afaf8842d9d52ac724e8c2f5642ecafc7"><div class="ttname"><a href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">Board::columns</a></div><div class="ttdeci">int columns</div><div class="ttdoc">Number of columns.</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00045">BoardGame_Classes.h:45</a></div></div>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00057">57</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>        : <a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>(<a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>), <a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>(<a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>), <a class="code hl_variable" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a>(<a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>, <a class="code hl_class" href="classPlayer.html">vector&lt;T&gt;</a>(<a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>)) {}</div>
+<div class="ttc" id="aclassBoard_html_a948d978e3b5fc460559b588f5dee9572"><div class="ttname"><a href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">Board::rows</a></div><div class="ttdeci">int rows</div><div class="ttdoc">Number of rows.</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00048">BoardGame_Classes.h:48</a></div></div>
+<div class="ttc" id="aclassBoard_html_af00c1fc363eb640ca276b8a572040040"><div class="ttname"><a href="classBoard.html#af00c1fc363eb640ca276b8a572040040">Board::board</a></div><div class="ttdeci">vector&lt; vector&lt; T &gt; &gt; board</div><div class="ttdoc">2D vector for the board</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00050">BoardGame_Classes.h:50</a></div></div>
+<div class="ttc" id="aclassBoard_html_afaf8842d9d52ac724e8c2f5642ecafc7"><div class="ttname"><a href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">Board::columns</a></div><div class="ttdeci">int columns</div><div class="ttdoc">Number of columns.</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00049">BoardGame_Classes.h:49</a></div></div>
+<div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdoc">Base template for all players (human or AI).</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00141">BoardGame_Classes.h:141</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -199,13 +203,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::~<a class="el" href="classBoard.html">Board</a> </td>
+          <td class="memname"><a class="el" href="classPlayer.html">virtual</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::~<a class="el" href="classBoard.html">Board</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -220,8 +224,8 @@ template&lt;typename T &gt; </div>
 
 <p>Virtual destructor. Frees allocated board memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00059">59</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00063">63</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -232,15 +236,15 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::game_is_over </td>
+          <td class="memname"><a class="el" href="classPlayer.html">virtual</a> <a class="el" href="classPlayer.html">bool</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::game_is_over </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlayer.html">Player</a>&lt; T &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="classPlayer.html">Player</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; *&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -254,7 +258,7 @@ template&lt;typename T &gt; </div>
 
 <p>Check if the game is over. </p>
 
-<p>Implemented in <a class="el" href="classInfinity__X__O__Board.html#aecd2c26979b7ba39a036ec469363f6bf">Infinity_X_O_Board</a>.</p>
+<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#ac6b120eac0b398ddc91e9bc1562badf9">Four_Four_XO_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#aecd2c26979b7ba39a036ec469363f6bf">Infinity_X_O_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#ada7bdaa8066378a91d22134d2b931343">Misere_Tic_Tac_Toe_board</a>, <a class="el" href="classNumerical__X__O__Board.html#a4dbd494c6fca2beea04c4180d3d322e9">Numerical_X_O_Board</a>, <a class="el" href="classSUS__Board.html#a1402f8069947c57d4b65f50248e699b2">SUS_Board</a>, and <a class="el" href="classX__O__5x5__Board.html#ad2e0c1e9c3cb85acdbff6c081ad7b8b3">X_O_5x5_Board</a>.</p>
 
 </div>
 </div>
@@ -264,13 +268,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt; vector&lt; T &gt; &gt; <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::get_board_matrix </td>
+          <td class="memname"><a class="el" href="classPlayer.html">vector</a>&lt; <a class="el" href="classPlayer.html">vector</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; &gt; <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::get_board_matrix </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -285,12 +289,12 @@ template&lt;typename T &gt; </div>
 
 <p>Return a copy of the current board as a 2D vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00083">83</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                               {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a>;</div>
-<div class="line"><span class="lineno">   85</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00087">87</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>                                               {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a>;</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00046">Board&lt; T &gt;::board</a>.</p>
+<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00050">Board&lt; T &gt;::board</a>.</p>
 
 </div>
 </div>
@@ -300,21 +304,21 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::get_cell </td>
+          <td class="memname"><a class="el" href="classPlayer.html">T</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::get_cell </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPlayer.html">int</a>&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPlayer.html">int</a>&#160;</td>
           <td class="paramname"><em>y</em>&#160;</td>
         </tr>
         <tr>
@@ -330,12 +334,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get Cell at coordinates (x,y). </p>
+<p>Return content of cell x, y in current board. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00094">94</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a>[x][y]; }</div>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00101">101</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>                             {</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#af00c1fc363eb640ca276b8a572040040">board</a>[x][y];</div>
+<div class="line"><span class="lineno">  103</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00046">Board&lt; T &gt;::board</a>.</p>
+<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00050">Board&lt; T &gt;::board</a>.</p>
 
 </div>
 </div>
@@ -345,13 +351,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::get_columns </td>
+          <td class="memname"><a class="el" href="classPlayer.html">int</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::get_columns </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -366,10 +372,45 @@ template&lt;typename T &gt; </div>
 
 <p>Get number of columns. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00091">91</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00095">95</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#afaf8842d9d52ac724e8c2f5642ecafc7">columns</a>; }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00045">Board&lt; T &gt;::columns</a>.</p>
+<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00049">Board&lt; T &gt;::columns</a>.</p>
+
+</div>
+</div>
+<a id="a512d0bd8c282985c410d677c82eb3b78" name="a512d0bd8c282985c410d677c82eb3b78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a512d0bd8c282985c410d677c82eb3b78">&#9670;&#160;</a></span>get_n_moves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPlayer.html">int</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::get_n_moves </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get number of moves. </p>
+
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00098">98</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#a5952baefabced65fecec333de638408d">n_moves</a>; }</div>
+<div class="ttc" id="aclassBoard_html_a5952baefabced65fecec333de638408d"><div class="ttname"><a href="classBoard.html#a5952baefabced65fecec333de638408d">Board::n_moves</a></div><div class="ttdeci">int n_moves</div><div class="ttdoc">Number of moves made.</div><div class="ttdef"><b>Definition</b> <a href="BoardGame__Classes_8h_source.html#l00051">BoardGame_Classes.h:51</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00051">Board&lt; T &gt;::n_moves</a>.</p>
 
 </div>
 </div>
@@ -379,13 +420,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::get_rows </td>
+          <td class="memname"><a class="el" href="classPlayer.html">int</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::get_rows </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -400,10 +441,10 @@ template&lt;typename T &gt; </div>
 
 <p>Get number of rows. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00088">88</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00092">92</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classBoard.html#a948d978e3b5fc460559b588f5dee9572">rows</a>; }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00044">Board&lt; T &gt;::rows</a>.</p>
+<p class="reference">References <a class="el" href="BoardGame__Classes_8h_source.html#l00048">Board&lt; T &gt;::rows</a>.</p>
 
 </div>
 </div>
@@ -413,15 +454,15 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::is_draw </td>
+          <td class="memname"><a class="el" href="classPlayer.html">virtual</a> <a class="el" href="classPlayer.html">bool</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::is_draw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlayer.html">Player</a>&lt; T &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="classPlayer.html">Player</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; *&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -435,7 +476,7 @@ template&lt;typename T &gt; </div>
 
 <p>Check if the game ended in a draw. </p>
 
-<p>Implemented in <a class="el" href="classInfinity__X__O__Board.html#a27dc0d692d24c8ec6e921267424bf046">Infinity_X_O_Board</a>.</p>
+<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#afcade23d315ec56024baeaaca94e432f">Four_Four_XO_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#a27dc0d692d24c8ec6e921267424bf046">Infinity_X_O_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#ae61d1f10678bb86d7de70a6a5f0e67f7">Misere_Tic_Tac_Toe_board</a>, <a class="el" href="classNumerical__X__O__Board.html#a2d3ee20a3d8e9b2e001649ce85d3a515">Numerical_X_O_Board</a>, <a class="el" href="classSUS__Board.html#a006d0b395a8912ceb0335b95cc69de49">SUS_Board</a>, and <a class="el" href="classX__O__5x5__Board.html#af71219aef79883d9aab1fb4c7b5b3f87">X_O_5x5_Board</a>.</p>
 
 </div>
 </div>
@@ -445,15 +486,15 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::is_lose </td>
+          <td class="memname"><a class="el" href="classPlayer.html">virtual</a> <a class="el" href="classPlayer.html">bool</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::is_lose </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlayer.html">Player</a>&lt; T &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="classPlayer.html">Player</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; *&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -467,7 +508,7 @@ template&lt;typename T &gt; </div>
 
 <p>Check if a player has lost. </p>
 
-<p>Implemented in <a class="el" href="classInfinity__X__O__Board.html#a041f1cd1f82eae2a0ca28791f41eb1c4">Infinity_X_O_Board</a>.</p>
+<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#aa77fe0ea2ae8646acd7db81f6a27965f">Four_Four_XO_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#a041f1cd1f82eae2a0ca28791f41eb1c4">Infinity_X_O_Board</a>, <a class="el" href="classNumerical__X__O__Board.html#a8248aecd5df2f3545323843fc1e4d48d">Numerical_X_O_Board</a>, <a class="el" href="classSUS__Board.html#a4c5fc64b7dc144a2f3c132ca50b713d9">SUS_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#a17b6a2ec14f1f4c9dc5b6cd59127bc56">Misere_Tic_Tac_Toe_board</a>, and <a class="el" href="classX__O__5x5__Board.html#af85ffbe23533e0388f64ca0f55b58979">X_O_5x5_Board</a>.</p>
 
 </div>
 </div>
@@ -477,15 +518,15 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::is_win </td>
+          <td class="memname"><a class="el" href="classPlayer.html">virtual</a> <a class="el" href="classPlayer.html">bool</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::is_win </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlayer.html">Player</a>&lt; T &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="classPlayer.html">Player</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; *&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -499,7 +540,7 @@ template&lt;typename T &gt; </div>
 
 <p>Check if a player has won. </p>
 
-<p>Implemented in <a class="el" href="classInfinity__X__O__Board.html#adee61151bd324d1e28fb1391e1df0789">Infinity_X_O_Board</a>.</p>
+<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#a469ec43cdebb07b56a2b780ba9134506">Four_Four_XO_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#a936b7e9aa80ec2938a10a0ece856eb98">Misere_Tic_Tac_Toe_board</a>, <a class="el" href="classInfinity__X__O__Board.html#adee61151bd324d1e28fb1391e1df0789">Infinity_X_O_Board</a>, <a class="el" href="classNumerical__X__O__Board.html#a0940816900ed8bf06b0cd49d70b443fd">Numerical_X_O_Board</a>, <a class="el" href="classSUS__Board.html#a48747aa0b5f24bac5b5953576725b3ec">SUS_Board</a>, and <a class="el" href="classX__O__5x5__Board.html#a90eeba3a2b960065c81ab50b08997da5">X_O_5x5_Board</a>.</p>
 
 </div>
 </div>
@@ -509,15 +550,15 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::update_board </td>
+          <td class="memname"><a class="el" href="classPlayer.html">virtual</a> <a class="el" href="classPlayer.html">bool</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::update_board </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classMove.html">Move</a>&lt; T &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="classMove.html">Move</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt; *&#160;</td>
           <td class="paramname"><em>move</em></td><td>)</td>
           <td></td>
         </tr>
@@ -538,7 +579,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the move is valid and applied, false otherwise. </dd></dl>
 
-<p>Implemented in <a class="el" href="classInfinity__X__O__Board.html#acdf958b1a2d08227ccfe316a68519622">Infinity_X_O_Board</a>.</p>
+<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#a406a2273ba6b32bc074afdd0402223ac">Four_Four_XO_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#acdf958b1a2d08227ccfe316a68519622">Infinity_X_O_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#a51c52a227b90423940eef5c91097d879">Misere_Tic_Tac_Toe_board</a>, <a class="el" href="classNumerical__X__O__Board.html#ae4bed90db4f9d8308c3b4e7e0db8a5d4">Numerical_X_O_Board</a>, <a class="el" href="classSUS__Board.html#a5cf8d1ad2da90ed50b77a7f5d91342f4">SUS_Board</a>, and <a class="el" href="classX__O__5x5__Board.html#a4c7b73d99de1c299bbef965cdc3c5f32">X_O_5x5_Board</a>.</p>
 
 </div>
 </div>
@@ -549,13 +590,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt;vector&lt;T&gt; &gt; <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::board</td>
+          <td class="memname"><a class="el" href="classPlayer.html">vector</a>&lt;<a class="el" href="classPlayer.html">vector</a>&lt;<a class="el" href="classPlayer.html">T</a>&gt; &gt; <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::board</td>
         </tr>
       </table>
   </td>
@@ -567,9 +608,9 @@ template&lt;typename T &gt; </div>
 
 <p>2D vector for the board </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00046">46</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00050">50</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00083">Board&lt; T &gt;::get_board_matrix()</a>, and <a class="el" href="BoardGame__Classes_8h_source.html#l00094">Board&lt; T &gt;::get_cell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00087">Board&lt; T &gt;::get_board_matrix()</a>, and <a class="el" href="BoardGame__Classes_8h_source.html#l00101">Board&lt; T &gt;::get_cell()</a>.</p>
 
 </div>
 </div>
@@ -579,13 +620,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::columns</td>
+          <td class="memname"><a class="el" href="classPlayer.html">int</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::columns</td>
         </tr>
       </table>
   </td>
@@ -597,9 +638,9 @@ template&lt;typename T &gt; </div>
 
 <p>Number of columns. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00045">45</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00049">49</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00091">Board&lt; T &gt;::get_columns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00095">Board&lt; T &gt;::get_columns()</a>.</p>
 
 </div>
 </div>
@@ -609,13 +650,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::n_moves = 0</td>
+          <td class="memname"><a class="el" href="classPlayer.html">int</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::n_moves = 0</td>
         </tr>
       </table>
   </td>
@@ -627,7 +668,9 @@ template&lt;typename T &gt; </div>
 
 <p>Number of moves made. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00047">47</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00051">51</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00098">Board&lt; T &gt;::get_n_moves()</a>.</p>
 
 </div>
 </div>
@@ -637,13 +680,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classBoard.html">Board</a>&lt; T &gt;::rows</td>
+          <td class="memname"><a class="el" href="classPlayer.html">int</a> <a class="el" href="classBoard.html">Board</a>&lt; <a class="el" href="classPlayer.html">T</a> &gt;::rows</td>
         </tr>
       </table>
   </td>
@@ -655,9 +698,9 @@ template&lt;typename T &gt; </div>
 
 <p>Number of rows. </p>
 
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00044">44</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00048">48</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00088">Board&lt; T &gt;::get_rows()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BoardGame__Classes_8h_source.html#l00092">Board&lt; T &gt;::get_rows()</a>.</p>
 
 </div>
 </div>

@@ -10,8 +10,14 @@ Entry point for the FCAI X-\/O (Tic-\/\+Tac-\/\+Toe) game.
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$memory$>$}\newline
 {\ttfamily \#include "{}../include/\+Board\+Game\+\_\+\+Classes.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Four\+\_\+\+Four\+\_\+\+XO.\+h"{}}\newline
 {\ttfamily \#include "{}../include/\+Infinity\+\_\+\+XO\+\_\+\+Classes.\+h"{}}\newline
-Include dependency graph for main.\+cpp\+:\nopagebreak
+{\ttfamily \#include "{}../include/\+Numerical\+\_\+\+X\+\_\+\+O.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+SUS\+\_\+\+Classes.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+X\+\_\+\+O\+\_\+5x5.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,7 +27,7 @@ Include dependency graph for main.\+cpp\+:\nopagebreak
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \begin{DoxyCompactList}\small\item\em Main function to run the X-\/O game. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -39,7 +45,7 @@ Definition in file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 \index{main.cpp@{main.cpp}!main@{main}}
 \index{main@{main}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{int}} main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -59,53 +65,219 @@ int Returns 0 on successful execution.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));\ \ \textcolor{comment}{//\ Seed\ the\ random\ number\ generator}}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Create\ an\ instance\ of\ the\ specific\ UI\ for\ X-\/O\ using\ a\ pointer\ }}
-\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classUI}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfinit__XO__UI}{Infinit\_XO\_UI}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ board.\ For\ X-\/O,\ this\ is\ an\ X\_O\_Board.}}
-\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classBoard}{Board<char>}}*\ xo\_board\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfinity__X__O__Board}{Infinity\_X\_O\_Board}}();}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Use\ the\ UI\ to\ set\ up\ the\ players\ for\ the\ game.}}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ The\ UI\ returns\ a\ dynamically\ allocated\ array\ of\ Player\ pointers.}}
-\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ players\ =\ game\_ui-\/>\mbox{\hyperlink{classUI_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ manager\ with\ the\ board\ and\ the\ array\ of\ players.}}
-\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classGameManager}{GameManager<char>}}\ x\_o\_game(xo\_board,\ players,\ game\_ui);}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ Run\ the\ game\ loop.}}
-\DoxyCodeLine{00049\ \ \ \ \ x\_o\_game.run();}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Cleanup\ -\/-\/-\/}}
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ board\ object.}}
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{delete}\ xo\_board;}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classPlayer}{srand}}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{classPlayer}{time}}(0)));\ \ \textcolor{comment}{//\ Seed\ the\ random\ number\ generator}}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ The\ Menu}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{choice}}\ =\ 1;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{classPlayer}{choice}}\ !=\ 0)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}-\/-\/Welcome\ to\ the\ FCAI\ Board\ Game\ Collection:\(\backslash\)n"{}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}0.\ Exit\(\backslash\)n"{}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}1.\ Infinity\ X\_O\(\backslash\)n"{}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}2.\ Numerical\ X\_O\(\backslash\)n"{}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}3.\ 5\ x\ 5\ X\_O\(\backslash\)n"{}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}4.\ Misere\ X\_O\(\backslash\)n"{}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}5.\ Four\_Four\ X\_O\(\backslash\)n"{}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}6.\ SUS\ Game\(\backslash\)n"{}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Select\ a\ game\ (0-\/6):\ "{}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ \mbox{\hyperlink{classPlayer}{choice}};}
 \DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ individual\ player\ objects.}}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
-\DoxyCodeLine{00058\ \ \ \ \ \}}
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ array\ of\ player\ pointers\ itself.}}
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \textcolor{comment}{//\ Exit\ successfully}}
-\DoxyCodeLine{00063\ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{classPlayer}{choice}})\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Exiting\ the\ program.\ Goodbye!\(\backslash\)\(\backslash\)n"{}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{UI<char>}}*\ \mbox{\hyperlink{classPlayer}{game\_ui}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfinit__XO__UI}{Infinit\_XO\_UI}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ board.\ For\ X-\/O,\ this\ is\ an\ X\_O\_Board.}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Board<char>}}*\ \mbox{\hyperlink{classPlayer}{xo\_board}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfinity__X__O__Board}{Infinity\_X\_O\_Board}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ UI\ to\ set\ up\ the\ players\ for\ the\ game.}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ UI\ returns\ a\ dynamically\ allocated\ array\ of\ Player\ pointers.}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ players\ =\ \mbox{\hyperlink{classPlayer}{game\_ui}}-\/>setup\_players();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ manager\ with\ the\ board\ and\ the\ array\ of\ players.}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{GameManager<char>}}\ \mbox{\hyperlink{classPlayer}{x\_o\_game}}(\mbox{\hyperlink{classPlayer}{xo\_board}},\ players,\ \mbox{\hyperlink{classPlayer}{game\_ui}});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Run\ the\ game\ loop.}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{x\_o\_game}}.run();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Cleanup\ -\/-\/-\/}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ board\ object.}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classPlayer}{xo\_board}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ individual\ player\ objects.}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ 2;\ ++\mbox{\hyperlink{classPlayer}{i}})\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[\mbox{\hyperlink{classPlayer}{i}}];}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ array\ of\ player\ pointers\ itself.}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{UI<char>}}*\ \mbox{\hyperlink{classPlayer}{game\_ui}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classNumerical__XO__UI}{Numerical\_XO\_UI}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ board.\ For\ X-\/O,\ this\ is\ an\ X\_O\_Board.}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Board<char>}}*\ \mbox{\hyperlink{classPlayer}{xo\_board}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classNumerical__X__O__Board}{Numerical\_X\_O\_Board}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ UI\ to\ set\ up\ the\ players\ for\ the\ game.}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ UI\ returns\ a\ dynamically\ allocated\ array\ of\ Player\ pointers.}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ players\ =\ \mbox{\hyperlink{classPlayer}{game\_ui}}-\/>setup\_players();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ manager\ with\ the\ board\ and\ the\ array\ of\ players.}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{GameManager<char>}}\ \mbox{\hyperlink{classPlayer}{x\_o\_game}}(\mbox{\hyperlink{classPlayer}{xo\_board}},\ players,\ \mbox{\hyperlink{classPlayer}{game\_ui}});}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Run\ the\ game\ loop.}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{x\_o\_game}}.run();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Cleanup\ -\/-\/-\/}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ board\ object.}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classPlayer}{xo\_board}};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ individual\ player\ objects.}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ 2;\ ++\mbox{\hyperlink{classPlayer}{i}})\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[\mbox{\hyperlink{classPlayer}{i}}];}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ array\ of\ player\ pointers\ itself.}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{UI<char>}}*\ \mbox{\hyperlink{classPlayer}{game\_ui}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classX__O__5x5__UI}{X\_O\_5x5\_UI}}();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ board.\ For\ X-\/O,\ this\ is\ an\ X\_O\_Board.}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Board<char>}}*\ \mbox{\hyperlink{classPlayer}{xo\_board}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classX__O__5x5__Board}{X\_O\_5x5\_Board}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ UI\ to\ set\ up\ the\ players\ for\ the\ game.}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ UI\ returns\ a\ dynamically\ allocated\ array\ of\ Player\ pointers.}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ players\ =\ \mbox{\hyperlink{classPlayer}{game\_ui}}-\/>setup\_players();}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ manager\ with\ the\ board\ and\ the\ array\ of\ players.}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{GameManager<char>}}\ \mbox{\hyperlink{classPlayer}{x\_o\_game}}(\mbox{\hyperlink{classPlayer}{xo\_board}},\ players,\ \mbox{\hyperlink{classPlayer}{game\_ui}});}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Run\ the\ game\ loop.}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{x\_o\_game}}.run();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Cleanup\ -\/-\/-\/}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ board\ object.}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classPlayer}{xo\_board}};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ individual\ player\ objects.}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ 2;\ ++\mbox{\hyperlink{classPlayer}{i}})\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[\mbox{\hyperlink{classPlayer}{i}}];}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ array\ of\ player\ pointers\ itself.}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{UI<char>}}*\ \mbox{\hyperlink{classPlayer}{game\_ui}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI}{Misere\_Tic\_Tac\_Toe\_UI}}();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ board.\ For\ X-\/O,\ this\ is\ an\ X\_O\_Board.}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Board<char>}}*\ \mbox{\hyperlink{classPlayer}{xo\_board}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board}{Misere\_Tic\_Tac\_Toe\_board}}();}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ UI\ to\ set\ up\ the\ players\ for\ the\ game.}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ UI\ returns\ a\ dynamically\ allocated\ array\ of\ Player\ pointers.}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ players\ =\ \mbox{\hyperlink{classPlayer}{game\_ui}}-\/>setup\_players();}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ manager\ with\ the\ board\ and\ the\ array\ of\ players.}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{GameManager<char>}}\ \mbox{\hyperlink{classPlayer}{x\_o\_game}}(\mbox{\hyperlink{classPlayer}{xo\_board}},\ players,\ \mbox{\hyperlink{classPlayer}{game\_ui}});}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Run\ the\ game\ loop.}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{x\_o\_game}}.run();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Cleanup\ -\/-\/-\/}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ board\ object.}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classPlayer}{xo\_board}};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ individual\ player\ objects.}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ 2;\ ++\mbox{\hyperlink{classPlayer}{i}})\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[\mbox{\hyperlink{classPlayer}{i}}];}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ array\ of\ player\ pointers\ itself.}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{UI<char>}}*\ \mbox{\hyperlink{classPlayer}{game\_ui}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classFour__Four__XO__UI}{Four\_Four\_XO\_UI}}();}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ board.\ For\ X-\/O,\ this\ is\ an\ X\_O\_Board.}}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Board<char>}}*\ \mbox{\hyperlink{classPlayer}{xo\_board}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classFour__Four__XO__Board}{Four\_Four\_XO\_Board}}();}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ UI\ to\ set\ up\ the\ players\ for\ the\ game.}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ UI\ returns\ a\ dynamically\ allocated\ array\ of\ Player\ pointers.}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ players\ =\ \mbox{\hyperlink{classPlayer}{game\_ui}}-\/>setup\_players();}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ manager\ with\ the\ board\ and\ the\ array\ of\ players.}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{GameManager<char>}}\ \mbox{\hyperlink{classPlayer}{x\_o\_game}}(\mbox{\hyperlink{classPlayer}{xo\_board}},\ players,\ \mbox{\hyperlink{classPlayer}{game\_ui}});}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Run\ the\ game\ loop.}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{x\_o\_game}}.run();}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Cleanup\ -\/-\/-\/}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ board\ object.}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classPlayer}{xo\_board}};}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ individual\ player\ objects.}}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ 2;\ ++\mbox{\hyperlink{classPlayer}{i}})\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[\mbox{\hyperlink{classPlayer}{i}}];}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ array\ of\ player\ pointers\ itself.}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{UI<char>}}*\ \mbox{\hyperlink{classPlayer}{game\_ui}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classSUS__UI}{SUS\_UI}}();}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ board.\ For\ X-\/O,\ this\ is\ an\ X\_O\_Board.}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Board<char>}}*\ \mbox{\hyperlink{classPlayer}{xo\_board}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classSUS__Board}{SUS\_Board}}();}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ UI\ to\ set\ up\ the\ players\ for\ the\ game.}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ UI\ returns\ a\ dynamically\ allocated\ array\ of\ Player\ pointers.}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ players\ =\ \mbox{\hyperlink{classPlayer}{game\_ui}}-\/>setup\_players();}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ manager\ with\ the\ board\ and\ the\ array\ of\ players.}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{GameManager<char>}}\ \mbox{\hyperlink{classPlayer}{x\_o\_game}}(\mbox{\hyperlink{classPlayer}{xo\_board}},\ players,\ \mbox{\hyperlink{classPlayer}{game\_ui}});}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Run\ the\ game\ loop.}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{x\_o\_game}}.run();}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Cleanup\ -\/-\/-\/}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ board\ object.}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classPlayer}{xo\_board}};}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ individual\ player\ objects.}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ 2;\ ++\mbox{\hyperlink{classPlayer}{i}})\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[\mbox{\hyperlink{classPlayer}{i}}];}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ array\ of\ player\ pointers\ itself.}}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Invalid\ choice.\ Please\ try\ again.\(\backslash\)\(\backslash\)n"{}};}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{choice}}\ =\ 1;}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00227\ \ \ \ \ \}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{comment}{//\ //\ Run\ the\ game\ loop.}}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{comment}{//\ x\_o\_game.run();}}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{comment}{//\ //\ -\/-\/-\/\ Cleanup\ -\/-\/-\/}}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{comment}{//\ //\ Delete\ the\ dynamically\ allocated\ board\ object.}}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{comment}{//\ delete\ xo\_board;}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{comment}{//\ //\ Delete\ the\ individual\ player\ objects.}}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{comment}{//\ for\ (int\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ delete\ players[i];}}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{comment}{//\ //\ Delete\ the\ dynamically\ allocated\ array\ of\ player\ pointers\ itself.}}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{comment}{//\ delete[]\ players;}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \textcolor{comment}{//\ Exit\ successfully}}
+\DoxyCodeLine{00245\ \}}
 
 \end{DoxyCode}
-
-
-References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00277}{Game\+Manager$<$ T $>$\+::run()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00313}{UI$<$ T $>$\+::setup\+\_\+players()}}.
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
-\end{center}
-\end{figure}

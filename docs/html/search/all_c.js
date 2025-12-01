@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['set_5fboard_5fptr_0',['set_board_ptr',['../classPlayer.html#a3617a3ad0db435176a06948065f9a3a6',1,'Player']]],
-  ['setup_5fplayers_1',['setup_players',['../classUI.html#a6966a040c995b2292e5edddaa94f889a',1,'UI']]],
-  ['symbol_2',['symbol',['../classMove.html#a0bec25acdce91feab1b4c21c26505088',1,'Move::symbol'],['../classPlayer.html#a272d6c4dab769930d4f8074918e7708a',1,'Player::symbol']]]
+  ['player_0',['player',['../classPlayer.html',1,'Player&lt; T &gt;'],['../classPlayer.html#adb4e803a7ac0356b111b8ca79d766976',1,'Player::Player()']]],
+  ['players_1',['players',['../classGameManager.html#abc7b7dc6bd0e89a29886ace8a7db60bd',1,'GameManager']]],
+  ['playertype_2',['PlayerType',['../BoardGame__Classes_8h.html#abe590f3c9109f404f003d5d7e4f0fccf',1,'BoardGame_Classes.h']]],
+  ['pyramid_5fxo_2ecpp_3',['Pyramid_XO.cpp',['../Pyramid__XO_8cpp.html',1,'']]],
+  ['pyramid_5fxo_2eh_4',['Pyramid_XO.h',['../Pyramid__XO_8h.html',1,'']]],
+  ['pyramid_5fxo_5fboard_5',['Pyramid_XO_Board',['../classPyramid__XO__Board.html',1,'']]],
+  ['pyramid_5fxo_5fui_6',['Pyramid_XO_UI',['../classPyramid__XO__UI.html',1,'']]]
 ];

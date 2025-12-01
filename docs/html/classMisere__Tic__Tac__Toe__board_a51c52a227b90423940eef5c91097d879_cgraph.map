@@ -1,0 +1,5 @@
+<map id="Misere_Tic_Tac_Toe_board::update_board" name="Misere_Tic_Tac_Toe_board::update_board">
+<area shape="rect" id="Node000001" title="Updates the board with a player&#39;s move." alt="" coords="5,5,168,45"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="216,13,363,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,23,202,23,202,28,168,28"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="include/SUS_Classes.h" name="include/SUS_Classes.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="11,5,179,31"/>
+<area shape="rect" id="Node000002" href="$BoardGame__Classes_8h.html" title=" " alt="" coords="72,79,240,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,29,139,66,135,70,103,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,64,177"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="89,32,62,80,43,139,38,137,58,78,85,29"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="138,106,67,147,65,143,135,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="89,152,151,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="152,106,134,141,130,138,148,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="176,152,256,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="168,103,200,140,195,143,164,106"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="280,152,355,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="183,102,280,144,277,149,181,106"/>
+</map>
