@@ -22,4 +22,6 @@ add_executable(BoardGameFramework
         src/Misere_Tic_Tac_Toe.cpp
         src/Pyramid_XO.cpp
         include/Pyramid_XO.h
+        src/Four-in-a-row.cpp
+        include/Four-in-a-row.h
 )
