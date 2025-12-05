@@ -24,4 +24,6 @@ add_executable(BoardGameFramework
         include/Pyramid_XO.h
         src/Four-in-a-row.cpp
         include/Four-in-a-row.h
+        src/Diamond_Tic_Tac_Toe.cpp
+        include/Diamond_Tic_Tac_Toe.h
 )
