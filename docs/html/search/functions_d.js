@@ -11,7 +11,9 @@ var searchData=
   ['_7enumerical_5fx_5fo_5fboard_8',['~Numerical_X_O_Board',['../classNumerical__X__O__Board.html#a66b86f713a2f2fab185ac30f71cf5e93',1,'Numerical_X_O_Board']]],
   ['_7enumerical_5fxo_5fui_9',['~Numerical_XO_UI',['../classNumerical__XO__UI.html#a70629880d90710c8f171a324eef480c2',1,'Numerical_XO_UI']]],
   ['_7eplayer_10',['~Player',['../classPlayer.html#aac1f2ab2a8e2aa0336d302c16068020e',1,'Player']]],
-  ['_7esus_5fui_11',['~SUS_UI',['../classSUS__UI.html#a5860425ff09d2e1971fb7822c69b1a34',1,'SUS_UI']]],
-  ['_7eui_12',['~UI',['../classUI.html#a1012e508ff7df030714c62ddf6b261a7',1,'UI']]],
-  ['_7ex_5fo_5f5x5_5fui_13',['~X_O_5x5_UI',['../classX__O__5x5__UI.html#a06322538e7f2c422b203f7c8188f2c57',1,'X_O_5x5_UI']]]
+  ['_7epyramid_5fxo_5fboard_11',['~Pyramid_XO_Board',['../classPyramid__XO__Board.html#a0fd0307fca0e3fba749dad23c5a3ccdf',1,'Pyramid_XO_Board']]],
+  ['_7epyramid_5fxo_5fui_12',['~Pyramid_XO_UI',['../classPyramid__XO__UI.html#a17e3ab65c4b1ef16dd827b10d8495ace',1,'Pyramid_XO_UI']]],
+  ['_7esus_5fui_13',['~SUS_UI',['../classSUS__UI.html#a5860425ff09d2e1971fb7822c69b1a34',1,'SUS_UI']]],
+  ['_7eui_14',['~UI',['../classUI.html#a1012e508ff7df030714c62ddf6b261a7',1,'UI']]],
+  ['_7ex_5fo_5f5x5_5fui_15',['~X_O_5x5_UI',['../classX__O__5x5__UI.html#a06322538e7f2c422b203f7c8188f2c57',1,'X_O_5x5_UI']]]
 ];

@@ -1,0 +1,9 @@
+<map id="Pyramid_XO_UI::get_move" name="Pyramid_XO_UI::get_move">
+<area shape="rect" id="Node000001" title="Retrieves the next move from a player." alt="" coords="5,55,200,80"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#a508617eddfae8915d098102d480fc888" title="Get a pointer to the game board." alt="" coords="248,5,409,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,52,256,31,257,36,162,57"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="255,55,402,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,65,242,65,242,70,200,70"/>
+<area shape="rect" id="Node000004" href="$classPlayer.html#a2df3bd299bf7aecfa2275ec6902a60f8" title="Get player type (e.g., &#39;H&#39; or &#39;C&#39;)." alt="" coords="265,104,393,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="162,77,257,98,256,104,161,83"/>
+</map>

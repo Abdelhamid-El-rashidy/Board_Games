@@ -1,0 +1,5 @@
+<map id="Pyramid_XO_Board::is_win" name="Pyramid_XO_Board::is_win">
+<area shape="rect" id="Node000001" title="Checks if the given player has won the game." alt="" coords="5,5,200,31"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="248,5,395,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,15,234,15,234,21,201,21"/>
+</map>

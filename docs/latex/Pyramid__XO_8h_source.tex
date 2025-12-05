@@ -12,13 +12,38 @@
 \DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BoardGame__Classes_8h}{BoardGame\_Classes.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00009}00009\ }
 \DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00010}\mbox{\hyperlink{classPyramid__XO__Board}{00010}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPyramid__XO__Board}{Pyramid\_XO\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBoard}{Board}}<char>\ \{}
-\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00011}00011\ \};}
-\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00013}\mbox{\hyperlink{classPyramid__XO__UI}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPyramid__XO__UI}{Pyramid\_XO\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classUI}{UI}}<char>\ \{}
-\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00015}00015\ \};}
-\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00018}00018\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BOARDGAMEFRAMEWORK\_PYRAMID\_XO\_H}}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00011}00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00012}\mbox{\hyperlink{classPyramid__XO__Board_a35d849b123023b489e8bcd2f3522f2cd}{00012}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPyramid__XO__Board_a35d849b123023b489e8bcd2f3522f2cd}{blank\_symbol}}\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00014}00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{classPyramid__XO__Board_a21121ea2fe7c7d0ee1727ad51c4b53b2}{Pyramid\_XO\_Board}}();}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPyramid__XO__Board_a77b86fd4ce8a0750fc1b979ae23a2407}{update\_board}}(\mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classPlayer}{move}});}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPyramid__XO__Board_a757067ee52a8f5b1cf1b6777b6c7b331}{is\_win}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00039}\mbox{\hyperlink{classPyramid__XO__Board_a43c58b9f5de99a8a2325811ede3344ea}{00039}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPyramid__XO__Board_a43c58b9f5de99a8a2325811ede3344ea}{is\_lose}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPyramid__XO__Board_a8fe3a3f5772c0cda1eb6c847f6bdf39c}{is\_draw}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00053}00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPyramid__XO__Board_a4ea52230886944457ad5dfd1d8732da7}{game\_is\_over}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00055}\mbox{\hyperlink{classPyramid__XO__Board_a0fd0307fca0e3fba749dad23c5a3ccdf}{00055}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPyramid__XO__Board_a0fd0307fca0e3fba749dad23c5a3ccdf}{\string~Pyramid\_XO\_Board}}()\{\};}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00056}00056\ \};}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00058}\mbox{\hyperlink{classPyramid__XO__UI}{00058}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPyramid__XO__UI}{Pyramid\_XO\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classUI}{UI}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00059}00059\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00065}00065\ \ \ \ \ \mbox{\hyperlink{classPyramid__XO__UI_af9b3ef5883c6499d39a77c222b0d2e03}{Pyramid\_XO\_UI}}();}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00070}\mbox{\hyperlink{classPyramid__XO__UI_a17e3ab65c4b1ef16dd827b10d8495ace}{00070}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPyramid__XO__UI_a17e3ab65c4b1ef16dd827b10d8495ace}{\string~Pyramid\_XO\_UI}}()\ \{\};}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00079}00079\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPyramid__XO__UI_ab7c835c5fbf86ec08d3262e840cd7563}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type);}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00086}00086\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classPyramid__XO__UI_a9447abc21ff1b8baa5ac1d91d84b567e}{get\_move}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00088}00088\ \};}
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{Pyramid__XO_8h_source_l00091}00091\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BOARDGAMEFRAMEWORK\_PYRAMID\_XO\_H}}
 
 \end{DoxyCode}

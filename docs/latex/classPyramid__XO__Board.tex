@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for Pyramid\+\_\+\+XO\+\_\+\+Board\+:
-\nopagebreak
+Inheritance diagram for Pyramid\+\_\+\+XO\+\_\+\+Board\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,15 +15,30 @@ Inheritance diagram for Pyramid\+\_\+\+XO\+\_\+\+Board\+:
 \end{figure}
 
 
-Collaboration diagram for Pyramid\+\_\+\+XO\+\_\+\+Board\+:
-\nopagebreak
+Collaboration diagram for Pyramid\+\_\+\+XO\+\_\+\+Board\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=190pt]{classPyramid__XO__Board__coll__graph}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Additional Inherited Members}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPyramid__XO__Board_a21121ea2fe7c7d0ee1727ad51c4b53b2}{Pyramid\+\_\+\+XO\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes a 3x5 X-\/O board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classPyramid__XO__Board_a77b86fd4ce8a0750fc1b979ae23a2407}{update\+\_\+board}} (\mbox{\hyperlink{classMove}{Move}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPlayer}{move}})
+\begin{DoxyCompactList}\small\item\em Updates the board with a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classPyramid__XO__Board_a757067ee52a8f5b1cf1b6777b6c7b331}{is\+\_\+win}} (\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPlayer}{player}})
+\begin{DoxyCompactList}\small\item\em Checks if the given player has won the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classPyramid__XO__Board_a43c58b9f5de99a8a2325811ede3344ea}{is\+\_\+lose}} (\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Checks if the given player has lost the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classPyramid__XO__Board_a8fe3a3f5772c0cda1eb6c847f6bdf39c}{is\+\_\+draw}} (\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPlayer}{player}})
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended in a draw. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classPyramid__XO__Board_a4ea52230886944457ad5dfd1d8732da7}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPlayer}{player}})
+\begin{DoxyCompactList}\small\item\em Determines if the game is over (win or draw). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPyramid__XO__Board_a0fd0307fca0e3fba749dad23c5a3ccdf}{\texorpdfstring{$\sim$}{\string~}\+Pyramid\+\_\+\+XO\+\_\+\+Board}} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBoard}{Board$<$ char $>$}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,16 +46,6 @@ Collaboration diagram for Pyramid\+\_\+\+XO\+\_\+\+Board\+:
 \begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classBoard_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
 \begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classBoard_a93d9dec601dda58b7e206ccb47633e57}{update\+\_\+board}} (\mbox{\hyperlink{classMove}{Move}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPlayer}{move}})=0
-\begin{DoxyCompactList}\small\item\em Update the board with a new move. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classBoard_ab316fe3e79677b4617fc3d90d6c48f33}{is\+\_\+win}} (\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*})=0
-\begin{DoxyCompactList}\small\item\em Check if a player has won. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classBoard_a207d5f6feb77f81c51d1462f0245890d}{is\+\_\+lose}} (\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*})=0
-\begin{DoxyCompactList}\small\item\em Check if a player has lost. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classBoard_a8dbe2a243881986f3e53b45799d377fc}{is\+\_\+draw}} (\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*})=0
-\begin{DoxyCompactList}\small\item\em Check if the game ended in a draw. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classBoard_ae0e4575ec3cc4b6eb9f367ffb2beed13}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*})=0
-\begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ $>$ \mbox{\hyperlink{classBoard_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () \mbox{\hyperlink{classPlayer}{const}}
 \begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classBoard_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () \mbox{\hyperlink{classPlayer}{const}}
@@ -52,6 +56,12 @@ Collaboration diagram for Pyramid\+\_\+\+XO\+\_\+\+Board\+:
 \begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classBoard_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (\mbox{\hyperlink{classPlayer}{int}} x, \mbox{\hyperlink{classPlayer}{int}} y)
 \begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classPyramid__XO__Board_a35d849b123023b489e8bcd2f3522f2cd}{blank\+\_\+symbol}} = \textquotesingle{}.\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Character used to represent an empty cell on the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBoard}{Board$<$ char $>$}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -72,6 +82,351 @@ Definition at line \mbox{\hyperlink{Pyramid__XO_8h_source_l00010}{10}} of file \
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPyramid__XO__Board_a21121ea2fe7c7d0ee1727ad51c4b53b2}\label{classPyramid__XO__Board_a21121ea2fe7c7d0ee1727ad51c4b53b2} 
+\index{Pyramid\_XO\_Board@{Pyramid\_XO\_Board}!Pyramid\_XO\_Board@{Pyramid\_XO\_Board}}
+\index{Pyramid\_XO\_Board@{Pyramid\_XO\_Board}!Pyramid\_XO\_Board@{Pyramid\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{Pyramid\_XO\_Board()}{Pyramid\_XO\_Board()}}
+{\footnotesize\ttfamily Pyramid\+\_\+\+XO\+\_\+\+Board\+::\+Pyramid\+\_\+\+XO\+\_\+\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor that initializes a 3x5 X-\/O board. 
+
+
+
+Definition at line \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{Pyramid__XO_8cpp_source}{Pyramid\+\_\+\+XO.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classPlayer}{Board<char>}}(3,5)\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{distant}}[3]\ =\ \{0,1,2\};\ \textcolor{comment}{//\ range\ for\ each\ row\ to\ build\ pyramid\ shape}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}<\mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}};\ \mbox{\hyperlink{classPlayer}{i}}++)\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}<\mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}};\ \mbox{\hyperlink{classPlayer}{j}}++)\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{abs}}(\mbox{\hyperlink{classPlayer}{j}}-\/2)<=\mbox{\hyperlink{classPlayer}{distant}}[\mbox{\hyperlink{classPlayer}{i}}])\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \mbox{\hyperlink{classPyramid__XO__Board_a35d849b123023b489e8bcd2f3522f2cd}{blank\_symbol}};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \textcolor{charliteral}{'-\/'};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Pyramid__XO_8h_source_l00012}{blank\+\_\+symbol}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00050}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00049}{Board$<$ char $>$\+::columns}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00048}{Board$<$ char $>$\+::rows}}.
+
+\Hypertarget{classPyramid__XO__Board_a0fd0307fca0e3fba749dad23c5a3ccdf}\label{classPyramid__XO__Board_a0fd0307fca0e3fba749dad23c5a3ccdf} 
+\index{Pyramid\_XO\_Board@{Pyramid\_XO\_Board}!````~Pyramid\_XO\_Board@{\texorpdfstring{$\sim$}{\string~}Pyramid\_XO\_Board}}
+\index{````~Pyramid\_XO\_Board@{\texorpdfstring{$\sim$}{\string~}Pyramid\_XO\_Board}!Pyramid\_XO\_Board@{Pyramid\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Pyramid\_XO\_Board()}{\string~Pyramid\_XO\_Board()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{virtual}} Pyramid\+\_\+\+XO\+\_\+\+Board\+::\texorpdfstring{$\sim$}{\string~}\+Pyramid\+\_\+\+XO\+\_\+\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{Pyramid__XO_8h_source_l00055}{55}} of file \mbox{\hyperlink{Pyramid__XO_8h_source}{Pyramid\+\_\+\+XO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \{\};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPyramid__XO__Board_a4ea52230886944457ad5dfd1d8732da7}\label{classPyramid__XO__Board_a4ea52230886944457ad5dfd1d8732da7} 
+\index{Pyramid\_XO\_Board@{Pyramid\_XO\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Pyramid\_XO\_Board@{Pyramid\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{bool}} Pyramid\+\_\+\+XO\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determines if the game is over (win or draw). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player to evaluate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the game has ended, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBoard_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{Pyramid__XO_8cpp_source}{Pyramid\+\_\+\+XO.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPyramid__XO__Board_a757067ee52a8f5b1cf1b6777b6c7b331}{is\_win}}(\mbox{\hyperlink{classPlayer}{player}})\ ||\ \mbox{\hyperlink{classPyramid__XO__Board_a8fe3a3f5772c0cda1eb6c847f6bdf39c}{is\_draw}}(\mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00067}{is\+\_\+draw()}}, and \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00039}{is\+\_\+win()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPyramid__XO__Board_a4ea52230886944457ad5dfd1d8732da7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPyramid__XO__Board_a8fe3a3f5772c0cda1eb6c847f6bdf39c}\label{classPyramid__XO__Board_a8fe3a3f5772c0cda1eb6c847f6bdf39c} 
+\index{Pyramid\_XO\_Board@{Pyramid\_XO\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Pyramid\_XO\_Board@{Pyramid\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{bool}} Pyramid\+\_\+\+XO\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended in a draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all cells are filled and no player has won, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBoard_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{Pyramid__XO_8cpp_source}{Pyramid\+\_\+\+XO.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classBoard_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 9\ \&\&\ !\mbox{\hyperlink{classPyramid__XO__Board_a757067ee52a8f5b1cf1b6777b6c7b331}{is\_win}}(\mbox{\hyperlink{classPlayer}{player}}));}
+\DoxyCodeLine{00069\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00039}{is\+\_\+win()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00051}{Board$<$ char $>$\+::n\+\_\+moves}}.
+
+
+
+Referenced by \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00071}{game\+\_\+is\+\_\+over()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPyramid__XO__Board_a8fe3a3f5772c0cda1eb6c847f6bdf39c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPyramid__XO__Board_a8fe3a3f5772c0cda1eb6c847f6bdf39c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPyramid__XO__Board_a43c58b9f5de99a8a2325811ede3344ea}\label{classPyramid__XO__Board_a43c58b9f5de99a8a2325811ede3344ea} 
+\index{Pyramid\_XO\_Board@{Pyramid\_XO\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Pyramid\_XO\_Board@{Pyramid\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{bool}} Pyramid\+\_\+\+XO\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the given player has lost the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false (not used in X-\/O logic). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBoard_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Pyramid__XO_8h_source_l00039}{39}} of file \mbox{\hyperlink{Pyramid__XO_8h_source}{Pyramid\+\_\+\+XO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+
+\end{DoxyCode}
+\Hypertarget{classPyramid__XO__Board_a757067ee52a8f5b1cf1b6777b6c7b331}\label{classPyramid__XO__Board_a757067ee52a8f5b1cf1b6777b6c7b331} 
+\index{Pyramid\_XO\_Board@{Pyramid\_XO\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Pyramid\_XO\_Board@{Pyramid\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{bool}} Pyramid\+\_\+\+XO\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the given player has won the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player has a winning line, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBoard_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{Pyramid__XO_8cpp_source}{Pyramid\+\_\+\+XO.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{sym}}\ =\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{all\_equal}}\ =\ [\&](\textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{a}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{c}})\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer}{a}}\ ==\ \mbox{\hyperlink{classPlayer}{b}}\ \&\&\ \mbox{\hyperlink{classPlayer}{b}}\ ==\ \mbox{\hyperlink{classPlayer}{c}}\ \&\&\ \mbox{\hyperlink{classPlayer}{a}}\ !=\ \mbox{\hyperlink{classPyramid__XO__Board_a35d849b123023b489e8bcd2f3522f2cd}{blank\_symbol}};}
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ Check\ Column\ (3*5\ pyramid\ has\ only\ one\ column\ possible\ column\ of\ size\ 3)}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{all\_equal}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][2],\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][2],\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][2])\ \&\&\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][2]==\mbox{\hyperlink{classPlayer}{sym}}\ )\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Check\ 2nd\ row}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{all\_equal}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][2],\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][3])\ \&\&\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][1]==\mbox{\hyperlink{classPlayer}{sym}}\ )\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ Check\ 3rd\ row}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{all\_equal}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][0],\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][1],\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][2])\ \&\&\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][2]==\mbox{\hyperlink{classPlayer}{sym}}\ )\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{all\_equal}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][1],\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][2],\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][3])\ \&\&\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][2]==\mbox{\hyperlink{classPlayer}{sym}}\ )\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{all\_equal}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][2],\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][3],\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][4])\ \&\&\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][2]==\mbox{\hyperlink{classPlayer}{sym}}\ )\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ Check\ diagonals\ of\ pyramid\ (has\ only\ two\ diagonals)}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classPlayer}{all\_equal}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][2],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][0])\ \&\&\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][2]\ ==\ \mbox{\hyperlink{classPlayer}{sym}})\ ||}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classPlayer}{all\_equal}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][2],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][3],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][4])\ \&\&\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][2]\ ==\ \mbox{\hyperlink{classPlayer}{sym}}))}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00065\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Pyramid__XO_8h_source_l00012}{blank\+\_\+symbol}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00050}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00164}{Player$<$ T $>$\+::get\+\_\+symbol()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00071}{game\+\_\+is\+\_\+over()}}, and \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00067}{is\+\_\+draw()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPyramid__XO__Board_a757067ee52a8f5b1cf1b6777b6c7b331_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPyramid__XO__Board_a757067ee52a8f5b1cf1b6777b6c7b331_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPyramid__XO__Board_a77b86fd4ce8a0750fc1b979ae23a2407}\label{classPyramid__XO__Board_a77b86fd4ce8a0750fc1b979ae23a2407} 
+\index{Pyramid\_XO\_Board@{Pyramid\_XO\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Pyramid\_XO\_Board@{Pyramid\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{bool}} Pyramid\+\_\+\+XO\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMove}{Move}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the board with a player\textquotesingle{}s move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to a \doxylink{classMove}{Move$<$char$>$} object containing move coordinates and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and successfully applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBoard_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{Pyramid__XO_8cpp_source}{Pyramid\+\_\+\+XO.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ \mbox{\hyperlink{classPlayer}{move}}-\/>get\_x();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ \mbox{\hyperlink{classPlayer}{move}}-\/>get\_y();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{mark}}\ =\ \mbox{\hyperlink{classPlayer}{move}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Validate\ move\ and\ apply\ if\ valid}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(\mbox{\hyperlink{classPlayer}{x\ <\ 0\ ||\ x\ >}}=\ \mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ \mbox{\hyperlink{classPlayer}{y\ <\ 0\ ||\ y\ >}}=\ \mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \&\&}
+\DoxyCodeLine{00030\ \ \ \ \ (\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ ==\ \mbox{\hyperlink{classPyramid__XO__Board_a35d849b123023b489e8bcd2f3522f2cd}{blank\_symbol}}))\ \{}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoard_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ \mbox{\hyperlink{classPlayer}{mark}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Pyramid__XO_8h_source_l00012}{blank\+\_\+symbol}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00050}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00049}{Board$<$ char $>$\+::columns}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00164}{Player$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00051}{Board$<$ char $>$\+::n\+\_\+moves}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00048}{Board$<$ char $>$\+::rows}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPyramid__XO__Board_a77b86fd4ce8a0750fc1b979ae23a2407_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classPyramid__XO__Board_a35d849b123023b489e8bcd2f3522f2cd}\label{classPyramid__XO__Board_a35d849b123023b489e8bcd2f3522f2cd} 
+\index{Pyramid\_XO\_Board@{Pyramid\_XO\_Board}!blank\_symbol@{blank\_symbol}}
+\index{blank\_symbol@{blank\_symbol}!Pyramid\_XO\_Board@{Pyramid\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{blank\_symbol}{blank\_symbol}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{char}} Pyramid\+\_\+\+XO\+\_\+\+Board\+::blank\+\_\+symbol = \textquotesingle{}.\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Character used to represent an empty cell on the board. 
+
+
+
+Definition at line \mbox{\hyperlink{Pyramid__XO_8h_source_l00012}{12}} of file \mbox{\hyperlink{Pyramid__XO_8h_source}{Pyramid\+\_\+\+XO.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00039}{is\+\_\+win()}}, \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00012}{Pyramid\+\_\+\+XO\+\_\+\+Board()}}, and \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00023}{update\+\_\+board()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{Pyramid__XO_8h}{Pyramid\+\_\+\+XO.\+h}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{Pyramid__XO_8h}{Pyramid\+\_\+\+XO.\+h}}\item 
+src/\mbox{\hyperlink{Pyramid__XO_8cpp}{Pyramid\+\_\+\+XO.\+cpp}}\end{DoxyCompactItemize}
