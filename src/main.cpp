@@ -22,6 +22,7 @@
 #include "include/Pyramid_XO.h"
 #include "include/Four-in-a-row.h"
 #include "../include/Diamond_Tic_Tac_Toe.h"
+#include "../include/Obstacles_XO.h"
 using namespace std;
 
 /**
@@ -55,7 +56,8 @@ int main() {
         cout << "7. Pyramid XO\n";
         cout << "8. Four_in_a_row\n";
         cout << "9. Diamond_Tic_Tac_Toe\n";
-        cout << "Select a game (0-9): ";
+        cout << "10. Obstacles_XO\n";
+        cout << "Select a game (0-10): ";
         cin >> choice;
 
         switch (choice) {
@@ -284,6 +286,33 @@ int main() {
 
                 // Create the game board. For X-O, this is an X_O_Board.
                 Board<char>* xo_board = new Diamond_Tic_Tac_Toe_Board();
+
+                // Use the UI to set up the players for the game.
+                // The UI returns a dynamically allocated array of Player pointers.
+                Player<char>** players = game_ui->setup_players();
+
+                // Create the game manager with the board and the array of players.
+                GameManager<char> x_o_game(xo_board, players, game_ui);
+
+                // Run the game loop.
+                x_o_game.run();
+
+                // --- Cleanup ---
+                // Delete the dynamically allocated board object.
+                delete xo_board;
+
+                // Delete the individual player objects.
+                for (int i = 0; i < 2; ++i) {
+                    delete players[i];
+                }
+                // Delete the dynamically allocated array of player pointers itself.
+                delete[] players;
+            }
+            case 10: {
+                UI<char>* game_ui = new Obstacles_XO_UI();
+
+                // Create the game board. For X-O, this is an X_O_Board.
+                Board<char>* xo_board = new Obstacles_XO_Board();
 
                 // Use the UI to set up the players for the game.
                 // The UI returns a dynamically allocated array of Player pointers.
