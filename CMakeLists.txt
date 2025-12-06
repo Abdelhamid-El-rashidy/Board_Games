@@ -26,4 +26,7 @@ add_executable(BoardGameFramework
         include/Four-in-a-row.h
         src/Diamond_Tic_Tac_Toe.cpp
         include/Diamond_Tic_Tac_Toe.h
+        include/Computer_Player.h
+        src/Ultimate_Tic_Tac_Toe.cpp
+        include/Ultimate_Tic_Tac_Toe.h
 )
