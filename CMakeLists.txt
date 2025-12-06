@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 3.31.6)
 project(BoardGameFramework)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -26,7 +26,8 @@ add_executable(BoardGameFramework
         include/Four-in-a-row.h
         src/Diamond_Tic_Tac_Toe.cpp
         include/Diamond_Tic_Tac_Toe.h
-        include/Computer_Player.h
-        src/Ultimate_Tic_Tac_Toe.cpp
-        include/Ultimate_Tic_Tac_Toe.h
+        src/Obstacles_XO.cpp
+        include/Obstacles_XO.h
+        src/Words_XO.cpp
+        include/Words_XO.h
 )
