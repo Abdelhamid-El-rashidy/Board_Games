@@ -25,6 +25,7 @@
 #include "../include/Obstacles_XO.h"
 #include "../include/Words_XO.h"
 #include "../include/Memory_Tic-Tac-Toe.h"
+#include "../include/Ultimate_Tic_Tac_Toe.h"
 
 using namespace std;
 
@@ -62,7 +63,8 @@ int main() {
         cout << "10. Obstacles_XO\n";
         cout << "11. Word_XO\n";
         cout << "12. Memory tic-tac-toe\n";
-        cout << "Select a game (0-12): ";
+        cout << "13. Ultimate Tic Tac Toe\n";
+        cout << "Select a game (0-13): ";
         cin >> choice;
 
         switch (choice) {
@@ -373,6 +375,33 @@ int main() {
 
                 // Create the game board. For X-O, this is an X_O_Board.
                 Board<char>* xo_board = new MEMORY_TIC_TAC_TOE_Board();
+
+                // Use the UI to set up the players for the game.
+                // The UI returns a dynamically allocated array of Player pointers.
+                Player<char>** players = game_ui->setup_players();
+
+                // Create the game manager with the board and the array of players.
+                GameManager<char> x_o_game(xo_board, players, game_ui);
+
+                // Run the game loop.
+                x_o_game.run();
+
+                // --- Cleanup ---
+                // Delete the dynamically allocated board object.
+                delete xo_board;
+
+                // Delete the individual player objects.
+                for (int i = 0; i < 2; ++i) {
+                    delete players[i];
+                }
+                // Delete the dynamically allocated array of player pointers itself.
+                delete[] players;
+            }
+            case 13 : {
+                UI<char>* game_ui = new Ultimate_XO_UI();
+
+                // Create the game board. For X-O, this is an X_O_Board.
+                Board<char>* xo_board = new Ultimate_XO_Board();
 
                 // Use the UI to set up the players for the game.
                 // The UI returns a dynamically allocated array of Player pointers.

@@ -89,6 +89,8 @@ bool Ultimate_XO_Board::update_board(Move<char>* move) {
         if ((all_equal(board[dx+0][dy+0], board[dx+1][dy+1], board[dx+2][dy+2]) && board[dx+1][dy+1] == sym) ||
             (all_equal(board[dx+0][dy+2], board[dx+1][dy+1], board[dx+2][dy+0]) && board[dx+1][dy+1] == sym))
             return true;
+
+        return false;
     };
 
     // Validate move and apply if valid
