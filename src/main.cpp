@@ -19,12 +19,12 @@
 #include "../include/Misere_Tic_Tac_Toe.h"
 #include "../include/SUS_Classes.h"
 #include "../include/X_O_5x5.h"
-#include "include/Pyramid_XO.h"
-#include "include/Four-in-a-row.h"
+#include "../include/Pyramid_XO.h"
+#include "../include/Four-in-a-row.h"
 #include "../include/Diamond_Tic_Tac_Toe.h"
 #include "../include/Obstacles_XO.h"
 #include "../include/Words_XO.h"
-#include "include/Memory Tic-Tac-Toe.h"
+#include "../include/Memory_Tic-Tac-Toe.h"
 
 using namespace std;
 
