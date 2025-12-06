@@ -30,4 +30,6 @@ add_executable(BoardGameFramework
         include/Obstacles_XO.h
         src/Words_XO.cpp
         include/Words_XO.h
+        include/Memory Tic-Tac-Toe.h
+        src/Memory Tic-Tac-Toe.cpp
 )
