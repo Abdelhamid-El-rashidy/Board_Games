@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 3.31.6)
 project(BoardGameFramework)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -28,4 +28,6 @@ add_executable(BoardGameFramework
         include/Diamond_Tic_Tac_Toe.h
         src/Obstacles_XO.cpp
         include/Obstacles_XO.h
+        src/Words_XO.cpp
+        include/Words_XO.h
 )
