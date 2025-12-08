@@ -57,7 +57,7 @@ protected:
         return score;
     }
 
-    bool is_win(const vector<vector<T>>& b, T symbol, int N = 3) const {
+    virtual bool is_win(const vector<vector<T>>& b, T symbol, int N = 3) const {
         int rows = b.size();
         int cols = b[0].size();
 
@@ -100,7 +100,7 @@ protected:
         return false;
     }
 
-    bool is_draw(const vector<vector<T>>& b, int N = 3) const {
+    virtual bool is_draw(const vector<vector<T>>& b, int N = 3) const {
         for (auto &row : b)
             for (auto &cell : row)
                 if (cell == '.') return false;
