@@ -81,12 +81,15 @@ Pyramid_XO_UI::Pyramid_XO_UI() : UI<char>("Weclome to Pyramid Tic Tac Toe", 3) {
 
 
 Player<char>* Pyramid_XO_UI::create_player(string& name, char symbol, PlayerType type) {
-    // Create player based on type
     cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
-        << " player: " << name << " (" << symbol << ")\n";
+         << " player: " << name << " (" << symbol << ")\n";
 
-    return new Player<char>(name, symbol, type);
+    if (type == PlayerType::COMPUTER)
+        return new smartPlayer<char>(name, symbol, type);   // create smartPlayer
+
+    return new Player<char>(name, symbol, type);            // human is regular player
 }
+
 
 Move<char>* Pyramid_XO_UI::get_move(Player<char>* player) {
     int x, y;
@@ -96,9 +99,29 @@ Move<char>* Pyramid_XO_UI::get_move(Player<char>* player) {
         cin >> x >> y;
     }
     else if (player->get_type() == PlayerType::COMPUTER) {
-        x = rand() % player->get_board_ptr()->get_rows();
-        y = rand() % player->get_board_ptr()->get_columns();
+        auto smart_player = dynamic_cast<smartPlayer<char>*>(player);
+        auto move = smart_player->calculateMove();
+        x = move.first;
+        y = move.second;
     }
     return new Move<char>(x, y, player->get_symbol());
 }
+
+Player<char> **Pyramid_XO_UI::setup_players() {
+    Player<char>** players = new Player<char>*[2];
+    vector<string> type_options = { "Human", "Computer" };
+
+    string nameX = get_player_name("Player X");
+    PlayerType typeX = get_player_type_choice("Player X", type_options);
+    players[0] = create_player(nameX, static_cast<char>('X'), typeX);
+
+    string nameO = get_player_name("Player O");
+    PlayerType typeO = get_player_type_choice("Player O", type_options);
+    players[1] = create_player(nameO, static_cast<char>('O'), typeO);
+
+    return players;
+}
+
+
+
 

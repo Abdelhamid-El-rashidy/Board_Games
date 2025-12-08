@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.31.6)
 project(BoardGameFramework)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 
 include_directories(.)
 
@@ -34,4 +36,5 @@ add_executable(BoardGameFramework
         src/Memory_Tic-Tac-Toe.cpp
         include/Ultimate_Tic_Tac_Toe.h
         src/Ultimate_Tic_Tac_Toe.cpp
+        include/Smart_Player.h
 )

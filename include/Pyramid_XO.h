@@ -6,6 +6,7 @@
 #define BOARDGAMEFRAMEWORK_PYRAMID_XO_H
 
 #include "BoardGame_Classes.h"
+#include "Smart_Player.h"
 
 class Pyramid_XO_Board : public Board<char> {
 private:
@@ -85,6 +86,26 @@ public:
      */
     virtual Move<char>* get_move(Player<char>* player);
 
+    /**
+     * @brief Setup smartPlayer
+     * @return A pointer to a array of smart player objects.
+     */
+    virtual Player<char> **setup_players() override;
+
+};
+
+class pyramidSmartPlayer : public smartPlayer<char> {
+public:
+    /**
+     * @brief Calculate the best move through Minmax algorithms.
+     * @return the best (x,y) coordinates for computer Move
+     */
+    virtual pair<int,int> calculateMove() override;
+
+    /**
+     * @return the opponent_symbol depending on game
+     */
+    virtual char get_opponent_symbol() const override;
 };
 
 

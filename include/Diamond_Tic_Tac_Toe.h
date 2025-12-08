@@ -95,6 +95,7 @@ public:
  */
 
     virtual Move<char>* get_move(Player<char>* player);
+
 };
 
 #endif //BOARDGAMEFRAMEWORK_DIAMOND_TIC_TAC_TOE_H
