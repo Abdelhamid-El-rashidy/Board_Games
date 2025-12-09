@@ -4,6 +4,7 @@
 
 #include <bits/stdc++.h>
 #include "BoardGame_Classes.h"
+#include "Smart_Player.h"
 
 class Diamond_Tic_Tac_Toe_Board : public Board<char> {
 private:
@@ -96,6 +97,28 @@ public:
 
     virtual Move<char>* get_move(Player<char>* player);
 
+    /**
+     * @brief Setup smartPlayer
+     * @return A pointer to a array of smart player objects.
+     */
+    virtual Player<char> **setup_players() override;
+
+};
+
+class DiamondSmartPlayer : public smartPlayer<char> {
+public:
+    /**
+     * @brief Calculate the best move through Minmax algorithms.
+     * @return the best (x,y) coordinates for computer Move
+     */
+    virtual pair<int,int> calculateMove() override;
+
+    /**
+     * @return the opponent_symbol depending on game
+     */
+    virtual char get_opponent_symbol() const override;
+    virtual int evaluate_board(const vector<vector<char>>& b, char ai, char opp, int N = 3) const override;
+    virtual bool is_win(const vector<vector<char>>& b, char symbol, int N = 3) const override;
 };
 
 #endif //BOARDGAMEFRAMEWORK_DIAMOND_TIC_TAC_TOE_H

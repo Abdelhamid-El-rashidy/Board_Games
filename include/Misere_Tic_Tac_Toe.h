@@ -13,6 +13,7 @@
 
 #include <bits/stdc++.h>
 #include "BoardGame_Classes.h"
+#include "include/Smart_Player.h"
 
 
 
@@ -115,6 +116,27 @@ public:
      * @return A pointer to a new `Move<char>` object representing the player's action.
      */
     virtual Move<char>* get_move(Player<char>* player);
+
+    /**
+ * @brief Setup smartPlayer
+ * @return A pointer to a array of smart player objects.
+ */
+    virtual Player<char> **setup_players() override;
+
+};
+
+class MisereSmartPlayer : public smartPlayer<char> {
+public:
+    MisereSmartPlayer(string n, char s, PlayerType t) : smartPlayer(n, s, t) {}
+
+    virtual pair<int, int> calculateMove() override;
+
+    virtual char get_opponent_symbol() const override;
+
+    bool check_3_in_row(const vector<vector<char>>& b, char symbol) const;
+
+    int minimax_misere(vector<vector<char>>& b, bool isMaximizing, int depth = 0);
+
 };
 
 #endif //BOARDGAMEFRAMEWORK_MISÈRE_TIC_TAC_TOE_H
