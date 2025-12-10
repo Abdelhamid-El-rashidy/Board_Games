@@ -94,19 +94,5 @@ public:
 
 };
 
-class pyramidSmartPlayer : public smartPlayer<char> {
-public:
-    /**
-     * @brief Calculate the best move through Minmax algorithms.
-     * @return the best (x,y) coordinates for computer Move
-     */
-    virtual pair<int,int> calculateMove() override;
-
-    /**
-     * @return the opponent_symbol depending on game
-     */
-    virtual char get_opponent_symbol() const override;
-};
-
 
 #endif //BOARDGAMEFRAMEWORK_PYRAMID_XO_H

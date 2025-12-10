@@ -4,6 +4,7 @@
 
 #include "../include/Pyramid_XO.h"
 #include "include/BoardGame_Classes.h"
+#include "include/Smart_Player.h"
 
 using namespace std;
 
@@ -121,7 +122,6 @@ Player<char> **Pyramid_XO_UI::setup_players() {
 
     return players;
 }
-
 
 
 

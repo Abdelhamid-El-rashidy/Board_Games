@@ -37,4 +37,5 @@ add_executable(BoardGameFramework
         include/Ultimate_Tic_Tac_Toe.h
         src/Ultimate_Tic_Tac_Toe.cpp
         include/Smart_Player.h
+        include/AiPlayer.h
 )
