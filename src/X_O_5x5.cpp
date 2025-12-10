@@ -1,6 +1,7 @@
 #include <iomanip>
 #include <cctype>  // for toupper()
 #include "../include/X_O_5x5.h"
+#include "../include/Smart_Player.h"
 
 using namespace std;
 
@@ -135,7 +136,8 @@ Player<char>* X_O_5x5_UI::create_player(string& name, char symbol, PlayerType ty
     cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
         << " player: " << name << " (" << symbol << ")\n";
 
-    return new Player<char>(name, symbol, type);
+    if (type == PlayerType::HUMAN) return new Player<char>(name, symbol, type);
+    else return new smartPlayer<char>(name, symbol, type);
 }
 
 Move<char>* X_O_5x5_UI::get_move(Player<char>* player) {
@@ -146,8 +148,10 @@ Move<char>* X_O_5x5_UI::get_move(Player<char>* player) {
         cin >> x >> y;
     }
     else if (player->get_type() == PlayerType::COMPUTER) {
-        x = rand() % player->get_board_ptr()->get_rows();
-        y = rand() % player->get_board_ptr()->get_columns();
+        auto smart_player = dynamic_cast<smartPlayer<char>*>(player);
+        auto move = smart_player->calculateMove();
+        x = move.first;
+        y = move.second;
     }
     return new Move<char>(x, y, player->get_symbol());
 }
