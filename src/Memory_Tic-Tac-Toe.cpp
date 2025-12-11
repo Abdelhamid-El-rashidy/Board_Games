@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include "../include/Memory_Tic-Tac-Toe.h"
+#include "../include/Smart_Player.h"
 
 using namespace std ;
 
@@ -7,6 +8,9 @@ using namespace std ;
 
 MEMORY_TIC_TAC_TOE_Board::MEMORY_TIC_TAC_TOE_Board () : Board(3,3) {
     hidden_board = vector<vector<char>>(3, vector<char>(3, blank_symbol));
+    for (auto& row : board)
+        for (auto& cell : row)
+            cell = blank_symbol;
 }
 
 bool MEMORY_TIC_TAC_TOE_Board::update_board(Move<char> *move) {
@@ -23,7 +27,7 @@ bool MEMORY_TIC_TAC_TOE_Board::update_board(Move<char> *move) {
     hidden_board[x][y] = sym;
 
     // visible board stays always blank
-    board[x][y] = blank_symbol;
+    board[x][y] = sym;
 
     n_moves++;
     return true;
@@ -71,7 +75,8 @@ Player<char>* MEMORY_TIC_TAC_TOE_UI::create_player(string& name, char symbol, Pl
     cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
         << " player: " << name << " (" << symbol << ")\n";
 
-    return new Player<char>(name, symbol, type);
+    if (PlayerType::HUMAN == type) return new Player<char>(name, symbol, type);
+    return new smartPlayer<char>(name, symbol, type);
 }
 
 Move<char>* MEMORY_TIC_TAC_TOE_UI::get_move(Player<char>* player) {
@@ -82,8 +87,10 @@ Move<char>* MEMORY_TIC_TAC_TOE_UI::get_move(Player<char>* player) {
         cin >> x >> y;
     }
     else if (player->get_type() == PlayerType::COMPUTER) {
-        x = rand() % player->get_board_ptr()->get_rows();
-        y = rand() % player->get_board_ptr()->get_columns();
+        auto smartplayer = dynamic_cast<smartPlayer<char>*>(player);
+        auto move = smartplayer->calculateMove();
+        x = move.first;
+        y = move.second;
     }
     return new Move<char>(x, y, player->get_symbol());
 }

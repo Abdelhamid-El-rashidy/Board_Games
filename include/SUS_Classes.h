@@ -96,9 +96,8 @@ public:
     /**
      * @brief Destructor for XO_UI.
      */
-    ~SUS_UI() {};
 
-    Player<char>** setup_players() ;
+    // Player<char>** setup_players() ;
     /**
      * @brief Creates a player of the specified type.
      * @param name Name of the player.
@@ -114,6 +113,26 @@ public:
      * @return A pointer to a new `Move<char>` object representing the player's action.
      */
     virtual Move<char>* get_move(Player<char>* player);
+    ~SUS_UI() {};
+};
+
+class ne_Move : public Move<char> {
+private:
+    char value;
+public:
+    /**
+     * Constructor to intialize Base Class Move and Derived Class dualMove
+     * @param x x-coordinate in grid
+     * @param y y-coordinate in grid
+     * @param symbol the current player's move symbol
+     * @param value the number played by the move
+     */
+    ne_Move(int x, int y, char symbol, char value) : Move<char>(x,y,symbol), value(value) {};
+
+    char get_value() const { return value; }
+
+    virtual ~ne_Move() {}
+
 };
 
 #endif

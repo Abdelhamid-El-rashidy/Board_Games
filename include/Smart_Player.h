@@ -109,7 +109,7 @@ protected:
 
     // Minmax Alg with alpha bata optimization and depth optimization to avoid excessive search for large boards
     // https://www.geeksforgeeks.org/dsa/minimax-algorithm-in-game-theory-set-4-alpha-beta-pruning/
-    int minimax(vector<vector<T>>& b, bool maximizingPlayer, T ai, T opp, int alpha, int beta, int depth, int N = 3) {
+    virtual int minimax(vector<vector<T>>& b, bool maximizingPlayer, T ai, T opp, int alpha, int beta, int depth, int N = 3) {
         if (is_win(b, ai, N)) return 1000 + depth; // prefer faster win
         if (is_win(b, opp, N)) return -1000 - depth; // prefer slower loss
         if (is_draw(b, N)) return 0;

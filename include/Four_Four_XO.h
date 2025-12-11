@@ -88,7 +88,7 @@ private:
     // Directions: Up, Right, Down, Left
     vector<pair<int, int>> directions;
     int current_dx, current_dy; // Store direction for createMove
-
+    
 protected:
     /**
      * @brief Check if position has a piece belonging to the player that can be moved.
@@ -102,7 +102,7 @@ protected:
         char cell = board_ptr->get_cell(x, y);
         return cell == this->get_symbol();
     }
-
+    
     /**
      * @brief Check if position has a piece belonging to a specific symbol.
      */
@@ -115,7 +115,7 @@ protected:
         char cell = board_ptr->get_cell(x, y);
         return cell == symbol;
     }
-
+    
     /**
      * @brief Helper to create undo move for any symbol.
      */
@@ -131,7 +131,7 @@ protected:
     int minimax(Board<char>* boardPtr, bool maximizingPlayer, char ai, char opp, int alpha, int beta, int depth, int N = 3) {
         // Terminal conditions
         if (boardPtr->is_win(this)) return 1000 + depth;
-
+        
         Player<char>* tempOpp = new Player<char>("temp", opp, PlayerType::AI);
         tempOpp->set_board_ptr(boardPtr);
         if (boardPtr->is_win(tempOpp)) {
@@ -139,33 +139,33 @@ protected:
             return -1000 - depth;
         }
         delete tempOpp;
-
+        
         if (boardPtr->is_draw(this)) return 0;
         if (depth == 0) return evaluate_board(boardPtr, ai, opp, N);
-
+        
         int rows = boardPtr->get_rows();
         int cols = boardPtr->get_columns();
-
+        
         if (maximizingPlayer) {
             int best = numeric_limits<int>::min();
             for (int i = 0; i < rows; i++) {
                 for (int j = 0; j < cols; j++) {
                     // Check for AI's pieces
                     if (!condition_for_symbol(i, j, ai)) continue;
-
+                    
                     for (auto& dir : directions) {
                         int dx = dir.first;
                         int dy = dir.second;
                         if (i + dx < 0 || i + dx >= rows || j + dy < 0 || j + dy >= cols) continue;
                         if (boardPtr->get_cell(i + dx, j + dy) != blank_symbol) continue;
-
+                        
                         // Try the move
                         Move<char>* move = new dualMove(i, j, ai, dy, dx);
                         if (!move) continue;
-
+                        
                         if (boardPtr->update_board(move)) {
                             int val = minimax(boardPtr, false, ai, opp, alpha, beta, depth - 1, N);
-
+                            
                             // Undo the move - move piece back from (i+dx, j+dy) to (i, j)
                             Move<char>* undomove = createUndoMoveForSymbol(i, j, dx, dy, ai);
                             if (undomove && boardPtr->update_board(undomove)) {
@@ -175,7 +175,7 @@ protected:
                                 delete undomove;
                             }
                             delete move;
-
+                            
                             best = max(best, val);
                             alpha = max(alpha, best);
                             if (beta <= alpha) {
@@ -194,20 +194,20 @@ protected:
                 for (int j = 0; j < cols; j++) {
                     // Check for opponent's pieces
                     if (!condition_for_symbol(i, j, opp)) continue;
-
+                    
                     for (auto& dir : directions) {
                         int dx = dir.first;
                         int dy = dir.second;
                         if (i + dx < 0 || i + dx >= rows || j + dy < 0 || j + dy >= cols) continue;
                         if (boardPtr->get_cell(i + dx, j + dy) != blank_symbol) continue;
-
+                        
                         // Create move with opponent's symbol
                         Move<char>* move = new dualMove(i, j, opp, dy, dx);
                         if (!move) continue;
-
+                        
                         if (boardPtr->update_board(move)) {
                             int val = minimax(boardPtr, true, ai, opp, alpha, beta, depth - 1, N);
-
+                            
                             // Undo the move - move piece back from (i+dx, j+dy) to (i, j)
                             Move<char>* undomove = createUndoMoveForSymbol(i, j, dx, dy, opp);
                             if (undomove && boardPtr->update_board(undomove)) {
@@ -217,7 +217,7 @@ protected:
                                 delete undomove;
                             }
                             delete move;
-
+                            
                             best = min(best, val);
                             beta = min(beta, best);
                             if (beta <= alpha) {
@@ -238,7 +238,7 @@ protected:
      */
     virtual int evaluate_board(Board<char>* boardPtr, char ai, char opp, int N = 3) override {
         if (boardPtr->is_win(this)) return 1000;
-
+        
         Player<char>* tempOpp = new Player<char>("temp", opp, PlayerType::AI);
         tempOpp->set_board_ptr(boardPtr);
         if (boardPtr->is_win(tempOpp)) {
@@ -246,7 +246,7 @@ protected:
             return -1000;
         }
         delete tempOpp;
-
+        
         // Simple heuristic: count pieces in winning positions
         // Check for 2 in a row (potential win)
         int score = 0;
@@ -254,7 +254,7 @@ protected:
         int rows = board.size();
         int cols = board[0].size();
         char blank = '.';
-
+        
         // Check for potential winning lines
         auto count_line = [&](int x, int y, int dx, int dy, char sym) -> int {
             int count = 0;
@@ -268,7 +268,7 @@ protected:
             }
             return count;
         };
-
+        
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 // Check horizontal
@@ -276,13 +276,13 @@ protected:
                 int opp_count = count_line(i, j, 0, 1, opp);
                 if (ai_count > 0) score += ai_count * 10;
                 if (opp_count > 0) score -= opp_count * 10;
-
+                
                 // Check vertical
                 ai_count = count_line(i, j, 1, 0, ai);
                 opp_count = count_line(i, j, 1, 0, opp);
                 if (ai_count > 0) score += ai_count * 10;
                 if (opp_count > 0) score -= opp_count * 10;
-
+                
                 // Check diagonal
                 ai_count = count_line(i, j, 1, 1, ai);
                 opp_count = count_line(i, j, 1, 1, opp);
@@ -290,12 +290,12 @@ protected:
                 if (opp_count > 0) score -= opp_count * 10;
             }
         }
-
+        
         return score;
     }
 
 public:
-    FourFourAIPlayer(string n, char s, PlayerType t)
+    FourFourAIPlayer(string n, char s, PlayerType t) 
         : AIPlayer<char>(n, s, t, '.', 3), current_dx(0), current_dy(0) {
         directions = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}}; // Up, Right, Down, Left
     }
@@ -323,28 +323,28 @@ public:
             for (int j = 0; j < cols; j++) {
                 // Check if position has player's piece
                 if (!condition(i, j)) continue;
-
+                
                 // Try each direction
                 for (auto& dir : directions) {
                     int dx = dir.first;
                     int dy = dir.second;
-
+                    
                     // Check if move is valid
                     if (i + dx < 0 || i + dx >= rows || j + dy < 0 || j + dy >= cols) continue;
                     if (board_ptr->get_cell(i + dx, j + dy) != blank_symbol) continue;
-
+                    
                     // Try the move
                     current_dx = dx;
                     current_dy = dy;
                     Move<char>* move = createMove(i, j);
                     if (!move) continue;
-
+                    
                     if (board_ptr->update_board(move)) {
                         int eval = minimax(board_ptr, false, ai, opp,
                                           numeric_limits<int>::min(),
                                           numeric_limits<int>::max(),
                                           maxDepth);
-
+                        
                         // Undo the move - move piece back from (i+dx, j+dy) to (i, j)
                         Move<char>* undoMove = createUndoMoveForSymbol(i, j, dx, dy, ai);
                         if (undoMove && board_ptr->update_board(undoMove)) {
@@ -353,7 +353,7 @@ public:
                             delete undoMove;
                         }
                         delete move;
-
+                        
                         if (eval > bestVal) {
                             bestVal = eval;
                             bestX = i;
@@ -425,17 +425,17 @@ class Four_Four_XO_UI : public UI<char> {
 
 public:
     Four_Four_XO_UI() : UI<char>("Welcome to Four-Four Tic Tac Toe Game",3) {}
-
+    
     /**
      * @brief Set up players (Human or Computer).
      */
     virtual Player<char>** setup_players() override;
-
+    
     /**
      * @brief Create a player based on name, symbol, and type.
      */
     virtual Player<char>* create_player(string& name, char symbol, PlayerType type) override;
-
+    
     /**
      * @brief Retrieves the next move from a player.
      * @param player Pointer to the player whose move is being requested.

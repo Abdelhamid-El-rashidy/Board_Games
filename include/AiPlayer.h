@@ -15,12 +15,12 @@ using namespace std;
 
 /**
  * @brief Base class for AI players following Open-Closed Principle (OCP).
- *
+ * 
  * This class is open for extension but closed for modification.
  * Derived classes only need to override:
  * - createMove() - Create a move at given position
  * - createUndoMove() - Create an undo move at given position
- *
+ * 
  * Optional overrides:
  * - condition() - Check if position is valid for a move (default: checks if cell is blank)
  * - get_opponent_symbol() - Get opponent's symbol (default: works for X/O games)
@@ -60,10 +60,10 @@ protected:
 
     /**
      * @brief Generate possible move values for a given position.
-     *
+     * 
      * For simple games (like Tic-Tac-Toe), this returns a single value (AI's symbol).
      * For complex games (like Numerical XO), this returns multiple values from search space.
-     *
+     * 
      * @param x X coordinate
      * @param y Y coordinate
      * @param isMaximizing Whether this is the maximizing player's turn
@@ -90,7 +90,7 @@ protected:
         // Terminal conditions
         // Check if AI (this player) wins
         if (boardPtr->is_win(this)) return 1000 + depth; // Prefer faster wins
-
+        
         // Check if opponent wins - create temporary player with opponent symbol
         Player<T>* tempOpponent = new Player<T>("temp_opp", opp, PlayerType::AI);
         tempOpponent->set_board_ptr(boardPtr);
@@ -99,7 +99,7 @@ protected:
             return -1000 - depth; // Prefer slower losses
         }
         delete tempOpponent;
-
+        
         if (boardPtr->is_draw(this)) return 0;
         if (depth == 0) return evaluate_board(boardPtr, ai, opp, N);
 
@@ -124,7 +124,7 @@ protected:
                                 }
                                 delete move;
                                 delete undomove;
-
+                                
                                 best = max(best, val);
                                 alpha = max(alpha, best);
                                 if (beta <= alpha) {
@@ -153,7 +153,7 @@ protected:
                                 }
                                 delete move;
                                 delete undomove;
-
+                                
                                 best = min(best, val);
                                 beta = min(beta, best);
                                 if (beta <= alpha) {
@@ -177,7 +177,7 @@ public:
      * @param blank Blank symbol used on the board
      * @param depth Maximum search depth (default: 3)
      */
-    AIPlayer(string n, T s, PlayerType t, T blank, int depth = 3)
+    AIPlayer(string n, T s, PlayerType t, T blank, int depth = 3) 
         : Player<T>(n, s, t), blank_symbol(blank), max_depth(depth) {}
 
     virtual ~AIPlayer() {}
@@ -194,7 +194,7 @@ public:
     /**
      * @brief Pure virtual function to undo the previous move played during backtracking algorithm.
      * Must be implemented by derived classes.
-     * @note The protocol to inform the update_board function in @class Board that this is an undo move
+     * @note The protocol to inform the update_board function in @class Board that this is an undo move 
      * is to place a blank_symbol in @class Move symbol attribute.
      * @param x the x_coordinate of move within board.
      * @param y the y_coordinate of move within board.
@@ -257,7 +257,7 @@ public:
                     for (T moveValue : moveValues) {
                         Move<T>* move = createMove(i, j);
                         if (!move) continue;
-
+                        
                         board_ptr->update_board(move);
                         int eval = minimax(board_ptr, false, ai, opp,
                                            numeric_limits<int>::min(),
@@ -269,7 +269,7 @@ public:
                             delete undoMove;
                         }
                         delete move;
-
+                        
                         if (eval > bestVal) {
                             bestVal = eval;
                             bestX = i;
