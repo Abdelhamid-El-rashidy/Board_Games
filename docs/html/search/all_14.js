@@ -1,19 +1,11 @@
 var searchData=
 [
-  ['_7eboard_0',['~Board',['../classBoard.html#a138a6378af669dd1ce55dc11217aea48',1,'Board']]],
-  ['_7edualmove_1',['~dualMove',['../classdualMove.html#adf6e139065f5f0cd6deb7811e5e57b24',1,'dualMove']]],
-  ['_7efour_5ffour_5fxo_5fboard_2',['~Four_Four_XO_Board',['../classFour__Four__XO__Board.html#a97209efde74b54d29b427b3d22af0649',1,'Four_Four_XO_Board']]],
-  ['_7efour_5ffour_5fxo_5fui_3',['~Four_Four_XO_UI',['../classFour__Four__XO__UI.html#a3d57477f433e8d7cd98518761eb070bd',1,'Four_Four_XO_UI']]],
-  ['_7einfinit_5fxo_5fui_4',['~Infinit_XO_UI',['../classInfinit__XO__UI.html#a25d218e89b158c35d03545de6a60338d',1,'Infinit_XO_UI']]],
-  ['_7emisere_5ftic_5ftac_5ftoe_5fui_5',['~Misere_Tic_Tac_Toe_UI',['../classMisere__Tic__Tac__Toe__UI.html#aee4807aa5b52e2a37b4e12ba502a9335',1,'Misere_Tic_Tac_Toe_UI']]],
-  ['_7emove_6',['~Move',['../classMove.html#a8dd9eeed1b7e22daadd790dd60e743da',1,'Move']]],
-  ['_7enmove_7',['~nMove',['../classnMove.html#a09a40d42a1128e2dd5cf7c6d2836f8e1',1,'nMove']]],
-  ['_7enumerical_5fx_5fo_5fboard_8',['~Numerical_X_O_Board',['../classNumerical__X__O__Board.html#a66b86f713a2f2fab185ac30f71cf5e93',1,'Numerical_X_O_Board']]],
-  ['_7enumerical_5fxo_5fui_9',['~Numerical_XO_UI',['../classNumerical__XO__UI.html#a70629880d90710c8f171a324eef480c2',1,'Numerical_XO_UI']]],
-  ['_7eplayer_10',['~Player',['../classPlayer.html#aac1f2ab2a8e2aa0336d302c16068020e',1,'Player']]],
-  ['_7epyramid_5fxo_5fboard_11',['~Pyramid_XO_Board',['../classPyramid__XO__Board.html#a0fd0307fca0e3fba749dad23c5a3ccdf',1,'Pyramid_XO_Board']]],
-  ['_7epyramid_5fxo_5fui_12',['~Pyramid_XO_UI',['../classPyramid__XO__UI.html#a17e3ab65c4b1ef16dd827b10d8495ace',1,'Pyramid_XO_UI']]],
-  ['_7esus_5fui_13',['~SUS_UI',['../classSUS__UI.html#a5860425ff09d2e1971fb7822c69b1a34',1,'SUS_UI']]],
-  ['_7eui_14',['~UI',['../classUI.html#a1012e508ff7df030714c62ddf6b261a7',1,'UI']]],
-  ['_7ex_5fo_5f5x5_5fui_15',['~X_O_5x5_UI',['../classX__O__5x5__UI.html#a06322538e7f2c422b203f7c8188f2c57',1,'X_O_5x5_UI']]]
+  ['x_0',['x',['../classMove.html#a5f399fb722305d3061e0f6f2438e5390',1,'Move::x'],['../Numerical__X__O_8cpp.html#aa7d67912fa10fd50fc91ce1913798e84',1,'X:&#160;Numerical_X_O.cpp']]],
+  ['x_5fo_5f5x5_2ecpp_1',['X_O_5x5.cpp',['../X__O__5x5_8cpp.html',1,'']]],
+  ['x_5fo_5f5x5_2eh_2',['X_O_5x5.h',['../X__O__5x5_8h.html',1,'']]],
+  ['x_5fo_5f5x5_5fboard_3',['x_o_5x5_board',['../classX__O__5x5__Board.html',1,'X_O_5x5_Board'],['../classX__O__5x5__Board.html#a94984764cd60bf3dd97be032d5b7d003',1,'X_O_5x5_Board::X_O_5x5_Board()']]],
+  ['x_5fo_5f5x5_5fui_4',['x_o_5x5_ui',['../classX__O__5x5__UI.html',1,'X_O_5x5_UI'],['../classX__O__5x5__UI.html#a8be0a91cacf1817daaf876653b5ee35e',1,'X_O_5x5_UI::X_O_5x5_UI()']]],
+  ['x_5fo_5fboard_5',['X_O_Board',['../classX__O__Board.html',1,'']]],
+  ['xo_5fui_6',['XO_UI',['../classXO__UI.html',1,'']]],
+  ['xogamelauncher_7',['xogamelauncher',['../classXOGameLauncher.html',1,'XOGameLauncher&lt; T, UIType, BoardType &gt;'],['../classXOGameLauncher.html#a17f0617d34596ae418a846cf1b1c9777',1,'XOGameLauncher::XOGameLauncher()']]]
 ];

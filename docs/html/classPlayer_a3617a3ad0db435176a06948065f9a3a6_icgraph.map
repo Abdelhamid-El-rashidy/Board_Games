@@ -1,5 +1,18 @@
 <map id="Player::set_board_ptr" name="Player::set_board_ptr">
-<area shape="rect" id="Node000001" title="Assign the board pointer for the player." alt="" coords="276,5,436,31"/>
-<area shape="rect" id="Node000002" href="$classGameManager.html#addaf3682d9783bdc432a8e3273b5b92c" title="Construct a game manager with board, players, and UI." alt="" coords="5,5,228,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,21,228,21,228,15,262,15"/>
+<area shape="rect" id="Node000001" title="Assign the board pointer for the player." alt="" coords="805,95,965,121"/>
+<area shape="rect" id="Node000002" href="$classFourFourAIPlayer.html#a3586ff3a70afa4f0aaf2309764d6a453" title="Evaluate board position with heuristic." alt="" coords="547,5,745,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="834,93,704,48,706,43,836,88"/>
+<area shape="rect" id="Node000003" href="$classFourFourAIPlayer.html#a8427da39d2c0c84609a00dbd51347c9f" title="Override minimax to handle opponent pieces correctly." alt="" coords="288,42,487,67"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="791,101,487,68,487,63,792,95"/>
+<area shape="rect" id="Node000005" href="$classGameManager.html#addaf3682d9783bdc432a8e3273b5b92c" title="Construct a game manager with board, players, and UI." alt="" coords="535,121,757,146"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="792,121,758,124,757,119,791,115"/>
+<area shape="rect" id="Node000006" href="$classAIPlayer.html#a4c0c158048dc4b7fabb54dafc9fd0659" title="Minimax algorithm with alpha&#45;beta pruning." alt="" coords="575,194,717,219"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="842,128,679,196,677,191,840,123"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="534,41,487,46,486,41,533,35"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="433,33,430,28,422,24,387,21,360,23,345,28,342,33,350,40,346,44,337,34,342,24,359,17,387,15,423,19,434,24,438,30"/>
+<area shape="rect" id="Node000004" href="$classFourFourAIPlayer.html#ae65b9079173802af7f5091473ce5f513" title="Override calculateMove to handle direction&#45;based moves." alt="" coords="5,42,240,67"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="274,57,240,57,240,52,274,52"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="689,185,677,176,646,173,621,175,607,180,604,185,611,192,607,196,599,186,603,176,619,170,646,167,679,171,692,181"/>
+<area shape="rect" id="Node000007" href="$classAIPlayer.html#a962dc21adb2a91029e4d903e701c191a" title="Calculate and return the best move using minimax algorithm." alt="" coords="298,194,477,219"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="561,209,477,209,477,204,561,204"/>
 </map>

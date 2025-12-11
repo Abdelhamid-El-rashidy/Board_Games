@@ -32,7 +32,9 @@ Collaboration diagram for Pyramid\+\_\+\+XO\+\_\+\+UI\+:\nopagebreak
 \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPyramid__XO__UI_ab7c835c5fbf86ec08d3262e840cd7563}{create\+\_\+player}} (\mbox{\hyperlink{classPlayer}{string}} \&name, \mbox{\hyperlink{classPlayer}{char}} symbol, \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
 \begin{DoxyCompactList}\small\item\em Creates a player of the specified type. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classMove}{Move}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPyramid__XO__UI_a9447abc21ff1b8baa5ac1d91d84b567e}{get\+\_\+move}} (\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPlayer}{player}})
-\begin{DoxyCompactList}\small\item\em Retrieves the next move from a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves the next move from a player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPyramid__XO__UI_a80577f177405a54f73700dbf7bc97492}{setup\+\_\+players}} () \mbox{\hyperlink{classPlayer}{override}}
+\begin{DoxyCompactList}\small\item\em Setup \doxylink{classsmartPlayer}{smart\+Player}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classUI}{UI$<$ char $>$}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -44,8 +46,6 @@ Collaboration diagram for Pyramid\+\_\+\+XO\+\_\+\+UI\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{void}} \mbox{\hyperlink{classUI_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{message}})
 \begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classUI_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
-\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classUI_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (\mbox{\hyperlink{classPlayer}{string}} \&name, \mbox{\hyperlink{classPlayer}{char}} symbol, \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
 \begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{void}} \mbox{\hyperlink{classUI_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ $>$ \&\mbox{\hyperlink{classPlayer}{matrix}}) \mbox{\hyperlink{classPlayer}{const}}
@@ -56,7 +56,7 @@ Collaboration diagram for Pyramid\+\_\+\+XO\+\_\+\+UI\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classUI_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{player\+\_\+label}})
 \begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classUI_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{player\+\_\+label}}, \mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{string}} $>$ \&\mbox{\hyperlink{classPlayer}{options}})
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classUI_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{player\+\_\+label}}, \mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{string}} $>$ \&options)
 \begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classUI}{UI$<$ char $>$}}}
 \begin{DoxyCompactItemize}
@@ -68,7 +68,7 @@ Collaboration diagram for Pyramid\+\_\+\+XO\+\_\+\+UI\+:\nopagebreak
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{Pyramid__XO_8h_source_l00058}{58}} of file \mbox{\hyperlink{Pyramid__XO_8h_source}{Pyramid\+\_\+\+XO.\+h}}.
+Definition at line \mbox{\hyperlink{Pyramid__XO_8h_source_l00059}{59}} of file \mbox{\hyperlink{Pyramid__XO_8h_source}{Pyramid\+\_\+\+XO.\+h}}.
 
 
 
@@ -85,13 +85,13 @@ Constructs an \doxylink{classXO__UI}{XO\+\_\+\+UI} object.
 
 Initializes the base {\ttfamily \doxylink{classUI}{UI}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} class with the welcome message "{}\+FCAI X-\/\+O"{}. 
 
-Definition at line \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{Pyramid__XO_8cpp_source}{Pyramid\+\_\+\+XO.\+cpp}}.
+Definition at line \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{Pyramid__XO_8cpp_source}{Pyramid\+\_\+\+XO.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classPlayer}{UI<char>}}(\textcolor{stringliteral}{"{}Weclome\ to\ Pyramid\ Tic\ Tac\ Toe"{}},\ 3)\ \{}
-\DoxyCodeLine{00079\ }
-\DoxyCodeLine{00080\ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classPlayer}{UI<char>}}(\textcolor{stringliteral}{"{}Weclome\ to\ Pyramid\ Tic\ Tac\ Toe"{}},\ 3)\ \{}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classPyramid__XO__UI_a17e3ab65c4b1ef16dd827b10d8495ace}\label{classPyramid__XO__UI_a17e3ab65c4b1ef16dd827b10d8495ace} 
@@ -106,11 +106,11 @@ Destructor for \doxylink{classXO__UI}{XO\+\_\+\+UI}.
 
 
 
-Definition at line \mbox{\hyperlink{Pyramid__XO_8h_source_l00070}{70}} of file \mbox{\hyperlink{Pyramid__XO_8h_source}{Pyramid\+\_\+\+XO.\+h}}.
+Definition at line \mbox{\hyperlink{Pyramid__XO_8h_source_l00071}{71}} of file \mbox{\hyperlink{Pyramid__XO_8h_source}{Pyramid\+\_\+\+XO.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00070\ \{\};}
+\DoxyCodeLine{00071\ \{\};}
 
 \end{DoxyCode}
 
@@ -136,27 +136,41 @@ Creates a player of the specified type.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Pointer to the newly created Player$<$char$>$ instance. 
+Pointer to the newly created \doxylink{classPlayer}{Player$<$char$>$} instance. 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00083}{83}} of file \mbox{\hyperlink{Pyramid__XO_8cpp_source}{Pyramid\+\_\+\+XO.\+cpp}}.
+Definition at line \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{Pyramid__XO_8cpp_source}{Pyramid\+\_\+\+XO.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//\ Create\ player\ based\ on\ type}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Creating\ "{}}\ <<\ (type\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}human"{}}\ :\ \textcolor{stringliteral}{"{}computer"{}})}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ symbol\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ symbol\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
 \DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Player<char>}}(name,\ symbol,\ type);}
-\DoxyCodeLine{00089\ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{if}\ (type\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{smartPlayer<char>}}(name,\ symbol,\ type);\ \ \ \textcolor{comment}{//\ create\ smartPlayer}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Player<char>}}(name,\ symbol,\ type);\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ human\ is\ regular\ player}}
+\DoxyCodeLine{00092\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{HUMAN}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{COMPUTER}}, and \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{HUMAN}}.
 
+
+
+Referenced by \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00111}{setup\+\_\+players()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPyramid__XO__UI_ab7c835c5fbf86ec08d3262e840cd7563_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{classPyramid__XO__UI_a9447abc21ff1b8baa5ac1d91d84b567e}\label{classPyramid__XO__UI_a9447abc21ff1b8baa5ac1d91d84b567e} 
 \index{Pyramid\_XO\_UI@{Pyramid\_XO\_UI}!get\_move@{get\_move}}
 \index{get\_move@{get\_move}!Pyramid\_XO\_UI@{Pyramid\_XO\_UI}}
@@ -181,28 +195,30 @@ Implements \mbox{\hyperlink{classUI_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ cha
 
 
 
-Definition at line \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{Pyramid__XO_8cpp_source}{Pyramid\+\_\+\+XO.\+cpp}}.
+Definition at line \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{Pyramid__XO_8cpp_source}{Pyramid\+\_\+\+XO.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
-\DoxyCodeLine{00093\ }
-\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPlease\ enter\ your\ move\ x\ and\ y\ (0\ to\ 2):\ "{}};}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ x\ >>\ y;}
-\DoxyCodeLine{00097\ \ \ \ \ \}}
-\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})\ \{}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ x\ =\ \mbox{\hyperlink{classPlayer}{rand}}()\ \%\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}()-\/>get\_rows();}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ y\ =\ \mbox{\hyperlink{classPlayer}{rand}}()\ \%\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}()-\/>get\_columns();}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPlease\ enter\ your\ move\ x\ and\ y\ (0\ to\ 2):\ "{}};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ x\ >>\ y;}
 \DoxyCodeLine{00101\ \ \ \ \ \}}
-\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Move<char>}}(x,\ y,\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}());}
-\DoxyCodeLine{00103\ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{smart\_player}}\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classPlayer}{smartPlayer<char>}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{move}}\ =\ \mbox{\hyperlink{classPlayer}{smart\_player}}-\/>calculateMove();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ x\ =\ \mbox{\hyperlink{classPlayer}{move}}.first;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ y\ =\ \mbox{\hyperlink{classPlayer}{move}}.second;}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Move<char>}}(x,\ y,\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}());}
+\DoxyCodeLine{00109\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{COMPUTER}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00167}{Player$<$ T $>$\+::get\+\_\+board\+\_\+ptr()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00164}{Player$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00161}{Player$<$ T $>$\+::get\+\_\+type()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{HUMAN}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{COMPUTER}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00164}{Player$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00161}{Player$<$ T $>$\+::get\+\_\+type()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{HUMAN}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -210,6 +226,57 @@ Here is the call graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classPyramid__XO__UI_a9447abc21ff1b8baa5ac1d91d84b567e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPyramid__XO__UI_a80577f177405a54f73700dbf7bc97492}\label{classPyramid__XO__UI_a80577f177405a54f73700dbf7bc97492} 
+\index{Pyramid\_XO\_UI@{Pyramid\_XO\_UI}!setup\_players@{setup\_players}}
+\index{setup\_players@{setup\_players}!Pyramid\_XO\_UI@{Pyramid\_XO\_UI}}
+\doxysubsubsection{\texorpdfstring{setup\_players()}{setup\_players()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Pyramid\+\_\+\+XO\+\_\+\+UI\+::setup\+\_\+players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Setup \doxylink{classsmartPlayer}{smart\+Player}. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a array of smart player objects. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUI_a6966a040c995b2292e5edddaa94f889a}{UI$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{Pyramid__XO_8cpp_source}{Pyramid\+\_\+\+XO.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ players\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Player<char>}}*[2];}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{classPlayer}{vector<string>}}\ \mbox{\hyperlink{classPlayer}{type\_options}}\ =\ \{\ \textcolor{stringliteral}{"{}Human"{}},\ \textcolor{stringliteral}{"{}Computer"{}}\ \};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{nameX}}\ =\ \mbox{\hyperlink{classUI_a7b1603de1f73fbb4006e4f00a27c44da}{get\_player\_name}}(\textcolor{stringliteral}{"{}Player\ X"{}});}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ \mbox{\hyperlink{classPlayer}{typeX}}\ =\ \mbox{\hyperlink{classUI_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\_player\_type\_choice}}(\textcolor{stringliteral}{"{}Player\ X"{}},\ \mbox{\hyperlink{classPlayer}{type\_options}});}
+\DoxyCodeLine{00117\ \ \ \ \ players[0]\ =\ \mbox{\hyperlink{classPyramid__XO__UI_ab7c835c5fbf86ec08d3262e840cd7563}{create\_player}}(\mbox{\hyperlink{classPlayer}{nameX}},\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(\textcolor{charliteral}{'X'}),\ \mbox{\hyperlink{classPlayer}{typeX}});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{nameO}}\ =\ \mbox{\hyperlink{classUI_a7b1603de1f73fbb4006e4f00a27c44da}{get\_player\_name}}(\textcolor{stringliteral}{"{}Player\ O"{}});}
+\DoxyCodeLine{00120\ \ \ \ \ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ \mbox{\hyperlink{classPlayer}{typeO}}\ =\ \mbox{\hyperlink{classUI_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\_player\_type\_choice}}(\textcolor{stringliteral}{"{}Player\ O"{}},\ \mbox{\hyperlink{classPlayer}{type\_options}});}
+\DoxyCodeLine{00121\ \ \ \ \ players[1]\ =\ \mbox{\hyperlink{classPyramid__XO__UI_ab7c835c5fbf86ec08d3262e840cd7563}{create\_player}}(\mbox{\hyperlink{classPlayer}{nameO}},\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(\textcolor{charliteral}{'O'}),\ \mbox{\hyperlink{classPlayer}{typeO}});}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{return}\ players;}
+\DoxyCodeLine{00124\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Pyramid__XO_8cpp_source_l00084}{create\+\_\+player()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00187}{UI$<$ char $>$\+::get\+\_\+player\+\_\+name()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00197}{UI$<$ char $>$\+::get\+\_\+player\+\_\+type\+\_\+choice()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPyramid__XO__UI_a80577f177405a54f73700dbf7bc97492_cgraph}
 \end{center}
 \end{figure}
 

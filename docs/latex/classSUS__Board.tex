@@ -93,16 +93,16 @@ Default constructor that initializes a 3x3 X-\/O board.
 
 
 
-Definition at line \mbox{\hyperlink{SUS__Classes_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{SUS__Classes_8cpp_source}{SUS\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{SUS__Classes_8cpp_source_l00253}{253}} of file \mbox{\hyperlink{SUS__Classes_8cpp_source}{SUS\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBoard}{Board}}(3,\ 3)\ \{}
-\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//\ Initialize\ all\ cells\ with\ blank\_symbol}}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classPlayer}{row}}\ :\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}})}
-\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{for}}\ (\mbox{\hyperlink{classPlayer}{auto}}\&\ \mbox{\hyperlink{classPlayer}{cell}}\ :\ \mbox{\hyperlink{classPlayer}{row}})}
-\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cell}}\ =\ \mbox{\hyperlink{classSUS__Board_a8992f8d0fb8c8f2916249518e94c22b2}{blank\_symbol}};}
-\DoxyCodeLine{00011\ \}}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBoard}{Board}}(3,\ 3)\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{comment}{//\ Initialize\ all\ cells\ with\ blank\_symbol}}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classPlayer}{row}}\ :\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{for}}\ (\mbox{\hyperlink{classPlayer}{auto}}\&\ \mbox{\hyperlink{classPlayer}{cell}}\ :\ \mbox{\hyperlink{classPlayer}{row}})}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cell}}\ =\ \mbox{\hyperlink{classSUS__Board_a8992f8d0fb8c8f2916249518e94c22b2}{blank\_symbol}};}
+\DoxyCodeLine{00258\ \}}
 
 \end{DoxyCode}
 
@@ -136,18 +136,18 @@ Implements \mbox{\hyperlink{classBoard_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$
 
 
 
-Definition at line \mbox{\hyperlink{SUS__Classes_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{SUS__Classes_8cpp_source}{SUS\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{SUS__Classes_8cpp_source_l00314}{314}} of file \mbox{\hyperlink{SUS__Classes_8cpp_source}{SUS\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classSUS__Board_a48747aa0b5f24bac5b5953576725b3ec}{is\_win}}(\mbox{\hyperlink{classPlayer}{player}})\ ||\ \mbox{\hyperlink{classSUS__Board_a006d0b395a8912ceb0335b95cc69de49}{is\_draw}}(\mbox{\hyperlink{classPlayer}{player}})\ ;}
-\DoxyCodeLine{00072\ \}}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classSUS__Board_a48747aa0b5f24bac5b5953576725b3ec}{is\_win}}(\mbox{\hyperlink{classPlayer}{player}})\ ||\ \mbox{\hyperlink{classSUS__Board_a006d0b395a8912ceb0335b95cc69de49}{is\_draw}}(\mbox{\hyperlink{classPlayer}{player}})\ ;}
+\DoxyCodeLine{00316\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{SUS__Classes_8cpp_source_l00066}{is\+\_\+draw()}}, and \mbox{\hyperlink{SUS__Classes_8cpp_source_l00035}{is\+\_\+win()}}.
+References \mbox{\hyperlink{SUS__Classes_8cpp_source_l00310}{is\+\_\+draw()}}, and \mbox{\hyperlink{SUS__Classes_8cpp_source_l00279}{is\+\_\+win()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -180,22 +180,22 @@ Implements \mbox{\hyperlink{classBoard_a8dbe2a243881986f3e53b45799d377fc}{Board$
 
 
 
-Definition at line \mbox{\hyperlink{SUS__Classes_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{SUS__Classes_8cpp_source}{SUS\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{SUS__Classes_8cpp_source_l00310}{310}} of file \mbox{\hyperlink{SUS__Classes_8cpp_source}{SUS\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classBoard_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 9\ \&\&\ !\mbox{\hyperlink{classSUS__Board_a48747aa0b5f24bac5b5953576725b3ec}{is\_win}}(\mbox{\hyperlink{classPlayer}{player}}));}
-\DoxyCodeLine{00068\ \}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classBoard_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 9\ \&\&\ !\mbox{\hyperlink{classSUS__Board_a48747aa0b5f24bac5b5953576725b3ec}{is\_win}}(\mbox{\hyperlink{classPlayer}{player}}));}
+\DoxyCodeLine{00312\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{SUS__Classes_8cpp_source_l00035}{is\+\_\+win()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00051}{Board$<$ char $>$\+::n\+\_\+moves}}.
+References \mbox{\hyperlink{SUS__Classes_8cpp_source_l00279}{is\+\_\+win()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00051}{Board$<$ char $>$\+::n\+\_\+moves}}.
 
 
 
-Referenced by \mbox{\hyperlink{SUS__Classes_8cpp_source_l00070}{game\+\_\+is\+\_\+over()}}.
+Referenced by \mbox{\hyperlink{SUS__Classes_8cpp_source_l00314}{game\+\_\+is\+\_\+over()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -266,40 +266,40 @@ Implements \mbox{\hyperlink{classBoard_ab316fe3e79677b4617fc3d90d6c48f33}{Board$
 
 
 
-Definition at line \mbox{\hyperlink{SUS__Classes_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{SUS__Classes_8cpp_source}{SUS\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{SUS__Classes_8cpp_source_l00279}{279}} of file \mbox{\hyperlink{SUS__Classes_8cpp_source}{SUS\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{sym}}\ =\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{score}}\ =\ 0;}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{isSUS}}\ =\ [\&](\textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{a}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{c}})\ \{}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classPlayer}{a}}\ ==\ \textcolor{charliteral}{'S'}\ \&\&\ \mbox{\hyperlink{classPlayer}{b}}\ ==\ \textcolor{charliteral}{'U'}\ \&\&\ \mbox{\hyperlink{classPlayer}{c}}\ ==\ \textcolor{charliteral}{'S'});}
-\DoxyCodeLine{00043\ \ \ \ \ \};}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Check\ rows}}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ 3;\ \mbox{\hyperlink{classPlayer}{i}}++)\ \{}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{isSUS}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][0],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][2]))\ \mbox{\hyperlink{classPlayer}{score}}++;}
-\DoxyCodeLine{00048\ \ \ \ \ \}}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ Check\ columns}}
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}\ <\ 3;\ \mbox{\hyperlink{classPlayer}{j}}++)\ \{}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{isSUS}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][\mbox{\hyperlink{classPlayer}{j}}],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][\mbox{\hyperlink{classPlayer}{j}}],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][\mbox{\hyperlink{classPlayer}{j}}]))\ \mbox{\hyperlink{classPlayer}{score}}++;}
-\DoxyCodeLine{00053\ \ \ \ \ \}}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Check\ main\ diagonal}}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{isSUS}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][0],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][2]))\ \mbox{\hyperlink{classPlayer}{score}}++;}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ Check\ anti-\/diagonal}}
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{isSUS}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][2],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][0]))\ \mbox{\hyperlink{classPlayer}{score}}++;}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{score}}\ \%\ 2\ ==\ 1)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \}}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{sym}}\ =\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{score}}\ =\ 0;}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{isSUS}}\ =\ [\&](\textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{a}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{c}})\ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classPlayer}{a}}\ ==\ \textcolor{charliteral}{'S'}\ \&\&\ \mbox{\hyperlink{classPlayer}{b}}\ ==\ \textcolor{charliteral}{'U'}\ \&\&\ \mbox{\hyperlink{classPlayer}{c}}\ ==\ \textcolor{charliteral}{'S'});}
+\DoxyCodeLine{00287\ \ \ \ \ \};}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{comment}{//\ Check\ rows}}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ 3;\ \mbox{\hyperlink{classPlayer}{i}}++)\ \{}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{isSUS}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][0],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][2]))\ \mbox{\hyperlink{classPlayer}{score}}++;}
+\DoxyCodeLine{00292\ \ \ \ \ \}}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{comment}{//\ Check\ columns}}
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}\ <\ 3;\ \mbox{\hyperlink{classPlayer}{j}}++)\ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{isSUS}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][\mbox{\hyperlink{classPlayer}{j}}],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][\mbox{\hyperlink{classPlayer}{j}}],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][\mbox{\hyperlink{classPlayer}{j}}]))\ \mbox{\hyperlink{classPlayer}{score}}++;}
+\DoxyCodeLine{00297\ \ \ \ \ \}}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{comment}{//\ Check\ main\ diagonal}}
+\DoxyCodeLine{00300\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{isSUS}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][0],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][2]))\ \mbox{\hyperlink{classPlayer}{score}}++;}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{comment}{//\ Check\ anti-\/diagonal}}
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{isSUS}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][2],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][0]))\ \mbox{\hyperlink{classPlayer}{score}}++;}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{score}}\ \%\ 2\ ==\ 1)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \}}
 
 \end{DoxyCode}
 
@@ -308,7 +308,7 @@ References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00050}{Board$<$ char $
 
 
 
-Referenced by \mbox{\hyperlink{SUS__Classes_8cpp_source_l00070}{game\+\_\+is\+\_\+over()}}, and \mbox{\hyperlink{SUS__Classes_8cpp_source_l00066}{is\+\_\+draw()}}.
+Referenced by \mbox{\hyperlink{SUS__Classes_8cpp_source_l00314}{game\+\_\+is\+\_\+over()}}, and \mbox{\hyperlink{SUS__Classes_8cpp_source_l00310}{is\+\_\+draw()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -348,31 +348,28 @@ Implements \mbox{\hyperlink{classBoard_a93d9dec601dda58b7e206ccb47633e57}{Board$
 
 
 
-Definition at line \mbox{\hyperlink{SUS__Classes_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{SUS__Classes_8cpp_source}{SUS\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{SUS__Classes_8cpp_source_l00260}{260}} of file \mbox{\hyperlink{SUS__Classes_8cpp_source}{SUS\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ \mbox{\hyperlink{classPlayer}{move}}-\/>get\_x();}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ \mbox{\hyperlink{classPlayer}{move}}-\/>get\_y();}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{mark}}\ =\ \mbox{\hyperlink{classPlayer}{move}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Validate\ move\ and\ apply\ if\ valid}}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(\mbox{\hyperlink{classPlayer}{x\ <\ 0\ ||\ x\ >}}=\ \mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ \mbox{\hyperlink{classPlayer}{y\ <\ 0\ ||\ y\ >}}=\ \mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \&\&}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ ==\ \mbox{\hyperlink{classSUS__Board_a8992f8d0fb8c8f2916249518e94c22b2}{blank\_symbol}}\ ||\ \mbox{\hyperlink{classPlayer}{mark}}\ ==\ 0))\ \{}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{mark}}\ ==\ 0)\ \{\ \textcolor{comment}{//\ Undo\ move}}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoard_a5952baefabced65fecec333de638408d}{n\_moves}}-\/-\/;}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ \mbox{\hyperlink{classSUS__Board_a8992f8d0fb8c8f2916249518e94c22b2}{blank\_symbol}};}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Apply\ move}}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoard_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ \mbox{\hyperlink{classPlayer}{toupper}}(\mbox{\hyperlink{classPlayer}{mark}});}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{comment}{//\ Convert\ Move<char>*\ →\ ne\_Move*}}
+\DoxyCodeLine{00262\ \ \ \ \ \mbox{\hyperlink{classne__Move}{ne\_Move}}*\ \mbox{\hyperlink{classPlayer}{nm}}\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classne__Move}{ne\_Move}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classPlayer}{move}});}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classPlayer}{nm}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ \mbox{\hyperlink{classPlayer}{nm}}-\/>get\_x();}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ \mbox{\hyperlink{classPlayer}{nm}}-\/>get\_y();}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{val}}\ =\ \mbox{\hyperlink{classPlayer}{nm}}-\/>get\_value();}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{mark}}\ =\ \mbox{\hyperlink{classPlayer}{move}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{comment}{//\ Validate\ move\ and\ apply\ if\ valid}}
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(\mbox{\hyperlink{classPlayer}{x\ <\ 0\ ||\ x\ >}}=\ \mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ \mbox{\hyperlink{classPlayer}{y\ <\ 0\ ||\ y\ >}}=\ \mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \&\&\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ ==\ \mbox{\hyperlink{classSUS__Board_a8992f8d0fb8c8f2916249518e94c22b2}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoard_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ \mbox{\hyperlink{classPlayer}{toupper}}(\mbox{\hyperlink{classPlayer}{val}});}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00275\ \ \ \ \ \}}
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00277\ \}}
 
 \end{DoxyCode}
 
@@ -401,7 +398,7 @@ Definition at line \mbox{\hyperlink{SUS__Classes_8h_source_l00030}{30}} of file 
 
 
 
-Referenced by \mbox{\hyperlink{SUS__Classes_8cpp_source_l00006}{SUS\+\_\+\+Board()}}, and \mbox{\hyperlink{SUS__Classes_8cpp_source_l00013}{update\+\_\+board()}}.
+Referenced by \mbox{\hyperlink{SUS__Classes_8cpp_source_l00253}{SUS\+\_\+\+Board()}}, and \mbox{\hyperlink{SUS__Classes_8cpp_source_l00260}{update\+\_\+board()}}.
 
 
 

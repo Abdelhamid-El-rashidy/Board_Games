@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['misere_5ftic_5ftac_5ftoe_5fboard_0',['Misere_Tic_Tac_Toe_board',['../classMisere__Tic__Tac__Toe__board.html',1,'']]],
-  ['misere_5ftic_5ftac_5ftoe_5fui_1',['Misere_Tic_Tac_Toe_UI',['../classMisere__Tic__Tac__Toe__UI.html',1,'']]],
-  ['move_2',['Move',['../classMove.html',1,'']]],
-  ['move_3c_20char_20_3e_3',['Move&lt; char &gt;',['../classMove.html',1,'']]]
+  ['infinit_5fxo_5fui_0',['Infinit_XO_UI',['../classInfinit__XO__UI.html',1,'']]],
+  ['infinity_5fx_5fo_5fboard_1',['Infinity_X_O_Board',['../classInfinity__X__O__Board.html',1,'']]]
 ];

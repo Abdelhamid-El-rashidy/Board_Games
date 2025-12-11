@@ -8,40 +8,58 @@
 \DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00013}00013\ }
 \DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <bits/stdc++.h>}}
 \DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BoardGame__Classes_8h}{BoardGame\_Classes.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Smart__Player_8h}{include/Smart\_Player.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00017}00017\ }
 \DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00019}00019\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00033}\mbox{\hyperlink{classMisere__Tic__Tac__Toe__board}{00033}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMisere__Tic__Tac__Toe__board}{Misere\_Tic\_Tac\_Toe\_board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBoard}{Board}}<char>\{}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00034}00034\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00035}\mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a2e48c38b22a722db6bf452c453725e05}{00035}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a2e48c38b22a722db6bf452c453725e05}{blank\_symbol}}\ =\ \textcolor{charliteral}{'.'};\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00036}00036\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a1f311a5895b3354d5ef06796e76bf291}{Misere\_Tic\_Tac\_Toe\_board}}();}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00020}00020\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00034}\mbox{\hyperlink{classMisere__Tic__Tac__Toe__board}{00034}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMisere__Tic__Tac__Toe__board}{Misere\_Tic\_Tac\_Toe\_board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBoard}{Board}}<char>\{}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00035}00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00036}\mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a2e48c38b22a722db6bf452c453725e05}{00036}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a2e48c38b22a722db6bf452c453725e05}{blank\_symbol}}\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00037}00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a1f311a5895b3354d5ef06796e76bf291}{Misere\_Tic\_Tac\_Toe\_board}}();}
 \DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a51c52a227b90423940eef5c91097d879}{update\_board}}(\mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classPlayer}{move}});}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00055}\mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a936b7e9aa80ec2938a10a0ece856eb98}{00055}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a936b7e9aa80ec2938a10a0ece856eb98}{is\_win}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*)\{\textcolor{keywordflow}{return}\ \ \textcolor{keyword}{false};\ \};}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00056}00056\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a17b6a2ec14f1f4c9dc5b6cd59127bc56}{is\_lose}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00063}00063\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_ae61d1f10678bb86d7de70a6a5f0e67f7}{is\_draw}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00070}00070\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00076}00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_ada7bdaa8066378a91d22134d2b931343}{game\_is\_over}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00077}00077\ \};}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00078}00078\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00089}\mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI}{00089}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI}{Misere\_Tic\_Tac\_Toe\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classUI}{UI}}<char>\ \{}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00090}00090\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00096}00096\ \ \ \ \ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI_a5e4280d571c36f99830c0184ac3ff4f4}{Misere\_Tic\_Tac\_Toe\_UI}}();}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00097}00097\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00101}00101\ \ \ \ \ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI_aee4807aa5b52e2a37b4e12ba502a9335}{\string~Misere\_Tic\_Tac\_Toe\_UI}}();}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00102}00102\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00110}00110\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI_ac79b0792cb9c8b62efe244232f82a141}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type);}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00111}00111\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00117}00117\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI_a13c2f356fe79f87ed9bce9ca4efadb68}{get\_move}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00118}00118\ \};}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a51c52a227b90423940eef5c91097d879}{update\_board}}(\mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classPlayer}{move}});}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00056}\mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a936b7e9aa80ec2938a10a0ece856eb98}{00056}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a936b7e9aa80ec2938a10a0ece856eb98}{is\_win}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*)\{\textcolor{keywordflow}{return}\ \ \textcolor{keyword}{false};\ \};}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_a17b6a2ec14f1f4c9dc5b6cd59127bc56}{is\_lose}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_ae61d1f10678bb86d7de70a6a5f0e67f7}{is\_draw}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00077}00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__board_ada7bdaa8066378a91d22134d2b931343}{game\_is\_over}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00078}00078\ \};}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00090}\mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI}{00090}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI}{Misere\_Tic\_Tac\_Toe\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classUI}{UI}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00091}00091\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00097}00097\ \ \ \ \ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI_a5e4280d571c36f99830c0184ac3ff4f4}{Misere\_Tic\_Tac\_Toe\_UI}}();}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00102}00102\ \ \ \ \ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI_aee4807aa5b52e2a37b4e12ba502a9335}{\string~Misere\_Tic\_Tac\_Toe\_UI}}();}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00111}00111\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI_ac79b0792cb9c8b62efe244232f82a141}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type);}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00118}00118\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI_a13c2f356fe79f87ed9bce9ca4efadb68}{get\_move}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
 \DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00119}00119\ }
-\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00120}00120\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BOARDGAMEFRAMEWORK\_MISÈRE\_TIC\_TAC\_TOE\_H}}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00124}00124\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPlayer}{Player<char>}}\ **\mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI_a28d61356cba69561f35c575150e4e3f6}{setup\_players}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00126}00126\ \};}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00128}\mbox{\hyperlink{classMisereSmartPlayer}{00128}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMisereSmartPlayer}{MisereSmartPlayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsmartPlayer}{smartPlayer}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00129}00129\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00130}\mbox{\hyperlink{classMisereSmartPlayer_ae38300294c908b68f4bdc872082df3b0}{00130}}\ \ \ \ \ \mbox{\hyperlink{classMisereSmartPlayer_ae38300294c908b68f4bdc872082df3b0}{MisereSmartPlayer}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{n}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{s}},\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ \mbox{\hyperlink{classPlayer}{t}})\ :\ \mbox{\hyperlink{classsmartPlayer}{smartPlayer}}(\mbox{\hyperlink{classPlayer}{n}},\ \mbox{\hyperlink{classPlayer}{s}},\ \mbox{\hyperlink{classPlayer}{t}})\ \{\}}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00132}00132\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPlayer}{pair<int,\ int>}}\ \mbox{\hyperlink{classMisereSmartPlayer_a994d1480fd59b8fe70f90fd5376ff19c}{calculateMove}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00134}00134\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classMisereSmartPlayer_abc3a201f5a853c29a686bb9657aa3c61}{get\_opponent\_symbol}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00136}00136\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMisereSmartPlayer_a4ba7476b6aa11da797052d8483308b24}{check\_3\_in\_row}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPlayer}{vector}}<\mbox{\hyperlink{classPlayer}{vector<char>}}>\&\ \mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer_a272d6c4dab769930d4f8074918e7708a}{symbol}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00138}00138\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMisereSmartPlayer_abd661568433d59f2a42bc657e1946363}{minimax\_misere}}(\mbox{\hyperlink{classPlayer}{vector}}<\mbox{\hyperlink{classPlayer}{vector<char>}}>\&\ \mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPlayer}{isMaximizing}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{depth}}\ =\ 0);}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00140}00140\ \};}
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{Misere__Tic__Tac__Toe_8h_source_l00142}00142\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BOARDGAMEFRAMEWORK\_MISÈRE\_TIC\_TAC\_TOE\_H}}
 
 \end{DoxyCode}
