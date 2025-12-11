@@ -260,7 +260,7 @@ public:
 
 
 bool Check_word(const string& W) {
-    ifstream file("dic.txt");
+    ifstream file("../dic.txt");
     if (!file.is_open()) {
         cerr << "Error: cannot open file dic.txt\n";
         return false; // previously returned 1 (true) — wrong
@@ -352,7 +352,7 @@ Player<char>* Word_XO_UI::create_player(string& name, char symbol, PlayerType ty
     } else {
         // Construct a wordSmartPlayer and pass the dictionary file path
         // Make sure "dic.txt" path is correct relative to your working dir
-        return new wordSmartPlayer(name, symbol, type, "dic.txt");
+        return new wordSmartPlayer(name, symbol, type, "../dic.txt");
     }
 }
 
