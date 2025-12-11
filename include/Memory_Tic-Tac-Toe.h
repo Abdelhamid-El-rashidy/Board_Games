@@ -26,7 +26,8 @@ using namespace std;
  */
 class MEMORY_TIC_TAC_TOE_Board : public Board<char> {
 private:
-    char blank_symbol = '?'; ///< Character used to represent an empty cell on the board.
+    char blank_symbol = '.'; ///< Character used to represent an empty cell on the board.
+    char took = '?'; ///< Character used to represent an empty cell on the board.
 
     vector<vector<char>> hidden_board;
 
