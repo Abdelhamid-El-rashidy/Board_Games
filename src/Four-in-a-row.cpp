@@ -1,7 +1,102 @@
 #include "../include/Four-in-a-row.h"
+#include "../include/Smart_Player.h"
 #include <bits/stdc++.h>
 
 using namespace std;
+
+class smartPlayer2 : public smartPlayer<char> {
+    using smartPlayer<char>::smartPlayer;
+public:
+    smartPlayer2(string n, char s, PlayerType t)
+            : smartPlayer<char>(n, s, t) {}
+
+    int evaluate_board(const vector<vector<char>>& b, char ai, char opp, int N = 4) const override {
+        return smartPlayer<char>::evaluate_board(b, ai, opp, N);
+    }
+
+    bool is_win(const vector<vector<char>>& b, char symbol, int N = 4) const override {
+        return smartPlayer<char>::is_win(b, symbol, N);
+    }
+
+    virtual bool is_draw(const vector<vector<char>>& b, int N = 4) const {
+        return smartPlayer<char>::is_draw(b, N);
+    }
+
+    int minimax(vector<vector<char>>& b, bool maximizingPlayer, char ai, char opp, int alpha, int beta, int depth, int N = 4) {
+        if (is_win(b, ai, N)) return 1000 + depth; // prefer faster win
+        if (is_win(b, opp, N)) return -1000 - depth; // prefer slower loss
+        if (is_draw(b, N)) return 0;
+        if (depth == 0) return evaluate_board(b, ai, opp, N);
+
+        int rows = b.size();
+        int cols = b[0].size();
+
+        if (maximizingPlayer) {
+            int best = numeric_limits<int>::min();
+            for (int j = 0; j < cols; j++)
+                for (int i = rows-1; i >= 0; i--)
+                    if (b[i][j] == '.') {
+                        b[i][j] = ai;
+                        int val = minimax(b, false, ai, opp, alpha, beta, depth - 1, N);
+                        b[i][j] = '.';
+                        best = max(best, val);
+                        alpha = max(alpha, best);
+                        if (beta <= alpha) return best;
+                    }
+            return best;
+        } else {
+            int best = numeric_limits<int>::max();
+            for (int j = 0; j < cols; j++)
+                for (int i = rows-1; i >= 0; i--)
+                    if (b[i][j] == '.') {
+                        b[i][j] = opp;
+                        int val = minimax(b, true, ai, opp, alpha, beta, depth - 1, N);
+                        b[i][j] = '.';
+                        best = min(best, val);
+                        beta = min(beta, best);
+                        if (beta <= alpha) return best;
+                    }
+            return best;
+        }
+    }
+
+    pair<int,int> calculateMove()  {
+        Board<char>* board_ptr = this->get_board_ptr();
+        if (!board_ptr) throw runtime_error("Board not assigned to player!");
+
+        auto tempBoard = board_ptr->get_board_matrix();
+        int rows = tempBoard.size();
+        int cols = tempBoard[0].size();
+
+        int bestVal = numeric_limits<int>::min();
+        int bestX = -1, bestY = -1;
+
+        char ai = this->get_symbol();
+        char opp = get_opponent_symbol();
+
+        int maxDepth = 2; // tweak: higher depth = stronger AI but slower
+
+        for (int j = 0; j < cols; j++)
+            for (int i = rows-1; i >= 0; i--)
+                if (tempBoard[i][j] == '.') {
+                    tempBoard[i][j] = ai;
+                    int moveVal = minimax(tempBoard, false, ai, opp,
+                                          numeric_limits<int>::min(),
+                                          numeric_limits<int>::max(),
+                                          maxDepth);
+                    tempBoard[i][j] = '.';
+                    if (moveVal > bestVal) {
+                        bestVal = moveVal;
+                        bestX = i;
+                        bestY = j;
+                    }
+                }
+
+        return {bestX, bestY};
+    }
+
+};
+
 
 Four_in_a_row_Board::Four_in_a_row_Board() : Board(6, 7) {
     // Initialize all cells with blank_symbol
@@ -86,7 +181,8 @@ Player<char>* Four_in_a_row_UI::create_player(string& name, char symbol, PlayerT
     cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
         << " player: " << name << " (" << symbol << ")\n";
 
-    return new Player<char>(name, symbol, type);
+    if (type == PlayerType::HUMAN) return new Player<char>(name, symbol, type);
+    return new smartPlayer<char>(name, symbol, type);
 }
 
 Move<char>* Four_in_a_row_UI::get_move(Player<char>* player) {
@@ -97,8 +193,10 @@ Move<char>* Four_in_a_row_UI::get_move(Player<char>* player) {
         cin >> y ;
     }
     else if (player->get_type() == PlayerType::COMPUTER) {
-        // x = rand() % player->get_board_ptr()->get_rows();
-         y = rand() % player->get_board_ptr()->get_columns();
+        auto smart_player = dynamic_cast<smartPlayer<char>*>(player);
+        auto move = smart_player->calculateMove();
+        // x = move.first;
+        y = move.second;
     }
     return new Move<char>(0,y, player->get_symbol());
 }
