@@ -259,17 +259,36 @@ public:
 };
 
 
-bool Check_word(const string& W) {
-    ifstream file("../dic.txt");
-    if (!file.is_open()) {
-        cerr << "Error: cannot open file dic.txt\n";
-        return false; // previously returned 1 (true) — wrong
+static unordered_set<string> GLOBAL_DICT;
+static bool GLOBAL_DICT_LOADED = false;
+
+void load_global_dictionary(const string& path = "../dic.txt") {
+    if (GLOBAL_DICT_LOADED) return;
+    ifstream f(path);
+    if (!f.is_open()) {
+        cerr << "Warning: cannot open " << path << "\n";
+        GLOBAL_DICT_LOADED = true; // prevent repeated warnings
+        return;
     }
     string line;
-    while (getline(file, line)) {
-        if (W == line) return true;
+    while (getline(f, line)) {
+        // trim
+        size_t s = 0, e = line.size();
+        while (s < e && isspace((unsigned char)line[s])) ++s;
+        while (e > s && isspace((unsigned char)line[e-1])) --e;
+        if (e - s == 0) continue;
+        string w = line.substr(s, e - s);
+        for (char &c : w) c = toupper(static_cast<unsigned char>(c));
+        GLOBAL_DICT.insert(w);
     }
-    return false;
+    GLOBAL_DICT_LOADED = true;
+}
+
+bool Check_word(const string& W) {
+    if (!GLOBAL_DICT_LOADED) load_global_dictionary("../dic.txt");
+    string t = W;
+    for (char &c : t) c = toupper(static_cast<unsigned char>(c));
+    return GLOBAL_DICT.count(t) > 0;
 }
 
 
