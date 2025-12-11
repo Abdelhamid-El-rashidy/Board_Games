@@ -1,0 +1,259 @@
+@startuml Board_Games_Complete_Class_Diagram
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+
+' ============================================
+' ENUMS
+' ============================================
+enum PlayerType {
+    HUMAN
+    COMPUTER
+    AI
+    RANDOM
+}
+
+' ============================================
+' CORE FRAMEWORK CLASSES
+' ============================================
+class Board<T> {
+    # int rows
+    # int columns
+    # vector<vector<T>> board
+    # int n_moves
+    --
+    + Board(int rows, int columns)
+    + ~Board()
+    + vector<vector<T>> get_board_matrix() const
+    + int get_rows() const
+    + int get_columns() const
+    + T get_cell(int x, int y)
+    + int get_n_moves() const
+    --
+    {abstract} + bool update_board(Move<T>* move)
+    {abstract} + bool is_win(Player<T>*)
+    {abstract} + bool is_lose(Player<T>*)
+    {abstract} + bool is_draw(Player<T>*)
+    {abstract} + bool game_is_over(Player<T>*)
+}
+
+class Move<T> {
+    - int x
+    - int y
+    - T symbol
+    --
+    + Move(int x, int y, T symbol)
+    + int get_x() const
+    + int get_y() const
+    + T get_symbol() const
+    + ~Move()
+}
+
+class Player<T> {
+    # string name
+    # PlayerType type
+    # T symbol
+    # Board<T>* boardPtr
+    --
+    + Player(string n, T s, PlayerType t)
+    + ~Player()
+    + string get_name() const
+    + PlayerType get_type() const
+    + T get_symbol() const
+    + Board<T>* get_board_ptr() const
+    + void set_board_ptr(Board<T>* b)
+}
+
+class UI<T> {
+    # int cell_width
+    --
+    # string get_player_name(string)
+    # PlayerType get_player_type_choice(string, vector<string>)
+    --
+    + UI(int width = 3)
+    + UI(string msg, int width)
+    + ~UI()
+    + void display_message(string)
+    + void display_board_matrix(vector<vector<T>> matrix) const
+    + Player<T>** setup_players()
+    --
+    {abstract} + Move<T>* get_move(Player<T>*)
+    {abstract} + Player<T>* create_player(string& name, T symbol, PlayerType type)
+}
+
+class GameManager<T> {
+    - Board<T>* boardPtr
+    - Player<T>* players[2]
+    - UI<T>* ui
+    --
+    + GameManager(Board<T>* b, Player<T>* p[2], UI<T>* u)
+    + void run()
+}
+
+' ============================================
+' AI PLAYER CLASSES
+' ============================================
+class AIPlayer<T> {
+    # T blank_symbol
+    # int max_depth
+    --
+    # int evaluate_board(Board<T>* boardPtr, T ai, T opp, int N = 3)
+    # int get_max_depth() const
+    # vector<T> generate_move_values(int x, int y, bool isMaximizing)
+    # int minimax(Board<T>* boardPtr, bool maximizingPlayer, T ai, T opp, int alpha, int beta, int depth, int N = 3)
+    --
+    + AIPlayer(string n, T s, PlayerType t, T blank, int depth = 3)
+    + ~AIPlayer()
+    + virtual bool condition(int x, int y)
+    + virtual T get_opponent_symbol()
+    + virtual Move<T>* calculateMove()
+    --
+    {abstract} + Move<T>* createMove(int x, int y)
+    {abstract} + Move<T>* createUndoMove(int x, int y)
+}
+
+class smartPlayer<T> {
+    # virtual T get_opponent_symbol() const
+    # virtual int evaluate_board(const vector<vector<T>>& b, T ai, T opp, int N = 3) const
+    # virtual bool is_win(const vector<vector<T>>& b, T symbol, int N = 3) const
+    # virtual bool is_draw(const vector<vector<T>>& b, int N = 3) const
+    # int minimax(vector<vector<T>>& b, bool maximizingPlayer, T ai, T opp, int alpha, int beta, int depth, int N = 3)
+    --
+    + smartPlayer(string n, T s, PlayerType t)
+    + virtual pair<int,int> calculateMove()
+}
+
+' ============================================
+' GAME-SPECIFIC MOVE CLASSES
+' ============================================
+class dualMove {
+    - int dx
+    - int dy
+    --
+    + dualMove(int x, int y, char symbol, int dy, int dx)
+    + int get_dy() const
+    + int get_dx() const
+    + ~dualMove()
+}
+
+class nMove {
+    - char value
+    --
+    + nMove(int x, int y, char symbol, char value)
+    + char get_value() const
+    + ~nMove()
+}
+
+' ============================================
+' BOARD GAME IMPLEMENTATIONS
+' ============================================
+class Infinity_X_O_Board
+class Numerical_X_O_Board
+class X_O_5x5_Board
+class Misere_Tic_Tac_Toe_board
+class Four_Four_XO_Board
+class SUS_Board
+class Pyramid_XO_Board
+class Four_in_a_row_Board
+class Diamond_Tic_Tac_Toe_Board
+class Obstacles_XO_Board
+class Word_XO_Board
+class MEMORY_TIC_TAC_TOE_Board
+class Ultimate_XO_Board
+class mainBoard
+
+' ============================================
+' UI IMPLEMENTATIONS
+' ============================================
+class Infinit_XO_UI
+class Numerical_XO_UI
+class X_O_5x5_UI
+class Misere_Tic_Tac_Toe_UI
+class Four_Four_XO_UI
+class SUS_UI
+class Pyramid_XO_UI
+class Four_in_a_row_UI
+class Diamond_Tic_Tac_Toe_UI
+class Obstacles_XO_UI
+class Word_XO_UI
+class MEMORY_TIC_TAC_TOE_UI
+class Ultimate_XO_UI
+
+' ============================================
+' GAME-SPECIFIC AI PLAYERS
+' ============================================
+class FourFourAIPlayer {
+    - vector<pair<int, int>> directions
+    - int current_dx
+    - int current_dy
+    --
+    # bool condition(int x, int y)
+    # bool condition_for_symbol(int x, int y, char symbol)
+    # int minimax(Board<char>* boardPtr, bool maximizingPlayer, char ai, char opp, int alpha, int beta, int depth, int N = 3)
+    # int evaluate_board(Board<char>* boardPtr, char ai, char opp, int N = 3)
+    # Move<char>* createUndoMoveForSymbol(int x, int y, int dx, int dy, char symbol)
+    --
+    + FourFourAIPlayer(string n, char s, PlayerType t)
+    + Move<char>* calculateMove()
+    + Move<char>* createMove(int x, int y)
+    + Move<char>* createUndoMove(int x, int y)
+}
+
+class MisereSmartPlayer
+class DiamondSmartPlayer
+
+' ============================================
+' INHERITANCE RELATIONSHIPS
+' ============================================
+PlayerType <|-- Player : uses
+Player <|-- AIPlayer
+Player <|-- smartPlayer
+AIPlayer <|-- FourFourAIPlayer
+smartPlayer <|-- MisereSmartPlayer
+smartPlayer <|-- DiamondSmartPlayer
+
+Move <|-- dualMove
+Move <|-- nMove
+
+Board <|-- Infinity_X_O_Board
+Board <|-- Numerical_X_O_Board
+Board <|-- X_O_5x5_Board
+Board <|-- Misere_Tic_Tac_Toe_board
+Board <|-- Four_Four_XO_Board
+Board <|-- SUS_Board
+Board <|-- Pyramid_XO_Board
+Board <|-- Four_in_a_row_Board
+Board <|-- Diamond_Tic_Tac_Toe_Board
+Board <|-- Obstacles_XO_Board
+Board <|-- Word_XO_Board
+Board <|-- MEMORY_TIC_TAC_TOE_Board
+Board <|-- Ultimate_XO_Board
+Board <|-- mainBoard
+
+UI <|-- Infinit_XO_UI
+UI <|-- Numerical_XO_UI
+UI <|-- X_O_5x5_UI
+UI <|-- Misere_Tic_Tac_Toe_UI
+UI <|-- Four_Four_XO_UI
+UI <|-- SUS_UI
+UI <|-- Pyramid_XO_UI
+UI <|-- Four_in_a_row_UI
+UI <|-- Diamond_Tic_Tac_Toe_UI
+UI <|-- Obstacles_XO_UI
+UI <|-- Word_XO_UI
+UI <|-- MEMORY_TIC_TAC_TOE_UI
+UI <|-- Ultimate_XO_UI
+
+' ============================================
+' COMPOSITION RELATIONSHIPS
+' ============================================
+Board o-- Move : uses
+Board o-- Player : interacts
+Player --> Board : boardPtr
+UI --> Move : creates
+UI --> Player : creates
+GameManager --> Board : contains
+GameManager --> Player : contains
+GameManager --> UI : contains
+
+@enduml
+
