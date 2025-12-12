@@ -122,7 +122,7 @@ bool X_O_5x5_Board::is_lose(Player<char>* player) {
 }
 
 bool X_O_5x5_Board::is_draw(Player<char>* player) {
-    return (n_moves == 24);
+    return (n_moves == 24 && !is_win(player));
 }
 
 bool X_O_5x5_Board::game_is_over(Player<char>* player) {
