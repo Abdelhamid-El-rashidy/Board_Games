@@ -117,12 +117,18 @@ Private Attributes</h2></td></tr>
 class Move&lt; T &gt;</div><p>Represents a single move in a board game. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of symbol placed on the board (<a class="el" href="classPlayer.html#adb4e803a7ac0356b111b8ca79d766976" title="Construct a player with name, symbol, and type.">e.g</a>., char, int). </td></tr>
+    <tr><td class="paramname">T</td><td>Type of symbol placed on the board (<a class="el" href="classPlayer.html#adb4e803a7ac0356b111b8ca79d766976" title="Construct a player with name, symbol, and type.">e.g</a>., char, int).</td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00113">113</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the x_coordinate of move within board. </td></tr>
+    <tr><td class="paramname">y</td><td>the y_coordinate of move within board. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to a <a class="el" href="classMove.html" title="Represents a single move in a board game.">Move</a> object. Caller is responsible for deletion. </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a100102cb072a2857304023233dac7b42" name="a100102cb072a2857304023233dac7b42"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a100102cb072a2857304023233dac7b42">&#9670;&#160;</a></span>Move()</h2>
@@ -400,8 +406,9 @@ template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" hre
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a></li>
+<li>include/<a class="el" href="AiPlayer_8h_source.html">AiPlayer.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

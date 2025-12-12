@@ -76,42 +76,62 @@
 \DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00072}00072\ }
 \DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00073}00073\ \textcolor{comment}{//=========Four-\/Four\ Tic\ Tac\ Toe\ UI\ Implementation\ =========}}
 \DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00074}00074\ }
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00075}\mbox{\hyperlink{classFour__Four__XO__UI_a462e22aa01d930bda7449c759f36c86f}{00075}}\ \mbox{\hyperlink{classPlayer}{Move<char>}}\ *\mbox{\hyperlink{classFour__Four__XO__UI_a462e22aa01d930bda7449c759f36c86f}{Four\_Four\_XO\_UI::get\_move}}(\mbox{\hyperlink{classPlayer}{Player<char>}}\ *\mbox{\hyperlink{classPlayer}{player}})\ \{}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordtype}{int}\ x,y,dx,dy;}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{dir}};}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00078}00078\ \ \ \ \ \mbox{\hyperlink{classPlayer}{vector<pair<int,int>}}>\ \mbox{\hyperlink{classPlayer}{dirs}}\ =\ \{\{1,0\},\ \{0,1\},\ \{-\/1,0\},\ \{0,-\/1\}\};\ \textcolor{comment}{//\ Up,\ Right,\ Down\ ,\ Left}}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00079}00079\ }
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00080}00080\ }
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Please\ enter\ the\ coordinates\ of\ a\ one\ of\ your\ pieces\ to\ move\ (0\ to\ 3):\ "{}};}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ x\ >>\ y;}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Which\ direction\ you\ want\ to\ move\ your\ piece?\ (1\ -\/>\ 'U',\ 2\ -\/>\ 'R',\ 3\ -\/>\ 'D',\ 4\ -\/>\ 'L'):\ "{}};}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ \mbox{\hyperlink{classPlayer}{dir}};}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{dir}}-\/-\/;}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{classPlayer}{dir<0||dir>}}3)\ \{}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Enter\ Valid\ direction:\ (1\ -\/>\ 'U',\ 2\ -\/>\ 'R',\ 3\ -\/>\ 'D',\ 4\ -\/>\ 'L'):\ "{}};}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ \mbox{\hyperlink{classPlayer}{dir}};}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{dir}}-\/-\/;}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ dx\ =\ \mbox{\hyperlink{classPlayer}{dirs}}[\mbox{\hyperlink{classPlayer}{dir}}].first;}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ dy\ =\ \mbox{\hyperlink{classPlayer}{dirs}}[\mbox{\hyperlink{classPlayer}{dir}}].second;}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00094}00094\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})\ \{}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ x\ =\ \mbox{\hyperlink{classPlayer}{rand}}()\ \%\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}()-\/>get\_rows();}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ y\ =\ \mbox{\hyperlink{classPlayer}{rand}}()\ \%\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}()-\/>get\_columns();}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00097}00097\ }
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{random\_device}}\ \mbox{\hyperlink{classPlayer}{rd}};}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{mt19937}}\ \mbox{\hyperlink{classPlayer}{gen}}(\mbox{\hyperlink{classPlayer}{rd}}());}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{L}}\ =\ 0,\ \mbox{\hyperlink{classPlayer}{R}}\ =\ 3;}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{uniform\_int\_distribution<int>}}\ \mbox{\hyperlink{classPlayer}{normal}}(\mbox{\hyperlink{classPlayer}{L}},\ \mbox{\hyperlink{classPlayer}{R}});}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{num}}\ =\ \mbox{\hyperlink{classPlayer}{normal}}(\mbox{\hyperlink{classPlayer}{gen}});}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ dx\ =\ \mbox{\hyperlink{classPlayer}{dirs}}[\mbox{\hyperlink{classPlayer}{num}}].first;}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ dy\ =\ \mbox{\hyperlink{classPlayer}{dirs}}[\mbox{\hyperlink{classPlayer}{num}}].second;}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00105}00105\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00106}00106\ }
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00107}00107\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdualMove}{dualMove}}(x,y,\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}(),dy,dx);}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00108}00108\ }
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00109}00109\ \}}
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00110}00110\ }
-\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00075}\mbox{\hyperlink{classFour__Four__XO__UI_a90dbc91c4dd78f281a872a3995ed325a}{00075}}\ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ \mbox{\hyperlink{classFour__Four__XO__UI_a90dbc91c4dd78f281a872a3995ed325a}{Four\_Four\_XO\_UI::setup\_players}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00076}00076\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ players\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Player<char>}}*[2];}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00077}00077\ \ \ \ \ \mbox{\hyperlink{classPlayer}{vector<string>}}\ \mbox{\hyperlink{classPlayer}{type\_options}}\ =\ \{\ \textcolor{stringliteral}{"{}Human"{}},\ \textcolor{stringliteral}{"{}Computer"{}}\ \};}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{nameX}}\ =\ \mbox{\hyperlink{classUI_a7b1603de1f73fbb4006e4f00a27c44da}{get\_player\_name}}(\textcolor{stringliteral}{"{}Player\ X"{}});}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00080}00080\ \ \ \ \ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ \mbox{\hyperlink{classPlayer}{typeX}}\ =\ \mbox{\hyperlink{classUI_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\_player\_type\_choice}}(\textcolor{stringliteral}{"{}Player\ X"{}},\ \mbox{\hyperlink{classPlayer}{type\_options}});}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00081}00081\ \ \ \ \ players[0]\ =\ \mbox{\hyperlink{classFour__Four__XO__UI_a59ebccfaecdea3e1c55b7acb20c9abca}{create\_player}}(\mbox{\hyperlink{classPlayer}{nameX}},\ \textcolor{charliteral}{'X'},\ \mbox{\hyperlink{classPlayer}{typeX}});}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{nameO}}\ =\ \mbox{\hyperlink{classUI_a7b1603de1f73fbb4006e4f00a27c44da}{get\_player\_name}}(\textcolor{stringliteral}{"{}Player\ O"{}});}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00084}00084\ \ \ \ \ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ \mbox{\hyperlink{classPlayer}{typeO}}\ =\ \mbox{\hyperlink{classUI_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\_player\_type\_choice}}(\textcolor{stringliteral}{"{}Player\ O"{}},\ \mbox{\hyperlink{classPlayer}{type\_options}});}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00085}00085\ \ \ \ \ players[1]\ =\ \mbox{\hyperlink{classFour__Four__XO__UI_a59ebccfaecdea3e1c55b7acb20c9abca}{create\_player}}(\mbox{\hyperlink{classPlayer}{nameO}},\ \textcolor{charliteral}{'O'},\ \mbox{\hyperlink{classPlayer}{typeO}});}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{return}\ players;}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00088}00088\ \}}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00090}\mbox{\hyperlink{classFour__Four__XO__UI_a59ebccfaecdea3e1c55b7acb20c9abca}{00090}}\ \mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classFour__Four__XO__UI_a59ebccfaecdea3e1c55b7acb20c9abca}{Four\_Four\_XO\_UI::create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type)\ \{}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00091}00091\ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Creating\ "{}}\ <<\ (type\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}human"{}}\ :\ \textcolor{stringliteral}{"{}computer"{}})}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ symbol\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keywordflow}{if}\ (type\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})\ \{}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ AI\ player\ with\ COMPUTER\ type\ -\/\ it\ will\ use\ calculateMove()\ instead\ of\ random}}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classFourFourAIPlayer}{FourFourAIPlayer}}(name,\ symbol,\ type);}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00097}00097\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Player<char>}}(name,\ symbol,\ type);}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00099}00099\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00100}00100\ \}}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00102}\mbox{\hyperlink{classFour__Four__XO__UI_a462e22aa01d930bda7449c759f36c86f}{00102}}\ \mbox{\hyperlink{classPlayer}{Move<char>}}\ *\mbox{\hyperlink{classFour__Four__XO__UI_a462e22aa01d930bda7449c759f36c86f}{Four\_Four\_XO\_UI::get\_move}}(\mbox{\hyperlink{classPlayer}{Player<char>}}\ *\mbox{\hyperlink{classPlayer}{player}})\ \{}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00103}00103\ \ \ \ \ \textcolor{comment}{//\ Check\ if\ player\ is\ an\ AI\ player\ (Computer\ uses\ FourFourAIPlayer)}}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00104}00104\ \ \ \ \ \mbox{\hyperlink{classFourFourAIPlayer}{FourFourAIPlayer}}*\ \mbox{\hyperlink{classPlayer}{aiPlayer}}\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classFourFourAIPlayer}{FourFourAIPlayer}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00105}00105\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{aiPlayer}})\ \{}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ AI's\ calculateMove\ instead\ of\ random}}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer}{aiPlayer}}-\/>calculateMove();}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00109}00109\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00110}00110\ \ \ \ \ \textcolor{comment}{//\ Human\ player}}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00111}00111\ \ \ \ \ \textcolor{keywordtype}{int}\ x,y,dx,dy;}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00112}00112\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{dir}};}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00113}00113\ \ \ \ \ \mbox{\hyperlink{classPlayer}{vector<pair<int,int>}}>\ \mbox{\hyperlink{classPlayer}{dirs}}\ =\ \{\{1,0\},\ \{0,1\},\ \{-\/1,0\},\ \{0,-\/1\}\};\ \textcolor{comment}{//\ Up,\ Right,\ Down\ ,\ Left}}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00115}00115\ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Please\ enter\ the\ coordinates\ of\ a\ one\ of\ your\ pieces\ to\ move\ (0\ to\ 3):\ "{}};}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00116}00116\ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ x\ >>\ y;}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00117}00117\ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Which\ direction\ you\ want\ to\ move\ your\ piece?\ (1\ -\/>\ 'U',\ 2\ -\/>\ 'R',\ 3\ -\/>\ 'D',\ 4\ -\/>\ 'L'):\ "{}};}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00118}00118\ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ \mbox{\hyperlink{classPlayer}{dir}};}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00119}00119\ \ \ \ \ \mbox{\hyperlink{classPlayer}{dir}}-\/-\/;}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{classPlayer}{dir<0||dir>}}3)\ \{}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Enter\ Valid\ direction:\ (1\ -\/>\ 'U',\ 2\ -\/>\ 'R',\ 3\ -\/>\ 'D',\ 4\ -\/>\ 'L'):\ "{}};}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ \mbox{\hyperlink{classPlayer}{dir}};}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{dir}}-\/-\/;}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00124}00124\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00125}00125\ \ \ \ \ dx\ =\ \mbox{\hyperlink{classPlayer}{dirs}}[\mbox{\hyperlink{classPlayer}{dir}}].first;}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00126}00126\ \ \ \ \ dy\ =\ \mbox{\hyperlink{classPlayer}{dirs}}[\mbox{\hyperlink{classPlayer}{dir}}].second;}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00128}00128\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdualMove}{dualMove}}(x,y,\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}(),dy,dx);}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00129}00129\ \}}
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{Four__Four__XO_8cpp_source_l00131}00131\ }
 
 \end{DoxyCode}

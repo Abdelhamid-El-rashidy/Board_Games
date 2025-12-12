@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ui_0',['ui',['../classUI.html#afb59b53f3c2ed750b1a9a0c7d6dc4a7a',1,'UI::UI(int cell_display_width=3)'],['../classUI.html#ae50eed41905ca2f8dc103d9bef427fe6',1,'UI::UI(string message, int cell_display_width)']]],
-  ['update_5fboard_1',['update_board',['../classBoard.html#a93d9dec601dda58b7e206ccb47633e57',1,'Board::update_board()'],['../classFour__Four__XO__Board.html#a406a2273ba6b32bc074afdd0402223ac',1,'Four_Four_XO_Board::update_board()'],['../classInfinity__X__O__Board.html#acdf958b1a2d08227ccfe316a68519622',1,'Infinity_X_O_Board::update_board()'],['../classMisere__Tic__Tac__Toe__board.html#a51c52a227b90423940eef5c91097d879',1,'Misere_Tic_Tac_Toe_board::update_board()'],['../classNumerical__X__O__Board.html#ae4bed90db4f9d8308c3b4e7e0db8a5d4',1,'Numerical_X_O_Board::update_board()'],['../classPyramid__XO__Board.html#a77b86fd4ce8a0750fc1b979ae23a2407',1,'Pyramid_XO_Board::update_board()'],['../classSUS__Board.html#a5cf8d1ad2da90ed50b77a7f5d91342f4',1,'SUS_Board::update_board()'],['../classX__O__5x5__Board.html#a4c7b73d99de1c299bbef965cdc3c5f32',1,'X_O_5x5_Board::update_board()']]]
+  ['obstacles_5fxo_5fboard_0',['Obstacles_XO_Board',['../classObstacles__XO__Board.html#a3e336da3597cad2168744be3d3bf8294',1,'Obstacles_XO_Board']]],
+  ['obstacles_5fxo_5fui_1',['Obstacles_XO_UI',['../classObstacles__XO__UI.html#a64731286434936df486de87d0589cf85',1,'Obstacles_XO_UI']]]
 ];

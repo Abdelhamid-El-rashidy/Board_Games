@@ -40,13 +40,19 @@ Represents a single move in a board game.
 
 
 \begin{DoxyTemplParams}{Template Parameters}
-{\em T} & Type of symbol placed on the board (\doxylink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{e.\+g}., char, int). \\
+{\em T} & Type of symbol placed on the board (\doxylink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{e.\+g}., char, int).\\
 \hline
 \end{DoxyTemplParams}
 
-
-Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00113}{113}} of file \mbox{\hyperlink{BoardGame__Classes_8h_source}{Board\+Game\+\_\+\+Classes.\+h}}.
-
+\begin{DoxyParams}{Parameters}
+{\em x} & the x\+\_\+coordinate of move within board. \\
+\hline
+{\em y} & the y\+\_\+coordinate of move within board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a \doxylink{classMove}{Move} object. Caller is responsible for deletion. 
+\end{DoxyReturn}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -223,6 +229,7 @@ Referenced by \mbox{\hyperlink{BoardGame__Classes_8h_source_l00126}{Move$<$ T $>
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{BoardGame__Classes_8h}{Board\+Game\+\_\+\+Classes.\+h}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{BoardGame__Classes_8h}{Board\+Game\+\_\+\+Classes.\+h}}\item 
+include/\mbox{\hyperlink{AiPlayer_8h}{Ai\+Player.\+h}}\end{DoxyCompactItemize}

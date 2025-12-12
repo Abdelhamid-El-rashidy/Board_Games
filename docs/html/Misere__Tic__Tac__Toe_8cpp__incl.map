@@ -1,18 +1,26 @@
 <map id="src/Misere_Tic_Tac_Toe.cpp" name="src/Misere_Tic_Tac_Toe.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="47,5,189,45"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,181,116,207"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,47,89,94,68,168,63,166,83,92,105,44"/>
-<area shape="rect" id="Node000003" href="$Misere__Tic__Tac__Toe_8h.html" title="Defines the X&#45;O (Tic&#45;Tac&#45;Toe) specific classes that extend the generic board game framework." alt="" coords="98,93,253,133"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,44,157,80,153,83,129,47"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="149,136,90,176,87,171,146,131"/>
-<area shape="rect" id="Node000004" href="$BoardGame__Classes_8h.html" title=" " alt="" coords="141,181,309,207"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="190,132,212,168,208,171,185,135"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="62,255,121,280"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="204,209,126,250,124,246,202,204"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="145,255,208,280"/>
-<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="219,209,194,245,190,242,215,206"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="233,255,313,280"/>
-<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="235,206,260,242,255,245,230,209"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="337,255,411,280"/>
-<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="250,204,338,246,336,251,248,209"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="113,5,255,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="18,181,129,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,48,121,68,97,95,82,132,77,168,71,167,77,130,92,92,117,64,146,43"/>
+<area shape="rect" id="Node000003" href="$Misere__Tic__Tac__Toe_8h.html" title="Defines the X&#45;O (Tic&#45;Tac&#45;Toe) specific classes that extend the generic board game framework." alt="" coords="107,93,261,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,46,187,79,181,79,181,46"/>
+<area shape="rect" id="Node000009" href="$Smart__Player_8h.html" title=" " alt="" coords="213,181,384,207"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="221,43,250,64,276,92,292,130,300,167,294,168,287,132,271,95,247,68,218,48"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="159,136,102,175,99,171,156,131"/>
+<area shape="rect" id="Node000004" href="$BoardGame__Classes_8h.html" title=" " alt="" coords="84,255,252,280"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="185,134,173,241,168,241,179,134"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="213,131,272,171,269,176,210,136"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,328,64,353"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="148,282,70,324,67,319,145,278"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="89,328,151,353"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="162,282,138,318,133,315,158,279"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="176,328,256,353"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="178,279,203,315,198,318,174,282"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="280,328,355,353"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="193,278,282,320,279,324,191,282"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="279,209,202,250,200,246,276,204"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="276,255,335,280"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="302,207,306,241,300,241,297,207"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="359,255,444,280"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="317,204,375,244,372,249,314,209"/>
 </map>

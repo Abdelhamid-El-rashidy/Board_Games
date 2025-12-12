@@ -1,9 +1,7 @@
 <map id="Misere_Tic_Tac_Toe_UI::get_move" name="Misere_Tic_Tac_Toe_UI::get_move">
-<area shape="rect" id="Node000001" title="Retrieves the next move from a player." alt="" coords="5,47,155,87"/>
-<area shape="rect" id="Node000002" href="$classPlayer.html#a508617eddfae8915d098102d480fc888" title="Get a pointer to the game board." alt="" coords="203,5,364,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,47,216,31,218,37,156,52"/>
-<area shape="rect" id="Node000003" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="210,55,357,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,65,196,65,196,70,155,70"/>
-<area shape="rect" id="Node000004" href="$classPlayer.html#a2df3bd299bf7aecfa2275ec6902a60f8" title="Get player type (e.g., &#39;H&#39; or &#39;C&#39;)." alt="" coords="219,104,347,129"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,83,218,98,216,103,154,88"/>
+<area shape="rect" id="Node000001" title="Retrieves the next move from a player." alt="" coords="5,23,155,63"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="203,5,349,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,31,189,27,190,32,155,36"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#a2df3bd299bf7aecfa2275ec6902a60f8" title="Get player type (e.g., &#39;H&#39; or &#39;C&#39;)." alt="" coords="212,55,340,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,50,199,55,198,61,155,55"/>
 </map>

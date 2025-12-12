@@ -15,7 +15,7 @@ Pyramid_XO_Board::Pyramid_XO_Board() : Board<char>(3,5) {
     for (int i = 0; i<rows; i++) {
         for (int j = 0; j<columns; j++) {
             if (abs(j-2)<=distant[i]) board[i][j] = blank_symbol;
-            else board[i][j] = '-';
+            else board[i][j] = '#';
         }
     }
 }

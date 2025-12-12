@@ -22,6 +22,9 @@ This project provides a flexible, extensible framework for creating board games.
 
 The framework follows the **Open-Closed Principle** - it's open for extension (you can add new games) but closed for modification (the core framework remains unchanged).
 
+### Report
+- [Project Report](https://docs.google.com/document/d/1GhDm3uQc0b17LqqxxypT8vBVlTFlVtnRxI1i0f75TiQ/edit?tab=t.0)
+
 ## ✨ Features
 
 - **13 Different Games**: Multiple Tic-Tac-Toe variants and board games

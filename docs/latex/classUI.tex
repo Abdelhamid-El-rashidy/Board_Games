@@ -33,7 +33,7 @@ Base class for handling user interface and input/output.
 \item 
 \mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classUI_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{player\+\_\+label}})
 \begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classUI_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{player\+\_\+label}}, \mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{string}} $>$ \&\mbox{\hyperlink{classPlayer}{options}})
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classUI_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{player\+\_\+label}}, \mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{string}} $>$ \&options)
 \begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -148,7 +148,7 @@ Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00347}{347}} o
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{HUMAN}}.
+References \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{HUMAN}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00143}{Player$<$ T $>$\+::name}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00145}{Player$<$ T $>$\+::symbol}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00144}{Player$<$ T $>$\+::type}}.
 
 \Hypertarget{classUI_aa3775124efaeac59935ae0afb354708d}\label{classUI_aa3775124efaeac59935ae0afb354708d} 
 \index{UI$<$ T $>$@{UI$<$ T $>$}!display\_board\_matrix@{display\_board\_matrix}}
@@ -225,7 +225,7 @@ Ask the user (or AI) to make a move.
 
 
 
-Implemented in \mbox{\hyperlink{classFour__Four__XO__UI_a462e22aa01d930bda7449c759f36c86f}{Four\+\_\+\+Four\+\_\+\+XO\+\_\+\+UI}}, \mbox{\hyperlink{classInfinit__XO__UI_a01e2ad782bacda8c2f7cff214617b54c}{Infinit\+\_\+\+XO\+\_\+\+UI}}, \mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI_a13c2f356fe79f87ed9bce9ca4efadb68}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI}}, \mbox{\hyperlink{classNumerical__XO__UI_af6296ae59c604456f531f4e996e99467}{Numerical\+\_\+\+XO\+\_\+\+UI}}, \mbox{\hyperlink{classPyramid__XO__UI_a9447abc21ff1b8baa5ac1d91d84b567e}{Pyramid\+\_\+\+XO\+\_\+\+UI}}, \mbox{\hyperlink{classSUS__UI_a621a4bfadf8d79f2b2b66f2241c310c3}{SUS\+\_\+\+UI}}, and \mbox{\hyperlink{classX__O__5x5__UI_a60163186f3074fea418f530e78f5f9f1}{X\+\_\+\+O\+\_\+5x5\+\_\+\+UI}}.
+Implemented in \mbox{\hyperlink{classDiamond__Tic__Tac__Toe__UI_a02d44e878b59b3433f9a9a5ee7b70372}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI}}, \mbox{\hyperlink{classFour__in__a__row__UI_ae1c2682677ba6efbd4566b0c9ecf5532}{Four\+\_\+in\+\_\+a\+\_\+row\+\_\+\+UI}}, \mbox{\hyperlink{classFour__Four__XO__UI_a462e22aa01d930bda7449c759f36c86f}{Four\+\_\+\+Four\+\_\+\+XO\+\_\+\+UI}}, \mbox{\hyperlink{classInfinit__XO__UI_a01e2ad782bacda8c2f7cff214617b54c}{Infinit\+\_\+\+XO\+\_\+\+UI}}, \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__UI_a250a43990310d27ea3eaaca58300b4ab}{MEMORY\+\_\+\+TIC\+\_\+\+TAC\+\_\+\+TOE\+\_\+\+UI}}, \mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI_a13c2f356fe79f87ed9bce9ca4efadb68}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI}}, \mbox{\hyperlink{classNumerical__XO__UI_af6296ae59c604456f531f4e996e99467}{Numerical\+\_\+\+XO\+\_\+\+UI}}, \mbox{\hyperlink{classObstacles__XO__UI_af38dd50ff53dd04ff3fc3cf11bbbae9a}{Obstacles\+\_\+\+XO\+\_\+\+UI}}, \mbox{\hyperlink{classPyramid__XO__UI_a9447abc21ff1b8baa5ac1d91d84b567e}{Pyramid\+\_\+\+XO\+\_\+\+UI}}, \mbox{\hyperlink{classSUS__UI_a621a4bfadf8d79f2b2b66f2241c310c3}{SUS\+\_\+\+UI}}, \mbox{\hyperlink{classUltimate__XO__UI_af23c123c7d50d44645ed7f61c4fdac85}{Ultimate\+\_\+\+XO\+\_\+\+UI}}, \mbox{\hyperlink{classWord__XO__UI_a468a141aff236927a593e8b105f6a6ab}{Word\+\_\+\+XO\+\_\+\+UI}}, and \mbox{\hyperlink{classX__O__5x5__UI_a60163186f3074fea418f530e78f5f9f1}{X\+\_\+\+O\+\_\+5x5\+\_\+\+UI}}.
 
 \Hypertarget{classUI_a7b1603de1f73fbb4006e4f00a27c44da}\label{classUI_a7b1603de1f73fbb4006e4f00a27c44da} 
 \index{UI$<$ T $>$@{UI$<$ T $>$}!get\_player\_name@{get\_player\_name}}
@@ -271,8 +271,8 @@ Definition at line \mbox{\hyperlink{BoardGame__Classes_8h_source_l00197}{197}} o
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Choose\ "{}}\ <<\ \mbox{\hyperlink{classPlayer}{player\_label}}\ <<\ \textcolor{stringliteral}{"{}\ type:\(\backslash\)n"{}};}
-\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ \mbox{\hyperlink{classPlayer}{options}}.size();\ ++\mbox{\hyperlink{classPlayer}{i}})}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \mbox{\hyperlink{classPlayer}{i}}\ +\ 1\ <<\ \textcolor{stringliteral}{"{}.\ "{}}\ <<\ \mbox{\hyperlink{classPlayer}{options}}[\mbox{\hyperlink{classPlayer}{i}}]\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ options.size();\ ++\mbox{\hyperlink{classPlayer}{i}})}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \mbox{\hyperlink{classPlayer}{i}}\ +\ 1\ <<\ \textcolor{stringliteral}{"{}.\ "{}}\ <<\ options[\mbox{\hyperlink{classPlayer}{i}}]\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
 \DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{choice}};}
 \DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ \mbox{\hyperlink{classPlayer}{choice}};}
 \DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classPlayer}{choice}}\ ==\ 2)\ ?\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}}\ :\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}};}
@@ -296,7 +296,7 @@ Set up players for the game.
 
 Default implementation of setting up two players. 
 
-Reimplemented in \mbox{\hyperlink{classSUS__UI_ac6340e45474680c71c6dcda9a6701616}{SUS\+\_\+\+UI}}.
+Reimplemented in \mbox{\hyperlink{classUltimate__XO__UI_a0848f8ed75af10299e45cabe72167330}{Ultimate\+\_\+\+XO\+\_\+\+UI}}, \mbox{\hyperlink{classDiamond__Tic__Tac__Toe__UI_a7ea9fbbf49d5462c662f36ed7d1f7c71}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI}}, \mbox{\hyperlink{classFour__Four__XO__UI_a90dbc91c4dd78f281a872a3995ed325a}{Four\+\_\+\+Four\+\_\+\+XO\+\_\+\+UI}}, \mbox{\hyperlink{classMisere__Tic__Tac__Toe__UI_a28d61356cba69561f35c575150e4e3f6}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI}}, and \mbox{\hyperlink{classPyramid__XO__UI_a80577f177405a54f73700dbf7bc97492}{Pyramid\+\_\+\+XO\+\_\+\+UI}}.
 
 
 

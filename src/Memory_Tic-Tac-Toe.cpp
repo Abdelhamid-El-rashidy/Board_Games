@@ -27,7 +27,7 @@ bool MEMORY_TIC_TAC_TOE_Board::update_board(Move<char> *move) {
     hidden_board[x][y] = sym;
 
     // visible board stays always blank
-    board[x][y] = sym;
+    hidden_board[x][y] = sym;
 
     n_moves++;
     return true;

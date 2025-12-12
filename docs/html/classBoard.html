@@ -140,15 +140,15 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" href="classPlayer.html">T</a>&gt;<br />
 class Board&lt; T &gt;</div><p>Base template for any board used in board games. </p>
+<p>Pure virtual function to undo the previous move played during backtracking algorithm. Must be implemented by derived classes.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>Type of the elements stored on the board (<a class="el" href="classPlayer.html#adb4e803a7ac0356b111b8ca79d766976" title="Construct a player with name, symbol, and type.">e.g</a>., char, int, string).</td></tr>
   </table>
   </dd>
 </dl>
-<p>Provides core data (rows, columns, matrix) and virtual methods to be implemented by specific games like Tic-Tac-Toe, Connect4, etc. </p>
-
-<p class="definition">Definition at line <a class="el" href="BoardGame__Classes_8h_source.html#l00046">46</a> of file <a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a>.</p>
+<p>Provides core data (rows, columns, matrix) and virtual methods to be implemented by specific games like Tic-Tac-Toe, Connect4, etc.</p>
+<dl class="section note"><dt>Note</dt><dd>The protocol to inform the update_board function in is an undo move is to place a blank_symbol in </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae5dfded241ee3644196e2f6074d1d0b1" name="ae5dfded241ee3644196e2f6074d1d0b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5dfded241ee3644196e2f6074d1d0b1">&#9670;&#160;</a></span>Board()</h2>
@@ -258,7 +258,7 @@ template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" hre
 
 <p>Check if the game is over. </p>
 
-<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#ac6b120eac0b398ddc91e9bc1562badf9">Four_Four_XO_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#aecd2c26979b7ba39a036ec469363f6bf">Infinity_X_O_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#ada7bdaa8066378a91d22134d2b931343">Misere_Tic_Tac_Toe_board</a>, <a class="el" href="classNumerical__X__O__Board.html#a4dbd494c6fca2beea04c4180d3d322e9">Numerical_X_O_Board</a>, <a class="el" href="classPyramid__XO__Board.html#a4ea52230886944457ad5dfd1d8732da7">Pyramid_XO_Board</a>, <a class="el" href="classSUS__Board.html#a1402f8069947c57d4b65f50248e699b2">SUS_Board</a>, and <a class="el" href="classX__O__5x5__Board.html#ad2e0c1e9c3cb85acdbff6c081ad7b8b3">X_O_5x5_Board</a>.</p>
+<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#ac6b120eac0b398ddc91e9bc1562badf9">Four_Four_XO_Board</a>, <a class="el" href="classDiamond__Tic__Tac__Toe__Board.html#a8b8463957057101e5ae2d9d4b05cdb29">Diamond_Tic_Tac_Toe_Board</a>, <a class="el" href="classFour__in__a__row__Board.html#aa3d741c8cdddc115bb90c61bde8d899a">Four_in_a_row_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#aecd2c26979b7ba39a036ec469363f6bf">Infinity_X_O_Board</a>, <a class="el" href="classMEMORY__TIC__TAC__TOE__Board.html#af4fff22495f8616d8ab9d1a24e4b3dbc">MEMORY_TIC_TAC_TOE_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#ada7bdaa8066378a91d22134d2b931343">Misere_Tic_Tac_Toe_board</a>, <a class="el" href="classNumerical__X__O__Board.html#a4dbd494c6fca2beea04c4180d3d322e9">Numerical_X_O_Board</a>, <a class="el" href="classObstacles__XO__Board.html#a2679a478c779c15846b232de888342aa">Obstacles_XO_Board</a>, <a class="el" href="classPyramid__XO__Board.html#a4ea52230886944457ad5dfd1d8732da7">Pyramid_XO_Board</a>, <a class="el" href="classSUS__Board.html#a1402f8069947c57d4b65f50248e699b2">SUS_Board</a>, <a class="el" href="classmainBoard.html#ad423f7f1cbe5387e9246f9a687e8e86b">mainBoard</a>, <a class="el" href="classUltimate__XO__Board.html#a904e0d77265beafee0fe6de5502edb71">Ultimate_XO_Board</a>, <a class="el" href="classWord__XO__Board.html#a1c3f48151ea759156dea95cc7d5ee362">Word_XO_Board</a>, and <a class="el" href="classX__O__5x5__Board.html#ad2e0c1e9c3cb85acdbff6c081ad7b8b3">X_O_5x5_Board</a>.</p>
 
 </div>
 </div>
@@ -476,7 +476,14 @@ template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" hre
 
 <p>Check if the game ended in a draw. </p>
 
-<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#afcade23d315ec56024baeaaca94e432f">Four_Four_XO_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#a27dc0d692d24c8ec6e921267424bf046">Infinity_X_O_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#ae61d1f10678bb86d7de70a6a5f0e67f7">Misere_Tic_Tac_Toe_board</a>, <a class="el" href="classNumerical__X__O__Board.html#a2d3ee20a3d8e9b2e001649ce85d3a515">Numerical_X_O_Board</a>, <a class="el" href="classPyramid__XO__Board.html#a8fe3a3f5772c0cda1eb6c847f6bdf39c">Pyramid_XO_Board</a>, <a class="el" href="classSUS__Board.html#a006d0b395a8912ceb0335b95cc69de49">SUS_Board</a>, and <a class="el" href="classX__O__5x5__Board.html#af71219aef79883d9aab1fb4c7b5b3f87">X_O_5x5_Board</a>.</p>
+<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#afcade23d315ec56024baeaaca94e432f">Four_Four_XO_Board</a>, <a class="el" href="classDiamond__Tic__Tac__Toe__Board.html#a53278a31e7bdeb673ed49f35ff38d541">Diamond_Tic_Tac_Toe_Board</a>, <a class="el" href="classFour__in__a__row__Board.html#af4475a3ab1b31be663a75ed367f089aa">Four_in_a_row_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#a27dc0d692d24c8ec6e921267424bf046">Infinity_X_O_Board</a>, <a class="el" href="classMEMORY__TIC__TAC__TOE__Board.html#a42f4019e449d2c49efdb3129507984e3">MEMORY_TIC_TAC_TOE_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#ae61d1f10678bb86d7de70a6a5f0e67f7">Misere_Tic_Tac_Toe_board</a>, <a class="el" href="classNumerical__X__O__Board.html#a2d3ee20a3d8e9b2e001649ce85d3a515">Numerical_X_O_Board</a>, <a class="el" href="classObstacles__XO__Board.html#acca6c3d042f40540ec89f4119a8d809f">Obstacles_XO_Board</a>, <a class="el" href="classPyramid__XO__Board.html#a8fe3a3f5772c0cda1eb6c847f6bdf39c">Pyramid_XO_Board</a>, <a class="el" href="classSUS__Board.html#a006d0b395a8912ceb0335b95cc69de49">SUS_Board</a>, <a class="el" href="classmainBoard.html#afb575a6cf25eedc30e6f640bc03ea9ff">mainBoard</a>, <a class="el" href="classUltimate__XO__Board.html#ac47eab5bd084a6f6cf417137e34393a1">Ultimate_XO_Board</a>, <a class="el" href="classWord__XO__Board.html#a8c05ad3bda2665753e852b60144bd520">Word_XO_Board</a>, and <a class="el" href="classX__O__5x5__Board.html#af71219aef79883d9aab1fb4c7b5b3f87">X_O_5x5_Board</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Ultimate__Tic__Tac__Toe_8cpp_source.html#l00113">Ultimate_XO_Board::is_draw()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classBoard_a8dbe2a243881986f3e53b45799d377fc_icgraph.svg" width="540" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -508,7 +515,7 @@ template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" hre
 
 <p>Check if a player has lost. </p>
 
-<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#aa77fe0ea2ae8646acd7db81f6a27965f">Four_Four_XO_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#a041f1cd1f82eae2a0ca28791f41eb1c4">Infinity_X_O_Board</a>, <a class="el" href="classNumerical__X__O__Board.html#a8248aecd5df2f3545323843fc1e4d48d">Numerical_X_O_Board</a>, <a class="el" href="classPyramid__XO__Board.html#a43c58b9f5de99a8a2325811ede3344ea">Pyramid_XO_Board</a>, <a class="el" href="classSUS__Board.html#a4c5fc64b7dc144a2f3c132ca50b713d9">SUS_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#a17b6a2ec14f1f4c9dc5b6cd59127bc56">Misere_Tic_Tac_Toe_board</a>, and <a class="el" href="classX__O__5x5__Board.html#af85ffbe23533e0388f64ca0f55b58979">X_O_5x5_Board</a>.</p>
+<p>Implemented in <a class="el" href="classDiamond__Tic__Tac__Toe__Board.html#a07e6770e7b3166e22d0bcfba1d0e36eb">Diamond_Tic_Tac_Toe_Board</a>, <a class="el" href="classFour__in__a__row__Board.html#a8cf52f88efe8d3608595cadbe6421f6c">Four_in_a_row_Board</a>, <a class="el" href="classFour__Four__XO__Board.html#aa77fe0ea2ae8646acd7db81f6a27965f">Four_Four_XO_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#a041f1cd1f82eae2a0ca28791f41eb1c4">Infinity_X_O_Board</a>, <a class="el" href="classMEMORY__TIC__TAC__TOE__Board.html#a1e6b69d361433afbf79b2572b1153952">MEMORY_TIC_TAC_TOE_Board</a>, <a class="el" href="classNumerical__X__O__Board.html#a8248aecd5df2f3545323843fc1e4d48d">Numerical_X_O_Board</a>, <a class="el" href="classObstacles__XO__Board.html#aac0765d17e041b8d6ebc97ebf3e0ce36">Obstacles_XO_Board</a>, <a class="el" href="classPyramid__XO__Board.html#a43c58b9f5de99a8a2325811ede3344ea">Pyramid_XO_Board</a>, <a class="el" href="classSUS__Board.html#a4c5fc64b7dc144a2f3c132ca50b713d9">SUS_Board</a>, <a class="el" href="classmainBoard.html#a00448920ec481a5dfbed7721d5401981">mainBoard</a>, <a class="el" href="classUltimate__XO__Board.html#a7e727ac92e568a7ab0138068623cb0fe">Ultimate_XO_Board</a>, <a class="el" href="classWord__XO__Board.html#abac3a6023109e4809b116f923adba1e8">Word_XO_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#a17b6a2ec14f1f4c9dc5b6cd59127bc56">Misere_Tic_Tac_Toe_board</a>, and <a class="el" href="classX__O__5x5__Board.html#af85ffbe23533e0388f64ca0f55b58979">X_O_5x5_Board</a>.</p>
 
 </div>
 </div>
@@ -540,7 +547,14 @@ template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" hre
 
 <p>Check if a player has won. </p>
 
-<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#a469ec43cdebb07b56a2b780ba9134506">Four_Four_XO_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#a936b7e9aa80ec2938a10a0ece856eb98">Misere_Tic_Tac_Toe_board</a>, <a class="el" href="classInfinity__X__O__Board.html#adee61151bd324d1e28fb1391e1df0789">Infinity_X_O_Board</a>, <a class="el" href="classNumerical__X__O__Board.html#a0940816900ed8bf06b0cd49d70b443fd">Numerical_X_O_Board</a>, <a class="el" href="classPyramid__XO__Board.html#a757067ee52a8f5b1cf1b6777b6c7b331">Pyramid_XO_Board</a>, <a class="el" href="classSUS__Board.html#a48747aa0b5f24bac5b5953576725b3ec">SUS_Board</a>, and <a class="el" href="classX__O__5x5__Board.html#a90eeba3a2b960065c81ab50b08997da5">X_O_5x5_Board</a>.</p>
+<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#a469ec43cdebb07b56a2b780ba9134506">Four_Four_XO_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#a936b7e9aa80ec2938a10a0ece856eb98">Misere_Tic_Tac_Toe_board</a>, <a class="el" href="classDiamond__Tic__Tac__Toe__Board.html#a45f1c473e3191dcf085abdecabb3c403">Diamond_Tic_Tac_Toe_Board</a>, <a class="el" href="classFour__in__a__row__Board.html#a10a2305f75eff7f01fdc1eb6f1541cbb">Four_in_a_row_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#adee61151bd324d1e28fb1391e1df0789">Infinity_X_O_Board</a>, <a class="el" href="classMEMORY__TIC__TAC__TOE__Board.html#aa9b8d9870ce3341b3e080896513a8d69">MEMORY_TIC_TAC_TOE_Board</a>, <a class="el" href="classNumerical__X__O__Board.html#a0940816900ed8bf06b0cd49d70b443fd">Numerical_X_O_Board</a>, <a class="el" href="classObstacles__XO__Board.html#af87aa4c90181835037636e1d43c349ed">Obstacles_XO_Board</a>, <a class="el" href="classPyramid__XO__Board.html#a757067ee52a8f5b1cf1b6777b6c7b331">Pyramid_XO_Board</a>, <a class="el" href="classSUS__Board.html#a48747aa0b5f24bac5b5953576725b3ec">SUS_Board</a>, <a class="el" href="classmainBoard.html#a08e4f7b20a2b4ace2d6020de6c7fff47">mainBoard</a>, <a class="el" href="classUltimate__XO__Board.html#a626ddd9872d4fcb10257ba08aacbc941">Ultimate_XO_Board</a>, <a class="el" href="classWord__XO__Board.html#a423c6610a952ef533ed2ac414992e0bc">Word_XO_Board</a>, and <a class="el" href="classX__O__5x5__Board.html#a90eeba3a2b960065c81ab50b08997da5">X_O_5x5_Board</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Ultimate__Tic__Tac__Toe_8cpp_source.html#l00106">Ultimate_XO_Board::is_win()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classBoard_ab316fe3e79677b4617fc3d90d6c48f33_icgraph.svg" width="531" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -579,7 +593,14 @@ template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" hre
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the move is valid and applied, false otherwise. </dd></dl>
 
-<p>Implemented in <a class="el" href="classFour__Four__XO__Board.html#a406a2273ba6b32bc074afdd0402223ac">Four_Four_XO_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#acdf958b1a2d08227ccfe316a68519622">Infinity_X_O_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#a51c52a227b90423940eef5c91097d879">Misere_Tic_Tac_Toe_board</a>, <a class="el" href="classNumerical__X__O__Board.html#ae4bed90db4f9d8308c3b4e7e0db8a5d4">Numerical_X_O_Board</a>, <a class="el" href="classPyramid__XO__Board.html#a77b86fd4ce8a0750fc1b979ae23a2407">Pyramid_XO_Board</a>, <a class="el" href="classSUS__Board.html#a5cf8d1ad2da90ed50b77a7f5d91342f4">SUS_Board</a>, and <a class="el" href="classX__O__5x5__Board.html#a4c7b73d99de1c299bbef965cdc3c5f32">X_O_5x5_Board</a>.</p>
+<p>Implemented in <a class="el" href="classDiamond__Tic__Tac__Toe__Board.html#a0838b52ce8aa942f1677b6a20be8d986">Diamond_Tic_Tac_Toe_Board</a>, <a class="el" href="classFour__in__a__row__Board.html#ad3a32243947e4236321eb8ab4e095787">Four_in_a_row_Board</a>, <a class="el" href="classFour__Four__XO__Board.html#a406a2273ba6b32bc074afdd0402223ac">Four_Four_XO_Board</a>, <a class="el" href="classInfinity__X__O__Board.html#acdf958b1a2d08227ccfe316a68519622">Infinity_X_O_Board</a>, <a class="el" href="classMEMORY__TIC__TAC__TOE__Board.html#a53faceed2184041e959884be7c1bbba2">MEMORY_TIC_TAC_TOE_Board</a>, <a class="el" href="classMisere__Tic__Tac__Toe__board.html#a51c52a227b90423940eef5c91097d879">Misere_Tic_Tac_Toe_board</a>, <a class="el" href="classNumerical__X__O__Board.html#ae4bed90db4f9d8308c3b4e7e0db8a5d4">Numerical_X_O_Board</a>, <a class="el" href="classObstacles__XO__Board.html#a3520ce8cd45d12edc02ebbdfc8827013">Obstacles_XO_Board</a>, <a class="el" href="classPyramid__XO__Board.html#a77b86fd4ce8a0750fc1b979ae23a2407">Pyramid_XO_Board</a>, <a class="el" href="classSUS__Board.html#a5cf8d1ad2da90ed50b77a7f5d91342f4">SUS_Board</a>, <a class="el" href="classmainBoard.html#a8bb5f7543a9f076d201b2140dc251dca">mainBoard</a>, <a class="el" href="classUltimate__XO__Board.html#a620c5fe6041917fee5b063f4ae555f35">Ultimate_XO_Board</a>, <a class="el" href="classWord__XO__Board.html#a222eae361bb853ecad93944ade98d029">Word_XO_Board</a>, and <a class="el" href="classX__O__5x5__Board.html#a4c7b73d99de1c299bbef965cdc3c5f32">X_O_5x5_Board</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Ultimate__Tic__Tac__Toe_8cpp_source.html#l00069">Ultimate_XO_Board::update_board()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classBoard_a93d9dec601dda58b7e206ccb47633e57_icgraph.svg" width="374" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -704,8 +725,9 @@ template&lt;<a class="el" href="classPlayer.html">typename</a> <a class="el" hre
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="BoardGame__Classes_8h_source.html">BoardGame_Classes.h</a></li>
+<li>include/<a class="el" href="AiPlayer_8h_source.html">AiPlayer.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

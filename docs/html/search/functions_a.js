@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['set_5fboard_5fptr_0',['set_board_ptr',['../classPlayer.html#a3617a3ad0db435176a06948065f9a3a6',1,'Player']]],
-  ['setup_5fplayers_1',['setup_players',['../classUI.html#a6966a040c995b2292e5edddaa94f889a',1,'UI::setup_players()'],['../classSUS__UI.html#ac6340e45474680c71c6dcda9a6701616',1,'SUS_UI::setup_players()']]],
-  ['sus_5fboard_2',['SUS_Board',['../classSUS__Board.html#a653be0dfe8070a59361bd228c0b54f71',1,'SUS_Board']]],
-  ['sus_5fui_3',['SUS_UI',['../classSUS__UI.html#ac1a13d00ecf04b1ea3af53f1c08949c1',1,'SUS_UI']]]
+  ['ne_5fmove_0',['ne_Move',['../classne__Move.html#ac43b1b715b7195710de410026ba9df72',1,'ne_Move']]],
+  ['nemove_1',['neMove',['../classneMove.html#a5e9660b51b434cefdffa189bd3cb2301',1,'neMove']]],
+  ['nmove_2',['nMove',['../classnMove.html#ac6bfc58db3bd058879c8bfde1eeabfd0',1,'nMove']]],
+  ['numerical_5fx_5fo_5fboard_3',['Numerical_X_O_Board',['../classNumerical__X__O__Board.html#a084939543c4cf8a896a93da9cd7975eb',1,'Numerical_X_O_Board']]],
+  ['numerical_5fxo_5fui_4',['Numerical_XO_UI',['../classNumerical__XO__UI.html#a952961ac98f71c317b1f093f5c53a43d',1,'Numerical_XO_UI']]]
 ];

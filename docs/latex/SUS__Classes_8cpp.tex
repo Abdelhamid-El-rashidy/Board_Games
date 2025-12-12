@@ -1,11 +1,70 @@
 \doxysection{src/\+SUS\+\_\+\+Classes.cpp File Reference}
 \hypertarget{SUS__Classes_8cpp}{}\label{SUS__Classes_8cpp}\index{src/SUS\_Classes.cpp@{src/SUS\_Classes.cpp}}
 {\ttfamily \#include "{}../include/\+SUS\+\_\+\+Classes.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Smart\+\_\+\+Player.\+h"{}}\newline
 {\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
 Include dependency graph for SUS\+\_\+\+Classes.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=343pt]{SUS__Classes_8cpp__incl}
+\includegraphics[width=350pt]{SUS__Classes_8cpp__incl}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSUS__SmartPlayer}{SUS\+\_\+\+Smart\+Player}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{SUS__Classes_8cpp_ac4c6900d1680729e3c6f37e9b8f85e90}{Check\+\_\+\+SUS}} (\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{string}} \&\mbox{\hyperlink{classPlayer}{W}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \mbox{\hyperlink{SUS__Classes_8cpp_a8e1a740810c985c566a270fb1ef04335}{LETTERS}} = \{\textquotesingle{}\mbox{\hyperlink{classPlayer}{S}}\textquotesingle{},\textquotesingle{}\mbox{\hyperlink{classPlayer}{U}}\textquotesingle{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{SUS__Classes_8cpp_ac4c6900d1680729e3c6f37e9b8f85e90}\label{SUS__Classes_8cpp_ac4c6900d1680729e3c6f37e9b8f85e90} 
+\index{SUS\_Classes.cpp@{SUS\_Classes.cpp}!Check\_SUS@{Check\_SUS}}
+\index{Check\_SUS@{Check\_SUS}!SUS\_Classes.cpp@{SUS\_Classes.cpp}}
+\doxysubsubsection{\texorpdfstring{Check\_SUS()}{Check\_SUS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{bool}} Check\+\_\+\+SUS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{string}} \&}]{W }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{SUS__Classes_8cpp_source_l00248}{248}} of file \mbox{\hyperlink{SUS__Classes_8cpp_source}{SUS\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{W}}\ ==\ \textcolor{stringliteral}{"{}SUS"{}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00251\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{SUS__Classes_8cpp_a8e1a740810c985c566a270fb1ef04335}\label{SUS__Classes_8cpp_a8e1a740810c985c566a270fb1ef04335} 
+\index{SUS\_Classes.cpp@{SUS\_Classes.cpp}!LETTERS@{LETTERS}}
+\index{LETTERS@{LETTERS}!SUS\_Classes.cpp@{SUS\_Classes.cpp}}
+\doxysubsubsection{\texorpdfstring{LETTERS}{LETTERS}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$\mbox{\hyperlink{classPlayer}{char}}$>$ LETTERS = \{\textquotesingle{}\mbox{\hyperlink{classPlayer}{S}}\textquotesingle{},\textquotesingle{}\mbox{\hyperlink{classPlayer}{U}}\textquotesingle{}\}}
+
+
+
+Definition at line \mbox{\hyperlink{SUS__Classes_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{SUS__Classes_8cpp_source}{SUS\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \{\textcolor{charliteral}{'S'},\textcolor{charliteral}{'U'}\};}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{SUS__Classes_8cpp_source_l00193}{SUS\+\_\+\+Smart\+Player\+::calculate\+Move2()}}, and \mbox{\hyperlink{SUS__Classes_8cpp_source_l00027}{SUS\+\_\+\+Smart\+Player\+::load\+Dictionary()}}.
+

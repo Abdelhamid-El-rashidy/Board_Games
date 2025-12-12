@@ -1,16 +1,24 @@
 <map id="src/Pyramid_XO.cpp" name="src/Pyramid_XO.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="93,5,243,31"/>
-<area shape="rect" id="Node000002" href="$Pyramid__XO_8h.html" title=" " alt="" coords="17,79,193,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,33,127,70,123,66,156,29"/>
-<area shape="rect" id="Node000003" href="$BoardGame__Classes_8h.html" title=" " alt="" coords="84,152,252,177"/>
-<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="180,30,196,51,208,78,210,95,206,113,190,142,185,140,201,111,204,95,203,79,191,54,176,33"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,103,151,140,147,143,114,106"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="5,225,64,251"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="148,180,70,221,67,216,145,175"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="89,225,151,251"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="162,179,138,216,133,213,158,176"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="176,225,256,251"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="178,176,203,213,198,216,174,179"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="280,225,355,251"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="193,175,282,217,279,222,191,180"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="150,5,301,31"/>
+<area shape="rect" id="Node000002" href="$Pyramid__XO_8h.html" title=" " alt="" coords="137,79,313,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,31,228,65,223,65,223,31"/>
+<area shape="rect" id="Node000003" href="$BoardGame__Classes_8h.html" title=" " alt="" coords="84,225,252,251"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="190,33,155,51,140,64,128,80,121,96,119,114,124,150,138,184,154,213,149,215,133,187,119,152,113,114,116,95,123,77,136,61,152,47,187,28"/>
+<area shape="rect" id="Node000008" href="$Smart__Player_8h.html" title=" " alt="" coords="245,152,365,177"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="263,28,299,47,315,61,328,77,333,93,332,110,322,140,317,139,327,109,328,94,323,80,311,64,296,51,261,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="223,105,180,213,175,211,218,103"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="240,102,284,141,280,145,236,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,299,64,324"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="148,253,70,294,67,290,145,248"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="89,299,151,324"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="162,253,138,289,133,286,158,250"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="176,299,256,324"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="178,250,203,286,198,289,174,253"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="280,299,355,324"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="193,248,282,290,279,295,191,253"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="284,180,204,221,201,217,282,175"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="276,225,335,251"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="308,178,308,212,303,212,303,178"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="359,225,444,251"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="322,175,376,215,373,219,319,180"/>
 </map>
