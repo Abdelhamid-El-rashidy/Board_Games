@@ -327,17 +327,11 @@ Contributions are welcome! To contribute:
 4. Test thoroughly before submitting
 5. Update this README if adding new games
 
-### Code Style Guidelines
-
-- Use meaningful variable and class names
-- Add comments for complex logic
-- Follow the existing inheritance patterns
-- Keep AI players extensible (minimal required overrides)
-
-## 🐛 Known Issues
+## 🐛 Known Issues && Possible extensions
 
 - Some games may need additional testing for edge cases
 - AI depth can be adjusted per game for optimal performance
+- We plan to add a network interface that allows the users to play over the same LAN.
 
 ## 📝 License
 
@@ -356,15 +350,3 @@ This project is provided for educational purposes. Please check with the origina
 - Starter Framework by Dr.ElRamly from FCAI 
 - AI algorithms inspired by classic game theory
 - Design patterns from "Design Patterns: Elements of Reusable Object-Oriented Software"
-
-## 📚 References
-
-- Open-Closed Principle: SOLID principles
-- Minimax Algorithm: Game theory and AI
-- Template Method Pattern: Design Patterns book
-- CMake Documentation: https://cmake.org/documentation/
-
----
-
-**Note**: This framework demonstrates advanced C++ features including templates, polymorphism, virtual functions, and design patterns. It's suitable for educational purposes and as a foundation for more complex game implementations.
-
