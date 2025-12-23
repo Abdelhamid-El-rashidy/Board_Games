@@ -2,7 +2,7 @@
 
 A comprehensive C++ framework for implementing and playing various board games, particularly Tic-Tac-Toe variants. This project demonstrates object-oriented design principles including the Open-Closed Principle (OCP), template-based design, and polymorphism.
 
-## 📋 Table of Contents
+## Table of Contents
 
 * [Overview](#overview)
 * [Features](#features)
@@ -17,7 +17,7 @@ A comprehensive C++ framework for implementing and playing various board games, 
 * [Known Issues & Future Work](#known-issues--future-work)
 * [License](#license)
 
-## 🎮 Overview
+## Overview
 
 This project provides a flexible and extensible framework for creating board games. It includes a generic base framework (`BoardGame_Classes.h`) and **13 different game implementations**, each demonstrating different gameplay mechanics and AI strategies.
 
@@ -29,7 +29,7 @@ Game selection and execution are handled through a **modular menu system**, allo
 
 * [Project Report](https://docs.google.com/document/d/1GhDm3uQc0b17LqqxxypT8vBVlTFlVtnRxI1i0f75TiQ/edit?tab=t.0)
 
-## ✨ Features
+## Features
 
 * **13 Different Games**: Multiple Tic-Tac-Toe variants and board games
 * **AI Players**: Intelligent computer players using the minimax algorithm with alpha-beta pruning
@@ -39,7 +39,7 @@ Game selection and execution are handled through a **modular menu system**, allo
 * **Polymorphic Design**: Shared interfaces with game-specific behavior
 * **Unified Game Menu**: Centralized menu system for launching games polymorphically
 
-## 🏗️ Architecture
+## Architecture
 
 The project follows a layered architecture:
 
@@ -75,7 +75,7 @@ Key components:
 
 This design removes hard-coded logic from `main.cpp` and strictly follows the **Open-Closed Principle** — new games can be added without modifying existing code.
 
-## 🎯 Games Included
+## Games Included
 
 | #  | Game Name            | Description                           |
 | -- | -------------------- | ------------------------------------- |
@@ -138,7 +138,7 @@ Board_Games/
 └── README.md
 ```
 
-## 🎨 Design Patterns
+## Design Patterns
 
 ### 1. Template Method Pattern
 
@@ -160,7 +160,7 @@ The framework allows adding new games and AI players without modifying existing 
 
 Each game is wrapped inside a `GameLauncher` object and executed polymorphically by the menu system.
 
-## 🤖 AI Implementation
+## AI Implementation
 
 * Minimax algorithm with alpha-beta pruning
 * Depth-limited search
@@ -182,19 +182,19 @@ options[14] = new XOGameLauncher<char, MyGame_UI, MyGame_Board>("My Custom Game"
 
 No changes to `main.cpp` are required.
 
-## 🧪 Testing
+## Testing
 
 * Select a game from the menu
 * Choose player types (Human / Computer)
 * Verify win, draw, and AI behavior
 
-## 🐛 Known Issues & Future Work
+## Known Issues & Future Work
 
 * Some games may require additional edge-case testing
 * AI depth is configurable and may need tuning per game
 * **A LAN-based multiplayer network interface is planned**
 
-## 📝 License
+## License
 
 This project is provided for educational purposes.
 
@@ -205,7 +205,7 @@ This project is provided for educational purposes.
 * Adham
 * Hussien
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 * Starter framework by Dr. ElRamly (FCAI)
 * Classic game theory AI algorithms
