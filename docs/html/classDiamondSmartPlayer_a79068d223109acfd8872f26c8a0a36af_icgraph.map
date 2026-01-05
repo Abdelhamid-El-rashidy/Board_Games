@@ -1,0 +1,5 @@
+<map id="DiamondSmartPlayer::get_opponent_symbol" name="DiamondSmartPlayer::get_opponent_symbol">
+<area shape="rect" id="Node000001" title=" " alt="" coords="215,5,389,45"/>
+<area shape="rect" id="Node000002" href="$classDiamondSmartPlayer.html#a544a98099735ad4a86139fbba28697cf" title="Calculate the best move through Minmax algorithms." alt="" coords="5,5,167,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,28,167,28,167,23,201,23"/>
+</map>

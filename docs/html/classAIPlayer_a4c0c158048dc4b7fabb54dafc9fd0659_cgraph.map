@@ -1,0 +1,25 @@
+<map id="AIPlayer::minimax" name="AIPlayer::minimax">
+<area shape="rect" id="Node000001" title="Minimax algorithm with alpha&#45;beta pruning." alt="" coords="5,161,148,187"/>
+<area shape="poly" id="edge10_Node000001_Node000001" title=" " alt="" coords="41,163,34,153,38,143,52,137,77,135,107,138,119,147,115,152,105,143,77,140,54,142,41,147,39,152,45,160"/>
+<area shape="rect" id="Node000002" href="$classAIPlayer.html#a7a5e28485ca22a629601e98c3580b6d7" title="Check if a position is valid for making a move." alt="" coords="221,5,365,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,160,126,102,157,68,195,40,207,33,210,38,197,44,161,72,130,105,88,163"/>
+<area shape="rect" id="Node000004" href="$classAIPlayer.html#a7b61c8b977c9322cd5773309bc54c8e8" title="Pure virtual function to create a valid move depending on current game rules. Must be implemented by ..." alt="" coords="213,55,374,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="91,159,135,124,195,89,213,82,215,87,197,94,138,129,94,163"/>
+<area shape="rect" id="Node000005" href="$classAIPlayer.html#a38676c42e4a922eadace3633b5b046cb" title=" " alt="" coords="196,104,391,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="124,159,195,139,230,130,231,135,197,145,125,164"/>
+<area shape="rect" id="Node000006" href="$classAIPlayer.html#ab348ca15fad1cb2099d9a6336b41c637" title="Evaluate the current board position from AI&#39;s perspective." alt="" coords="223,154,364,194"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="148,171,209,171,209,177,148,177"/>
+<area shape="rect" id="Node000007" href="$classAIPlayer.html#ab26d7531433c20c1616ec836a7fb5cce" title="Generate possible move values for a given position." alt="" coords="222,218,365,258"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="122,184,213,211,211,217,120,189"/>
+<area shape="rect" id="Node000010" href="$classPlayer.html#adb4e803a7ac0356b111b8ca79d766976" title="Construct a player with name, symbol, and type." alt="" coords="237,283,349,308"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="92,185,136,226,166,248,197,268,225,279,223,284,195,272,163,253,133,230,89,189"/>
+<area shape="rect" id="Node000011" href="$classPlayer.html#a3617a3ad0db435176a06948065f9a3a6" title="Assign the board pointer for the player." alt="" coords="213,332,373,357"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="87,186,128,250,159,287,198,318,208,324,206,329,194,323,156,291,123,253,82,188"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#a508617eddfae8915d098102d480fc888" title="Get a pointer to the game board." alt="" coords="445,5,606,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="365,15,431,15,431,21,365,21"/>
+<area shape="rect" id="Node000008" href="$classAIPlayer.html#a706839a21ea012862d53269c478a56e6" title="Get the opponent&#39;s symbol." alt="" coords="439,190,612,230"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="364,227,425,219,426,225,365,232"/>
+<area shape="rect" id="Node000009" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="660,227,807,252"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="365,238,439,239,612,239,646,239,646,244,612,245,439,245,365,243"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="613,220,646,224,646,230,612,225"/>
+</map>

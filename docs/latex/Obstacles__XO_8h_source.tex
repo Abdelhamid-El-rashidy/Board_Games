@@ -1,0 +1,45 @@
+\doxysection{Obstacles\+\_\+\+XO.\+h}
+\hypertarget{Obstacles__XO_8h_source}{}\label{Obstacles__XO_8h_source}\index{include/Obstacles\_XO.h@{include/Obstacles\_XO.h}}
+\mbox{\hyperlink{Obstacles__XO_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ BOARDGAMEFRAMEWORK\_OBSTACLES\_XO\_H}}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00007}00007\ \textcolor{preprocessor}{\#define\ BOARDGAMEFRAMEWORK\_OBSTACLES\_XO\_H}}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BoardGame__Classes_8h}{BoardGame\_Classes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00011}\mbox{\hyperlink{classObstacles__XO__Board}{00011}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classObstacles__XO__Board}{Obstacles\_XO\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBoard}{Board}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00012}00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00013}\mbox{\hyperlink{classObstacles__XO__Board_a80aa429de39b44a3bc2835f5f2670226}{00013}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classObstacles__XO__Board_a80aa429de39b44a3bc2835f5f2670226}{obstacle\_symbol}}\ =\ \textcolor{charliteral}{'\#'};\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00015}00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{classObstacles__XO__Board_a3e336da3597cad2168744be3d3bf8294}{Obstacles\_XO\_Board}}();}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classObstacles__XO__Board_a3520ce8cd45d12edc02ebbdfc8827013}{update\_board}}(\mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classPlayer}{move}});}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classObstacles__XO__Board_af87aa4c90181835037636e1d43c349ed}{is\_win}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00042}\mbox{\hyperlink{classObstacles__XO__Board_aac0765d17e041b8d6ebc97ebf3e0ce36}{00042}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classObstacles__XO__Board_aac0765d17e041b8d6ebc97ebf3e0ce36}{is\_lose}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classObstacles__XO__Board_acca6c3d042f40540ec89f4119a8d809f}{is\_draw}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classObstacles__XO__Board_a2679a478c779c15846b232de888342aa}{game\_is\_over}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00059}\mbox{\hyperlink{classObstacles__XO__Board_a335f0af99b46883efa8ca78789bed6de}{00059}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classObstacles__XO__Board_a335f0af99b46883efa8ca78789bed6de}{\string~Obstacles\_XO\_Board}}()\ \{\};}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00060}00060\ \};}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00072}\mbox{\hyperlink{classObstacles__XO__UI}{00072}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classObstacles__XO__UI}{Obstacles\_XO\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classUI}{UI}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00073}00073\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00079}00079\ \ \ \ \ \mbox{\hyperlink{classObstacles__XO__UI_a64731286434936df486de87d0589cf85}{Obstacles\_XO\_UI}}();}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00085}\mbox{\hyperlink{classObstacles__XO__UI_a7fc36e45a091e9a5558e1802fc790108}{00085}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classObstacles__XO__UI_a7fc36e45a091e9a5558e1802fc790108}{\string~Obstacles\_XO\_UI}}()\ \{\};}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00095}00095\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classObstacles__XO__UI_a442a1728afa506d29482f74a52fd4893}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type);}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00103}00103\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classObstacles__XO__UI_af38dd50ff53dd04ff3fc3cf11bbbae9a}{get\_move}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00104}00104\ \};}
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{Obstacles__XO_8h_source_l00106}00106\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BOARDGAMEFRAMEWORK\_OBSTACLES\_XO\_H}}
+
+\end{DoxyCode}

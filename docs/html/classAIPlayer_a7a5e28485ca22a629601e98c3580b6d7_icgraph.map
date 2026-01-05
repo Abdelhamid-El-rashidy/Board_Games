@@ -1,0 +1,9 @@
+<map id="AIPlayer::condition" name="AIPlayer::condition">
+<area shape="rect" id="Node000001" title="Check if a position is valid for making a move." alt="" coords="423,7,567,32"/>
+<area shape="rect" id="Node000002" href="$classAIPlayer.html#a962dc21adb2a91029e4d903e701c191a" title="Calculate and return the best move using minimax algorithm." alt="" coords="5,7,184,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="409,13,375,10,303,8,232,10,184,13,184,8,232,5,303,3,375,5,409,7"/>
+<area shape="rect" id="Node000003" href="$classAIPlayer.html#a4c0c158048dc4b7fabb54dafc9fd0659" title="Minimax algorithm with alpha&#45;beta pruning." alt="" coords="232,44,375,70"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="416,38,369,47,368,42,415,32"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="218,44,166,35,166,30,219,39"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="337,34,327,26,303,23,283,25,273,30,271,35,276,43,272,46,265,36,269,26,282,20,303,18,329,21,340,30"/>
+</map>

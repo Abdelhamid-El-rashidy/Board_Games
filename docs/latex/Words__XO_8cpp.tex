@@ -1,0 +1,196 @@
+\doxysection{src/\+Words\+\_\+\+XO.cpp File Reference}
+\hypertarget{Words__XO_8cpp}{}\label{Words__XO_8cpp}\index{src/Words\_XO.cpp@{src/Words\_XO.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include "{}../include/\+Words\+\_\+\+XO.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Smart\+\_\+\+Player.\+h"{}}\newline
+Include dependency graph for Words\+\_\+\+XO.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Words__XO_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classwordSmartPlayer}{word\+Smart\+Player}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{void}} \mbox{\hyperlink{Words__XO_8cpp_ab65af4b7592bc63ebf5a2b8644511c14}{load\+\_\+global\+\_\+dictionary}} (\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{string}} \&\mbox{\hyperlink{classPlayer}{path}}="{}../dic.\+txt"{})
+\item 
+\mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{Words__XO_8cpp_a647f8969a15d4c17a2317ee247d62223}{Check\+\_\+word}} (\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{string}} \&\mbox{\hyperlink{classPlayer}{W}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \mbox{\hyperlink{Words__XO_8cpp_a8e1a740810c985c566a270fb1ef04335}{LETTERS}}
+\item 
+\mbox{\hyperlink{classPlayer}{static}} \mbox{\hyperlink{classPlayer}{unordered\+\_\+set}}$<$ \mbox{\hyperlink{classPlayer}{string}} $>$ \mbox{\hyperlink{Words__XO_8cpp_a8d48805059f45df00ce9317f5edc2832}{GLOBAL\+\_\+\+DICT}}
+\item 
+\mbox{\hyperlink{classPlayer}{static}} \mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d}{GLOBAL\+\_\+\+DICT\+\_\+\+LOADED}} = \mbox{\hyperlink{classPlayer}{false}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Words__XO_8cpp_a647f8969a15d4c17a2317ee247d62223}\label{Words__XO_8cpp_a647f8969a15d4c17a2317ee247d62223} 
+\index{Words\_XO.cpp@{Words\_XO.cpp}!Check\_word@{Check\_word}}
+\index{Check\_word@{Check\_word}!Words\_XO.cpp@{Words\_XO.cpp}}
+\doxysubsubsection{\texorpdfstring{Check\_word()}{Check\_word()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{bool}} Check\+\_\+word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{string}} \&}]{W }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Words__XO_8cpp_source_l00287}{287}} of file \mbox{\hyperlink{Words__XO_8cpp_source}{Words\+\_\+\+XO.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d}{GLOBAL\_DICT\_LOADED}})\ \mbox{\hyperlink{Words__XO_8cpp_ab65af4b7592bc63ebf5a2b8644511c14}{load\_global\_dictionary}}(\textcolor{stringliteral}{"{}../dic.txt"{}});}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{t}}\ =\ \mbox{\hyperlink{classPlayer}{W}};}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ \&\mbox{\hyperlink{classPlayer}{c}}\ :\ \mbox{\hyperlink{classPlayer}{t}})\ \mbox{\hyperlink{classPlayer}{c}}\ =\ \mbox{\hyperlink{classPlayer}{toupper}}(\mbox{\hyperlink{classPlayer}{static\_cast}}<\mbox{\hyperlink{classPlayer}{unsigned}}\ \mbox{\hyperlink{classPlayer}{char}}>(\mbox{\hyperlink{classPlayer}{c}}));}
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Words__XO_8cpp_a8d48805059f45df00ce9317f5edc2832}{GLOBAL\_DICT}}.count(\mbox{\hyperlink{classPlayer}{t}})\ >\ 0;}
+\DoxyCodeLine{00292\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Words__XO_8cpp_source_l00262}{GLOBAL\+\_\+\+DICT}}, \mbox{\hyperlink{Words__XO_8cpp_source_l00263}{GLOBAL\+\_\+\+DICT\+\_\+\+LOADED}}, and \mbox{\hyperlink{Words__XO_8cpp_source_l00265}{load\+\_\+global\+\_\+dictionary()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Words__XO_8cpp_source_l00327}{Word\+\_\+\+XO\+\_\+\+Board\+::is\+\_\+win()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{Words__XO_8cpp_a647f8969a15d4c17a2317ee247d62223_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Words__XO_8cpp_a647f8969a15d4c17a2317ee247d62223_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{Words__XO_8cpp_ab65af4b7592bc63ebf5a2b8644511c14}\label{Words__XO_8cpp_ab65af4b7592bc63ebf5a2b8644511c14} 
+\index{Words\_XO.cpp@{Words\_XO.cpp}!load\_global\_dictionary@{load\_global\_dictionary}}
+\index{load\_global\_dictionary@{load\_global\_dictionary}!Words\_XO.cpp@{Words\_XO.cpp}}
+\doxysubsubsection{\texorpdfstring{load\_global\_dictionary()}{load\_global\_dictionary()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{void}} load\+\_\+global\+\_\+dictionary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{string}} \&}]{path = {\ttfamily "{}../dic.txt"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Words__XO_8cpp_source_l00265}{265}} of file \mbox{\hyperlink{Words__XO_8cpp_source}{Words\+\_\+\+XO.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d}{GLOBAL\_DICT\_LOADED}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00267\ \ \ \ \ \mbox{\hyperlink{classPlayer}{ifstream}}\ \mbox{\hyperlink{classPlayer}{f}}(\mbox{\hyperlink{classPlayer}{path}});}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classPlayer}{f}}.is\_open())\ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cerr}}\ <<\ \textcolor{stringliteral}{"{}Warning:\ cannot\ open\ "{}}\ <<\ \mbox{\hyperlink{classPlayer}{path}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d}{GLOBAL\_DICT\_LOADED}}\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ prevent\ repeated\ warnings}}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00272\ \ \ \ \ \}}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{line}};}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{classPlayer}{getline}}(\mbox{\hyperlink{classPlayer}{f}},\ \mbox{\hyperlink{classPlayer}{line}}))\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ trim}}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classPlayer}{s}}\ =\ 0,\ \mbox{\hyperlink{classPlayer}{e}}\ =\ \mbox{\hyperlink{classPlayer}{line}}.size();}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{classPlayer}{s}}\ <\ \mbox{\hyperlink{classPlayer}{e}}\ \&\&\ \mbox{\hyperlink{classPlayer}{isspace}}((\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})\mbox{\hyperlink{classPlayer}{line}}[\mbox{\hyperlink{classPlayer}{s}}]))\ ++\mbox{\hyperlink{classPlayer}{s}};}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{classPlayer}{e}}\ >\ \mbox{\hyperlink{classPlayer}{s}}\ \&\&\ \mbox{\hyperlink{classPlayer}{isspace}}((\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})\mbox{\hyperlink{classPlayer}{line}}[\mbox{\hyperlink{classPlayer}{e}}-\/1]))\ -\/-\/\mbox{\hyperlink{classPlayer}{e}};}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{e}}\ -\/\ \mbox{\hyperlink{classPlayer}{s}}\ ==\ 0)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{w}}\ =\ \mbox{\hyperlink{classPlayer}{line}}.substr(\mbox{\hyperlink{classPlayer}{s}},\ \mbox{\hyperlink{classPlayer}{e}}\ -\/\ \mbox{\hyperlink{classPlayer}{s}});}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ \&\mbox{\hyperlink{classPlayer}{c}}\ :\ \mbox{\hyperlink{classPlayer}{w}})\ \mbox{\hyperlink{classPlayer}{c}}\ =\ \mbox{\hyperlink{classPlayer}{toupper}}(\mbox{\hyperlink{classPlayer}{static\_cast}}<\mbox{\hyperlink{classPlayer}{unsigned}}\ \mbox{\hyperlink{classPlayer}{char}}>(\mbox{\hyperlink{classPlayer}{c}}));}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Words__XO_8cpp_a8d48805059f45df00ce9317f5edc2832}{GLOBAL\_DICT}}.insert(\mbox{\hyperlink{classPlayer}{w}});}
+\DoxyCodeLine{00283\ \ \ \ \ \}}
+\DoxyCodeLine{00284\ \ \ \ \ \mbox{\hyperlink{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d}{GLOBAL\_DICT\_LOADED}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00285\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Words__XO_8cpp_source_l00262}{GLOBAL\+\_\+\+DICT}}, and \mbox{\hyperlink{Words__XO_8cpp_source_l00263}{GLOBAL\+\_\+\+DICT\+\_\+\+LOADED}}.
+
+
+
+Referenced by \mbox{\hyperlink{Words__XO_8cpp_source_l00287}{Check\+\_\+word()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Words__XO_8cpp_ab65af4b7592bc63ebf5a2b8644511c14_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{Words__XO_8cpp_a8d48805059f45df00ce9317f5edc2832}\label{Words__XO_8cpp_a8d48805059f45df00ce9317f5edc2832} 
+\index{Words\_XO.cpp@{Words\_XO.cpp}!GLOBAL\_DICT@{GLOBAL\_DICT}}
+\index{GLOBAL\_DICT@{GLOBAL\_DICT}!Words\_XO.cpp@{Words\_XO.cpp}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_DICT}{GLOBAL\_DICT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{unordered\+\_\+set}}$<$\mbox{\hyperlink{classPlayer}{string}}$>$ GLOBAL\+\_\+\+DICT\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{Words__XO_8cpp_source_l00262}{262}} of file \mbox{\hyperlink{Words__XO_8cpp_source}{Words\+\_\+\+XO.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Words__XO_8cpp_source_l00287}{Check\+\_\+word()}}, and \mbox{\hyperlink{Words__XO_8cpp_source_l00265}{load\+\_\+global\+\_\+dictionary()}}.
+
+\Hypertarget{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d}\label{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d} 
+\index{Words\_XO.cpp@{Words\_XO.cpp}!GLOBAL\_DICT\_LOADED@{GLOBAL\_DICT\_LOADED}}
+\index{GLOBAL\_DICT\_LOADED@{GLOBAL\_DICT\_LOADED}!Words\_XO.cpp@{Words\_XO.cpp}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_DICT\_LOADED}{GLOBAL\_DICT\_LOADED}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{bool}} GLOBAL\+\_\+\+DICT\+\_\+\+LOADED = \mbox{\hyperlink{classPlayer}{false}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{Words__XO_8cpp_source_l00263}{263}} of file \mbox{\hyperlink{Words__XO_8cpp_source}{Words\+\_\+\+XO.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Words__XO_8cpp_source_l00287}{Check\+\_\+word()}}, and \mbox{\hyperlink{Words__XO_8cpp_source_l00265}{load\+\_\+global\+\_\+dictionary()}}.
+
+\Hypertarget{Words__XO_8cpp_a8e1a740810c985c566a270fb1ef04335}\label{Words__XO_8cpp_a8e1a740810c985c566a270fb1ef04335} 
+\index{Words\_XO.cpp@{Words\_XO.cpp}!LETTERS@{LETTERS}}
+\index{LETTERS@{LETTERS}!Words\_XO.cpp@{Words\_XO.cpp}}
+\doxysubsubsection{\texorpdfstring{LETTERS}{LETTERS}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$\mbox{\hyperlink{classPlayer}{char}}$>$ LETTERS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{charliteral}{'A'},\textcolor{charliteral}{'B'},\textcolor{charliteral}{'C'},\textcolor{charliteral}{'D'},\textcolor{charliteral}{'E'},\textcolor{charliteral}{'F'},\textcolor{charliteral}{'G'},\textcolor{charliteral}{'H'},\textcolor{charliteral}{'I'},\textcolor{charliteral}{'J'},}
+\DoxyCodeLine{\ \ \ \ \textcolor{charliteral}{'K'},\textcolor{charliteral}{'L'},\textcolor{charliteral}{'M'},\textcolor{charliteral}{'N'},\textcolor{charliteral}{'O'},\textcolor{charliteral}{'P'},\textcolor{charliteral}{'Q'},\textcolor{charliteral}{'R'},\textcolor{charliteral}{'S'},\textcolor{charliteral}{'T'},}
+\DoxyCodeLine{\ \ \ \ \textcolor{charliteral}{'U'},\textcolor{charliteral}{'V'},\textcolor{charliteral}{'W'},\textcolor{charliteral}{'X'},\textcolor{charliteral}{'Y'},\textcolor{charliteral}{'Z'}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{Words__XO_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{Words__XO_8cpp_source}{Words\+\_\+\+XO.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{charliteral}{'A'},\textcolor{charliteral}{'B'},\textcolor{charliteral}{'C'},\textcolor{charliteral}{'D'},\textcolor{charliteral}{'E'},\textcolor{charliteral}{'F'},\textcolor{charliteral}{'G'},\textcolor{charliteral}{'H'},\textcolor{charliteral}{'I'},\textcolor{charliteral}{'J'},}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{charliteral}{'K'},\textcolor{charliteral}{'L'},\textcolor{charliteral}{'M'},\textcolor{charliteral}{'N'},\textcolor{charliteral}{'O'},\textcolor{charliteral}{'P'},\textcolor{charliteral}{'Q'},\textcolor{charliteral}{'R'},\textcolor{charliteral}{'S'},\textcolor{charliteral}{'T'},}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{charliteral}{'U'},\textcolor{charliteral}{'V'},\textcolor{charliteral}{'W'},\textcolor{charliteral}{'X'},\textcolor{charliteral}{'Y'},\textcolor{charliteral}{'Z'}}
+\DoxyCodeLine{00017\ \};}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{Words__XO_8cpp_source_l00207}{word\+Smart\+Player\+::calculate\+Move2()}}, and \mbox{\hyperlink{Words__XO_8cpp_source_l00037}{word\+Smart\+Player\+::load\+Dictionary()}}.
+

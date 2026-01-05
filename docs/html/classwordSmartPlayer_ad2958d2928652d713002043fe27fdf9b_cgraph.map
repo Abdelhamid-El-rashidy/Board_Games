@@ -1,0 +1,16 @@
+<map id="wordSmartPlayer::minimax" name="wordSmartPlayer::minimax">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,106,205,131"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="66,108,57,98,61,88,78,82,105,79,140,83,150,88,154,94,149,97,146,92,139,88,105,85,79,87,65,92,62,97,69,104"/>
+<area shape="rect" id="Node000002" href="$classwordSmartPlayer.html#a08ecaf78a83b4a706176529ddc9e6119" title=" " alt="" coords="253,5,452,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,104,252,55,274,47,275,52,254,60,136,108"/>
+<area shape="rect" id="Node000004" href="$classsmartPlayer.html#a046e18221d92303afd36dca43d859898" title=" " alt="" coords="273,69,432,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="205,104,260,98,260,103,206,109"/>
+<area shape="rect" id="Node000005" href="$classwordSmartPlayer.html#a626ed24f5a4811dde93bfaf94ce81497" title=" " alt="" coords="261,134,444,159"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="206,127,248,132,248,137,205,133"/>
+<area shape="rect" id="Node000007" href="$classPlayer.html#adb4e803a7ac0356b111b8ca79d766976" title="Construct a player with name, symbol, and type." alt="" coords="297,183,409,209"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="140,129,254,169,284,178,283,183,253,175,138,134"/>
+<area shape="rect" id="Node000003" href="$classwordSmartPlayer.html#a1fe6cbd81a0e85792f482bb50f5e4b5f" title=" " alt="" coords="500,13,708,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="452,23,486,23,486,28,452,28"/>
+<area shape="rect" id="Node000006" href="$classwordSmartPlayer.html#a153987c87159821a01b6ceb0e81a4d73" title=" " alt="" coords="527,127,681,167"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="444,144,513,144,513,149,444,149"/>
+</map>

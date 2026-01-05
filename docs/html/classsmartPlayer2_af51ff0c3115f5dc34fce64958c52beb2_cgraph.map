@@ -1,0 +1,30 @@
+<map id="smartPlayer2::calculateMove" name="smartPlayer2::calculateMove">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,193,217,219"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#a508617eddfae8915d098102d480fc888" title="Get a pointer to the game board." alt="" coords="272,5,433,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,192,176,124,217,84,264,48,292,33,294,38,267,52,221,88,180,128,124,195"/>
+<area shape="rect" id="Node000003" href="$classsmartPlayer.html#afb2249c0850bf2f4debaece4f4df9bf3" title=" " alt="" coords="925,74,1100,114"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,191,265,154,375,117,423,103,488,91,601,81,715,77,911,83,911,89,715,83,601,86,488,97,425,108,376,122,266,159,152,196"/>
+<area shape="rect" id="Node000004" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="939,255,1086,280"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="142,216,199,240,266,263,375,293,462,308,550,312,662,307,801,295,926,278,926,283,802,300,663,313,550,317,461,313,374,298,265,269,197,245,140,221"/>
+<area shape="rect" id="Node000005" href="$classsmartPlayer2.html#a8212944143d4baa2e7b05bca584a0e77" title=" " alt="" coords="265,193,440,219"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="217,203,251,203,251,209,217,209"/>
+<area shape="rect" id="Node000012" href="$classPlayer.html#adb4e803a7ac0356b111b8ca79d766976" title="Construct a player with name, symbol, and type." alt="" coords="519,272,631,297"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="188,216,506,270,505,276,187,221"/>
+<area shape="poly" id="edge14_Node000005_Node000005" title=" " alt="" coords="317,195,309,185,313,175,328,169,353,167,383,170,396,179,392,184,381,175,353,172,329,174,316,179,314,184,321,192"/>
+<area shape="rect" id="Node000006" href="$classsmartPlayer2.html#afed5c26b8eb1ad21be5016ccaf15b989" title=" " alt="" coords="488,157,663,197"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="440,192,474,187,475,193,441,197"/>
+<area shape="rect" id="Node000008" href="$classsmartPlayer2.html#acf253a6afb2216922e6a1184c7b50a14" title=" " alt="" coords="492,107,659,132"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="378,191,487,142,512,134,514,139,489,147,380,196"/>
+<area shape="rect" id="Node000011" href="$classsmartPlayer2.html#a36169753eb8ba31207c80de1769c9ceb" title=" " alt="" coords="715,221,873,247"/>
+<area shape="poly" id="edge12_Node000005_Node000011" title=" " alt="" coords="440,209,701,225,701,231,440,214"/>
+<area shape="poly" id="edge15_Node000005_Node000012" title=" " alt="" coords="391,216,527,265,525,270,389,221"/>
+<area shape="rect" id="Node000007" href="$classsmartPlayer.html#a2065c2b93e69c1851cd4d951f22b1ccb" title=" " alt="" coords="711,157,877,197"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="663,174,697,174,697,179,663,179"/>
+<area shape="rect" id="Node000009" href="$classsmartPlayer.html#a046e18221d92303afd36dca43d859898" title=" " alt="" coords="715,107,873,132"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="659,117,701,117,701,122,659,122"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="874,107,911,103,912,108,874,113"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="856,130,879,143,896,161,905,179,913,197,927,216,948,233,971,246,968,251,945,237,923,220,908,200,900,181,892,164,876,147,853,134"/>
+<area shape="rect" id="Node000010" href="$classsmartPlayer.html#a0c97a2045a733fbe524f424d6b7eb968" title=" " alt="" coords="937,180,1088,205"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="839,130,878,142,965,173,963,178,876,147,837,135"/>
+<area shape="poly" id="edge13_Node000011_Node000010" title=" " alt="" coords="861,219,931,205,932,211,862,224"/>
+</map>

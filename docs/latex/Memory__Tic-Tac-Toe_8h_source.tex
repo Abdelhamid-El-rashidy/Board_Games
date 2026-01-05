@@ -1,0 +1,48 @@
+\doxysection{Memory\+\_\+\+Tic-\/\+Tac-\/\+Toe.h}
+\hypertarget{Memory__Tic-Tac-Toe_8h_source}{}\label{Memory__Tic-Tac-Toe_8h_source}\index{include/Memory\_Tic-\/Tac-\/Toe.h@{include/Memory\_Tic-\/Tac-\/Toe.h}}
+\mbox{\hyperlink{Memory__Tic-Tac-Toe_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00010}00010\ \textcolor{preprocessor}{\#ifndef\ BOARDGAMEFRAMEWORK\_MEMORY\_TIC\_TAC\_TOE\_H}}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00011}00011\ \textcolor{preprocessor}{\#define\ BOARDGAMEFRAMEWORK\_MEMORY\_TIC\_TAC\_TOE\_H}}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <bits/stdc++.h>}}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BoardGame__Classes_8h}{BoardGame\_Classes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00015}00015\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00027}\mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board}{00027}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board}{MEMORY\_TIC\_TAC\_TOE\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBoard}{Board}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00028}00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00029}\mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_a8cc882693fd285c3c9d5fc823251f709}{00029}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_a8cc882693fd285c3c9d5fc823251f709}{blank\_symbol}}\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00030}\mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_adfc902d400aaa8e42a23bae8ee50cd5b}{00030}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_adfc902d400aaa8e42a23bae8ee50cd5b}{took}}\ =\ \textcolor{charliteral}{'?'};\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00032}\mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_a3bd25d83233150f7120b2e29929a66c8}{00032}}\ \ \ \ \ \mbox{\hyperlink{classPlayer}{vector<vector<char>}}>\ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_a3bd25d83233150f7120b2e29929a66c8}{hidden\_board}};}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00034}00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_a7996beceeac90483739c80b821222d5c}{MEMORY\_TIC\_TAC\_TOE\_Board}}\ ();}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_a53faceed2184041e959884be7c1bbba2}{update\_board}}(\mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classPlayer}{move}});}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_aa9b8d9870ce3341b3e080896513a8d69}{is\_win}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00059}\mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_a1e6b69d361433afbf79b2572b1153952}{00059}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_a1e6b69d361433afbf79b2572b1153952}{is\_lose}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00066}00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_a42f4019e449d2c49efdb3129507984e3}{is\_draw}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00073}00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__Board_af4fff22495f8616d8ab9d1a24e4b3dbc}{game\_is\_over}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00074}00074\ \};}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00086}\mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__UI}{00086}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__UI}{MEMORY\_TIC\_TAC\_TOE\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classUI}{UI}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00087}00087\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00093}00093\ \ \ \ \ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__UI_a8d9b1fcbd5bcd16a78020f677ab8412b}{MEMORY\_TIC\_TAC\_TOE\_UI}}();}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00098}\mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__UI_a268d5754d0c73bc12bfaac34b93577ea}{00098}}\ \ \ \ \ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__UI_a268d5754d0c73bc12bfaac34b93577ea}{\string~MEMORY\_TIC\_TAC\_TOE\_UI}}()\ \{\};}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00107}00107\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__UI_a9e3ea4f619ea7a80652fe86e9b2dd178}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type);}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00114}00114\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classMEMORY__TIC__TAC__TOE__UI_a250a43990310d27ea3eaaca58300b4ab}{get\_move}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00115}00115\ \};}
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{Memory__Tic-Tac-Toe_8h_source_l00117}00117\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BOARDGAMEFRAMEWORK\_MEMORY\_TIC\_TAC\_TOE\_H}}
+
+\end{DoxyCode}

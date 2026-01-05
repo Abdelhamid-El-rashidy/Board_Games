@@ -1,0 +1,25 @@
+<map id="src/Four&#45;in&#45;a&#45;row.cpp" name="src/Four&#45;in&#45;a&#45;row.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="96,5,255,31"/>
+<area shape="rect" id="Node000002" href="$Four-in-a-row_8h.html" title="Defines the X&#45;O (Tic&#45;Tac&#45;Toe) specific classes that extend the generic board game framework." alt="" coords="110,79,241,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,31,178,65,173,65,173,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,167,116,192"/>
+<area shape="poly" id="edge12_Node000001_Node000003" title=" " alt="" coords="156,33,127,53,100,80,80,118,68,154,63,153,75,116,96,77,124,49,153,29"/>
+<area shape="rect" id="Node000009" href="$Smart__Player_8h.html" title=" " alt="" coords="268,86,451,111"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="203,28,321,78,319,83,201,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="149,121,90,161,87,157,146,117"/>
+<area shape="rect" id="Node000004" href="$BoardGame__Classes_8h.html" title=" " alt="" coords="141,167,309,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="190,117,212,154,208,156,185,120"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="62,240,121,265"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="204,194,126,236,124,231,202,190"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="145,240,208,265"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="219,194,194,230,190,227,215,191"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="233,240,313,265"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="235,191,260,227,255,230,230,194"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="337,240,411,265"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="250,190,338,232,336,236,248,194"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="341,114,258,162,255,157,338,109"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="333,167,391,192"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="362,111,364,153,358,153,357,112"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="415,167,501,192"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="376,109,434,156,431,160,372,114"/>
+</map>

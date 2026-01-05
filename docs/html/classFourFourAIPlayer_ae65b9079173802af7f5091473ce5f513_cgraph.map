@@ -1,0 +1,35 @@
+<map id="FourFourAIPlayer::calculateMove" name="FourFourAIPlayer::calculateMove">
+<area shape="rect" id="Node000001" title="Override calculateMove to handle direction&#45;based moves." alt="" coords="5,208,240,233"/>
+<area shape="rect" id="Node000002" href="$classFourFourAIPlayer.html#a63c588798fa1ec23ad3cb4cd96370a97" title="Check if position has a piece belonging to the player that can be moved." alt="" coords="297,5,497,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,206,190,132,235,87,287,48,319,33,321,38,289,52,238,91,194,135,135,209"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#a508617eddfae8915d098102d480fc888" title="Get a pointer to the game board." alt="" coords="801,157,963,183"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="240,207,288,203,787,172,788,177,288,209,241,212"/>
+<area shape="rect" id="Node000004" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="580,56,727,81"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="134,206,195,148,238,116,287,92,358,71,432,61,504,57,566,58,566,64,504,62,433,66,360,76,289,96,241,121,198,152,137,210"/>
+<area shape="rect" id="Node000005" href="$classFourFourAIPlayer.html#a3e7b4ec9c592f25a40afe0be8dc05449" title="Create a dualMove at position (x, y) with stored direction." alt="" coords="288,107,505,132"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="150,205,287,149,335,133,336,138,289,154,153,210"/>
+<area shape="rect" id="Node000006" href="$classFourFourAIPlayer.html#a626a29524a02b6b57e18b54303d4c570" title="Helper to create undo move for any symbol." alt="" coords="563,210,744,250"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="241,220,549,226,548,231,240,225"/>
+<area shape="rect" id="Node000007" href="$classAIPlayer.html#a025987884475f11a556e327dc2a67aaa" title="Get the maximum search depth for minimax algorithm." alt="" coords="315,258,478,298"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="185,231,302,256,301,261,184,236"/>
+<area shape="rect" id="Node000008" href="$classAIPlayer.html#a706839a21ea012862d53269c478a56e6" title="Get the opponent&#39;s symbol." alt="" coords="315,322,478,362"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="145,231,208,268,289,308,309,315,307,320,287,312,206,273,143,236"/>
+<area shape="rect" id="Node000009" href="$classFourFourAIPlayer.html#a8427da39d2c0c84609a00dbd51347c9f" title="Override minimax to handle opponent pieces correctly." alt="" coords="297,411,496,436"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="137,232,199,296,242,336,289,372,349,403,346,408,287,376,239,340,195,300,133,235"/>
+<area shape="rect" id="Node000013" href="$classPlayer.html#adb4e803a7ac0356b111b8ca79d766976" title="Construct a player with name, symbol, and type." alt="" coords="597,461,709,487"/>
+<area shape="poly" id="edge20_Node000001_Node000013" title=" " alt="" coords="131,232,150,276,182,336,204,367,229,398,257,424,289,446,325,463,363,475,442,487,518,489,583,483,584,488,518,494,441,493,362,480,323,468,287,451,254,429,225,401,200,371,178,339,145,278,126,235"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="497,4,557,3,623,7,690,19,754,41,790,62,821,90,867,144,863,148,818,94,787,67,752,46,689,24,622,13,557,9,497,10"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="463,28,575,51,574,56,462,33"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="462,104,574,81,575,87,463,109"/>
+<area shape="poly" id="edge14_Node000009_Node000006" title=" " alt="" coords="443,408,475,393,503,372,514,359,520,346,526,320,533,293,540,279,551,265,565,255,569,259,555,269,544,282,538,295,531,321,525,348,519,362,507,376,477,398,445,413"/>
+<area shape="poly" id="edge17_Node000009_Node000009" title=" " alt="" coords="355,412,346,402,351,392,368,386,397,384,433,388,443,393,447,398,442,401,440,397,431,393,397,389,369,391,354,396,352,402,359,409"/>
+<area shape="rect" id="Node000010" href="$classFourFourAIPlayer.html#a3485e13e60dbd5ec0e28dfbcab943159" title="Check if position has a piece belonging to a specific symbol." alt="" coords="553,279,753,319"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="430,408,467,392,504,372,527,352,552,332,571,322,573,327,555,336,531,356,507,376,469,397,433,413"/>
+<area shape="rect" id="Node000011" href="$classFourFourAIPlayer.html#a3586ff3a70afa4f0aaf2309764d6a453" title="Evaluate board position with heuristic." alt="" coords="555,346,752,386"/>
+<area shape="poly" id="edge15_Node000009_Node000011" title=" " alt="" coords="454,408,549,386,551,392,455,413"/>
+<area shape="rect" id="Node000012" href="$classPlayer.html#a3617a3ad0db435176a06948065f9a3a6" title="Assign the board pointer for the player." alt="" coords="802,381,962,407"/>
+<area shape="poly" id="edge19_Node000009_Node000012" title=" " alt="" coords="496,415,788,397,788,402,496,420"/>
+<area shape="poly" id="edge18_Node000009_Node000013" title=" " alt="" coords="463,434,584,458,583,463,462,439"/>
+<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="714,277,752,260,808,224,854,189,857,193,811,229,755,264,716,282"/>
+<area shape="poly" id="edge16_Node000011_Node000012" title=" " alt="" coords="753,375,789,380,788,385,752,381"/>
+</map>

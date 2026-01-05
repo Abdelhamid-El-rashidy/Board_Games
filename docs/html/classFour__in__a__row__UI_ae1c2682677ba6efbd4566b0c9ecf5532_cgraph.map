@@ -1,0 +1,7 @@
+<map id="Four_in_a_row_UI::get_move" name="Four_in_a_row_UI::get_move">
+<area shape="rect" id="Node000001" title="Retrieves the next move from a player." alt="" coords="5,31,215,56"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="263,5,409,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,29,249,25,249,30,215,34"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#a2df3bd299bf7aecfa2275ec6902a60f8" title="Get player type (e.g., &#39;H&#39; or &#39;C&#39;)." alt="" coords="272,55,400,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="215,52,259,56,258,62,215,57"/>
+</map>

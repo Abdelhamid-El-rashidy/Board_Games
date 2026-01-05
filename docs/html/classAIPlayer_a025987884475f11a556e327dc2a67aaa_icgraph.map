@@ -1,0 +1,5 @@
+<map id="AIPlayer::get_max_depth" name="AIPlayer::get_max_depth">
+<area shape="rect" id="Node000001" title="Get the maximum search depth for minimax algorithm." alt="" coords="232,5,417,31"/>
+<area shape="rect" id="Node000002" href="$classAIPlayer.html#a962dc21adb2a91029e4d903e701c191a" title="Calculate and return the best move using minimax algorithm." alt="" coords="5,5,184,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,21,184,21,184,15,218,15"/>
+</map>

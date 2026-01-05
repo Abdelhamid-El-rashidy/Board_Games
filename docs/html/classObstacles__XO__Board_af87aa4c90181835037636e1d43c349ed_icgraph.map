@@ -1,0 +1,8 @@
+<map id="Obstacles_XO_Board::is_win" name="Obstacles_XO_Board::is_win">
+<area shape="rect" id="Node000001" title="Checks if the given player has won the game." alt="" coords="413,5,569,45"/>
+<area shape="rect" id="Node000002" href="$classObstacles__XO__Board.html#a2679a478c779c15846b232de888342aa" title="Determines if the game is over (win or draw)." alt="" coords="5,5,161,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="399,25,365,24,209,24,162,25,162,20,209,19,365,19,400,19"/>
+<area shape="rect" id="Node000003" href="$classObstacles__XO__Board.html#acca6c3d042f40540ec89f4119a8d809f" title="Checks if the game has ended in a draw." alt="" coords="209,33,365,73"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="400,41,366,45,365,40,400,35"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="196,43,161,39,162,33,196,38"/>
+</map>

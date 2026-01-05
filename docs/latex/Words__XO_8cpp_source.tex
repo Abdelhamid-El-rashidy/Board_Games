@@ -1,0 +1,417 @@
+\doxysection{Words\+\_\+\+XO.\+cpp}
+\hypertarget{Words__XO_8cpp_source}{}\label{Words__XO_8cpp_source}\index{src/Words\_XO.cpp@{src/Words\_XO.cpp}}
+\mbox{\hyperlink{Words__XO_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <cctype>}\ \ \textcolor{comment}{//\ for\ toupper()}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}../include/Words\_XO.h"{}}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}../include/Smart\_Player.h"{}}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00011}00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00013}\mbox{\hyperlink{Words__XO_8cpp_a8e1a740810c985c566a270fb1ef04335}{00013}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classPlayer}{vector<char>}}\ \mbox{\hyperlink{Words__XO_8cpp_a8e1a740810c985c566a270fb1ef04335}{LETTERS}}\ =\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{charliteral}{'A'},\textcolor{charliteral}{'B'},\textcolor{charliteral}{'C'},\textcolor{charliteral}{'D'},\textcolor{charliteral}{'E'},\textcolor{charliteral}{'F'},\textcolor{charliteral}{'G'},\textcolor{charliteral}{'H'},\textcolor{charliteral}{'I'},\textcolor{charliteral}{'J'},}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{charliteral}{'K'},\textcolor{charliteral}{'L'},\textcolor{charliteral}{'M'},\textcolor{charliteral}{'N'},\textcolor{charliteral}{'O'},\textcolor{charliteral}{'P'},\textcolor{charliteral}{'Q'},\textcolor{charliteral}{'R'},\textcolor{charliteral}{'S'},\textcolor{charliteral}{'T'},}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{charliteral}{'U'},\textcolor{charliteral}{'V'},\textcolor{charliteral}{'W'},\textcolor{charliteral}{'X'},\textcolor{charliteral}{'Y'},\textcolor{charliteral}{'Z'}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00017}00017\ \};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00019}\mbox{\hyperlink{classwordSmartPlayer}{00019}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classwordSmartPlayer}{wordSmartPlayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsmartPlayer}{smartPlayer}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classsmartPlayer}{smartPlayer}}<\textcolor{keywordtype}{char}>\mbox{\hyperlink{classsmartPlayer}{::smartPlayer}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00022}00022\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00023}\mbox{\hyperlink{classwordSmartPlayer_a8b68b68099cb6d260e7ec31da4370b8b}{00023}}\ \ \ \ \ \mbox{\hyperlink{classPlayer}{vector<string>}}\ \mbox{\hyperlink{classwordSmartPlayer_a8b68b68099cb6d260e7ec31da4370b8b}{dictionary}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00024}\mbox{\hyperlink{classwordSmartPlayer_a0a981f6d2785d3beaa8f98fe9cff5368}{00024}}\ \ \ \ \ \mbox{\hyperlink{classPlayer}{vector<char>}}\ \mbox{\hyperlink{classwordSmartPlayer_a0a981f6d2785d3beaa8f98fe9cff5368}{possibleLetters}};\ \ \ \ \ \ \textcolor{comment}{//\ only\ letters\ that\ appear\ in\ the\ dictionary}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00025}\mbox{\hyperlink{classwordSmartPlayer_a368ae8488480234df0e1d09ff16892a3}{00025}}\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classwordSmartPlayer_a368ae8488480234df0e1d09ff16892a3}{node\_counter}}\ =\ 0;\ \textcolor{comment}{//\ count\ nodes\ visited\ (mutable\ to\ update\ in\ const\ funcs)}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00026}\mbox{\hyperlink{classwordSmartPlayer_a24100421e9eed6c7e7ead5f5fb6a728b}{00026}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classwordSmartPlayer_a24100421e9eed6c7e7ead5f5fb6a728b}{MAX\_NODES}}\ =\ 10000;\ \textcolor{comment}{//\ tune\ this:\ 200k\ node\ budget\ as\ example}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00029}00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00030}\mbox{\hyperlink{classwordSmartPlayer_a346ff9bfdaa1f431d32c30a4d81c17f2}{00030}}\ \ \ \ \ \mbox{\hyperlink{classwordSmartPlayer_a346ff9bfdaa1f431d32c30a4d81c17f2}{wordSmartPlayer}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{n}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{s}},\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ \mbox{\hyperlink{classPlayer}{t}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \mbox{\hyperlink{classPlayer}{dictFile}})}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classsmartPlayer}{smartPlayer}}<\mbox{\hyperlink{classPlayer}{char}}>(\mbox{\hyperlink{classPlayer}{n}},\ \mbox{\hyperlink{classPlayer}{s}},\ \mbox{\hyperlink{classPlayer}{t}})}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00032}00032\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classwordSmartPlayer_afaef341c449009fb5cad6c946ac8e9cf}{loadDictionary}}(\mbox{\hyperlink{classPlayer}{dictFile}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00036}00036\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00037}\mbox{\hyperlink{classwordSmartPlayer_afaef341c449009fb5cad6c946ac8e9cf}{00037}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classwordSmartPlayer_afaef341c449009fb5cad6c946ac8e9cf}{loadDictionary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \mbox{\hyperlink{classPlayer}{filename}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{ifstream}}\ \mbox{\hyperlink{classPlayer}{in}}(\mbox{\hyperlink{classPlayer}{filename}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{w}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{unordered\_set<char>}}\ \mbox{\hyperlink{classPlayer}{letters}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{classPlayer}{in}}\ >>\ \mbox{\hyperlink{classPlayer}{w}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ convert\ to\ uppercase\ and\ keep\ only\ alphabetic\ characters}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ \&\mbox{\hyperlink{classPlayer}{ch}}\ :\ \mbox{\hyperlink{classPlayer}{w}})\ \mbox{\hyperlink{classPlayer}{ch}}\ =\ \mbox{\hyperlink{classPlayer}{toupper}}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\textcolor{keyword}{>}(\mbox{\hyperlink{classPlayer}{ch}}));}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classwordSmartPlayer_a8b68b68099cb6d260e7ec31da4370b8b}{dictionary}}.push\_back(\mbox{\hyperlink{classPlayer}{w}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{ch}}\ :\ \mbox{\hyperlink{classPlayer}{w}})\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{isalpha}}((\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})\mbox{\hyperlink{classPlayer}{ch}}))\ \mbox{\hyperlink{classPlayer}{letters}}.insert(\mbox{\hyperlink{classPlayer}{ch}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ build\ possibleLetters\ vector\ from\ set\ (stable\ order\ not\ required)}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classwordSmartPlayer_a0a981f6d2785d3beaa8f98fe9cff5368}{possibleLetters}}.assign(\mbox{\hyperlink{classPlayer}{letters}}.begin(),\ \mbox{\hyperlink{classPlayer}{letters}}.end());}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ dictionary\ is\ empty\ for\ whatever\ reason,\ fall\ back\ to\ full\ alphabet}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a0a981f6d2785d3beaa8f98fe9cff5368}{possibleLetters}}.empty())\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classwordSmartPlayer_a0a981f6d2785d3beaa8f98fe9cff5368}{possibleLetters}}\ =\ \mbox{\hyperlink{Words__XO_8cpp_a8e1a740810c985c566a270fb1ef04335}{LETTERS}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00056}\mbox{\hyperlink{classwordSmartPlayer_a626ed24f5a4811dde93bfaf94ce81497}{00056}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classwordSmartPlayer_a626ed24f5a4811dde93bfaf94ce81497}{is\_win}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPlayer}{vector}}<\mbox{\hyperlink{classPlayer}{vector<char>}}>\&\ \mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{s}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{N}}\ =\ 3)\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{R}}\ =\ \mbox{\hyperlink{classPlayer}{b}}.size();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{C}}\ =\ \mbox{\hyperlink{classPlayer}{b}}[0].size();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ all\ rows}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ \mbox{\hyperlink{classPlayer}{R}};\ \mbox{\hyperlink{classPlayer}{i}}++)\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{row}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}\ <\ \mbox{\hyperlink{classPlayer}{C}};\ \mbox{\hyperlink{classPlayer}{j}}++)\ \mbox{\hyperlink{classPlayer}{row}}\ +=\ \mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}];}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a153987c87159821a01b6ceb0e81a4d73}{is\_valid\_word}}(\mbox{\hyperlink{classPlayer}{row}}))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ all\ columns}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}\ <\ \mbox{\hyperlink{classPlayer}{C}};\ \mbox{\hyperlink{classPlayer}{j}}++)\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{col}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ \mbox{\hyperlink{classPlayer}{R}};\ \mbox{\hyperlink{classPlayer}{i}}++)\ \mbox{\hyperlink{classPlayer}{col}}\ +=\ \mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}];}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a153987c87159821a01b6ceb0e81a4d73}{is\_valid\_word}}(\mbox{\hyperlink{classPlayer}{col}}))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ TL-\/BR\ diagonal}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{R}}\ ==\ \mbox{\hyperlink{classPlayer}{C}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{diag}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{k}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{k}}\ <\ \mbox{\hyperlink{classPlayer}{R}};\ \mbox{\hyperlink{classPlayer}{k}}++)\ \mbox{\hyperlink{classPlayer}{diag}}\ +=\ \mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{k}}][\mbox{\hyperlink{classPlayer}{k}}];}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a153987c87159821a01b6ceb0e81a4d73}{is\_valid\_word}}(\mbox{\hyperlink{classPlayer}{diag}}))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ TR-\/BL\ diagonal}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{R}}\ ==\ \mbox{\hyperlink{classPlayer}{C}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{diag}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{k}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{k}}\ <\ \mbox{\hyperlink{classPlayer}{R}};\ \mbox{\hyperlink{classPlayer}{k}}++)\ \mbox{\hyperlink{classPlayer}{diag}}\ +=\ \mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{k}}][\mbox{\hyperlink{classPlayer}{C}}\ -\/\ 1\ -\/\ \mbox{\hyperlink{classPlayer}{k}}];}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a153987c87159821a01b6ceb0e81a4d73}{is\_valid\_word}}(\mbox{\hyperlink{classPlayer}{diag}}))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00091}\mbox{\hyperlink{classwordSmartPlayer_a153987c87159821a01b6ceb0e81a4d73}{00091}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classwordSmartPlayer_a153987c87159821a01b6ceb0e81a4d73}{is\_valid\_word}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \mbox{\hyperlink{classPlayer}{s}})\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ remove\ '.'\ (empty\ cells)}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{cleaned}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{c}}\ :\ \mbox{\hyperlink{classPlayer}{s}})}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{c}}\ !=\ \textcolor{charliteral}{'.'})\ \mbox{\hyperlink{classPlayer}{cleaned}}\ +=\ \mbox{\hyperlink{classPlayer}{c}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{cleaned}}.size()\ <\ 3)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer}{find}}(\mbox{\hyperlink{classwordSmartPlayer_a8b68b68099cb6d260e7ec31da4370b8b}{dictionary}}.begin(),\ \mbox{\hyperlink{classwordSmartPlayer_a8b68b68099cb6d260e7ec31da4370b8b}{dictionary}}.end(),\ \mbox{\hyperlink{classPlayer}{cleaned}})\ !=\ \mbox{\hyperlink{classwordSmartPlayer_a8b68b68099cb6d260e7ec31da4370b8b}{dictionary}}.end();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00100}00100\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00102}\mbox{\hyperlink{classwordSmartPlayer_a08ecaf78a83b4a706176529ddc9e6119}{00102}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classwordSmartPlayer_a08ecaf78a83b4a706176529ddc9e6119}{evaluate\_board}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPlayer}{vector}}<\mbox{\hyperlink{classPlayer}{vector<char>}}>\&\ \mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{ai}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{opp}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{N}}\ =\ 3)\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Scoring:\ more\ letters\ forming\ a\ prefix\ of\ any\ word\ =\ higher\ score}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{score}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classPlayer}{w}}\ :\ \mbox{\hyperlink{classwordSmartPlayer_a8b68b68099cb6d260e7ec31da4370b8b}{dictionary}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{score}}\ +=\ \mbox{\hyperlink{classwordSmartPlayer_a1fe6cbd81a0e85792f482bb50f5e4b5f}{score\_line}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{w}},\ \mbox{\hyperlink{classPlayer}{ai}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{score}}\ -\/=\ \mbox{\hyperlink{classwordSmartPlayer_a1fe6cbd81a0e85792f482bb50f5e4b5f}{score\_line}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{w}},\ \mbox{\hyperlink{classPlayer}{opp}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer}{score}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00114}\mbox{\hyperlink{classwordSmartPlayer_a1fe6cbd81a0e85792f482bb50f5e4b5f}{00114}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classwordSmartPlayer_a1fe6cbd81a0e85792f482bb50f5e4b5f}{score\_line}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPlayer}{vector}}<\mbox{\hyperlink{classPlayer}{vector<char>}}>\&\ \mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \mbox{\hyperlink{classPlayer}{word}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer_a272d6c4dab769930d4f8074918e7708a}{symbol}})\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{R}}\ =\ \mbox{\hyperlink{classPlayer}{b}}.size();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{C}}\ =\ \mbox{\hyperlink{classPlayer}{b}}[0].size();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{score}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Example\ scoring:\ +10\ for\ correct\ letter\ in\ position,\ +3\ for\ empty,\ -\/5\ otherwise}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ \mbox{\hyperlink{classPlayer}{R}};\ \mbox{\hyperlink{classPlayer}{i}}++)}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}\ <\ \mbox{\hyperlink{classPlayer}{C}};\ \mbox{\hyperlink{classPlayer}{j}}++)\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ horizontal\ word\ match\ possibility}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{j}}\ +\ \mbox{\hyperlink{classPlayer}{word}}.size()\ <=\ \mbox{\hyperlink{classPlayer}{C}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{s}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{k}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{k}}\ <\ \mbox{\hyperlink{classPlayer}{word}}.size();\ \mbox{\hyperlink{classPlayer}{k}}++)\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}+\mbox{\hyperlink{classPlayer}{k}}]\ ==\ \mbox{\hyperlink{classPlayer}{word}}[\mbox{\hyperlink{classPlayer}{k}}])\ \mbox{\hyperlink{classPlayer}{s}}\ +=\ 10;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}+\mbox{\hyperlink{classPlayer}{k}}]\ ==\ \textcolor{charliteral}{'.'})\ \mbox{\hyperlink{classPlayer}{s}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \mbox{\hyperlink{classPlayer}{s}}\ =\ -\/50;\ \textcolor{keywordflow}{break};\ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{score}}\ +=\ \mbox{\hyperlink{classPlayer}{s}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer}{score}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00135}00135\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00137}\mbox{\hyperlink{classwordSmartPlayer_ad2958d2928652d713002043fe27fdf9b}{00137}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classwordSmartPlayer_ad2958d2928652d713002043fe27fdf9b}{minimax}}(\mbox{\hyperlink{classPlayer}{vector}}<\mbox{\hyperlink{classPlayer}{vector<char>}}>\&\ \mbox{\hyperlink{classPlayer}{b}},}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPlayer}{maximizingPlayer}},}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{ai}},}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{opp}},}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{alpha}},}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{beta}},}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{depth}},}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{N}}\ =\ 3)}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00145}00145\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00146}00146\ \ \ \ \ \textcolor{comment}{//\ node\ accounting}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00147}00147\ \ \ \ \ ++\mbox{\hyperlink{classwordSmartPlayer_a368ae8488480234df0e1d09ff16892a3}{node\_counter}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00148}00148\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a368ae8488480234df0e1d09ff16892a3}{node\_counter}}\ >\ \mbox{\hyperlink{classwordSmartPlayer_a24100421e9eed6c7e7ead5f5fb6a728b}{MAX\_NODES}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ abort\ search\ early:\ return\ heuristic\ evaluation\ to\ let\ caller\ use\ partial\ result}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classwordSmartPlayer_a08ecaf78a83b4a706176529ddc9e6119}{evaluate\_board}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{ai}},\ \mbox{\hyperlink{classPlayer}{opp}},\ \mbox{\hyperlink{classPlayer}{N}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00151}00151\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00153}00153\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a626ed24f5a4811dde93bfaf94ce81497}{is\_win}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{ai}},\ \mbox{\hyperlink{classPlayer}{N}}))\ \textcolor{keywordflow}{return}\ 1000\ +\ \mbox{\hyperlink{classPlayer}{depth}};\ \textcolor{comment}{//\ prefer\ faster\ win}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00154}00154\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a626ed24f5a4811dde93bfaf94ce81497}{is\_win}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{opp}},\ \mbox{\hyperlink{classPlayer}{N}}))\ \textcolor{keywordflow}{return}\ -\/1000\ -\/\ \mbox{\hyperlink{classPlayer}{depth}};\ \textcolor{comment}{//\ prefer\ slower\ loss}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00155}00155\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsmartPlayer_a046e18221d92303afd36dca43d859898}{is\_draw}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{N}}))\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00156}00156\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{depth}}\ ==\ 0)\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classwordSmartPlayer_a08ecaf78a83b4a706176529ddc9e6119}{evaluate\_board}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{ai}},\ \mbox{\hyperlink{classPlayer}{opp}},\ \mbox{\hyperlink{classPlayer}{N}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00158}00158\ \ \ \ \ \textcolor{keywordtype}{int}\ rows\ =\ \mbox{\hyperlink{classPlayer}{b}}.size();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00159}00159\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{cols}}\ =\ \mbox{\hyperlink{classPlayer}{b}}[0].size();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00161}00161\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{maximizingPlayer}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00162}00162\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{best}}\ =\ \mbox{\hyperlink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{numeric\_limits<int>::min}}();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00163}00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ rows;\ ++\mbox{\hyperlink{classPlayer}{i}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}\ <\ \mbox{\hyperlink{classPlayer}{cols}};\ ++\mbox{\hyperlink{classPlayer}{j}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ !=\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{c}}\ :\ \mbox{\hyperlink{classwordSmartPlayer_a0a981f6d2785d3beaa8f98fe9cff5368}{possibleLetters}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \mbox{\hyperlink{classPlayer}{c}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{val}}\ =\ \mbox{\hyperlink{classwordSmartPlayer_ad2958d2928652d713002043fe27fdf9b}{minimax}}(\mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keyword}{false},\ \mbox{\hyperlink{classPlayer}{ai}},\ \mbox{\hyperlink{classPlayer}{opp}},\ \mbox{\hyperlink{classPlayer}{alpha}},\ \mbox{\hyperlink{classPlayer}{beta}},\ \mbox{\hyperlink{classPlayer}{depth}}\ -\/\ 1,\ \mbox{\hyperlink{classPlayer}{N}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{val}}\ >\ \mbox{\hyperlink{classPlayer}{best}})\ \mbox{\hyperlink{classPlayer}{best}}\ =\ \mbox{\hyperlink{classPlayer}{val}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{best}}\ >\ \mbox{\hyperlink{classPlayer}{alpha}})\ \mbox{\hyperlink{classPlayer}{alpha}}\ =\ \mbox{\hyperlink{classPlayer}{best}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{beta}}\ <=\ \mbox{\hyperlink{classPlayer}{alpha}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pruning\ -\/\ break\ out\ early}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ \mbox{\hyperlink{classPlayer}{OUT\_MAX\_LOOP}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ early\ node\ budget\ check}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a368ae8488480234df0e1d09ff16892a3}{node\_counter}}\ >\ \mbox{\hyperlink{classwordSmartPlayer_a24100421e9eed6c7e7ead5f5fb6a728b}{MAX\_NODES}})\ \textcolor{keywordflow}{goto}\ \mbox{\hyperlink{classPlayer}{OUT\_MAX\_LOOP}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00181}00181\ \mbox{\hyperlink{classPlayer}{OUT\_MAX\_LOOP}}:}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer}{best}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00183}00183\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{best}}\ =\ \mbox{\hyperlink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{numeric\_limits<int>::max}}();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ rows;\ ++\mbox{\hyperlink{classPlayer}{i}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}\ <\ \mbox{\hyperlink{classPlayer}{cols}};\ ++\mbox{\hyperlink{classPlayer}{j}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ !=\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{c}}\ :\ \mbox{\hyperlink{classwordSmartPlayer_a0a981f6d2785d3beaa8f98fe9cff5368}{possibleLetters}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \mbox{\hyperlink{classPlayer}{c}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{val}}\ =\ \mbox{\hyperlink{classwordSmartPlayer_ad2958d2928652d713002043fe27fdf9b}{minimax}}(\mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keyword}{true},\ \mbox{\hyperlink{classPlayer}{ai}},\ \mbox{\hyperlink{classPlayer}{opp}},\ \mbox{\hyperlink{classPlayer}{alpha}},\ \mbox{\hyperlink{classPlayer}{beta}},\ \mbox{\hyperlink{classPlayer}{depth}}\ -\/\ 1,\ \mbox{\hyperlink{classPlayer}{N}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{val}}\ <\ \mbox{\hyperlink{classPlayer}{best}})\ \mbox{\hyperlink{classPlayer}{best}}\ =\ \mbox{\hyperlink{classPlayer}{val}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{best}}\ <\ \mbox{\hyperlink{classPlayer}{beta}})\ \mbox{\hyperlink{classPlayer}{beta}}\ =\ \mbox{\hyperlink{classPlayer}{best}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{beta}}\ <=\ \mbox{\hyperlink{classPlayer}{alpha}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ \mbox{\hyperlink{classPlayer}{OUT\_MIN\_LOOP}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a368ae8488480234df0e1d09ff16892a3}{node\_counter}}\ >\ \mbox{\hyperlink{classwordSmartPlayer_a24100421e9eed6c7e7ead5f5fb6a728b}{MAX\_NODES}})\ \textcolor{keywordflow}{goto}\ \mbox{\hyperlink{classPlayer}{OUT\_MIN\_LOOP}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00201}00201\ \mbox{\hyperlink{classPlayer}{OUT\_MIN\_LOOP}}:}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer}{best}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00203}00203\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00204}00204\ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00206}00206\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00207}\mbox{\hyperlink{classwordSmartPlayer_ab4791918e207984b9d8a7400b436a19b}{00207}}\ \ \ \ \ \mbox{\hyperlink{classPlayer}{pair<pair<int,int>}},\textcolor{keywordtype}{int}>\ \mbox{\hyperlink{classwordSmartPlayer_ab4791918e207984b9d8a7400b436a19b}{calculateMove2}}()\ \ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Board<char>}}*\ \mbox{\hyperlink{classPlayer}{board\_ptr}}\ =\ this-\/>\mbox{\hyperlink{classPlayer_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!board\_ptr)\ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classPlayer}{runtime\_error}}(\textcolor{stringliteral}{"{}Board\ not\ assigned\ to\ player!"{}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{tempBoard}}\ =\ \mbox{\hyperlink{classPlayer}{board\_ptr}}-\/>get\_board\_matrix();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rows\ =\ \mbox{\hyperlink{classPlayer}{tempBoard}}.size();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{cols}}\ =\ \mbox{\hyperlink{classPlayer}{tempBoard}}[0].size();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{bestVal}}\ =\ \mbox{\hyperlink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{numeric\_limits<int>::min}}();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{bestX}}\ =\ -\/1,\ \mbox{\hyperlink{classPlayer}{bestY}}\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{bestc}}\ =\ \textcolor{charliteral}{'\#'};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{ai}}\ =\ this-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{opp}}\ =\ \mbox{\hyperlink{classsmartPlayer_afb2249c0850bf2f4debaece4f4df9bf3}{get\_opponent\_symbol}}();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ search\ configuration}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{maxDepth}}\ =\ 1;\ \textcolor{comment}{//\ can\ drop\ to\ 1\ if\ slow;\ raise\ if\ you\ add\ pruning/time\ limits}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classwordSmartPlayer_a368ae8488480234df0e1d09ff16892a3}{node\_counter}}\ =\ 0;\ \textcolor{comment}{//\ reset\ before\ search}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00225}00225\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ possibleLetters\ empty\ (shouldn't\ be),\ fall\ back}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00227}00227\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a0a981f6d2785d3beaa8f98fe9cff5368}{possibleLetters}}.empty())\ \mbox{\hyperlink{classwordSmartPlayer_a0a981f6d2785d3beaa8f98fe9cff5368}{possibleLetters}}\ =\ \mbox{\hyperlink{Words__XO_8cpp_a8e1a740810c985c566a270fb1ef04335}{LETTERS}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ rows;\ ++\mbox{\hyperlink{classPlayer}{i}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}\ <\ \mbox{\hyperlink{classPlayer}{cols}};\ ++\mbox{\hyperlink{classPlayer}{j}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{tempBoard}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ !=\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{c}}\ :\ \mbox{\hyperlink{classwordSmartPlayer_a0a981f6d2785d3beaa8f98fe9cff5368}{possibleLetters}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{tempBoard}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \mbox{\hyperlink{classPlayer}{c}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{moveVal}}\ =\ \mbox{\hyperlink{classwordSmartPlayer_ad2958d2928652d713002043fe27fdf9b}{minimax}}(\mbox{\hyperlink{classPlayer}{tempBoard}},\ \textcolor{keyword}{false},\ \mbox{\hyperlink{classPlayer}{ai}},\ \mbox{\hyperlink{classPlayer}{opp}},}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{numeric\_limits<int>::min}}(),}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{numeric\_limits<int>::max}}(),}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{maxDepth}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{tempBoard}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{moveVal}}\ >\ \mbox{\hyperlink{classPlayer}{bestVal}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{bestVal}}\ =\ \mbox{\hyperlink{classPlayer}{moveVal}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{bestX}}\ =\ \mbox{\hyperlink{classPlayer}{i}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{bestY}}\ =\ \mbox{\hyperlink{classPlayer}{j}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{bestc}}\ =\ \mbox{\hyperlink{classPlayer}{c}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ optional:\ if\ node\ budget\ reached,\ break\ entirely}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a368ae8488480234df0e1d09ff16892a3}{node\_counter}}\ >\ \mbox{\hyperlink{classwordSmartPlayer_a24100421e9eed6c7e7ead5f5fb6a728b}{MAX\_NODES}})\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a368ae8488480234df0e1d09ff16892a3}{node\_counter}}\ >\ \mbox{\hyperlink{classwordSmartPlayer_a24100421e9eed6c7e7ead5f5fb6a728b}{MAX\_NODES}})\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classwordSmartPlayer_a368ae8488480234df0e1d09ff16892a3}{node\_counter}}\ >\ \mbox{\hyperlink{classwordSmartPlayer_a24100421e9eed6c7e7ead5f5fb6a728b}{MAX\_NODES}})\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00251}00251\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00253}00253\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Debug:\ print\ nodes\ visited\ (remove\ in\ production)}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00254}00254\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ cerr\ <<\ "{}AI\ nodes\ visited:\ "{}\ <<\ node\_counter\ <<\ "{},\ bestVal="{}\ <<\ bestVal\ <<\ "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00256}00256\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\{\mbox{\hyperlink{classPlayer}{bestX}},\ \mbox{\hyperlink{classPlayer}{bestY}}\},\ \mbox{\hyperlink{classPlayer}{bestc}}\};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00257}00257\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00258}00258\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00259}00259\ \};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00260}00260\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00262}\mbox{\hyperlink{Words__XO_8cpp_a8d48805059f45df00ce9317f5edc2832}{00262}}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classPlayer}{unordered\_set<string>}}\ \mbox{\hyperlink{Words__XO_8cpp_a8d48805059f45df00ce9317f5edc2832}{GLOBAL\_DICT}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00263}\mbox{\hyperlink{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d}{00263}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d}{GLOBAL\_DICT\_LOADED}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00264}00264\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00265}\mbox{\hyperlink{Words__XO_8cpp_ab65af4b7592bc63ebf5a2b8644511c14}{00265}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Words__XO_8cpp_ab65af4b7592bc63ebf5a2b8644511c14}{load\_global\_dictionary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \mbox{\hyperlink{classPlayer}{path}}\ =\ \textcolor{stringliteral}{"{}../dic.txt"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00266}00266\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d}{GLOBAL\_DICT\_LOADED}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00267}00267\ \ \ \ \ \mbox{\hyperlink{classPlayer}{ifstream}}\ \mbox{\hyperlink{classPlayer}{f}}(\mbox{\hyperlink{classPlayer}{path}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00268}00268\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classPlayer}{f}}.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00269}00269\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cerr}}\ <<\ \textcolor{stringliteral}{"{}Warning:\ cannot\ open\ "{}}\ <<\ \mbox{\hyperlink{classPlayer}{path}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00270}00270\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d}{GLOBAL\_DICT\_LOADED}}\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ prevent\ repeated\ warnings}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00271}00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00272}00272\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00273}00273\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{line}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00274}00274\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{classPlayer}{getline}}(\mbox{\hyperlink{classPlayer}{f}},\ \mbox{\hyperlink{classPlayer}{line}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00275}00275\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ trim}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00276}00276\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classPlayer}{s}}\ =\ 0,\ \mbox{\hyperlink{classPlayer}{e}}\ =\ \mbox{\hyperlink{classPlayer}{line}}.size();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00277}00277\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{classPlayer}{s}}\ <\ \mbox{\hyperlink{classPlayer}{e}}\ \&\&\ \mbox{\hyperlink{classPlayer}{isspace}}((\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})\mbox{\hyperlink{classPlayer}{line}}[\mbox{\hyperlink{classPlayer}{s}}]))\ ++\mbox{\hyperlink{classPlayer}{s}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00278}00278\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{classPlayer}{e}}\ >\ \mbox{\hyperlink{classPlayer}{s}}\ \&\&\ \mbox{\hyperlink{classPlayer}{isspace}}((\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})\mbox{\hyperlink{classPlayer}{line}}[\mbox{\hyperlink{classPlayer}{e}}-\/1]))\ -\/-\/\mbox{\hyperlink{classPlayer}{e}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00279}00279\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{e}}\ -\/\ \mbox{\hyperlink{classPlayer}{s}}\ ==\ 0)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00280}00280\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{w}}\ =\ \mbox{\hyperlink{classPlayer}{line}}.substr(\mbox{\hyperlink{classPlayer}{s}},\ \mbox{\hyperlink{classPlayer}{e}}\ -\/\ \mbox{\hyperlink{classPlayer}{s}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00281}00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ \&\mbox{\hyperlink{classPlayer}{c}}\ :\ \mbox{\hyperlink{classPlayer}{w}})\ \mbox{\hyperlink{classPlayer}{c}}\ =\ \mbox{\hyperlink{classPlayer}{toupper}}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\textcolor{keyword}{>}(\mbox{\hyperlink{classPlayer}{c}}));}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00282}00282\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Words__XO_8cpp_a8d48805059f45df00ce9317f5edc2832}{GLOBAL\_DICT}}.insert(\mbox{\hyperlink{classPlayer}{w}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00283}00283\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00284}00284\ \ \ \ \ \mbox{\hyperlink{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d}{GLOBAL\_DICT\_LOADED}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00285}00285\ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00287}\mbox{\hyperlink{Words__XO_8cpp_a647f8969a15d4c17a2317ee247d62223}{00287}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{Words__XO_8cpp_a647f8969a15d4c17a2317ee247d62223}{Check\_word}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \mbox{\hyperlink{classPlayer}{W}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00288}00288\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{Words__XO_8cpp_ae55017ea5451f1d9df8a3fc22cef0a1d}{GLOBAL\_DICT\_LOADED}})\ \mbox{\hyperlink{Words__XO_8cpp_ab65af4b7592bc63ebf5a2b8644511c14}{load\_global\_dictionary}}(\textcolor{stringliteral}{"{}../dic.txt"{}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00289}00289\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{t}}\ =\ \mbox{\hyperlink{classPlayer}{W}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00290}00290\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ \&\mbox{\hyperlink{classPlayer}{c}}\ :\ \mbox{\hyperlink{classPlayer}{t}})\ \mbox{\hyperlink{classPlayer}{c}}\ =\ \mbox{\hyperlink{classPlayer}{toupper}}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\textcolor{keyword}{>}(\mbox{\hyperlink{classPlayer}{c}}));}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00291}00291\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Words__XO_8cpp_a8d48805059f45df00ce9317f5edc2832}{GLOBAL\_DICT}}.count(\mbox{\hyperlink{classPlayer}{t}})\ >\ 0;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00292}00292\ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00293}00293\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00295}\mbox{\hyperlink{classWord__XO__Board_a871452e4d4b33e023df8f7153b2fb5f6}{00295}}\ \mbox{\hyperlink{classWord__XO__Board_a871452e4d4b33e023df8f7153b2fb5f6}{Word\_XO\_Board::Word\_XO\_Board}}()\ :\ \mbox{\hyperlink{classBoard}{Board}}(3,\ 3),\ counter(0)\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00296}00296\ \ \ \ \ \textcolor{comment}{//\ Initialize\ all\ cells\ with\ blank\_symbol}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00297}00297\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classPlayer}{row}}\ :\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00298}00298\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classPlayer}{cell}}\ :\ \mbox{\hyperlink{classPlayer}{row}})}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cell}}\ =\ \mbox{\hyperlink{classWord__XO__Board_a87a325af7416c0143bc5b63ff2f5093c}{blank\_symbol}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00300}00300\ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00301}00301\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00302}\mbox{\hyperlink{classWord__XO__Board_a222eae361bb853ecad93944ade98d029}{00302}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classWord__XO__Board_a222eae361bb853ecad93944ade98d029}{Word\_XO\_Board::update\_board}}(\mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classPlayer}{move}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00304}00304\ \ \ \ \ \mbox{\hyperlink{classneMove}{neMove}}*\ \mbox{\hyperlink{classPlayer}{nm}}\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classneMove}{neMove}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classPlayer}{move}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00305}00305\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classPlayer}{nm}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00306}00306\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00307}00307\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ \mbox{\hyperlink{classPlayer}{nm}}-\/>get\_x();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00308}00308\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ \mbox{\hyperlink{classPlayer}{nm}}-\/>get\_y();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00309}00309\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{val}}\ =\ \mbox{\hyperlink{classPlayer}{nm}}-\/>get\_value();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00310}00310\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{ch}}\ =\ \mbox{\hyperlink{classPlayer}{move}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00311}00311\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00313}00313\ \ \ \ \ \textcolor{comment}{//\ Validate\ move\ and\ apply\ if\ valid}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00314}00314\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(\mbox{\hyperlink{classPlayer}{x\ <\ 0\ ||\ x\ >}}=\ \mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ \mbox{\hyperlink{classPlayer}{y\ <\ 0\ ||\ y\ >}}=\ \mbox{\hyperlink{classBoard_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \&\&\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ ==\ \mbox{\hyperlink{classWord__XO__Board_a87a325af7416c0143bc5b63ff2f5093c}{blank\_symbol}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00315}00315\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00316}00316\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoard_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00317}00317\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ \mbox{\hyperlink{classPlayer}{toupper}}(\mbox{\hyperlink{classPlayer}{val}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00318}00318\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00319}00319\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classWord__XO__Board_ab131289c2bde130080a140f4a8ed4c30}{counter}}++;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00320}00320\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00321}00321\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00322}00322\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00323}00323\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00324}00324\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00325}00325\ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00326}00326\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00327}\mbox{\hyperlink{classWord__XO__Board_a423c6610a952ef533ed2ac414992e0bc}{00327}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classWord__XO__Board_a423c6610a952ef533ed2ac414992e0bc}{Word\_XO\_Board::is\_win}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00328}00328\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{sym}}\ =\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00329}00329\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00330}00330\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{valid}}\ =\ [\&](\textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{a}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{c}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00331}00331\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{a}}\ ==\ \textcolor{charliteral}{'.'}\ ||\ \mbox{\hyperlink{classPlayer}{b}}\ ==\ \textcolor{charliteral}{'.'}\ ||\ \mbox{\hyperlink{classPlayer}{c}}\ ==\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00332}00332\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{s}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00333}00333\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{s}}.push\_back(\mbox{\hyperlink{classPlayer}{a}});\mbox{\hyperlink{classPlayer}{s}}.push\_back(\mbox{\hyperlink{classPlayer}{b}});\mbox{\hyperlink{classPlayer}{s}}.push\_back(\mbox{\hyperlink{classPlayer}{c}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00334}00334\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ see\ if\ the\ word\ is\ in\ the\ file}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00335}00335\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Words__XO_8cpp_a647f8969a15d4c17a2317ee247d62223}{Check\_word}}(\mbox{\hyperlink{classPlayer}{s}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00336}00336\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00337}00337\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00338}00338\ \ \ \ \ \textcolor{comment}{//\ Check\ rows\ and\ columns}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00339}00339\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ \mbox{\hyperlink{classBoard_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++\mbox{\hyperlink{classPlayer}{i}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00340}00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classPlayer}{valid}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][0],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[\mbox{\hyperlink{classPlayer}{i}}][2]))\ ||}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classPlayer}{valid}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][\mbox{\hyperlink{classPlayer}{i}}],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][\mbox{\hyperlink{classPlayer}{i}}],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][\mbox{\hyperlink{classPlayer}{i}}])))}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00343}00343\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00344}00344\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00345}00345\ \ \ \ \ \textcolor{comment}{//\ Check\ diagonals}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00346}00346\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classPlayer}{valid}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][0],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][2]))\ ||}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00347}00347\ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classPlayer}{valid}}(\mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[0][2],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \mbox{\hyperlink{classBoard_af00c1fc363eb640ca276b8a572040040}{board}}[2][0])))}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00348}00348\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00349}00349\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00350}00350\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00351}00351\ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00352}00352\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00353}\mbox{\hyperlink{classWord__XO__Board_a8c05ad3bda2665753e852b60144bd520}{00353}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classWord__XO__Board_a8c05ad3bda2665753e852b60144bd520}{Word\_XO\_Board::is\_draw}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00354}00354\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classBoard_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 9\ \&\&\ !\mbox{\hyperlink{classWord__XO__Board_a423c6610a952ef533ed2ac414992e0bc}{is\_win}}(\mbox{\hyperlink{classPlayer}{player}}));}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00355}00355\ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00356}00356\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00357}\mbox{\hyperlink{classWord__XO__Board_a1c3f48151ea759156dea95cc7d5ee362}{00357}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classWord__XO__Board_a1c3f48151ea759156dea95cc7d5ee362}{Word\_XO\_Board::game\_is\_over}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00358}00358\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classWord__XO__Board_a423c6610a952ef533ed2ac414992e0bc}{is\_win}}(\mbox{\hyperlink{classPlayer}{player}})\ ||\ \mbox{\hyperlink{classWord__XO__Board_a8c05ad3bda2665753e852b60144bd520}{is\_draw}}(\mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00359}00359\ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00360}00360\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00361}00361\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ XO\_UI\ Implementation}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00362}00362\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00363}\mbox{\hyperlink{classWord__XO__UI_a11a449d84298f6d6889388250031fd16}{00363}}\ \mbox{\hyperlink{classWord__XO__UI_a11a449d84298f6d6889388250031fd16}{Word\_XO\_UI::Word\_XO\_UI}}()\ :\ \mbox{\hyperlink{classUI}{UI}}<\mbox{\hyperlink{classPlayer}{char}}>(\textcolor{stringliteral}{"{}Weclome\ to\ FCAI\ Words\ X-\/O\ Game"{}},\ 3)\ \{\}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00364}00364\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00365}\mbox{\hyperlink{classWord__XO__UI_afcd43738310c3fdce01ce3767321e9c7}{00365}}\ \mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classWord__XO__UI_afcd43738310c3fdce01ce3767321e9c7}{Word\_XO\_UI::create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type)\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00366}00366\ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Creating\ "{}}\ <<\ (type\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}human"{}}\ :\ \textcolor{stringliteral}{"{}computer"{}})}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00367}00367\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ symbol\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00368}00368\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00369}00369\ \ \ \ \ \textcolor{keywordflow}{if}\ (type\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00370}00370\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Player<char>}}(name,\ symbol,\ type);}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00371}00371\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00372}00372\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Construct\ a\ wordSmartPlayer\ and\ pass\ the\ dictionary\ file\ path}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00373}00373\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Make\ sure\ "{}dic.txt"{}\ path\ is\ correct\ relative\ to\ your\ working\ dir}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00374}00374\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classwordSmartPlayer}{wordSmartPlayer}}(name,\ symbol,\ type,\ \textcolor{stringliteral}{"{}../dic.txt"{}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00375}00375\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00376}00376\ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00377}00377\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00378}00378\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00379}\mbox{\hyperlink{classWord__XO__UI_a468a141aff236927a593e8b105f6a6ab}{00379}}\ \mbox{\hyperlink{classPlayer}{Move<char>}}*\ \mbox{\hyperlink{classWord__XO__UI_a468a141aff236927a593e8b105f6a6ab}{Word\_XO\_UI::get\_move}}(\mbox{\hyperlink{classPlayer}{Player<char>}}*\ \mbox{\hyperlink{classPlayer}{player}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00380}00380\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00381}00381\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{c}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00382}00382\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00383}00383\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00384}00384\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPlease\ enter\ your\ move\ x\ and\ y\ (0\ to\ 2)\ and\ character:\ "{}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00385}00385\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ x\ >>\ y\ >>\ \mbox{\hyperlink{classPlayer}{c}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00386}00386\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00387}00387\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00388}00388\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{smart\_player}}\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classwordSmartPlayer}{wordSmartPlayer}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00389}00389\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classPlayer}{smart\_player}})\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00390}00390\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ fallback:\ the\ player\ is\ not\ a\ wordSmartPlayer\ (shouldn't\ happen\ if\ create\_player\ fixed)}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cerr}}\ <<\ \textcolor{stringliteral}{"{}Warning:\ computer\ player\ is\ not\ wordSmartPlayer\ —\ using\ default\ move.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00392}00392\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ produce\ a\ simple\ default\ move\ (first\ empty\ cell\ with\ 'A')\ to\ avoid\ crash}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00393}00393\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Board<char>}}*\ \mbox{\hyperlink{classPlayer}{board\_ptr}}\ =\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00394}00394\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classPlayer}{board\_ptr}})\ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classPlayer}{runtime\_error}}(\textcolor{stringliteral}{"{}Board\ not\ assigned\ to\ computer\ player!"{}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00395}00395\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{tmp}}\ =\ \mbox{\hyperlink{classPlayer}{board\_ptr}}-\/>get\_board\_matrix();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00396}00396\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPlayer}{found}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{i}}\ <\ (\mbox{\hyperlink{classPlayer}{int}})\mbox{\hyperlink{classPlayer}{tmp}}.size()\ \&\&\ !\mbox{\hyperlink{classPlayer}{found}};\ ++\mbox{\hyperlink{classPlayer}{i}})}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}\ <\ (\mbox{\hyperlink{classPlayer}{int}})\mbox{\hyperlink{classPlayer}{tmp}}[\mbox{\hyperlink{classPlayer}{i}}].\mbox{\hyperlink{classPlayer}{size}}()\ \&\&\ !\mbox{\hyperlink{classPlayer}{found}};\ ++\mbox{\hyperlink{classPlayer}{j}})}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{tmp}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ ==\ \textcolor{charliteral}{'.'})\ \{\ x\ =\ \mbox{\hyperlink{classPlayer}{i}};\ y\ =\ \mbox{\hyperlink{classPlayer}{j}};\ \mbox{\hyperlink{classPlayer}{c}}\ =\ \textcolor{charliteral}{'A'};\ \mbox{\hyperlink{classPlayer}{found}}\ =\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classPlayer}{found}})\ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classPlayer}{runtime\_error}}(\textcolor{stringliteral}{"{}No\ valid\ moves\ available\ for\ computer."{}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00401}00401\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00402}00402\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{move}}\ =\ \mbox{\hyperlink{classPlayer}{smart\_player}}-\/>calculateMove2();}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ \mbox{\hyperlink{classPlayer}{move}}.first.first;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00404}00404\ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ \mbox{\hyperlink{classPlayer}{move}}.first.second;}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00405}00405\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{c}}\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(\mbox{\hyperlink{classPlayer}{move}}.second);}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00406}00406\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00407}00407\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00408}00408\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classneMove}{neMove}}(x,\ y,\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}(),\ \mbox{\hyperlink{classPlayer}{c}});}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00409}00409\ \}}
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00410}00410\ }
+\DoxyCodeLine{\Hypertarget{Words__XO_8cpp_source_l00411}00411\ }
+
+\end{DoxyCode}

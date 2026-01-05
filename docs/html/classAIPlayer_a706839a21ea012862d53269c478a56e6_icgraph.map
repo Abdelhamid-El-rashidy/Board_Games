@@ -1,0 +1,12 @@
+<map id="AIPlayer::get_opponent_symbol" name="AIPlayer::get_opponent_symbol">
+<area shape="rect" id="Node000001" title="Get the opponent&#39;s symbol." alt="" coords="613,5,787,45"/>
+<area shape="rect" id="Node000002" href="$classAIPlayer.html#a962dc21adb2a91029e4d903e701c191a" title="Calculate and return the best move using minimax algorithm." alt="" coords="5,34,184,59"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="600,25,565,24,399,24,232,35,184,39,184,34,232,29,398,19,565,19,600,19"/>
+<area shape="rect" id="Node000003" href="$classAIPlayer.html#ab26d7531433c20c1616ec836a7fb5cce" title="Generate possible move values for a given position." alt="" coords="423,33,565,73"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="600,42,566,46,565,41,599,36"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="409,55,184,51,184,45,409,49"/>
+<area shape="rect" id="Node000004" href="$classAIPlayer.html#a4c0c158048dc4b7fabb54dafc9fd0659" title="Minimax algorithm with alpha&#45;beta pruning." alt="" coords="232,109,375,134"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="425,81,341,111,339,106,424,76"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="253,106,130,62,132,57,255,101"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="337,98,327,90,303,87,283,89,273,94,271,100,276,107,272,110,265,100,269,90,282,84,303,82,329,86,340,94"/>
+</map>

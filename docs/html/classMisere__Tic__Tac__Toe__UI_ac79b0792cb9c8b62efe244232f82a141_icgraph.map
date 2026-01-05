@@ -1,0 +1,5 @@
+<map id="Misere_Tic_Tac_Toe_UI::create_player" name="Misere_Tic_Tac_Toe_UI::create_player">
+<area shape="rect" id="Node000001" title="Creates a player of the specified type." alt="" coords="203,5,352,45"/>
+<area shape="rect" id="Node000002" href="$classMisere__Tic__Tac__Toe__UI.html#a28d61356cba69561f35c575150e4e3f6" title="Setup smartPlayer." alt="" coords="5,5,155,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,28,155,28,155,23,189,23"/>
+</map>

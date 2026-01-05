@@ -1,0 +1,5 @@
+<map id="Pyramid_XO_UI::create_player" name="Pyramid_XO_UI::create_player">
+<area shape="rect" id="Node000001" title="Creates a player of the specified type." alt="" coords="220,5,391,45"/>
+<area shape="rect" id="Node000002" href="$classPyramid__XO__UI.html#a80577f177405a54f73700dbf7bc97492" title="Setup smartPlayer." alt="" coords="5,5,172,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,28,172,28,172,23,206,23"/>
+</map>

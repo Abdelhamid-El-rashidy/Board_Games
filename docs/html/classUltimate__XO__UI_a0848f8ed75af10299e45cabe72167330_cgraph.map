@@ -1,0 +1,7 @@
+<map id="Ultimate_XO_UI::setup_players" name="Ultimate_XO_UI::setup_players">
+<area shape="rect" id="Node000001" title="Set up players for the game." alt="" coords="5,37,175,77"/>
+<area shape="rect" id="Node000002" href="$classUltimate__XO__UI.html#a1daf6c6533d68c8b2dfd78fcda2f28d5" title="Creates a player of the specified type." alt="" coords="223,5,397,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,42,209,37,210,43,175,48"/>
+<area shape="rect" id="Node000003" href="$classUI.html#ac3d45fea2bbcaa0372d8e5101e116ca1" title="Ask the user to choose the player type from a list." alt="" coords="225,69,395,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,67,211,72,210,78,174,72"/>
+</map>

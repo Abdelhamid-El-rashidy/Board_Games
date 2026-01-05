@@ -1,0 +1,5 @@
+<map id="Board::update_board" name="Board::update_board">
+<area shape="rect" id="Node000001" title="Update the board with a new move." alt="" coords="211,13,368,38"/>
+<area shape="rect" id="Node000002" href="$classUltimate__XO__Board.html#a620c5fe6041917fee5b063f4ae555f35" title="Updates the board with a player&#39;s move." alt="" coords="5,5,163,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,28,163,28,163,23,197,23"/>
+</map>

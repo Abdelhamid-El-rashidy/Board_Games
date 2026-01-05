@@ -1,0 +1,177 @@
+\doxysection{ne\+Move Class Reference}
+\hypertarget{classneMove}{}\label{classneMove}\index{neMove@{neMove}}
+
+
+A specialized move class for Word Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$Words\+\_\+\+XO.\+h$>$}
+
+
+
+Inheritance diagram for ne\+Move\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classneMove__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ne\+Move\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classneMove__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classneMove_a5e9660b51b434cefdffa189bd3cb2301}{ne\+Move}} (\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a5f399fb722305d3061e0f6f2438e5390}{x}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_abe58a4df9d3e121d06a3b2d1815f012e}{y}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classMove_a0bec25acdce91feab1b4c21c26505088}{symbol}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classneMove_acb4fe6dc81ee364c0df42f5fb0741d79}{value}})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize Base Class \doxylink{classMove}{Move} and Derived Class \doxylink{classneMove}{ne\+Move}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classneMove_a08679652e56e5246df3ae8431507ee16}{get\+\_\+value}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Retrieves the character value of the move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classneMove_af31c335aa7ba22318c89a66b78319d6a}{\texorpdfstring{$\sim$}{\string~}ne\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classneMove}{ne\+Move}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMove}{Move$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMove_a100102cb072a2857304023233dac7b42}{Move}} (\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a5f399fb722305d3061e0f6f2438e5390}{x}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_abe58a4df9d3e121d06a3b2d1815f012e}{y}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classMove_a0bec25acdce91feab1b4c21c26505088}{symbol}})
+\begin{DoxyCompactList}\small\item\em Construct a move at (x, y) using a symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a9d4f543a81e361f872d37bcfb64d5b55}{get\+\_\+x}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get row index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a96469802a55c9083a1e93c7edec8a00c}{get\+\_\+y}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get column index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classMove_a595bf740852c05a1cb425ef2640fd4ff}{get\+\_\+symbol}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get the move symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classMove_a8dd9eeed1b7e22daadd790dd60e743da}{\texorpdfstring{$\sim$}{\string~}\+Move}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classneMove_acb4fe6dc81ee364c0df42f5fb0741d79}{value}}
+\begin{DoxyCompactList}\small\item\em The character value associated with this move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A specialized move class for Word Tic-\/\+Tac-\/\+Toe. 
+
+This class extends {\ttfamily \doxylink{classMove}{Move}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} to include a specific character value that the player wishes to place on the board.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{classMove}{Move} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{Words__XO_8h_source_l00124}{124}} of file \mbox{\hyperlink{Words__XO_8h_source}{Words\+\_\+\+XO.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classneMove_a5e9660b51b434cefdffa189bd3cb2301}\label{classneMove_a5e9660b51b434cefdffa189bd3cb2301} 
+\index{neMove@{neMove}!neMove@{neMove}}
+\index{neMove@{neMove}!neMove@{neMove}}
+\doxysubsubsection{\texorpdfstring{neMove()}{neMove()}}
+{\footnotesize\ttfamily ne\+Move\+::ne\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{int}}}]{x,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{y,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{symbol,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize Base Class \doxylink{classMove}{Move} and Derived Class \doxylink{classneMove}{ne\+Move}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate in grid. \\
+\hline
+{\em y} & y-\/coordinate in grid. \\
+\hline
+{\em symbol} & The current player\textquotesingle{}s symbol. \\
+\hline
+{\em value} & The character value played by the move. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Words__XO_8h_source_l00135}{135}} of file \mbox{\hyperlink{Words__XO_8h_source}{Words\+\_\+\+XO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00135\ :\ \mbox{\hyperlink{classPlayer}{Move<char>}}(\mbox{\hyperlink{classMove_a5f399fb722305d3061e0f6f2438e5390}{x}},\mbox{\hyperlink{classMove_abe58a4df9d3e121d06a3b2d1815f012e}{y}},\mbox{\hyperlink{classMove_a0bec25acdce91feab1b4c21c26505088}{symbol}}),\ \mbox{\hyperlink{classneMove_acb4fe6dc81ee364c0df42f5fb0741d79}{value}}(\mbox{\hyperlink{classneMove_acb4fe6dc81ee364c0df42f5fb0741d79}{value}})\ \{\};}
+
+\end{DoxyCode}
+\Hypertarget{classneMove_af31c335aa7ba22318c89a66b78319d6a}\label{classneMove_af31c335aa7ba22318c89a66b78319d6a} 
+\index{neMove@{neMove}!````~neMove@{\texorpdfstring{$\sim$}{\string~}neMove}}
+\index{````~neMove@{\texorpdfstring{$\sim$}{\string~}neMove}!neMove@{neMove}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}neMove()}{\string~neMove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{virtual}} ne\+Move\+::\texorpdfstring{$\sim$}{\string~}ne\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{classneMove}{ne\+Move}. 
+
+
+
+Definition at line \mbox{\hyperlink{Words__XO_8h_source_l00146}{146}} of file \mbox{\hyperlink{Words__XO_8h_source}{Words\+\_\+\+XO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00146\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classneMove_a08679652e56e5246df3ae8431507ee16}\label{classneMove_a08679652e56e5246df3ae8431507ee16} 
+\index{neMove@{neMove}!get\_value@{get\_value}}
+\index{get\_value@{get\_value}!neMove@{neMove}}
+\doxysubsubsection{\texorpdfstring{get\_value()}{get\_value()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{char}} ne\+Move\+::get\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the character value of the move. 
+
+\begin{DoxyReturn}{Returns}
+The character value. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Words__XO_8h_source_l00141}{141}} of file \mbox{\hyperlink{Words__XO_8h_source}{Words\+\_\+\+XO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classneMove_acb4fe6dc81ee364c0df42f5fb0741d79}{value}};\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Words__XO_8h_source_l00126}{value}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classneMove_acb4fe6dc81ee364c0df42f5fb0741d79}\label{classneMove_acb4fe6dc81ee364c0df42f5fb0741d79} 
+\index{neMove@{neMove}!value@{value}}
+\index{value@{value}!neMove@{neMove}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{char}} ne\+Move\+::value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The character value associated with this move. 
+
+
+
+Definition at line \mbox{\hyperlink{Words__XO_8h_source_l00126}{126}} of file \mbox{\hyperlink{Words__XO_8h_source}{Words\+\_\+\+XO.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{Words__XO_8h_source_l00141}{get\+\_\+value()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Words__XO_8h}{Words\+\_\+\+XO.\+h}}\end{DoxyCompactItemize}

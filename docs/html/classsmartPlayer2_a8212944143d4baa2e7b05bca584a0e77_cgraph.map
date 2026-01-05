@@ -1,0 +1,24 @@
+<map id="smartPlayer2::minimax" name="smartPlayer2::minimax">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,95,180,121"/>
+<area shape="poly" id="edge11_Node000001_Node000001" title=" " alt="" coords="57,97,49,87,53,77,68,71,93,69,123,72,136,81,132,86,121,77,93,74,69,76,56,81,54,86,61,94"/>
+<area shape="rect" id="Node000002" href="$classsmartPlayer2.html#afed5c26b8eb1ad21be5016ccaf15b989" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,93,227,55,246,48,248,53,229,60,129,98"/>
+<area shape="rect" id="Node000004" href="$classsmartPlayer2.html#acf253a6afb2216922e6a1184c7b50a14" title=" " alt="" coords="232,70,399,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,95,218,91,219,96,181,101"/>
+<area shape="rect" id="Node000009" href="$classsmartPlayer2.html#a36169753eb8ba31207c80de1769c9ceb" title=" " alt="" coords="455,121,613,146"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="180,110,441,125,441,131,180,116"/>
+<area shape="rect" id="Node000010" href="$classPlayer.html#adb4e803a7ac0356b111b8ca79d766976" title="Construct a player with name, symbol, and type." alt="" coords="259,171,371,197"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="132,118,265,164,263,169,130,123"/>
+<area shape="rect" id="Node000003" href="$classsmartPlayer.html#a2065c2b93e69c1851cd4d951f22b1ccb" title=" " alt="" coords="451,5,617,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="403,23,437,23,437,28,403,28"/>
+<area shape="rect" id="Node000005" href="$classsmartPlayer.html#a046e18221d92303afd36dca43d859898" title=" " alt="" coords="455,70,613,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="399,80,441,80,441,85,399,85"/>
+<area shape="rect" id="Node000006" href="$classsmartPlayer.html#afb2249c0850bf2f4debaece4f4df9bf3" title=" " alt="" coords="665,5,864,45"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="585,67,670,46,671,51,587,73"/>
+<area shape="rect" id="Node000007" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="912,42,1059,67"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="613,75,898,57,899,63,614,80"/>
+<area shape="rect" id="Node000008" href="$classsmartPlayer.html#a0c97a2045a733fbe524f424d6b7eb968" title=" " alt="" coords="689,121,840,146"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="593,93,693,115,692,120,592,98"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="865,36,899,41,898,46,864,41"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="614,131,675,131,675,136,614,136"/>
+</map>

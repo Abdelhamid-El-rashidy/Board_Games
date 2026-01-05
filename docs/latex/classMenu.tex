@@ -1,0 +1,203 @@
+\doxysection{Menu Class Reference}
+\hypertarget{classMenu}{}\label{classMenu}\index{Menu@{Menu}}
+
+
+{\ttfamily \#include $<$games\+Menu.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMenu_ad466dd83355124a6ed958430450bfe94}{Menu}} ()
+\item 
+\mbox{\hyperlink{classMenu_a831387f51358cfb88cd018e1777bc980}{\texorpdfstring{$\sim$}{\string~}\+Menu}} ()
+\item 
+\mbox{\hyperlink{classPlayer}{void}} \mbox{\hyperlink{classMenu_ac23355e22b1ace3631aa713c8122ffc3}{print\+\_\+menu}} ()
+\item 
+\mbox{\hyperlink{classPlayer}{void}} \mbox{\hyperlink{classMenu_a35656cd130e24d69383a5c9d0a73a38c}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{map}}$<$ \mbox{\hyperlink{classPlayer}{int}}, \mbox{\hyperlink{classGameLauncher}{Game\+Launcher}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{gamesMenu_8h_source_l00052}{52}} of file \mbox{\hyperlink{gamesMenu_8h_source}{games\+Menu.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMenu_ad466dd83355124a6ed958430450bfe94}\label{classMenu_ad466dd83355124a6ed958430450bfe94} 
+\index{Menu@{Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Menu()}{Menu()}}
+{\footnotesize\ttfamily Menu\+::\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gamesMenu_8h_source_l00057}{57}} of file \mbox{\hyperlink{gamesMenu_8h_source}{games\+Menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Register\ for\ all\ games.}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[1]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ Infinit\_XO\_UI,\ Infinity\_X\_O\_Board>}}(\textcolor{stringliteral}{"{}Infinity\ X-\/O"{}});}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[2]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ Numerical\_XO\_UI,\ Numerical\_X\_O\_Board>}}(\textcolor{stringliteral}{"{}Numerical\ X-\/O"{}});}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[3]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ X\_O\_5x5\_UI,\ X\_O\_5x5\_Board>}}(\textcolor{stringliteral}{"{}5x5\ X-\/O"{}});}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[4]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ Misere\_Tic\_Tac\_Toe\_UI,\ Misere\_Tic\_Tac\_Toe\_board>}}(\textcolor{stringliteral}{"{}Misere\ Tic-\/Tac-\/Toe"{}});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[5]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ Four\_Four\_XO\_UI,\ Four\_Four\_XO\_Board>}}(\textcolor{stringliteral}{"{}Four\ Four\ X-\/O"{}});}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[6]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ SUS\_UI,\ SUS\_Board>}}(\textcolor{stringliteral}{"{}SUS\ Game"{}});}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[7]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ Pyramid\_XO\_UI,\ Pyramid\_XO\_Board>}}(\textcolor{stringliteral}{"{}Pyramid\ X-\/O"{}});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[8]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ Four\_in\_a\_row\_UI,\ Four\_in\_a\_row\_Board>}}(\textcolor{stringliteral}{"{}Four-\/in-\/a-\/row"{}});}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[9]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ Diamond\_Tic\_Tac\_Toe\_UI,\ Diamond\_Tic\_Tac\_Toe\_Board>}}(\textcolor{stringliteral}{"{}Diamond\ Tic-\/Tac-\/Toe"{}});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[10]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ Obstacles\_XO\_UI,\ Obstacles\_XO\_Board>}}(\textcolor{stringliteral}{"{}Obstacles\ X-\/O"{}});}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[11]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ Word\_XO\_UI,\ Word\_XO\_Board>}}(\textcolor{stringliteral}{"{}Word\ X-\/O"{}});}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[12]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ MEMORY\_TIC\_TAC\_TOE\_UI,\ MEMORY\_TIC\_TAC\_TOE\_Board>}}(\textcolor{stringliteral}{"{}Memory\ Tic-\/Tac-\/Toe"{}});}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[13]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{XOGameLauncher<char,\ Ultimate\_XO\_UI,\ Ultimate\_XO\_Board>}}(\textcolor{stringliteral}{"{}Ultimate\ Tic-\/Tac-\/Toe"{}});}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{gamesMenu_8h_source_l00054}{options}}.
+
+\Hypertarget{classMenu_a831387f51358cfb88cd018e1777bc980}\label{classMenu_a831387f51358cfb88cd018e1777bc980} 
+\index{Menu@{Menu}!````~Menu@{\texorpdfstring{$\sim$}{\string~}Menu}}
+\index{````~Menu@{\texorpdfstring{$\sim$}{\string~}Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Menu()}{\string~Menu()}}
+{\footnotesize\ttfamily Menu\+::\texorpdfstring{$\sim$}{\string~}\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gamesMenu_8h_source_l00074}{74}} of file \mbox{\hyperlink{gamesMenu_8h_source}{games\+Menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classPlayer}{p}}\ :\ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}})\ \mbox{\hyperlink{classPlayer}{delete}}\ \mbox{\hyperlink{classPlayer}{p}}.\mbox{\hyperlink{classPlayer}{second}};}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{gamesMenu_8h_source_l00054}{options}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMenu_ac23355e22b1ace3631aa713c8122ffc3}\label{classMenu_ac23355e22b1ace3631aa713c8122ffc3} 
+\index{Menu@{Menu}!print\_menu@{print\_menu}}
+\index{print\_menu@{print\_menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{print\_menu()}{print\_menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{void}} Menu\+::print\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gamesMenu_8h_source_l00078}{78}} of file \mbox{\hyperlink{gamesMenu_8h_source}{games\+Menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/\ Welcome\ to\ the\ FCAI\ Board\ Game\ Collection\ -\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}0.\ Exit\(\backslash\)n"{}};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classPlayer}{item}}\ :\ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}})\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{classPlayer}{item}}.first;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameLauncher}{GameLauncher}}*\ \mbox{\hyperlink{classPlayer}{game}}\ =\ \mbox{\hyperlink{classPlayer}{item}}.second;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{keywordtype}{id}\ <<\ \textcolor{stringliteral}{"{}.\ "{}}\ <<\ \mbox{\hyperlink{classPlayer}{game}}-\/>\mbox{\hyperlink{classPlayer_aed2af19790ba73190e3ebeea589518e1}{get\_name}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00158}{Player$<$ T $>$\+::get\+\_\+name()}}, and \mbox{\hyperlink{gamesMenu_8h_source_l00054}{options}}.
+
+
+
+Referenced by \mbox{\hyperlink{gamesMenu_8h_source_l00090}{run()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{classMenu_ac23355e22b1ace3631aa713c8122ffc3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{classMenu_ac23355e22b1ace3631aa713c8122ffc3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classMenu_a35656cd130e24d69383a5c9d0a73a38c}\label{classMenu_a35656cd130e24d69383a5c9d0a73a38c} 
+\index{Menu@{Menu}!run@{run}}
+\index{run@{run}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{void}} Menu\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gamesMenu_8h_source_l00090}{90}} of file \mbox{\hyperlink{gamesMenu_8h_source}{games\+Menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{choice}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_ac23355e22b1ace3631aa713c8122ffc3}{print\_menu}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Select\ a\ game\ (0-\/13):\ "{}};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ \mbox{\hyperlink{classPlayer}{choice}};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{choice}}\ ==\ 0)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Goodbye!\(\backslash\)n"{}};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}.count(\mbox{\hyperlink{classPlayer}{choice}}))\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu_a5885a47b13c2a35abec16693112a0b06}{options}}[\mbox{\hyperlink{classPlayer}{choice}}]-\/>launch();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Invalid\ option!\(\backslash\)n"{}};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{gamesMenu_8h_source_l00054}{options}}, and \mbox{\hyperlink{gamesMenu_8h_source_l00078}{print\+\_\+menu()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMenu_a35656cd130e24d69383a5c9d0a73a38c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classMenu_a5885a47b13c2a35abec16693112a0b06}\label{classMenu_a5885a47b13c2a35abec16693112a0b06} 
+\index{Menu@{Menu}!options@{options}}
+\index{options@{options}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{map}}$<$\mbox{\hyperlink{classPlayer}{int}}, \mbox{\hyperlink{classGameLauncher}{Game\+Launcher}}\texorpdfstring{$\ast$}{*}$>$ Menu\+::options\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{gamesMenu_8h_source_l00054}{54}} of file \mbox{\hyperlink{gamesMenu_8h_source}{games\+Menu.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{gamesMenu_8h_source_l00057}{Menu()}}, \mbox{\hyperlink{gamesMenu_8h_source_l00078}{print\+\_\+menu()}}, \mbox{\hyperlink{gamesMenu_8h_source_l00090}{run()}}, and \mbox{\hyperlink{gamesMenu_8h_source_l00074}{\texorpdfstring{$\sim$}{\string~}\+Menu()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{gamesMenu_8h}{games\+Menu.\+h}}\end{DoxyCompactItemize}

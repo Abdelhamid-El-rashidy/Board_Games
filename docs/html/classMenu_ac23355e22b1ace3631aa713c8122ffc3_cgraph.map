@@ -1,0 +1,5 @@
+<map id="Menu::print_menu" name="Menu::print_menu">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,145,31"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#aed2af19790ba73190e3ebeea589518e1" title="Get the player&#39;s name." alt="" coords="193,5,329,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,15,180,15,180,21,145,21"/>
+</map>

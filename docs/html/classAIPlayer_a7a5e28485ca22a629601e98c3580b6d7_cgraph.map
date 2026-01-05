@@ -1,0 +1,5 @@
+<map id="AIPlayer::condition" name="AIPlayer::condition">
+<area shape="rect" id="Node000001" title="Check if a position is valid for making a move." alt="" coords="5,5,149,31"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#a508617eddfae8915d098102d480fc888" title="Get a pointer to the game board." alt="" coords="197,5,359,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,15,184,15,184,21,150,21"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="MEMORY_TIC_TAC_TOE_UI::get_move" name="MEMORY_TIC_TAC_TOE_UI::get_move">
+<area shape="rect" id="Node000001" title="Retrieves the next move from a player." alt="" coords="5,23,179,63"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="227,5,373,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,30,212,26,213,31,180,35"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#a2df3bd299bf7aecfa2275ec6902a60f8" title="Get player type (e.g., &#39;H&#39; or &#39;C&#39;)." alt="" coords="236,55,364,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,51,222,56,222,61,179,56"/>
+</map>

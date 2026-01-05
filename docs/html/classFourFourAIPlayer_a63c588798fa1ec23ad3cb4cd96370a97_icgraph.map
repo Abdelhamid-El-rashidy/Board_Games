@@ -1,0 +1,5 @@
+<map id="FourFourAIPlayer::condition" name="FourFourAIPlayer::condition">
+<area shape="rect" id="Node000001" title="Check if position has a piece belonging to the player that can be moved." alt="" coords="288,5,488,31"/>
+<area shape="rect" id="Node000002" href="$classFourFourAIPlayer.html#ae65b9079173802af7f5091473ce5f513" title="Override calculateMove to handle direction&#45;based moves." alt="" coords="5,5,240,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="274,21,240,21,240,15,274,15"/>
+</map>

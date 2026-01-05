@@ -1,0 +1,10 @@
+<map id="wordSmartPlayer::score_line" name="wordSmartPlayer::score_line">
+<area shape="rect" id="Node000001" title=" " alt="" coords="749,29,957,55"/>
+<area shape="rect" id="Node000002" href="$classwordSmartPlayer.html#a08ecaf78a83b4a706176529ddc9e6119" title=" " alt="" coords="503,22,701,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="736,45,701,45,701,39,736,39"/>
+<area shape="rect" id="Node000003" href="$classwordSmartPlayer.html#ad2958d2928652d713002043fe27fdf9b" title=" " alt="" coords="255,29,455,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="489,45,455,45,455,39,489,39"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="398,20,396,15,388,12,355,8,328,10,314,15,312,20,319,27,315,31,306,21,311,11,327,5,355,3,389,7,399,11,403,17"/>
+<area shape="rect" id="Node000004" href="$classwordSmartPlayer.html#ab4791918e207984b9d8a7400b436a19b" title=" " alt="" coords="5,22,207,62"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="241,45,207,45,207,39,241,39"/>
+</map>

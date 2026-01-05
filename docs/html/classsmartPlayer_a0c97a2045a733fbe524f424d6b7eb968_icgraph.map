@@ -1,0 +1,21 @@
+<map id="smartPlayer::is_win" name="smartPlayer::is_win">
+<area shape="rect" id="Node000001" title=" " alt="" coords="939,61,1089,87"/>
+<area shape="rect" id="Node000002" href="$classsmartPlayer.html#a046e18221d92303afd36dca43d859898" title=" " alt="" coords="732,61,891,87"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="925,77,891,77,891,71,925,71"/>
+<area shape="rect" id="Node000006" href="$classsmartPlayer.html#a813fa8a35e205952685fc055af8a8e48" title=" " alt="" coords="517,128,684,153"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="942,92,891,102,685,133,684,128,890,97,941,87"/>
+<area shape="rect" id="Node000008" href="$classsmartPlayer2.html#a36169753eb8ba31207c80de1769c9ceb" title=" " alt="" coords="732,8,891,33"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="951,60,859,36,861,31,952,55"/>
+<area shape="rect" id="Node000003" href="$classsmartPlayer2.html#acf253a6afb2216922e6a1184c7b50a14" title=" " alt="" coords="517,55,684,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="718,74,684,73,684,67,718,68"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="759,93,643,130,641,125,757,88"/>
+<area shape="rect" id="Node000004" href="$classsmartPlayer2.html#a8212944143d4baa2e7b05bca584a0e77" title=" " alt="" coords="280,29,455,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="503,59,455,54,455,49,504,54"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="409,20,398,11,367,8,342,10,329,15,327,20,334,27,330,31,321,21,326,11,341,5,367,3,400,7,412,16"/>
+<area shape="rect" id="Node000005" href="$classsmartPlayer2.html#af51ff0c3115f5dc34fce64958c52beb2" title=" " alt="" coords="5,29,217,55"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="267,45,217,45,217,39,267,39"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="638,118,628,110,601,107,578,109,566,113,564,119,570,126,566,130,559,120,563,110,577,104,601,101,630,105,642,114"/>
+<area shape="rect" id="Node000007" href="$classsmartPlayer.html#a6064105bc4b494d926db58ff05c98aaa" title=" " alt="" coords="265,128,469,153"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="503,143,470,143,470,138,503,138"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="718,28,455,40,455,35,718,22"/>
+</map>

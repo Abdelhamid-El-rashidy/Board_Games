@@ -1,0 +1,7 @@
+<map id="Ultimate_XO_Board::update_board" name="Ultimate_XO_Board::update_board">
+<area shape="rect" id="Node000001" title="Updates the board with a player&#39;s move." alt="" coords="5,23,163,63"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="216,5,363,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,31,202,26,202,31,163,36"/>
+<area shape="rect" id="Node000003" href="$classBoard.html#a93d9dec601dda58b7e206ccb47633e57" title="Update the board with a new move." alt="" coords="211,55,368,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,50,197,54,197,59,163,55"/>
+</map>

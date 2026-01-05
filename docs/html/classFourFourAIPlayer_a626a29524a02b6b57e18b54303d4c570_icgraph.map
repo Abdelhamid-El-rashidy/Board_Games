@@ -1,0 +1,9 @@
+<map id="FourFourAIPlayer::createUndoMoveForSymbol" name="FourFourAIPlayer::createUndoMoveForSymbol">
+<area shape="rect" id="Node000001" title="Helper to create undo move for any symbol." alt="" coords="535,5,716,45"/>
+<area shape="rect" id="Node000002" href="$classFourFourAIPlayer.html#ae65b9079173802af7f5091473ce5f513" title="Override calculateMove to handle direction&#45;based moves." alt="" coords="5,13,240,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="521,18,487,16,387,13,288,16,241,18,240,13,288,11,387,8,487,11,521,13"/>
+<area shape="rect" id="Node000003" href="$classFourFourAIPlayer.html#a8427da39d2c0c84609a00dbd51347c9f" title="Override minimax to handle opponent pieces correctly." alt="" coords="288,50,487,75"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="521,44,469,53,468,47,521,39"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="283,51,213,41,214,35,284,45"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="430,41,419,32,387,29,362,31,348,36,346,41,353,48,349,52,340,42,345,32,361,26,387,23,421,27,433,37"/>
+</map>

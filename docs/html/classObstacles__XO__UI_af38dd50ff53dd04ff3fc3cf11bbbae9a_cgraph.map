@@ -1,0 +1,9 @@
+<map id="Obstacles_XO_UI::get_move" name="Obstacles_XO_UI::get_move">
+<area shape="rect" id="Node000001" title="Retrieves the next move from a player." alt="" coords="5,55,211,80"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#a508617eddfae8915d098102d480fc888" title="Get a pointer to the game board." alt="" coords="259,5,420,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,52,265,31,266,36,169,57"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="266,55,413,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,65,252,65,252,70,211,70"/>
+<area shape="rect" id="Node000004" href="$classPlayer.html#a2df3bd299bf7aecfa2275ec6902a60f8" title="Get player type (e.g., &#39;H&#39; or &#39;C&#39;)." alt="" coords="275,104,403,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="169,77,266,98,265,104,168,83"/>
+</map>

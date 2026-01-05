@@ -1,0 +1,7 @@
+<map id="Four_in_a_row_Board::is_draw" name="Four_in_a_row_Board::is_draw">
+<area shape="rect" id="Node000001" title="Checks if the game has ended in a draw." alt="" coords="5,5,165,45"/>
+<area shape="rect" id="Node000002" href="$classFour__in__a__row__Board.html#a10a2305f75eff7f01fdc1eb6f1541cbb" title="Checks if the given player has won the game." alt="" coords="213,5,373,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,23,199,23,199,28,165,28"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="421,13,568,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="374,23,407,23,407,28,374,28"/>
+</map>

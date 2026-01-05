@@ -1,0 +1,11 @@
+<map id="Word_XO_Board::is_draw" name="Word_XO_Board::is_draw">
+<area shape="rect" id="Node000001" title="Checks if the game has ended in a draw." alt="" coords="5,31,188,56"/>
+<area shape="rect" id="Node000002" href="$classWord__XO__Board.html#a423c6610a952ef533ed2ac414992e0bc" title="Checks if the given player has won the game." alt="" coords="236,31,411,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,41,222,41,222,46,188,46"/>
+<area shape="rect" id="Node000003" href="$Words__XO_8cpp.html#a647f8969a15d4c17a2317ee247d62223" title=" " alt="" coords="481,5,583,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="411,30,468,23,468,28,411,35"/>
+<area shape="rect" id="Node000005" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="459,55,605,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="411,51,445,55,445,60,411,56"/>
+<area shape="rect" id="Node000004" href="$Words__XO_8cpp.html#ab65af4b7592bc63ebf5a2b8644511c14" title=" " alt="" coords="653,5,823,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="583,15,640,15,640,21,583,21"/>
+</map>

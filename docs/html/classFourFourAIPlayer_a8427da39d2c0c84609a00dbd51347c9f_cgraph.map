@@ -1,0 +1,17 @@
+<map id="FourFourAIPlayer::minimax" name="FourFourAIPlayer::minimax">
+<area shape="rect" id="Node000001" title="Override minimax to handle opponent pieces correctly." alt="" coords="5,141,204,166"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="65,142,56,132,61,122,77,116,105,114,139,118,149,123,153,128,148,131,146,127,138,123,105,119,78,121,64,126,62,132,69,139"/>
+<area shape="rect" id="Node000002" href="$classFourFourAIPlayer.html#a3485e13e60dbd5ec0e28dfbcab943159" title="Check if position has a piece belonging to a specific symbol." alt="" coords="252,5,452,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,138,177,98,251,55,267,48,269,53,253,60,179,103,124,143"/>
+<area shape="rect" id="Node000004" href="$classFourFourAIPlayer.html#a626a29524a02b6b57e18b54303d4c570" title="Helper to create undo move for any symbol." alt="" coords="261,69,443,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="154,138,260,110,262,115,156,143"/>
+<area shape="rect" id="Node000005" href="$classFourFourAIPlayer.html#a3586ff3a70afa4f0aaf2309764d6a453" title="Evaluate board position with heuristic." alt="" coords="253,133,451,173"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="204,151,239,151,239,156,204,156"/>
+<area shape="rect" id="Node000006" href="$classPlayer.html#a3617a3ad0db435176a06948065f9a3a6" title="Assign the board pointer for the player." alt="" coords="501,169,661,194"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="153,164,201,174,252,183,308,187,352,187,452,183,487,182,487,187,452,188,352,192,308,192,252,188,200,180,152,169"/>
+<area shape="rect" id="Node000007" href="$classPlayer.html#adb4e803a7ac0356b111b8ca79d766976" title="Construct a player with name, symbol, and type." alt="" coords="296,249,408,274"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="129,164,184,194,253,227,294,242,292,247,251,232,182,199,126,168"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#a508617eddfae8915d098102d480fc888" title="Get a pointer to the game board." alt="" coords="500,13,661,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="452,23,486,23,486,28,452,28"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="451,163,488,167,487,173,451,168"/>
+</map>

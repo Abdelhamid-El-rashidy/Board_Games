@@ -1,0 +1,8 @@
+<map id="Diamond_Tic_Tac_Toe_Board::is_win" name="Diamond_Tic_Tac_Toe_Board::is_win">
+<area shape="rect" id="Node000001" title="Checks if the given player has won the game." alt="" coords="432,5,596,45"/>
+<area shape="rect" id="Node000002" href="$classDiamond__Tic__Tac__Toe__Board.html#a8b8463957057101e5ae2d9d4b05cdb29" title="Determines if the game is over (win or draw)." alt="" coords="5,5,172,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="418,25,384,24,220,24,172,25,172,20,220,19,384,19,418,19"/>
+<area shape="rect" id="Node000003" href="$classDiamond__Tic__Tac__Toe__Board.html#a53278a31e7bdeb673ed49f35ff38d541" title="Checks if the game has ended in a draw." alt="" coords="220,33,384,73"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="419,41,384,45,384,40,418,35"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="206,43,172,39,172,34,207,38"/>
+</map>

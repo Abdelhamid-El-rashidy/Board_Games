@@ -1,0 +1,6 @@
+<map id="wordSmartPlayer::minimax" name="wordSmartPlayer::minimax">
+<area shape="rect" id="Node000001" title=" " alt="" coords="255,29,455,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="399,20,396,15,388,12,355,8,328,10,314,15,311,20,318,27,314,31,306,21,310,11,327,5,355,3,390,7,400,11,403,17"/>
+<area shape="rect" id="Node000002" href="$classwordSmartPlayer.html#ab4791918e207984b9d8a7400b436a19b" title=" " alt="" coords="5,22,207,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,45,207,45,207,39,241,39"/>
+</map>

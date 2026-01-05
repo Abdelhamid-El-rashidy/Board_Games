@@ -1,0 +1,5 @@
+<map id="FourFourAIPlayer::evaluate_board" name="FourFourAIPlayer::evaluate_board">
+<area shape="rect" id="Node000001" title="Evaluate board position with heuristic." alt="" coords="5,5,203,45"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#a3617a3ad0db435176a06948065f9a3a6" title="Assign the board pointer for the player." alt="" coords="251,13,411,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,23,237,23,237,28,203,28"/>
+</map>

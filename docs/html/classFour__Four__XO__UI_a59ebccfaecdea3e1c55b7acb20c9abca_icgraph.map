@@ -1,0 +1,5 @@
+<map id="Four_Four_XO_UI::create_player" name="Four_Four_XO_UI::create_player">
+<area shape="rect" id="Node000001" title="Create a player based on name, symbol, and type." alt="" coords="228,5,408,45"/>
+<area shape="rect" id="Node000002" href="$classFour__Four__XO__UI.html#a90dbc91c4dd78f281a872a3995ed325a" title="Set up players (Human or Computer)." alt="" coords="5,5,180,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+</map>

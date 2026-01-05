@@ -1,0 +1,12 @@
+<map id="smartPlayer2::is_draw" name="smartPlayer2::is_draw">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,70,172,95"/>
+<area shape="rect" id="Node000002" href="$classsmartPlayer.html#a046e18221d92303afd36dca43d859898" title=" " alt="" coords="220,70,379,95"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,80,206,80,206,85,172,85"/>
+<area shape="rect" id="Node000003" href="$classsmartPlayer.html#afb2249c0850bf2f4debaece4f4df9bf3" title=" " alt="" coords="427,5,625,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="350,67,433,46,434,51,351,73"/>
+<area shape="rect" id="Node000004" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="673,42,820,67"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="379,75,659,57,660,63,379,80"/>
+<area shape="rect" id="Node000005" href="$classsmartPlayer.html#a0c97a2045a733fbe524f424d6b7eb968" title=" " alt="" coords="451,121,601,146"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="358,93,456,115,455,120,357,98"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="626,36,660,41,659,46,625,41"/>
+</map>

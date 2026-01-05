@@ -1,0 +1,280 @@
+\doxysection{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI Class Reference}
+\hypertarget{classDiamond__Tic__Tac__Toe__UI}{}\label{classDiamond__Tic__Tac__Toe__UI}\index{Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}}
+
+
+{\ttfamily \#include $<$Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+
+
+Inheritance diagram for Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classDiamond__Tic__Tac__Toe__UI__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classDiamond__Tic__Tac__Toe__UI__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDiamond__Tic__Tac__Toe__UI_ae3d9da68f3b5e8acddc4896d043ca2c4}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an Misere\+\_\+\+UI object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classDiamond__Tic__Tac__Toe__UI_af0f8d78434f658c6408406b925d83030}{\texorpdfstring{$\sim$}{\string~}\+Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for Misere\+\_\+\+UI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDiamond__Tic__Tac__Toe__UI_a01af5f62663ce57ac6a2b72256190bee}{create\+\_\+player}} (\mbox{\hyperlink{classPlayer}{string}} \&name, \mbox{\hyperlink{classPlayer}{char}} symbol, \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Creates a player of the specified type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classMove}{Move}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDiamond__Tic__Tac__Toe__UI_a02d44e878b59b3433f9a9a5ee7b70372}{get\+\_\+move}} (\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPlayer}{player}})
+\begin{DoxyCompactList}\small\item\em Retrieves the next move from a player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDiamond__Tic__Tac__Toe__UI_a7ea9fbbf49d5462c662f36ed7d1f7c71}{setup\+\_\+players}} () \mbox{\hyperlink{classPlayer}{override}}
+\begin{DoxyCompactList}\small\item\em Setup \doxylink{classsmartPlayer}{smart\+Player}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classUI}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUI_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classPlayer}{cell\+\_\+display\+\_\+width}}=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{classUI}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUI_ae50eed41905ca2f8dc103d9bef427fe6}{UI}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{message}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classPlayer}{cell\+\_\+display\+\_\+width}})
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{classUI}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classUI_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{void}} \mbox{\hyperlink{classUI_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{message}})
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classUI_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (\mbox{\hyperlink{classPlayer}{string}} \&name, \mbox{\hyperlink{classPlayer}{char}} symbol, \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{void}} \mbox{\hyperlink{classUI_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ $>$ \&\mbox{\hyperlink{classPlayer}{matrix}}) \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classUI}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classUI_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{player\+\_\+label}})
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classUI_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{player\+\_\+label}}, \mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{string}} $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classUI}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classUI_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8h_source_l00068}{68}} of file \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8h_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classDiamond__Tic__Tac__Toe__UI_ae3d9da68f3b5e8acddc4896d043ca2c4}\label{classDiamond__Tic__Tac__Toe__UI_ae3d9da68f3b5e8acddc4896d043ca2c4} 
+\index{Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}!Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}}
+\index{Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}!Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}}
+\doxysubsubsection{\texorpdfstring{Diamond\_Tic\_Tac\_Toe\_UI()}{Diamond\_Tic\_Tac\_Toe\_UI()}}
+{\footnotesize\ttfamily Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+::\+Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs an Misere\+\_\+\+UI object. 
+
+Initializes the base {\ttfamily \doxylink{classUI}{UI}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} class with the welcome message "{}\+FCAI X-\/\+O"{}. 
+
+Definition at line \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8cpp_source_l00314}{314}} of file \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00314\ :\ \mbox{\hyperlink{classPlayer}{UI<char>}}(\textcolor{stringliteral}{"{}Welcome\ to\ 7x7\ Diamond\ Tic-\/Tac-\/Toe\ Game"{}},\ 3)\ \{\}}
+
+\end{DoxyCode}
+\Hypertarget{classDiamond__Tic__Tac__Toe__UI_af0f8d78434f658c6408406b925d83030}\label{classDiamond__Tic__Tac__Toe__UI_af0f8d78434f658c6408406b925d83030} 
+\index{Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}!````~Diamond\_Tic\_Tac\_Toe\_UI@{\texorpdfstring{$\sim$}{\string~}Diamond\_Tic\_Tac\_Toe\_UI}}
+\index{````~Diamond\_Tic\_Tac\_Toe\_UI@{\texorpdfstring{$\sim$}{\string~}Diamond\_Tic\_Tac\_Toe\_UI}!Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Diamond\_Tic\_Tac\_Toe\_UI()}{\string~Diamond\_Tic\_Tac\_Toe\_UI()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{virtual}} Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+::\texorpdfstring{$\sim$}{\string~}\+Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor for Misere\+\_\+\+UI. 
+
+
+
+Definition at line \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8h_source_l00080}{80}} of file \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8h_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \{\};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDiamond__Tic__Tac__Toe__UI_a01af5f62663ce57ac6a2b72256190bee}\label{classDiamond__Tic__Tac__Toe__UI_a01af5f62663ce57ac6a2b72256190bee} 
+\index{Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*} Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{string}} \&}]{name,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{symbol,  }\item[{\mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Creates a player of the specified type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the player. \\
+\hline
+{\em symbol} & Character symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) assigned to the player. \\
+\hline
+{\em type} & The type of the player (Human or Computer). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \doxylink{classPlayer}{Player$<$char$>$} instance. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8cpp_source_l00316}{316}} of file \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00317\ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}Creating\ "{}}\ <<\ (type\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}human"{}}\ :\ \textcolor{stringliteral}{"{}computer"{}})}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ symbol\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keywordflow}{if}\ (type\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{smartPlayer<char>}}(name,\ symbol,\ type);\ \ \ \textcolor{comment}{//\ create\ smartPlayer}}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Player<char>}}(name,\ symbol,\ type);\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ human\ is\ regular\ player}}
+\DoxyCodeLine{00324\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{COMPUTER}}, and \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{HUMAN}}.
+
+
+
+Referenced by \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8cpp_source_l00339}{setup\+\_\+players()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDiamond__Tic__Tac__Toe__UI_a01af5f62663ce57ac6a2b72256190bee_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDiamond__Tic__Tac__Toe__UI_a02d44e878b59b3433f9a9a5ee7b70372}\label{classDiamond__Tic__Tac__Toe__UI_a02d44e878b59b3433f9a9a5ee7b70372} 
+\index{Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMove}{Move}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*} Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the next move from a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player whose move is being requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a new {\ttfamily \doxylink{classMove}{Move}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} object representing the player\textquotesingle{}s action. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUI_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8cpp_source_l00326}{326}} of file \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cout}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPlease\ enter\ your\ move\ x\ and\ y\ (0\ to\ 6):\ "{}};}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{cin}}\ >>\ x\ >>\ y;}
+\DoxyCodeLine{00331\ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})\ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{smart\_player}}\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classPlayer}{smartPlayer<char>}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classPlayer}{player}});}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{move}}\ =\ \mbox{\hyperlink{classPlayer}{smart\_player}}-\/>calculateMove();}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ x\ =\ \mbox{\hyperlink{classPlayer}{move}}.first;}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ y\ =\ \mbox{\hyperlink{classPlayer}{move}}.second;}
+\DoxyCodeLine{00336\ \ \ \ \ \}}
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Move<char>}}(x,\ y,\ \mbox{\hyperlink{classPlayer}{player}}-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}());}
+\DoxyCodeLine{00338\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{COMPUTER}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00164}{Player$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00161}{Player$<$ T $>$\+::get\+\_\+type()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{HUMAN}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classDiamond__Tic__Tac__Toe__UI_a02d44e878b59b3433f9a9a5ee7b70372_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDiamond__Tic__Tac__Toe__UI_a7ea9fbbf49d5462c662f36ed7d1f7c71}\label{classDiamond__Tic__Tac__Toe__UI_a7ea9fbbf49d5462c662f36ed7d1f7c71} 
+\index{Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}!setup\_players@{setup\_players}}
+\index{setup\_players@{setup\_players}!Diamond\_Tic\_Tac\_Toe\_UI@{Diamond\_Tic\_Tac\_Toe\_UI}}
+\doxysubsubsection{\texorpdfstring{setup\_players()}{setup\_players()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{Player}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+::setup\+\_\+players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Setup \doxylink{classsmartPlayer}{smart\+Player}. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a array of smart player objects. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUI_a6966a040c995b2292e5edddaa94f889a}{UI$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8cpp_source_l00339}{339}} of file \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00340\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player<char>}}**\ players\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Player<char>}}*[2];}
+\DoxyCodeLine{00341\ \ \ \ \ \mbox{\hyperlink{classPlayer}{vector<string>}}\ \mbox{\hyperlink{classPlayer}{type\_options}}\ =\ \{\ \textcolor{stringliteral}{"{}Human"{}},\ \textcolor{stringliteral}{"{}Computer"{}}\ \};}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{nameX}}\ =\ \mbox{\hyperlink{classUI_a7b1603de1f73fbb4006e4f00a27c44da}{get\_player\_name}}(\textcolor{stringliteral}{"{}Player\ X"{}});}
+\DoxyCodeLine{00344\ \ \ \ \ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ \mbox{\hyperlink{classPlayer}{typeX}}\ =\ \mbox{\hyperlink{classUI_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\_player\_type\_choice}}(\textcolor{stringliteral}{"{}Player\ X"{}},\ \mbox{\hyperlink{classPlayer}{type\_options}});}
+\DoxyCodeLine{00345\ \ \ \ \ players[0]\ =\ \mbox{\hyperlink{classDiamond__Tic__Tac__Toe__UI_a01af5f62663ce57ac6a2b72256190bee}{create\_player}}(\mbox{\hyperlink{classPlayer}{nameX}},\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(\textcolor{charliteral}{'X'}),\ \mbox{\hyperlink{classPlayer}{typeX}});}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00347\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classPlayer}{nameO}}\ =\ \mbox{\hyperlink{classUI_a7b1603de1f73fbb4006e4f00a27c44da}{get\_player\_name}}(\textcolor{stringliteral}{"{}Player\ O"{}});}
+\DoxyCodeLine{00348\ \ \ \ \ \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ \mbox{\hyperlink{classPlayer}{typeO}}\ =\ \mbox{\hyperlink{classUI_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\_player\_type\_choice}}(\textcolor{stringliteral}{"{}Player\ O"{}},\ \mbox{\hyperlink{classPlayer}{type\_options}});}
+\DoxyCodeLine{00349\ \ \ \ \ players[1]\ =\ \mbox{\hyperlink{classDiamond__Tic__Tac__Toe__UI_a01af5f62663ce57ac6a2b72256190bee}{create\_player}}(\mbox{\hyperlink{classPlayer}{nameO}},\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(\textcolor{charliteral}{'O'}),\ \mbox{\hyperlink{classPlayer}{typeO}});}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \ \ \ \ \textcolor{keywordflow}{return}\ players;}
+\DoxyCodeLine{00352\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Diamond__Tic__Tac__Toe_8cpp_source_l00316}{create\+\_\+player()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00187}{UI$<$ char $>$\+::get\+\_\+player\+\_\+name()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00197}{UI$<$ char $>$\+::get\+\_\+player\+\_\+type\+\_\+choice()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDiamond__Tic__Tac__Toe__UI_a7ea9fbbf49d5462c662f36ed7d1f7c71_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Diamond__Tic__Tac__Toe_8h}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+src/\mbox{\hyperlink{Diamond__Tic__Tac__Toe_8cpp}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}\end{DoxyCompactItemize}

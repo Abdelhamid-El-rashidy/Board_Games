@@ -1,0 +1,146 @@
+\doxysection{ne\+\_\+\+Move Class Reference}
+\hypertarget{classne__Move}{}\label{classne__Move}\index{ne\_Move@{ne\_Move}}
+
+
+{\ttfamily \#include $<$SUS\+\_\+\+Classes.\+h$>$}
+
+
+
+Inheritance diagram for ne\+\_\+\+Move\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classne__Move__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ne\+\_\+\+Move\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classne__Move__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classne__Move_ac43b1b715b7195710de410026ba9df72}{ne\+\_\+\+Move}} (\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a5f399fb722305d3061e0f6f2438e5390}{x}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_abe58a4df9d3e121d06a3b2d1815f012e}{y}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classMove_a0bec25acdce91feab1b4c21c26505088}{symbol}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classne__Move_ac48c46ff95f08f0786b00191ab52ca1d}{value}})
+\item 
+\mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classne__Move_aa35a98897072111711676c094393e3cc}{get\+\_\+value}} () \mbox{\hyperlink{classPlayer}{const}}
+\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classne__Move_a30ba673814a1c25e8f5243a9e3e64cdf}{\texorpdfstring{$\sim$}{\string~}ne\+\_\+\+Move}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMove}{Move$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMove_a100102cb072a2857304023233dac7b42}{Move}} (\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a5f399fb722305d3061e0f6f2438e5390}{x}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_abe58a4df9d3e121d06a3b2d1815f012e}{y}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classMove_a0bec25acdce91feab1b4c21c26505088}{symbol}})
+\begin{DoxyCompactList}\small\item\em Construct a move at (x, y) using a symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a9d4f543a81e361f872d37bcfb64d5b55}{get\+\_\+x}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get row index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classMove_a96469802a55c9083a1e93c7edec8a00c}{get\+\_\+y}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get column index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classMove_a595bf740852c05a1cb425ef2640fd4ff}{get\+\_\+symbol}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get the move symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classMove_a8dd9eeed1b7e22daadd790dd60e743da}{\texorpdfstring{$\sim$}{\string~}\+Move}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classne__Move_ac48c46ff95f08f0786b00191ab52ca1d}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{SUS__Classes_8h_source_l00119}{119}} of file \mbox{\hyperlink{SUS__Classes_8h_source}{SUS\+\_\+\+Classes.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classne__Move_ac43b1b715b7195710de410026ba9df72}\label{classne__Move_ac43b1b715b7195710de410026ba9df72} 
+\index{ne\_Move@{ne\_Move}!ne\_Move@{ne\_Move}}
+\index{ne\_Move@{ne\_Move}!ne\_Move@{ne\_Move}}
+\doxysubsubsection{\texorpdfstring{ne\_Move()}{ne\_Move()}}
+{\footnotesize\ttfamily ne\+\_\+\+Move\+::ne\+\_\+\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{int}}}]{x,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{y,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{symbol,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor to intialize Base Class \doxylink{classMove}{Move} and Derived Class \doxylink{classdualMove}{dual\+Move} 
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate in grid \\
+\hline
+{\em y} & y-\/coordinate in grid \\
+\hline
+{\em symbol} & the current player\textquotesingle{}s move symbol \\
+\hline
+{\em value} & the number played by the move \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{SUS__Classes_8h_source_l00130}{130}} of file \mbox{\hyperlink{SUS__Classes_8h_source}{SUS\+\_\+\+Classes.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00130\ :\ \mbox{\hyperlink{classPlayer}{Move<char>}}(\mbox{\hyperlink{classMove_a5f399fb722305d3061e0f6f2438e5390}{x}},\mbox{\hyperlink{classMove_abe58a4df9d3e121d06a3b2d1815f012e}{y}},\mbox{\hyperlink{classMove_a0bec25acdce91feab1b4c21c26505088}{symbol}}),\ \mbox{\hyperlink{classne__Move_ac48c46ff95f08f0786b00191ab52ca1d}{value}}(\mbox{\hyperlink{classne__Move_ac48c46ff95f08f0786b00191ab52ca1d}{value}})\ \{\};}
+
+\end{DoxyCode}
+\Hypertarget{classne__Move_a30ba673814a1c25e8f5243a9e3e64cdf}\label{classne__Move_a30ba673814a1c25e8f5243a9e3e64cdf} 
+\index{ne\_Move@{ne\_Move}!````~ne\_Move@{\texorpdfstring{$\sim$}{\string~}ne\_Move}}
+\index{````~ne\_Move@{\texorpdfstring{$\sim$}{\string~}ne\_Move}!ne\_Move@{ne\_Move}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ne\_Move()}{\string~ne\_Move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{virtual}} ne\+\_\+\+Move\+::\texorpdfstring{$\sim$}{\string~}ne\+\_\+\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{SUS__Classes_8h_source_l00134}{134}} of file \mbox{\hyperlink{SUS__Classes_8h_source}{SUS\+\_\+\+Classes.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00134\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classne__Move_aa35a98897072111711676c094393e3cc}\label{classne__Move_aa35a98897072111711676c094393e3cc} 
+\index{ne\_Move@{ne\_Move}!get\_value@{get\_value}}
+\index{get\_value@{get\_value}!ne\_Move@{ne\_Move}}
+\doxysubsubsection{\texorpdfstring{get\_value()}{get\_value()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{char}} ne\+\_\+\+Move\+::get\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{SUS__Classes_8h_source_l00132}{132}} of file \mbox{\hyperlink{SUS__Classes_8h_source}{SUS\+\_\+\+Classes.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classne__Move_ac48c46ff95f08f0786b00191ab52ca1d}{value}};\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{SUS__Classes_8h_source_l00121}{value}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classne__Move_ac48c46ff95f08f0786b00191ab52ca1d}\label{classne__Move_ac48c46ff95f08f0786b00191ab52ca1d} 
+\index{ne\_Move@{ne\_Move}!value@{value}}
+\index{value@{value}!ne\_Move@{ne\_Move}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{char}} ne\+\_\+\+Move\+::value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{SUS__Classes_8h_source_l00121}{121}} of file \mbox{\hyperlink{SUS__Classes_8h_source}{SUS\+\_\+\+Classes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{SUS__Classes_8h_source_l00132}{get\+\_\+value()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{SUS__Classes_8h}{SUS\+\_\+\+Classes.\+h}}\end{DoxyCompactItemize}

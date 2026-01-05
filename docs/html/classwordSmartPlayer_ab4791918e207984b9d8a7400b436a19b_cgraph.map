@@ -1,0 +1,25 @@
+<map id="wordSmartPlayer::calculateMove2" name="wordSmartPlayer::calculateMove2">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,113,207,153"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#a508617eddfae8915d098102d480fc888" title="Get a pointer to the game board." alt="" coords="274,5,435,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,110,187,75,254,41,278,32,280,37,256,46,190,80,136,115"/>
+<area shape="rect" id="Node000003" href="$classsmartPlayer.html#afb2249c0850bf2f4debaece4f4df9bf3" title=" " alt="" coords="267,55,442,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,110,254,96,255,101,194,115"/>
+<area shape="rect" id="Node000004" href="$classPlayer.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="281,120,428,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="207,130,268,130,268,135,207,135"/>
+<area shape="rect" id="Node000005" href="$classwordSmartPlayer.html#ad2958d2928652d713002043fe27fdf9b" title=" " alt="" coords="255,193,455,219"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="175,150,298,187,297,192,174,155"/>
+<area shape="rect" id="Node000011" href="$classPlayer.html#adb4e803a7ac0356b111b8ca79d766976" title="Construct a player with name, symbol, and type." alt="" coords="546,244,658,269"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="131,151,185,192,219,213,256,229,327,247,401,257,471,260,532,259,532,264,471,265,401,262,326,253,254,234,217,218,182,197,128,155"/>
+<area shape="poly" id="edge10_Node000005_Node000005" title=" " alt="" coords="315,195,306,185,311,175,327,169,355,167,389,171,399,175,403,181,398,184,396,179,388,176,355,172,328,174,314,179,312,184,319,191"/>
+<area shape="rect" id="Node000006" href="$classwordSmartPlayer.html#a08ecaf78a83b4a706176529ddc9e6119" title=" " alt="" coords="503,66,701,106"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="384,191,453,154,477,135,501,116,515,109,517,114,504,120,480,139,456,159,387,196"/>
+<area shape="rect" id="Node000008" href="$classsmartPlayer.html#a046e18221d92303afd36dca43d859898" title=" " alt="" coords="523,130,681,170"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="411,191,509,168,510,174,412,196"/>
+<area shape="rect" id="Node000009" href="$classwordSmartPlayer.html#a626ed24f5a4811dde93bfaf94ce81497" title=" " alt="" coords="511,195,693,220"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="455,204,497,204,497,209,455,209"/>
+<area shape="poly" id="edge11_Node000005_Node000011" title=" " alt="" coords="418,216,533,240,532,245,417,221"/>
+<area shape="rect" id="Node000007" href="$classwordSmartPlayer.html#a1fe6cbd81a0e85792f482bb50f5e4b5f" title=" " alt="" coords="749,73,957,99"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="702,83,736,83,736,89,702,89"/>
+<area shape="rect" id="Node000010" href="$classwordSmartPlayer.html#a153987c87159821a01b6ceb0e81a4d73" title=" " alt="" coords="777,187,930,227"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="693,205,763,205,763,210,693,210"/>
+</map>

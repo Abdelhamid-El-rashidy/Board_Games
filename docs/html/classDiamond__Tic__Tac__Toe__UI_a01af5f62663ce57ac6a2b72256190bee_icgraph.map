@@ -1,0 +1,5 @@
+<map id="Diamond_Tic_Tac_Toe_UI::create_player" name="Diamond_Tic_Tac_Toe_UI::create_player">
+<area shape="rect" id="Node000001" title="Creates a player of the specified type." alt="" coords="217,5,381,45"/>
+<area shape="rect" id="Node000002" href="$classDiamond__Tic__Tac__Toe__UI.html#a7ea9fbbf49d5462c662f36ed7d1f7c71" title="Setup smartPlayer." alt="" coords="5,5,169,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,28,169,28,169,23,204,23"/>
+</map>

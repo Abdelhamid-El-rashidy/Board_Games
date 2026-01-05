@@ -1,0 +1,6 @@
+<map id="smartPlayer2::minimax" name="smartPlayer2::minimax">
+<area shape="rect" id="Node000001" title=" " alt="" coords="265,29,440,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="396,20,384,11,353,8,327,10,313,15,311,20,318,27,314,31,305,21,310,11,326,5,353,3,386,7,399,16"/>
+<area shape="rect" id="Node000002" href="$classsmartPlayer2.html#af51ff0c3115f5dc34fce64958c52beb2" title=" " alt="" coords="5,29,217,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,45,217,45,217,39,252,39"/>
+</map>

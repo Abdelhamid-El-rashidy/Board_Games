@@ -1,0 +1,378 @@
+\doxysection{smart\+Player2 Class Reference}
+\hypertarget{classsmartPlayer2}{}\label{classsmartPlayer2}\index{smartPlayer2@{smartPlayer2}}
+
+
+Inheritance diagram for smart\+Player2\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classsmartPlayer2__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for smart\+Player2\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classsmartPlayer2__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmartPlayer2_a5a8bf05bc73928448c77e864337af39c}{smart\+Player2}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{n}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classPlayer}{s}}, \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer}{t}})
+\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classsmartPlayer2_afed5c26b8eb1ad21be5016ccaf15b989}{evaluate\+\_\+board}} (\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ $>$ \&\mbox{\hyperlink{classPlayer}{b}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classPlayer}{ai}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classPlayer}{opp}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classPlayer}{N}}=4) \mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{override}}
+\item 
+\mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classsmartPlayer2_a36169753eb8ba31207c80de1769c9ceb}{is\+\_\+win}} (\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ $>$ \&\mbox{\hyperlink{classPlayer}{b}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classPlayer_a272d6c4dab769930d4f8074918e7708a}{symbol}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classPlayer}{N}}=4) \mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{override}}
+\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classsmartPlayer2_acf253a6afb2216922e6a1184c7b50a14}{is\+\_\+draw}} (\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ $>$ \&\mbox{\hyperlink{classPlayer}{b}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classPlayer}{N}}=4) \mbox{\hyperlink{classPlayer}{const}}
+\item 
+\mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classsmartPlayer2_a8212944143d4baa2e7b05bca584a0e77}{minimax}} (\mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ $>$ \&\mbox{\hyperlink{classPlayer}{b}}, \mbox{\hyperlink{classPlayer}{bool}} \mbox{\hyperlink{classPlayer}{maximizing\+Player}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classPlayer}{ai}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classPlayer}{opp}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classPlayer}{alpha}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classPlayer}{beta}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classPlayer}{depth}}, \mbox{\hyperlink{classPlayer}{int}} \mbox{\hyperlink{classPlayer}{N}}=4)
+\item 
+\mbox{\hyperlink{classPlayer}{pair}}$<$ \mbox{\hyperlink{classPlayer}{int}}, \mbox{\hyperlink{classPlayer}{int}} $>$ \mbox{\hyperlink{classsmartPlayer2_af51ff0c3115f5dc34fce64958c52beb2}{calculate\+Move}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsmartPlayer}{smart\+Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmartPlayer_abcc806ba1a26290eeeb8c50528828306}{smart\+Player}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{n}}, \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classPlayer}{s}}, \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer}{t}})
+\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classsmartPlayer_ace8aa6894184d74559fdeb7338397a22}{\texorpdfstring{$\sim$}{\string~}smart\+Player}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPlayer}{Player$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{Player}} (\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer}{n}}, \mbox{\hyperlink{classPlayer}{T}} \mbox{\hyperlink{classPlayer}{s}}, \mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer}{t}})
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer_aac1f2ab2a8e2aa0336d302c16068020e}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\item 
+\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer_aed2af19790ba73190e3ebeea589518e1}{get\+\_\+name}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer_a2df3bd299bf7aecfa2275ec6902a60f8}{get\+\_\+type}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get player type (\doxylink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{e.\+g}., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{T}} \mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\+\_\+symbol}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBoard}{Board}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlayer_a508617eddfae8915d098102d480fc888}{get\+\_\+board\+\_\+ptr}} () \mbox{\hyperlink{classPlayer}{const}}
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{void}} \mbox{\hyperlink{classPlayer_a3617a3ad0db435176a06948065f9a3a6}{set\+\_\+board\+\_\+ptr}} (\mbox{\hyperlink{classBoard}{Board}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPlayer}{b}})
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classsmartPlayer}{smart\+Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{char}} \mbox{\hyperlink{classsmartPlayer_afb2249c0850bf2f4debaece4f4df9bf3}{get\+\_\+opponent\+\_\+symbol}} () \mbox{\hyperlink{classPlayer}{const}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classPlayer}{Player$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{string}} \mbox{\hyperlink{classPlayer_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classPlayer}{Player} name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{classPlayer_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classPlayer}{Player} type (\doxylink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{e.\+g}., HUMAN or COMPUTER) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{T}} \mbox{\hyperlink{classPlayer_a272d6c4dab769930d4f8074918e7708a}{symbol}}
+\begin{DoxyCompactList}\small\item\em Players symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBoard}{Board}}$<$ \mbox{\hyperlink{classPlayer}{T}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlayer_a26249e756f850b6585267bfbc928ac79}{board\+Ptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{Four-in-a-row_8cpp_source}{Four-\/in-\/a-\/row.\+cpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsmartPlayer2_a5a8bf05bc73928448c77e864337af39c}\label{classsmartPlayer2_a5a8bf05bc73928448c77e864337af39c} 
+\index{smartPlayer2@{smartPlayer2}!smartPlayer2@{smartPlayer2}}
+\index{smartPlayer2@{smartPlayer2}!smartPlayer2@{smartPlayer2}}
+\doxysubsubsection{\texorpdfstring{smartPlayer2()}{smartPlayer2()}}
+{\footnotesize\ttfamily smart\+Player2\+::smart\+Player2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{string}}}]{n,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{s,  }\item[{\mbox{\hyperlink{BoardGame__Classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{Four-in-a-row_8cpp_source}{Four-\/in-\/a-\/row.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classPlayer}{smartPlayer<char>}}(\mbox{\hyperlink{classPlayer}{n}},\ \mbox{\hyperlink{classPlayer}{s}},\ \mbox{\hyperlink{classPlayer}{t}})\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsmartPlayer2_af51ff0c3115f5dc34fce64958c52beb2}\label{classsmartPlayer2_af51ff0c3115f5dc34fce64958c52beb2} 
+\index{smartPlayer2@{smartPlayer2}!calculateMove@{calculateMove}}
+\index{calculateMove@{calculateMove}!smartPlayer2@{smartPlayer2}}
+\doxysubsubsection{\texorpdfstring{calculateMove()}{calculateMove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{pair}}$<$ \mbox{\hyperlink{classPlayer}{int}}, \mbox{\hyperlink{classPlayer}{int}} $>$ smart\+Player2\+::calculate\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmartPlayer_a6064105bc4b494d926db58ff05c98aaa}{smart\+Player$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{Four-in-a-row_8cpp_source}{Four-\/in-\/a-\/row.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Board<char>}}*\ \mbox{\hyperlink{classPlayer}{board\_ptr}}\ =\ this-\/>\mbox{\hyperlink{classPlayer_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!board\_ptr)\ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classPlayer}{runtime\_error}}(\textcolor{stringliteral}{"{}Board\ not\ assigned\ to\ player!"{}});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classPlayer}{tempBoard}}\ =\ \mbox{\hyperlink{classPlayer}{board\_ptr}}-\/>get\_board\_matrix();}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rows\ =\ \mbox{\hyperlink{classPlayer}{tempBoard}}.size();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{cols}}\ =\ \mbox{\hyperlink{classPlayer}{tempBoard}}[0].size();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{bestVal}}\ =\ \mbox{\hyperlink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{numeric\_limits<int>::min}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{bestX}}\ =\ -\/1,\ \mbox{\hyperlink{classPlayer}{bestY}}\ =\ -\/1;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{ai}}\ =\ this-\/>\mbox{\hyperlink{classPlayer_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPlayer}{opp}}\ =\ \mbox{\hyperlink{classsmartPlayer_afb2249c0850bf2f4debaece4f4df9bf3}{get\_opponent\_symbol}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{maxDepth}}\ =\ 2;\ \textcolor{comment}{//\ tweak:\ higher\ depth\ =\ stronger\ AI\ but\ slower}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}\ <\ \mbox{\hyperlink{classPlayer}{cols}};\ \mbox{\hyperlink{classPlayer}{j}}++)}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ rows-\/1;\ \mbox{\hyperlink{classPlayer}{i}}\ >=\ 0;\ \mbox{\hyperlink{classPlayer}{i}}-\/-\/)}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{tempBoard}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{tempBoard}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \mbox{\hyperlink{classPlayer}{ai}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{moveVal}}\ =\ \mbox{\hyperlink{classsmartPlayer2_a8212944143d4baa2e7b05bca584a0e77}{minimax}}(\mbox{\hyperlink{classPlayer}{tempBoard}},\ \textcolor{keyword}{false},\ \mbox{\hyperlink{classPlayer}{ai}},\ \mbox{\hyperlink{classPlayer}{opp}},}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{numeric\_limits<int>::min}}(),}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{numeric\_limits<int>::max}}(),}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{maxDepth}});}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{tempBoard}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{moveVal}}\ >\ \mbox{\hyperlink{classPlayer}{bestVal}})\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{bestVal}}\ =\ \mbox{\hyperlink{classPlayer}{moveVal}};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{bestX}}\ =\ \mbox{\hyperlink{classPlayer}{i}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{bestY}}\ =\ \mbox{\hyperlink{classPlayer}{j}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\mbox{\hyperlink{classPlayer}{bestX}},\ \mbox{\hyperlink{classPlayer}{bestY}}\};}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{BoardGame__Classes_8h_source_l00167}{Player$<$ T $>$\+::get\+\_\+board\+\_\+ptr()}}, \mbox{\hyperlink{Smart__Player_8h_source_l00018}{smart\+Player$<$ char $>$\+::get\+\_\+opponent\+\_\+symbol()}}, \mbox{\hyperlink{BoardGame__Classes_8h_source_l00164}{Player$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00025}{minimax()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00152}{Player$<$ T $>$\+::\+Player()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmartPlayer2_af51ff0c3115f5dc34fce64958c52beb2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsmartPlayer2_afed5c26b8eb1ad21be5016ccaf15b989}\label{classsmartPlayer2_afed5c26b8eb1ad21be5016ccaf15b989} 
+\index{smartPlayer2@{smartPlayer2}!evaluate\_board@{evaluate\_board}}
+\index{evaluate\_board@{evaluate\_board}!smartPlayer2@{smartPlayer2}}
+\doxysubsubsection{\texorpdfstring{evaluate\_board()}{evaluate\_board()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{int}} smart\+Player2\+::evaluate\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ $>$ \&}]{b,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{ai,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{opp,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{N = {\ttfamily 4} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmartPlayer_a2065c2b93e69c1851cd4d951f22b1ccb}{smart\+Player$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{Four-in-a-row_8cpp_source}{Four-\/in-\/a-\/row.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classsmartPlayer_a2065c2b93e69c1851cd4d951f22b1ccb}{smartPlayer<char>::evaluate\_board}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{ai}},\ \mbox{\hyperlink{classPlayer}{opp}},\ \mbox{\hyperlink{classPlayer}{N}});}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Smart__Player_8h_source_l00027}{smart\+Player$<$ T $>$\+::evaluate\+\_\+board()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00025}{minimax()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmartPlayer2_afed5c26b8eb1ad21be5016ccaf15b989_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmartPlayer2_afed5c26b8eb1ad21be5016ccaf15b989_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsmartPlayer2_acf253a6afb2216922e6a1184c7b50a14}\label{classsmartPlayer2_acf253a6afb2216922e6a1184c7b50a14} 
+\index{smartPlayer2@{smartPlayer2}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!smartPlayer2@{smartPlayer2}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{virtual}} \mbox{\hyperlink{classPlayer}{bool}} smart\+Player2\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ $>$ \&}]{b,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{N = {\ttfamily 4} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmartPlayer_a046e18221d92303afd36dca43d859898}{smart\+Player$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{Four-in-a-row_8cpp_source}{Four-\/in-\/a-\/row.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classsmartPlayer_a046e18221d92303afd36dca43d859898}{smartPlayer<char>::is\_draw}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{N}});}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Smart__Player_8h_source_l00103}{smart\+Player$<$ T $>$\+::is\+\_\+draw()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00025}{minimax()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmartPlayer2_acf253a6afb2216922e6a1184c7b50a14_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmartPlayer2_acf253a6afb2216922e6a1184c7b50a14_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsmartPlayer2_a36169753eb8ba31207c80de1769c9ceb}\label{classsmartPlayer2_a36169753eb8ba31207c80de1769c9ceb} 
+\index{smartPlayer2@{smartPlayer2}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!smartPlayer2@{smartPlayer2}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{bool}} smart\+Player2\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{const}} \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ $>$ \&}]{b,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{symbol,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{N = {\ttfamily 4} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmartPlayer_a0c97a2045a733fbe524f424d6b7eb968}{smart\+Player$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{Four-in-a-row_8cpp_source}{Four-\/in-\/a-\/row.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classsmartPlayer_a0c97a2045a733fbe524f424d6b7eb968}{smartPlayer<char>::is\_win}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer_a272d6c4dab769930d4f8074918e7708a}{symbol}},\ \mbox{\hyperlink{classPlayer}{N}});}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Smart__Player_8h_source_l00060}{smart\+Player$<$ T $>$\+::is\+\_\+win()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00145}{Player$<$ T $>$\+::symbol}}.
+
+
+
+Referenced by \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00025}{minimax()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classsmartPlayer2_a36169753eb8ba31207c80de1769c9ceb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmartPlayer2_a36169753eb8ba31207c80de1769c9ceb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsmartPlayer2_a8212944143d4baa2e7b05bca584a0e77}\label{classsmartPlayer2_a8212944143d4baa2e7b05bca584a0e77} 
+\index{smartPlayer2@{smartPlayer2}!minimax@{minimax}}
+\index{minimax@{minimax}!smartPlayer2@{smartPlayer2}}
+\doxysubsubsection{\texorpdfstring{minimax()}{minimax()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{int}} smart\+Player2\+::minimax (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{vector}}$<$ \mbox{\hyperlink{classPlayer}{char}} $>$ $>$ \&}]{b,  }\item[{\mbox{\hyperlink{classPlayer}{bool}}}]{maximizing\+Player,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{ai,  }\item[{\mbox{\hyperlink{classPlayer}{char}}}]{opp,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{alpha,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{beta,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{depth,  }\item[{\mbox{\hyperlink{classPlayer}{int}}}]{N = {\ttfamily 4} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmartPlayer_a813fa8a35e205952685fc055af8a8e48}{smart\+Player$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{Four-in-a-row_8cpp_source}{Four-\/in-\/a-\/row.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsmartPlayer2_a36169753eb8ba31207c80de1769c9ceb}{is\_win}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{ai}},\ \mbox{\hyperlink{classPlayer}{N}}))\ \textcolor{keywordflow}{return}\ 1000\ +\ \mbox{\hyperlink{classPlayer}{depth}};\ \textcolor{comment}{//\ prefer\ faster\ win}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsmartPlayer2_a36169753eb8ba31207c80de1769c9ceb}{is\_win}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{opp}},\ \mbox{\hyperlink{classPlayer}{N}}))\ \textcolor{keywordflow}{return}\ -\/1000\ -\/\ \mbox{\hyperlink{classPlayer}{depth}};\ \textcolor{comment}{//\ prefer\ slower\ loss}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsmartPlayer2_acf253a6afb2216922e6a1184c7b50a14}{is\_draw}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{N}}))\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{depth}}\ ==\ 0)\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classsmartPlayer2_afed5c26b8eb1ad21be5016ccaf15b989}{evaluate\_board}}(\mbox{\hyperlink{classPlayer}{b}},\ \mbox{\hyperlink{classPlayer}{ai}},\ \mbox{\hyperlink{classPlayer}{opp}},\ \mbox{\hyperlink{classPlayer}{N}});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rows\ =\ \mbox{\hyperlink{classPlayer}{b}}.size();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{cols}}\ =\ \mbox{\hyperlink{classPlayer}{b}}[0].size();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{maximizingPlayer}})\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{best}}\ =\ \mbox{\hyperlink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{numeric\_limits<int>::min}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}\ <\ \mbox{\hyperlink{classPlayer}{cols}};\ \mbox{\hyperlink{classPlayer}{j}}++)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ rows-\/1;\ \mbox{\hyperlink{classPlayer}{i}}\ >=\ 0;\ \mbox{\hyperlink{classPlayer}{i}}-\/-\/)}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \mbox{\hyperlink{classPlayer}{ai}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{val}}\ =\ \mbox{\hyperlink{classsmartPlayer2_a8212944143d4baa2e7b05bca584a0e77}{minimax}}(\mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keyword}{false},\ \mbox{\hyperlink{classPlayer}{ai}},\ \mbox{\hyperlink{classPlayer}{opp}},\ \mbox{\hyperlink{classPlayer}{alpha}},\ \mbox{\hyperlink{classPlayer}{beta}},\ \mbox{\hyperlink{classPlayer}{depth}}\ -\/\ 1,\ \mbox{\hyperlink{classPlayer}{N}});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{best}}\ =\ \mbox{\hyperlink{classPlayer}{max}}(\mbox{\hyperlink{classPlayer}{best}},\ \mbox{\hyperlink{classPlayer}{val}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{alpha}}\ =\ \mbox{\hyperlink{classPlayer}{max}}(\mbox{\hyperlink{classPlayer}{alpha}},\ \mbox{\hyperlink{classPlayer}{best}});}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{beta}}\ <=\ \mbox{\hyperlink{classPlayer}{alpha}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer}{best}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer}{best}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{best}}\ =\ \mbox{\hyperlink{classPlayer_adb4e803a7ac0356b111b8ca79d766976}{numeric\_limits<int>::max}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{j}}\ =\ 0;\ \mbox{\hyperlink{classPlayer}{j}}\ <\ \mbox{\hyperlink{classPlayer}{cols}};\ \mbox{\hyperlink{classPlayer}{j}}++)}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{i}}\ =\ rows-\/1;\ \mbox{\hyperlink{classPlayer}{i}}\ >=\ 0;\ \mbox{\hyperlink{classPlayer}{i}}-\/-\/)}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \mbox{\hyperlink{classPlayer}{opp}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlayer}{val}}\ =\ \mbox{\hyperlink{classsmartPlayer2_a8212944143d4baa2e7b05bca584a0e77}{minimax}}(\mbox{\hyperlink{classPlayer}{b}},\ \textcolor{keyword}{true},\ \mbox{\hyperlink{classPlayer}{ai}},\ \mbox{\hyperlink{classPlayer}{opp}},\ \mbox{\hyperlink{classPlayer}{alpha}},\ \mbox{\hyperlink{classPlayer}{beta}},\ \mbox{\hyperlink{classPlayer}{depth}}\ -\/\ 1,\ \mbox{\hyperlink{classPlayer}{N}});}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{b}}[\mbox{\hyperlink{classPlayer}{i}}][\mbox{\hyperlink{classPlayer}{j}}]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{best}}\ =\ \mbox{\hyperlink{classPlayer}{min}}(\mbox{\hyperlink{classPlayer}{best}},\ \mbox{\hyperlink{classPlayer}{val}});}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{beta}}\ =\ \mbox{\hyperlink{classPlayer}{min}}(\mbox{\hyperlink{classPlayer}{beta}},\ \mbox{\hyperlink{classPlayer}{best}});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPlayer}{beta}}\ <=\ \mbox{\hyperlink{classPlayer}{alpha}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer}{best}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPlayer}{best}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00013}{evaluate\+\_\+board()}}, \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00021}{is\+\_\+draw()}}, \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00017}{is\+\_\+win()}}, \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00025}{minimax()}}, and \mbox{\hyperlink{BoardGame__Classes_8h_source_l00152}{Player$<$ T $>$\+::\+Player()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00063}{calculate\+Move()}}, and \mbox{\hyperlink{Four-in-a-row_8cpp_source_l00025}{minimax()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmartPlayer2_a8212944143d4baa2e7b05bca584a0e77_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmartPlayer2_a8212944143d4baa2e7b05bca584a0e77_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Four-in-a-row_8cpp}{Four-\/in-\/a-\/row.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+<map id="MisereSmartPlayer::calculateMove" name="MisereSmartPlayer::calculateMove">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,160,79"/>
+<area shape="rect" id="Node000002" href="$classPlayer.html#a508617eddfae8915d098102d480fc888" title="Get a pointer to the game board." alt="" coords="208,5,369,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,41,211,31,212,36,161,46"/>
+<area shape="rect" id="Node000003" href="$classMisereSmartPlayer.html#abd661568433d59f2a42bc657e1946363" title=" " alt="" coords="211,79,366,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,72,198,79,197,84,160,77"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="250,80,248,70,254,61,268,55,289,53,313,56,326,63,323,68,311,61,289,58,269,60,257,65,253,71,255,78"/>
+<area shape="rect" id="Node000004" href="$classMisereSmartPlayer.html#a4ba7476b6aa11da797052d8483308b24" title=" " alt="" coords="423,47,578,87"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="366,85,410,78,410,84,367,90"/>
+<area shape="rect" id="Node000005" href="$classMisereSmartPlayer.html#abc3a201f5a853c29a686bb9657aa3c61" title=" " alt="" coords="417,111,584,151"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="367,108,404,114,403,119,366,114"/>
+</map>

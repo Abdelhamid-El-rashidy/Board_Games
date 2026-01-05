@@ -1,0 +1,15 @@
+<map id="smartPlayer::evaluate_board" name="smartPlayer::evaluate_board">
+<area shape="rect" id="Node000001" title=" " alt="" coords="740,63,907,103"/>
+<area shape="rect" id="Node000002" href="$classsmartPlayer2.html#afed5c26b8eb1ad21be5016ccaf15b989" title=" " alt="" coords="517,22,692,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="726,68,692,61,693,56,727,62"/>
+<area shape="rect" id="Node000005" href="$classsmartPlayer.html#a813fa8a35e205952685fc055af8a8e48" title=" " alt="" coords="521,111,688,136"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="727,104,675,113,674,108,726,98"/>
+<area shape="rect" id="Node000003" href="$classsmartPlayer2.html#a8212944143d4baa2e7b05bca584a0e77" title=" " alt="" coords="280,29,455,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="504,45,455,45,455,39,504,39"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="410,20,399,11,367,8,342,10,328,15,326,20,333,27,329,31,320,21,325,11,341,5,367,3,401,7,413,16"/>
+<area shape="rect" id="Node000004" href="$classsmartPlayer2.html#af51ff0c3115f5dc34fce64958c52beb2" title=" " alt="" coords="5,29,217,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="267,45,217,45,217,39,267,39"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="644,101,633,93,605,89,581,91,569,96,566,102,573,109,569,112,561,102,565,92,580,86,605,84,635,88,647,97"/>
+<area shape="rect" id="Node000006" href="$classsmartPlayer.html#a6064105bc4b494d926db58ff05c98aaa" title=" " alt="" coords="265,111,469,136"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="508,126,470,126,470,121,508,121"/>
+</map>

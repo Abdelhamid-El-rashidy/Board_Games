@@ -1,0 +1,22 @@
+<map id="include/Diamond_Tic_Tac_Toe.h" name="include/Diamond_Tic_Tac_Toe.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="99,5,258,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="30,93,141,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,48,112,86,108,82,154,44"/>
+<area shape="rect" id="Node000003" href="$BoardGame__Classes_8h.html" title=" " alt="" coords="84,167,252,192"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,46,172,153,167,153,175,46"/>
+<area shape="rect" id="Node000008" href="$Smart__Player_8h.html" title=" " alt="" coords="236,93,356,119"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="209,43,269,84,266,88,206,48"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,240,64,265"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="148,194,70,236,67,231,145,190"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="89,240,151,265"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="162,194,138,230,133,227,158,191"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="176,240,256,265"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="178,191,203,227,198,230,174,194"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="280,240,355,265"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="193,190,282,232,279,236,191,194"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="277,121,202,162,200,157,274,116"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="276,167,335,192"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="300,119,305,153,299,154,295,119"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="359,167,444,192"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="314,116,374,157,372,161,311,121"/>
+</map>

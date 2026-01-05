@@ -1,0 +1,8 @@
+<map id="SUS_SmartPlayer::evaluate_board" name="SUS_SmartPlayer::evaluate_board">
+<area shape="rect" id="Node000001" title=" " alt="" coords="505,22,705,62"/>
+<area shape="rect" id="Node000002" href="$classSUS__SmartPlayer.html#a12997b1bc461e8622940323f673cc5ec" title=" " alt="" coords="256,29,457,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="491,45,458,45,458,39,491,39"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="401,20,398,15,390,12,357,8,330,10,316,15,313,20,320,27,316,31,308,21,312,11,329,5,357,3,392,7,402,11,405,17"/>
+<area shape="rect" id="Node000003" href="$classSUS__SmartPlayer.html#a0bdb4e9b63a7fabb9e95c31ba7a5dc02" title=" " alt="" coords="5,22,208,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="242,45,208,45,208,39,242,39"/>
+</map>
