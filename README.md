@@ -63,6 +63,8 @@ The project follows a layered architecture:
 4. **UI<T>**: Handles user interaction and display
 5. **GameManager<T>**: Orchestrates the game loop
 
+![Class Diagram](Class_Diagram.png)
+
 ### Menu & Game Launching System
 
 The framework includes a **generic menu-based game launcher** that decouples game selection from game execution.
